@@ -1,6 +1,12 @@
 import React from "react";
 import { useRunStore } from "../store/runState";
 import { getLevelFromExp } from "../core/mechanics/experience";
+import {
+  calcHealth,
+  calcPinchThreshold,
+  calcStat,
+} from "../core/mechanics/stats";
+import { PokemonData } from "../core/data/pokemon";
 
 export const Sidebar: React.FC = () => {
   const player = useRunStore((state) => state.player);
@@ -8,6 +14,33 @@ export const Sidebar: React.FC = () => {
   const currentLevel = player
     ? getLevelFromExp(player.totalExp, player.growthRate)
     : 0;
+
+  let maxHp = 0;
+  let pinchHp = 0;
+  let currentSpeed = 0;
+
+  if (player) {
+    const data = PokemonData[player.species];
+    if (data) {
+      maxHp = calcHealth(
+        data.baseStats.hp,
+        currentLevel,
+        player.ivs.hp,
+        player.evs.hp,
+      );
+      pinchHp = calcPinchThreshold(maxHp);
+
+      currentSpeed = calcStat(
+        "spe",
+        data.baseStats.spe,
+        currentLevel,
+        player.ivs.spe,
+        player.evs.spe,
+        player.nature,
+        player.badges.thunder,
+      );
+    }
+  }
 
   return (
     <div className="w-80 bg-slate-900 text-white p-6 shadow-xl flex flex-col gap-6 fixed h-full overflow-y-auto">
@@ -26,69 +59,85 @@ export const Sidebar: React.FC = () => {
         <>
           {/* Main Info Panel */}
           <div className="bg-slate-800 p-4 rounded-lg border border-slate-700">
-            <h2 className="text-xl font-bold">
+            <h2 className="text-xl font-bold border-b border-slate-700 pb-2 mb-2">
               {player.species}{" "}
-              <span className="text-blue-400">Lv. {currentLevel}</span>
+              <span className="text-blue-400 float-right">
+                Lv. {currentLevel}
+              </span>
             </h2>
-            <div className="mt-2 text-sm text-slate-300">
-              <div className="flex justify-between border-b border-slate-700 pb-1 mb-1">
-                <span>Current HP:</span>
-                <span className="font-mono text-green-400">
-                  {player.currentHp}
+
+            <div className="text-sm text-slate-300 space-y-1">
+              {/* Static Info */}
+              <div className="flex justify-between pt-1">
+                <span>Total EXP:</span>
+                <span className="font-mono text-white">{player.totalExp}</span>
+              </div>
+              <div className="flex justify-between mb-2 pb-2 border-b border-slate-700">
+                <span>Nature:</span>
+                <span className="text-white">{player.nature}</span>
+              </div>
+
+              {/* Active Combat Info */}
+              <div className="flex justify-between items-center pt-1">
+                <span>Max HP:</span>
+                <span className="font-mono font-bold text-white">{maxHp}</span>
+              </div>
+              <div className="flex justify-between items-center">
+                <span>Pinch Range:</span>
+                <span className="font-mono font-bold text-white">
+                  ≤ {pinchHp}
                 </span>
               </div>
-              <div className="flex justify-between">
-                <span>Total EXP:</span>
-                <span className="font-mono">{player.totalExp}</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Nature:</span>
-                <span>{player.nature}</span>
+              <div className="flex justify-between items-center">
+                <span>Speed:</span>
+                <span className="font-mono font-bold text-white">
+                  {currentSpeed}
+                </span>
               </div>
             </div>
           </div>
 
           {/* IVs AND EVs BLOCK */}
           <div className="bg-slate-800 p-4 rounded-lg border border-slate-700">
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-6">
               {/* IVs Column */}
               <div>
                 <h3 className="font-bold mb-2 text-slate-200 border-b border-slate-600 pb-1">
                   IVs
                 </h3>
                 <ul className="text-sm space-y-1 text-slate-400">
-                  <li>
-                    HP:{" "}
+                  <li className="flex justify-between">
+                    <span>HP</span>{" "}
                     <span className="text-slate-200 font-mono">
                       {player.ivs.hp}
                     </span>
                   </li>
-                  <li>
-                    Atk:{" "}
+                  <li className="flex justify-between">
+                    <span>Atk</span>{" "}
                     <span className="text-slate-200 font-mono">
                       {player.ivs.atk}
                     </span>
                   </li>
-                  <li>
-                    Def:{" "}
+                  <li className="flex justify-between">
+                    <span>Def</span>{" "}
                     <span className="text-slate-200 font-mono">
                       {player.ivs.def}
                     </span>
                   </li>
-                  <li>
-                    SpA:{" "}
+                  <li className="flex justify-between">
+                    <span>SpA</span>{" "}
                     <span className="text-slate-200 font-mono">
                       {player.ivs.spa}
                     </span>
                   </li>
-                  <li>
-                    SpD:{" "}
+                  <li className="flex justify-between">
+                    <span>SpD</span>{" "}
                     <span className="text-slate-200 font-mono">
                       {player.ivs.spd}
                     </span>
                   </li>
-                  <li>
-                    Spe:{" "}
+                  <li className="flex justify-between">
+                    <span>Spe</span>{" "}
                     <span className="text-slate-200 font-mono">
                       {player.ivs.spe}
                     </span>
@@ -101,39 +150,39 @@ export const Sidebar: React.FC = () => {
                 <h3 className="font-bold mb-2 text-slate-200 border-b border-slate-600 pb-1">
                   EVs
                 </h3>
-                <ul className="text-sm space-y-1 text-slate-300">
-                  <li>
-                    HP:{" "}
+                <ul className="text-sm space-y-1 text-slate-400">
+                  <li className="flex justify-between">
+                    <span>HP</span>{" "}
                     <span className="text-white font-mono">
                       {player.evs.hp}
                     </span>
                   </li>
-                  <li>
-                    Atk:{" "}
+                  <li className="flex justify-between">
+                    <span>Atk</span>{" "}
                     <span className="text-white font-mono">
                       {player.evs.atk}
                     </span>
                   </li>
-                  <li>
-                    Def:{" "}
+                  <li className="flex justify-between">
+                    <span>Def</span>{" "}
                     <span className="text-white font-mono">
                       {player.evs.def}
                     </span>
                   </li>
-                  <li>
-                    SpA:{" "}
+                  <li className="flex justify-between">
+                    <span>SpA</span>{" "}
                     <span className="text-white font-mono">
                       {player.evs.spa}
                     </span>
                   </li>
-                  <li>
-                    SpD:{" "}
+                  <li className="flex justify-between">
+                    <span>SpD</span>{" "}
                     <span className="text-white font-mono">
                       {player.evs.spd}
                     </span>
                   </li>
-                  <li>
-                    Spe:{" "}
+                  <li className="flex justify-between">
+                    <span>Spe</span>{" "}
                     <span className="text-white font-mono">
                       {player.evs.spe}
                     </span>

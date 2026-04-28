@@ -19,6 +19,7 @@ export function calcStat(
   iv: number,
   ev: number,
   nature: Nature,
+  badgeBoost: boolean = false,
 ): number {
   let val =
     Math.trunc(
@@ -30,6 +31,17 @@ export function calcStat(
   const mod = NatureModifiers[nature];
   if (mod.plus === statName) val = Math.trunc(val * 1.1);
   if (mod.minus === statName) val = Math.trunc(val * 0.9);
+  if (badgeBoost) val = Math.trunc(val * 1.1);
 
   return val;
+}
+
+export function calcPinchThreshold(maxHp: number): number {
+  return Math.trunc(maxHp / 3);
+}
+
+export function applyStatStage(stat: number, stage: number): number {
+  if (stage === 0) return stat;
+  const factor = stage > 0 ? (2 + stage) / 2 : 2 / (2 - stage);
+  return Math.trunc(stat * factor);
 }
