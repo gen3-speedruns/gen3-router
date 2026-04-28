@@ -1,0 +1,9053 @@
+import type { Pokemon } from '../types';
+
+export const PokemonData: Record<string, Pokemon> = {
+  "Bulbasaur": {
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "baseStats": {
+      "hp": 45,
+      "atk": 49,
+      "def": 49,
+      "spa": 65,
+      "spd": 65,
+      "spe": 45
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 64,
+    "growthRate": "MediumSlow"
+  },
+  "Ivysaur": {
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "baseStats": {
+      "hp": 60,
+      "atk": 62,
+      "def": 63,
+      "spa": 80,
+      "spd": 80,
+      "spe": 60
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 1,
+      "spe": 0
+    },
+    "baseExp": 141,
+    "growthRate": "MediumSlow"
+  },
+  "Venusaur": {
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "baseStats": {
+      "hp": 80,
+      "atk": 82,
+      "def": 83,
+      "spa": 100,
+      "spd": 100,
+      "spe": 80
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 1,
+      "spe": 0
+    },
+    "baseExp": 208,
+    "growthRate": "MediumSlow"
+  },
+  "Charmander": {
+    "types": [
+      "fire"
+    ],
+    "baseStats": {
+      "hp": 39,
+      "atk": 52,
+      "def": 43,
+      "spa": 60,
+      "spd": 50,
+      "spe": 65
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "baseExp": 65,
+    "growthRate": "MediumSlow"
+  },
+  "Charmeleon": {
+    "types": [
+      "fire"
+    ],
+    "baseStats": {
+      "hp": 58,
+      "atk": 64,
+      "def": 58,
+      "spa": 80,
+      "spd": 65,
+      "spe": 80
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 1
+    },
+    "baseExp": 142,
+    "growthRate": "MediumSlow"
+  },
+  "Charizard": {
+    "types": [
+      "fire",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 78,
+      "atk": 84,
+      "def": 78,
+      "spa": 109,
+      "spd": 85,
+      "spe": 100
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 3,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 209,
+    "growthRate": "MediumSlow"
+  },
+  "Squirtle": {
+    "types": [
+      "water"
+    ],
+    "baseStats": {
+      "hp": 44,
+      "atk": 48,
+      "def": 65,
+      "spa": 50,
+      "spd": 64,
+      "spe": 43
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 66,
+    "growthRate": "MediumSlow"
+  },
+  "Wartortle": {
+    "types": [
+      "water"
+    ],
+    "baseStats": {
+      "hp": 59,
+      "atk": 63,
+      "def": 80,
+      "spa": 65,
+      "spd": 80,
+      "spe": 58
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "baseExp": 143,
+    "growthRate": "MediumSlow"
+  },
+  "Blastoise": {
+    "types": [
+      "water"
+    ],
+    "baseStats": {
+      "hp": 79,
+      "atk": 83,
+      "def": 100,
+      "spa": 85,
+      "spd": 105,
+      "spe": 78
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 3,
+      "spe": 0
+    },
+    "baseExp": 210,
+    "growthRate": "MediumSlow"
+  },
+  "Caterpie": {
+    "types": [
+      "bug"
+    ],
+    "baseStats": {
+      "hp": 45,
+      "atk": 30,
+      "def": 35,
+      "spa": 20,
+      "spd": 20,
+      "spe": 45
+    },
+    "evYield": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 53,
+    "growthRate": "MediumFast"
+  },
+  "Metapod": {
+    "types": [
+      "bug"
+    ],
+    "baseStats": {
+      "hp": 50,
+      "atk": 20,
+      "def": 55,
+      "spa": 25,
+      "spd": 25,
+      "spe": 30
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 72,
+    "growthRate": "MediumFast"
+  },
+  "Butterfree": {
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 60,
+      "atk": 45,
+      "def": 50,
+      "spa": 80,
+      "spd": 80,
+      "spe": 70
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 1,
+      "spe": 0
+    },
+    "baseExp": 160,
+    "growthRate": "MediumFast"
+  },
+  "Weedle": {
+    "types": [
+      "bug",
+      "poison"
+    ],
+    "baseStats": {
+      "hp": 40,
+      "atk": 35,
+      "def": 30,
+      "spa": 20,
+      "spd": 20,
+      "spe": 50
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "baseExp": 52,
+    "growthRate": "MediumFast"
+  },
+  "Kakuna": {
+    "types": [
+      "bug",
+      "poison"
+    ],
+    "baseStats": {
+      "hp": 45,
+      "atk": 25,
+      "def": 50,
+      "spa": 25,
+      "spd": 25,
+      "spe": 35
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 71,
+    "growthRate": "MediumFast"
+  },
+  "Beedrill": {
+    "types": [
+      "bug",
+      "poison"
+    ],
+    "baseStats": {
+      "hp": 65,
+      "atk": 80,
+      "def": 40,
+      "spa": 45,
+      "spd": 80,
+      "spe": 75
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "baseExp": 159,
+    "growthRate": "MediumFast"
+  },
+  "Pidgey": {
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 40,
+      "atk": 45,
+      "def": 40,
+      "spa": 35,
+      "spd": 35,
+      "spe": 56
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "baseExp": 55,
+    "growthRate": "MediumSlow"
+  },
+  "Pidgeotto": {
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 63,
+      "atk": 60,
+      "def": 55,
+      "spa": 50,
+      "spd": 50,
+      "spe": 71
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "baseExp": 113,
+    "growthRate": "MediumSlow"
+  },
+  "Pidgeot": {
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 83,
+      "atk": 80,
+      "def": 75,
+      "spa": 70,
+      "spd": 70,
+      "spe": 91
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 3
+    },
+    "baseExp": 172,
+    "growthRate": "MediumSlow"
+  },
+  "Rattata": {
+    "types": [
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 30,
+      "atk": 56,
+      "def": 35,
+      "spa": 25,
+      "spd": 35,
+      "spe": 72
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "baseExp": 57,
+    "growthRate": "MediumFast"
+  },
+  "Raticate": {
+    "types": [
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 55,
+      "atk": 81,
+      "def": 60,
+      "spa": 50,
+      "spd": 70,
+      "spe": 97
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "baseExp": 116,
+    "growthRate": "MediumFast"
+  },
+  "Spearow": {
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 40,
+      "atk": 60,
+      "def": 30,
+      "spa": 31,
+      "spd": 31,
+      "spe": 70
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "baseExp": 58,
+    "growthRate": "MediumFast"
+  },
+  "Fearow": {
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 65,
+      "atk": 90,
+      "def": 65,
+      "spa": 61,
+      "spd": 61,
+      "spe": 100
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "baseExp": 162,
+    "growthRate": "MediumFast"
+  },
+  "Ekans": {
+    "types": [
+      "poison"
+    ],
+    "baseStats": {
+      "hp": 35,
+      "atk": 60,
+      "def": 44,
+      "spa": 40,
+      "spd": 54,
+      "spe": 55
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 62,
+    "growthRate": "MediumFast"
+  },
+  "Arbok": {
+    "types": [
+      "poison"
+    ],
+    "baseStats": {
+      "hp": 60,
+      "atk": 85,
+      "def": 69,
+      "spa": 65,
+      "spd": 79,
+      "spe": 80
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 147,
+    "growthRate": "MediumFast"
+  },
+  "Pikachu": {
+    "types": [
+      "electric"
+    ],
+    "baseStats": {
+      "hp": 35,
+      "atk": 55,
+      "def": 30,
+      "spa": 50,
+      "spd": 40,
+      "spe": 90
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "baseExp": 82,
+    "growthRate": "MediumFast"
+  },
+  "Raichu": {
+    "types": [
+      "electric"
+    ],
+    "baseStats": {
+      "hp": 60,
+      "atk": 90,
+      "def": 55,
+      "spa": 90,
+      "spd": 80,
+      "spe": 100
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 3
+    },
+    "baseExp": 122,
+    "growthRate": "MediumFast"
+  },
+  "Sandshrew": {
+    "types": [
+      "ground"
+    ],
+    "baseStats": {
+      "hp": 50,
+      "atk": 75,
+      "def": 85,
+      "spa": 20,
+      "spd": 30,
+      "spe": 40
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 93,
+    "growthRate": "MediumFast"
+  },
+  "Sandslash": {
+    "types": [
+      "ground"
+    ],
+    "baseStats": {
+      "hp": 75,
+      "atk": 100,
+      "def": 110,
+      "spa": 45,
+      "spd": 55,
+      "spe": 65
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 163,
+    "growthRate": "MediumFast"
+  },
+  "Nidoran_f": {
+    "types": [
+      "poison"
+    ],
+    "baseStats": {
+      "hp": 55,
+      "atk": 47,
+      "def": 52,
+      "spa": 40,
+      "spd": 40,
+      "spe": 41
+    },
+    "evYield": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 59,
+    "growthRate": "MediumSlow"
+  },
+  "Nidorina": {
+    "types": [
+      "poison"
+    ],
+    "baseStats": {
+      "hp": 70,
+      "atk": 62,
+      "def": 67,
+      "spa": 55,
+      "spd": 55,
+      "spe": 56
+    },
+    "evYield": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 117,
+    "growthRate": "MediumSlow"
+  },
+  "Nidoqueen": {
+    "types": [
+      "poison",
+      "ground"
+    ],
+    "baseStats": {
+      "hp": 90,
+      "atk": 82,
+      "def": 87,
+      "spa": 75,
+      "spd": 85,
+      "spe": 76
+    },
+    "evYield": {
+      "hp": 3,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 194,
+    "growthRate": "MediumSlow"
+  },
+  "Nidoran_m": {
+    "types": [
+      "poison"
+    ],
+    "baseStats": {
+      "hp": 46,
+      "atk": 57,
+      "def": 40,
+      "spa": 40,
+      "spd": 40,
+      "spe": 50
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 60,
+    "growthRate": "MediumSlow"
+  },
+  "Nidorino": {
+    "types": [
+      "poison"
+    ],
+    "baseStats": {
+      "hp": 61,
+      "atk": 72,
+      "def": 57,
+      "spa": 55,
+      "spd": 55,
+      "spe": 65
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 118,
+    "growthRate": "MediumSlow"
+  },
+  "Nidoking": {
+    "types": [
+      "poison",
+      "ground"
+    ],
+    "baseStats": {
+      "hp": 81,
+      "atk": 92,
+      "def": 77,
+      "spa": 85,
+      "spd": 75,
+      "spe": 85
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 3,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 195,
+    "growthRate": "MediumSlow"
+  },
+  "Clefairy": {
+    "types": [
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 70,
+      "atk": 45,
+      "def": 48,
+      "spa": 60,
+      "spd": 65,
+      "spe": 35
+    },
+    "evYield": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 68,
+    "growthRate": "Fast"
+  },
+  "Clefable": {
+    "types": [
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 95,
+      "atk": 70,
+      "def": 73,
+      "spa": 85,
+      "spd": 90,
+      "spe": 60
+    },
+    "evYield": {
+      "hp": 3,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 129,
+    "growthRate": "Fast"
+  },
+  "Vulpix": {
+    "types": [
+      "fire"
+    ],
+    "baseStats": {
+      "hp": 38,
+      "atk": 41,
+      "def": 40,
+      "spa": 50,
+      "spd": 65,
+      "spe": 65
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "baseExp": 63,
+    "growthRate": "MediumFast"
+  },
+  "Ninetales": {
+    "types": [
+      "fire"
+    ],
+    "baseStats": {
+      "hp": 73,
+      "atk": 76,
+      "def": 75,
+      "spa": 81,
+      "spd": 100,
+      "spe": 100
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 1,
+      "spe": 1
+    },
+    "baseExp": 178,
+    "growthRate": "MediumFast"
+  },
+  "Jigglypuff": {
+    "types": [
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 115,
+      "atk": 45,
+      "def": 20,
+      "spa": 45,
+      "spd": 25,
+      "spe": 20
+    },
+    "evYield": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 76,
+    "growthRate": "Fast"
+  },
+  "Wigglytuff": {
+    "types": [
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 140,
+      "atk": 70,
+      "def": 45,
+      "spa": 75,
+      "spd": 50,
+      "spe": 45
+    },
+    "evYield": {
+      "hp": 3,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 109,
+    "growthRate": "Fast"
+  },
+  "Zubat": {
+    "types": [
+      "poison",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 40,
+      "atk": 45,
+      "def": 35,
+      "spa": 30,
+      "spd": 40,
+      "spe": 55
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "baseExp": 54,
+    "growthRate": "MediumFast"
+  },
+  "Golbat": {
+    "types": [
+      "poison",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 75,
+      "atk": 80,
+      "def": 70,
+      "spa": 65,
+      "spd": 75,
+      "spe": 90
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "baseExp": 171,
+    "growthRate": "MediumFast"
+  },
+  "Oddish": {
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "baseStats": {
+      "hp": 45,
+      "atk": 50,
+      "def": 55,
+      "spa": 75,
+      "spd": 65,
+      "spe": 30
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 78,
+    "growthRate": "MediumSlow"
+  },
+  "Gloom": {
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "baseStats": {
+      "hp": 60,
+      "atk": 65,
+      "def": 70,
+      "spa": 85,
+      "spd": 75,
+      "spe": 40
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 132,
+    "growthRate": "MediumSlow"
+  },
+  "Vileplume": {
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "baseStats": {
+      "hp": 75,
+      "atk": 80,
+      "def": 85,
+      "spa": 100,
+      "spd": 90,
+      "spe": 50
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 3,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 184,
+    "growthRate": "MediumSlow"
+  },
+  "Paras": {
+    "types": [
+      "bug",
+      "grass"
+    ],
+    "baseStats": {
+      "hp": 35,
+      "atk": 70,
+      "def": 55,
+      "spa": 45,
+      "spd": 55,
+      "spe": 25
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 70,
+    "growthRate": "MediumFast"
+  },
+  "Parasect": {
+    "types": [
+      "bug",
+      "grass"
+    ],
+    "baseStats": {
+      "hp": 60,
+      "atk": 95,
+      "def": 80,
+      "spa": 60,
+      "spd": 80,
+      "spe": 30
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 2,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 128,
+    "growthRate": "MediumFast"
+  },
+  "Venonat": {
+    "types": [
+      "bug",
+      "poison"
+    ],
+    "baseStats": {
+      "hp": 60,
+      "atk": 55,
+      "def": 50,
+      "spa": 40,
+      "spd": 55,
+      "spe": 45
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "baseExp": 75,
+    "growthRate": "MediumFast"
+  },
+  "Venomoth": {
+    "types": [
+      "bug",
+      "poison"
+    ],
+    "baseStats": {
+      "hp": 70,
+      "atk": 65,
+      "def": 60,
+      "spa": 90,
+      "spd": 75,
+      "spe": 90
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 1
+    },
+    "baseExp": 138,
+    "growthRate": "MediumFast"
+  },
+  "Diglett": {
+    "types": [
+      "ground"
+    ],
+    "baseStats": {
+      "hp": 10,
+      "atk": 55,
+      "def": 25,
+      "spa": 35,
+      "spd": 45,
+      "spe": 95
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "baseExp": 81,
+    "growthRate": "MediumFast"
+  },
+  "Dugtrio": {
+    "types": [
+      "ground"
+    ],
+    "baseStats": {
+      "hp": 35,
+      "atk": 80,
+      "def": 50,
+      "spa": 50,
+      "spd": 70,
+      "spe": 120
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "baseExp": 153,
+    "growthRate": "MediumFast"
+  },
+  "Meowth": {
+    "types": [
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 40,
+      "atk": 45,
+      "def": 35,
+      "spa": 40,
+      "spd": 40,
+      "spe": 90
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "baseExp": 69,
+    "growthRate": "MediumFast"
+  },
+  "Persian": {
+    "types": [
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 65,
+      "atk": 70,
+      "def": 60,
+      "spa": 65,
+      "spd": 65,
+      "spe": 115
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "baseExp": 148,
+    "growthRate": "MediumFast"
+  },
+  "Psyduck": {
+    "types": [
+      "water"
+    ],
+    "baseStats": {
+      "hp": 50,
+      "atk": 52,
+      "def": 48,
+      "spa": 65,
+      "spd": 50,
+      "spe": 55
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 80,
+    "growthRate": "MediumFast"
+  },
+  "Golduck": {
+    "types": [
+      "water"
+    ],
+    "baseStats": {
+      "hp": 80,
+      "atk": 82,
+      "def": 78,
+      "spa": 95,
+      "spd": 80,
+      "spe": 85
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 174,
+    "growthRate": "MediumFast"
+  },
+  "Mankey": {
+    "types": [
+      "fighting"
+    ],
+    "baseStats": {
+      "hp": 40,
+      "atk": 80,
+      "def": 35,
+      "spa": 35,
+      "spd": 45,
+      "spe": 70
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 74,
+    "growthRate": "MediumFast"
+  },
+  "Primeape": {
+    "types": [
+      "fighting"
+    ],
+    "baseStats": {
+      "hp": 65,
+      "atk": 105,
+      "def": 60,
+      "spa": 60,
+      "spd": 70,
+      "spe": 95
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 149,
+    "growthRate": "MediumFast"
+  },
+  "Growlithe": {
+    "types": [
+      "fire"
+    ],
+    "baseStats": {
+      "hp": 55,
+      "atk": 70,
+      "def": 45,
+      "spa": 70,
+      "spd": 50,
+      "spe": 60
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 91,
+    "growthRate": "Slow"
+  },
+  "Arcanine": {
+    "types": [
+      "fire"
+    ],
+    "baseStats": {
+      "hp": 90,
+      "atk": 110,
+      "def": 80,
+      "spa": 100,
+      "spd": 80,
+      "spe": 95
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 213,
+    "growthRate": "Slow"
+  },
+  "Poliwag": {
+    "types": [
+      "water"
+    ],
+    "baseStats": {
+      "hp": 40,
+      "atk": 50,
+      "def": 40,
+      "spa": 40,
+      "spd": 40,
+      "spe": 90
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "baseExp": 77,
+    "growthRate": "MediumSlow"
+  },
+  "Poliwhirl": {
+    "types": [
+      "water"
+    ],
+    "baseStats": {
+      "hp": 65,
+      "atk": 65,
+      "def": 65,
+      "spa": 50,
+      "spd": 50,
+      "spe": 90
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "baseExp": 131,
+    "growthRate": "MediumSlow"
+  },
+  "Poliwrath": {
+    "types": [
+      "water",
+      "fighting"
+    ],
+    "baseStats": {
+      "hp": 90,
+      "atk": 85,
+      "def": 95,
+      "spa": 70,
+      "spd": 90,
+      "spe": 70
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 3,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 185,
+    "growthRate": "MediumSlow"
+  },
+  "Abra": {
+    "types": [
+      "psychic"
+    ],
+    "baseStats": {
+      "hp": 25,
+      "atk": 20,
+      "def": 15,
+      "spa": 105,
+      "spd": 55,
+      "spe": 90
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 73,
+    "growthRate": "MediumSlow"
+  },
+  "Kadabra": {
+    "types": [
+      "psychic"
+    ],
+    "baseStats": {
+      "hp": 40,
+      "atk": 35,
+      "def": 30,
+      "spa": 120,
+      "spd": 70,
+      "spe": 105
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 145,
+    "growthRate": "MediumSlow"
+  },
+  "Alakazam": {
+    "types": [
+      "psychic"
+    ],
+    "baseStats": {
+      "hp": 55,
+      "atk": 50,
+      "def": 45,
+      "spa": 135,
+      "spd": 85,
+      "spe": 120
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 3,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 186,
+    "growthRate": "MediumSlow"
+  },
+  "Machop": {
+    "types": [
+      "fighting"
+    ],
+    "baseStats": {
+      "hp": 70,
+      "atk": 80,
+      "def": 50,
+      "spa": 35,
+      "spd": 35,
+      "spe": 35
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 88,
+    "growthRate": "MediumSlow"
+  },
+  "Machoke": {
+    "types": [
+      "fighting"
+    ],
+    "baseStats": {
+      "hp": 80,
+      "atk": 100,
+      "def": 70,
+      "spa": 50,
+      "spd": 60,
+      "spe": 45
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 146,
+    "growthRate": "MediumSlow"
+  },
+  "Machamp": {
+    "types": [
+      "fighting"
+    ],
+    "baseStats": {
+      "hp": 90,
+      "atk": 130,
+      "def": 80,
+      "spa": 65,
+      "spd": 85,
+      "spe": 55
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 3,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 193,
+    "growthRate": "MediumSlow"
+  },
+  "Bellsprout": {
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "baseStats": {
+      "hp": 50,
+      "atk": 75,
+      "def": 35,
+      "spa": 70,
+      "spd": 30,
+      "spe": 40
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 84,
+    "growthRate": "MediumSlow"
+  },
+  "Weepinbell": {
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "baseStats": {
+      "hp": 65,
+      "atk": 90,
+      "def": 50,
+      "spa": 85,
+      "spd": 45,
+      "spe": 55
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 151,
+    "growthRate": "MediumSlow"
+  },
+  "Victreebel": {
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "baseStats": {
+      "hp": 80,
+      "atk": 105,
+      "def": 65,
+      "spa": 100,
+      "spd": 60,
+      "spe": 70
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 3,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 191,
+    "growthRate": "MediumSlow"
+  },
+  "Tentacool": {
+    "types": [
+      "water",
+      "poison"
+    ],
+    "baseStats": {
+      "hp": 40,
+      "atk": 40,
+      "def": 35,
+      "spa": 50,
+      "spd": 100,
+      "spe": 70
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "baseExp": 105,
+    "growthRate": "Slow"
+  },
+  "Tentacruel": {
+    "types": [
+      "water",
+      "poison"
+    ],
+    "baseStats": {
+      "hp": 80,
+      "atk": 70,
+      "def": 65,
+      "spa": 80,
+      "spd": 120,
+      "spe": 100
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 2,
+      "spe": 0
+    },
+    "baseExp": 205,
+    "growthRate": "Slow"
+  },
+  "Geodude": {
+    "types": [
+      "rock",
+      "ground"
+    ],
+    "baseStats": {
+      "hp": 40,
+      "atk": 80,
+      "def": 100,
+      "spa": 30,
+      "spd": 30,
+      "spe": 20
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 86,
+    "growthRate": "MediumSlow"
+  },
+  "Graveler": {
+    "types": [
+      "rock",
+      "ground"
+    ],
+    "baseStats": {
+      "hp": 55,
+      "atk": 95,
+      "def": 115,
+      "spa": 45,
+      "spd": 45,
+      "spe": 35
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 134,
+    "growthRate": "MediumSlow"
+  },
+  "Golem": {
+    "types": [
+      "rock",
+      "ground"
+    ],
+    "baseStats": {
+      "hp": 80,
+      "atk": 110,
+      "def": 130,
+      "spa": 55,
+      "spd": 65,
+      "spe": 45
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 3,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 177,
+    "growthRate": "MediumSlow"
+  },
+  "Ponyta": {
+    "types": [
+      "fire"
+    ],
+    "baseStats": {
+      "hp": 50,
+      "atk": 85,
+      "def": 55,
+      "spa": 65,
+      "spd": 65,
+      "spe": 90
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "baseExp": 152,
+    "growthRate": "MediumFast"
+  },
+  "Rapidash": {
+    "types": [
+      "fire"
+    ],
+    "baseStats": {
+      "hp": 65,
+      "atk": 100,
+      "def": 70,
+      "spa": 80,
+      "spd": 80,
+      "spe": 105
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "baseExp": 192,
+    "growthRate": "MediumFast"
+  },
+  "Slowpoke": {
+    "types": [
+      "water",
+      "psychic"
+    ],
+    "baseStats": {
+      "hp": 90,
+      "atk": 65,
+      "def": 65,
+      "spa": 40,
+      "spd": 40,
+      "spe": 15
+    },
+    "evYield": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 99,
+    "growthRate": "MediumFast"
+  },
+  "Slowbro": {
+    "types": [
+      "water",
+      "psychic"
+    ],
+    "baseStats": {
+      "hp": 95,
+      "atk": 75,
+      "def": 110,
+      "spa": 100,
+      "spd": 80,
+      "spe": 30
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 164,
+    "growthRate": "MediumFast"
+  },
+  "Magnemite": {
+    "types": [
+      "electric",
+      "steel"
+    ],
+    "baseStats": {
+      "hp": 25,
+      "atk": 35,
+      "def": 70,
+      "spa": 95,
+      "spd": 55,
+      "spe": 45
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 89,
+    "growthRate": "MediumFast"
+  },
+  "Magneton": {
+    "types": [
+      "electric",
+      "steel"
+    ],
+    "baseStats": {
+      "hp": 50,
+      "atk": 60,
+      "def": 95,
+      "spa": 120,
+      "spd": 70,
+      "spe": 70
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 161,
+    "growthRate": "MediumFast"
+  },
+  "Farfetchd": {
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 52,
+      "atk": 65,
+      "def": 55,
+      "spa": 58,
+      "spd": 62,
+      "spe": 60
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 94,
+    "growthRate": "MediumFast"
+  },
+  "Doduo": {
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 35,
+      "atk": 85,
+      "def": 45,
+      "spa": 35,
+      "spd": 35,
+      "spe": 75
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 96,
+    "growthRate": "MediumFast"
+  },
+  "Dodrio": {
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 60,
+      "atk": 110,
+      "def": 70,
+      "spa": 60,
+      "spd": 60,
+      "spe": 100
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 158,
+    "growthRate": "MediumFast"
+  },
+  "Seel": {
+    "types": [
+      "water"
+    ],
+    "baseStats": {
+      "hp": 65,
+      "atk": 45,
+      "def": 55,
+      "spa": 45,
+      "spd": 70,
+      "spe": 45
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "baseExp": 100,
+    "growthRate": "MediumFast"
+  },
+  "Dewgong": {
+    "types": [
+      "water",
+      "ice"
+    ],
+    "baseStats": {
+      "hp": 90,
+      "atk": 70,
+      "def": 80,
+      "spa": 70,
+      "spd": 95,
+      "spe": 70
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 2,
+      "spe": 0
+    },
+    "baseExp": 176,
+    "growthRate": "MediumFast"
+  },
+  "Grimer": {
+    "types": [
+      "poison"
+    ],
+    "baseStats": {
+      "hp": 80,
+      "atk": 80,
+      "def": 50,
+      "spa": 40,
+      "spd": 50,
+      "spe": 25
+    },
+    "evYield": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 90,
+    "growthRate": "MediumFast"
+  },
+  "Muk": {
+    "types": [
+      "poison"
+    ],
+    "baseStats": {
+      "hp": 105,
+      "atk": 105,
+      "def": 75,
+      "spa": 65,
+      "spd": 100,
+      "spe": 50
+    },
+    "evYield": {
+      "hp": 1,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 157,
+    "growthRate": "MediumFast"
+  },
+  "Shellder": {
+    "types": [
+      "water"
+    ],
+    "baseStats": {
+      "hp": 30,
+      "atk": 65,
+      "def": 100,
+      "spa": 45,
+      "spd": 25,
+      "spe": 40
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 97,
+    "growthRate": "Slow"
+  },
+  "Cloyster": {
+    "types": [
+      "water",
+      "ice"
+    ],
+    "baseStats": {
+      "hp": 50,
+      "atk": 95,
+      "def": 180,
+      "spa": 85,
+      "spd": 45,
+      "spe": 70
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 203,
+    "growthRate": "Slow"
+  },
+  "Gastly": {
+    "types": [
+      "ghost",
+      "poison"
+    ],
+    "baseStats": {
+      "hp": 30,
+      "atk": 35,
+      "def": 30,
+      "spa": 100,
+      "spd": 35,
+      "spe": 80
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 95,
+    "growthRate": "MediumSlow"
+  },
+  "Haunter": {
+    "types": [
+      "ghost",
+      "poison"
+    ],
+    "baseStats": {
+      "hp": 45,
+      "atk": 50,
+      "def": 45,
+      "spa": 115,
+      "spd": 55,
+      "spe": 95
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 126,
+    "growthRate": "MediumSlow"
+  },
+  "Gengar": {
+    "types": [
+      "ghost",
+      "poison"
+    ],
+    "baseStats": {
+      "hp": 60,
+      "atk": 65,
+      "def": 60,
+      "spa": 130,
+      "spd": 75,
+      "spe": 110
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 3,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 190,
+    "growthRate": "MediumSlow"
+  },
+  "Onix": {
+    "types": [
+      "rock",
+      "ground"
+    ],
+    "baseStats": {
+      "hp": 35,
+      "atk": 45,
+      "def": 160,
+      "spa": 30,
+      "spd": 45,
+      "spe": 70
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 108,
+    "growthRate": "MediumFast"
+  },
+  "Drowzee": {
+    "types": [
+      "psychic"
+    ],
+    "baseStats": {
+      "hp": 60,
+      "atk": 48,
+      "def": 45,
+      "spa": 43,
+      "spd": 90,
+      "spe": 42
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "baseExp": 102,
+    "growthRate": "MediumFast"
+  },
+  "Hypno": {
+    "types": [
+      "psychic"
+    ],
+    "baseStats": {
+      "hp": 85,
+      "atk": 73,
+      "def": 70,
+      "spa": 73,
+      "spd": 115,
+      "spe": 67
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 2,
+      "spe": 0
+    },
+    "baseExp": 165,
+    "growthRate": "MediumFast"
+  },
+  "Krabby": {
+    "types": [
+      "water"
+    ],
+    "baseStats": {
+      "hp": 30,
+      "atk": 105,
+      "def": 90,
+      "spa": 25,
+      "spd": 25,
+      "spe": 50
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 115,
+    "growthRate": "MediumFast"
+  },
+  "Kingler": {
+    "types": [
+      "water"
+    ],
+    "baseStats": {
+      "hp": 55,
+      "atk": 130,
+      "def": 115,
+      "spa": 50,
+      "spd": 50,
+      "spe": 75
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 206,
+    "growthRate": "MediumFast"
+  },
+  "Voltorb": {
+    "types": [
+      "electric"
+    ],
+    "baseStats": {
+      "hp": 40,
+      "atk": 30,
+      "def": 50,
+      "spa": 55,
+      "spd": 55,
+      "spe": 100
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "baseExp": 103,
+    "growthRate": "MediumFast"
+  },
+  "Electrode": {
+    "types": [
+      "electric"
+    ],
+    "baseStats": {
+      "hp": 60,
+      "atk": 50,
+      "def": 70,
+      "spa": 80,
+      "spd": 80,
+      "spe": 140
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "baseExp": 150,
+    "growthRate": "MediumFast"
+  },
+  "Exeggcute": {
+    "types": [
+      "grass",
+      "psychic"
+    ],
+    "baseStats": {
+      "hp": 60,
+      "atk": 40,
+      "def": 80,
+      "spa": 60,
+      "spd": 45,
+      "spe": 40
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 98,
+    "growthRate": "Slow"
+  },
+  "Exeggutor": {
+    "types": [
+      "grass",
+      "psychic"
+    ],
+    "baseStats": {
+      "hp": 95,
+      "atk": 95,
+      "def": 85,
+      "spa": 125,
+      "spd": 65,
+      "spe": 55
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 212,
+    "growthRate": "Slow"
+  },
+  "Cubone": {
+    "types": [
+      "ground"
+    ],
+    "baseStats": {
+      "hp": 50,
+      "atk": 50,
+      "def": 95,
+      "spa": 40,
+      "spd": 50,
+      "spe": 35
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 87,
+    "growthRate": "MediumFast"
+  },
+  "Marowak": {
+    "types": [
+      "ground"
+    ],
+    "baseStats": {
+      "hp": 60,
+      "atk": 80,
+      "def": 110,
+      "spa": 50,
+      "spd": 80,
+      "spe": 45
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 124,
+    "growthRate": "MediumFast"
+  },
+  "Hitmonlee": {
+    "types": [
+      "fighting"
+    ],
+    "baseStats": {
+      "hp": 50,
+      "atk": 120,
+      "def": 53,
+      "spa": 35,
+      "spd": 110,
+      "spe": 87
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 139,
+    "growthRate": "MediumFast"
+  },
+  "Hitmonchan": {
+    "types": [
+      "fighting"
+    ],
+    "baseStats": {
+      "hp": 50,
+      "atk": 105,
+      "def": 79,
+      "spa": 35,
+      "spd": 110,
+      "spe": 76
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 2,
+      "spe": 0
+    },
+    "baseExp": 140,
+    "growthRate": "MediumFast"
+  },
+  "Lickitung": {
+    "types": [
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 90,
+      "atk": 55,
+      "def": 75,
+      "spa": 60,
+      "spd": 75,
+      "spe": 30
+    },
+    "evYield": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 127,
+    "growthRate": "MediumFast"
+  },
+  "Koffing": {
+    "types": [
+      "poison"
+    ],
+    "baseStats": {
+      "hp": 40,
+      "atk": 65,
+      "def": 95,
+      "spa": 60,
+      "spd": 45,
+      "spe": 35
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 114,
+    "growthRate": "MediumFast"
+  },
+  "Weezing": {
+    "types": [
+      "poison"
+    ],
+    "baseStats": {
+      "hp": 65,
+      "atk": 90,
+      "def": 120,
+      "spa": 85,
+      "spd": 70,
+      "spe": 60
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 173,
+    "growthRate": "MediumFast"
+  },
+  "Rhyhorn": {
+    "types": [
+      "ground",
+      "rock"
+    ],
+    "baseStats": {
+      "hp": 80,
+      "atk": 85,
+      "def": 95,
+      "spa": 30,
+      "spd": 30,
+      "spe": 25
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 135,
+    "growthRate": "Slow"
+  },
+  "Rhydon": {
+    "types": [
+      "ground",
+      "rock"
+    ],
+    "baseStats": {
+      "hp": 105,
+      "atk": 130,
+      "def": 120,
+      "spa": 45,
+      "spd": 45,
+      "spe": 40
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 204,
+    "growthRate": "Slow"
+  },
+  "Chansey": {
+    "types": [
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 250,
+      "atk": 5,
+      "def": 5,
+      "spa": 35,
+      "spd": 105,
+      "spe": 50
+    },
+    "evYield": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 255,
+    "growthRate": "Fast"
+  },
+  "Tangela": {
+    "types": [
+      "grass"
+    ],
+    "baseStats": {
+      "hp": 65,
+      "atk": 55,
+      "def": 115,
+      "spa": 100,
+      "spd": 40,
+      "spe": 60
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 166,
+    "growthRate": "MediumFast"
+  },
+  "Kangaskhan": {
+    "types": [
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 105,
+      "atk": 95,
+      "def": 80,
+      "spa": 40,
+      "spd": 80,
+      "spe": 90
+    },
+    "evYield": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 175,
+    "growthRate": "MediumFast"
+  },
+  "Horsea": {
+    "types": [
+      "water"
+    ],
+    "baseStats": {
+      "hp": 30,
+      "atk": 40,
+      "def": 70,
+      "spa": 70,
+      "spd": 25,
+      "spe": 60
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 83,
+    "growthRate": "MediumFast"
+  },
+  "Seadra": {
+    "types": [
+      "water"
+    ],
+    "baseStats": {
+      "hp": 55,
+      "atk": 65,
+      "def": 95,
+      "spa": 95,
+      "spd": 45,
+      "spe": 85
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 155,
+    "growthRate": "MediumFast"
+  },
+  "Goldeen": {
+    "types": [
+      "water"
+    ],
+    "baseStats": {
+      "hp": 45,
+      "atk": 67,
+      "def": 60,
+      "spa": 35,
+      "spd": 50,
+      "spe": 63
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 111,
+    "growthRate": "MediumFast"
+  },
+  "Seaking": {
+    "types": [
+      "water"
+    ],
+    "baseStats": {
+      "hp": 80,
+      "atk": 92,
+      "def": 65,
+      "spa": 65,
+      "spd": 80,
+      "spe": 68
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 170,
+    "growthRate": "MediumFast"
+  },
+  "Staryu": {
+    "types": [
+      "water"
+    ],
+    "baseStats": {
+      "hp": 30,
+      "atk": 45,
+      "def": 55,
+      "spa": 70,
+      "spd": 55,
+      "spe": 85
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "baseExp": 106,
+    "growthRate": "Slow"
+  },
+  "Starmie": {
+    "types": [
+      "water",
+      "psychic"
+    ],
+    "baseStats": {
+      "hp": 60,
+      "atk": 75,
+      "def": 85,
+      "spa": 100,
+      "spd": 85,
+      "spe": 115
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "baseExp": 207,
+    "growthRate": "Slow"
+  },
+  "Mr_mime": {
+    "types": [
+      "psychic"
+    ],
+    "baseStats": {
+      "hp": 40,
+      "atk": 45,
+      "def": 65,
+      "spa": 100,
+      "spd": 120,
+      "spe": 90
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 2,
+      "spe": 0
+    },
+    "baseExp": 136,
+    "growthRate": "MediumFast"
+  },
+  "Scyther": {
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 70,
+      "atk": 110,
+      "def": 80,
+      "spa": 55,
+      "spd": 80,
+      "spe": 105
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 187,
+    "growthRate": "MediumFast"
+  },
+  "Jynx": {
+    "types": [
+      "ice",
+      "psychic"
+    ],
+    "baseStats": {
+      "hp": 65,
+      "atk": 50,
+      "def": 35,
+      "spa": 115,
+      "spd": 95,
+      "spe": 95
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 137,
+    "growthRate": "MediumFast"
+  },
+  "Electabuzz": {
+    "types": [
+      "electric"
+    ],
+    "baseStats": {
+      "hp": 65,
+      "atk": 83,
+      "def": 57,
+      "spa": 95,
+      "spd": 85,
+      "spe": 105
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "baseExp": 156,
+    "growthRate": "MediumFast"
+  },
+  "Magmar": {
+    "types": [
+      "fire"
+    ],
+    "baseStats": {
+      "hp": 65,
+      "atk": 95,
+      "def": 57,
+      "spa": 100,
+      "spd": 85,
+      "spe": 93
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 167,
+    "growthRate": "MediumFast"
+  },
+  "Pinsir": {
+    "types": [
+      "bug"
+    ],
+    "baseStats": {
+      "hp": 65,
+      "atk": 125,
+      "def": 100,
+      "spa": 55,
+      "spd": 70,
+      "spe": 85
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 200,
+    "growthRate": "Slow"
+  },
+  "Tauros": {
+    "types": [
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 75,
+      "atk": 100,
+      "def": 95,
+      "spa": 40,
+      "spd": 70,
+      "spe": 110
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "baseExp": 211,
+    "growthRate": "Slow"
+  },
+  "Magikarp": {
+    "types": [
+      "water"
+    ],
+    "baseStats": {
+      "hp": 20,
+      "atk": 10,
+      "def": 55,
+      "spa": 15,
+      "spd": 20,
+      "spe": 80
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "baseExp": 20,
+    "growthRate": "Slow"
+  },
+  "Gyarados": {
+    "types": [
+      "water",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 95,
+      "atk": 125,
+      "def": 79,
+      "spa": 60,
+      "spd": 100,
+      "spe": 81
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 214,
+    "growthRate": "Slow"
+  },
+  "Lapras": {
+    "types": [
+      "water",
+      "ice"
+    ],
+    "baseStats": {
+      "hp": 130,
+      "atk": 85,
+      "def": 80,
+      "spa": 85,
+      "spd": 95,
+      "spe": 60
+    },
+    "evYield": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 219,
+    "growthRate": "Slow"
+  },
+  "Ditto": {
+    "types": [
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 48,
+      "atk": 48,
+      "def": 48,
+      "spa": 48,
+      "spd": 48,
+      "spe": 48
+    },
+    "evYield": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 61,
+    "growthRate": "MediumFast"
+  },
+  "Eevee": {
+    "types": [
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 55,
+      "atk": 55,
+      "def": 50,
+      "spa": 45,
+      "spd": 65,
+      "spe": 55
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "baseExp": 92,
+    "growthRate": "MediumFast"
+  },
+  "Vaporeon": {
+    "types": [
+      "water"
+    ],
+    "baseStats": {
+      "hp": 130,
+      "atk": 65,
+      "def": 60,
+      "spa": 110,
+      "spd": 95,
+      "spe": 65
+    },
+    "evYield": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 196,
+    "growthRate": "MediumFast"
+  },
+  "Jolteon": {
+    "types": [
+      "electric"
+    ],
+    "baseStats": {
+      "hp": 65,
+      "atk": 65,
+      "def": 60,
+      "spa": 110,
+      "spd": 95,
+      "spe": 130
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "baseExp": 197,
+    "growthRate": "MediumFast"
+  },
+  "Flareon": {
+    "types": [
+      "fire"
+    ],
+    "baseStats": {
+      "hp": 65,
+      "atk": 130,
+      "def": 60,
+      "spa": 95,
+      "spd": 110,
+      "spe": 65
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 198,
+    "growthRate": "MediumFast"
+  },
+  "Porygon": {
+    "types": [
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 65,
+      "atk": 60,
+      "def": 70,
+      "spa": 85,
+      "spd": 75,
+      "spe": 40
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 130,
+    "growthRate": "MediumFast"
+  },
+  "Omanyte": {
+    "types": [
+      "rock",
+      "water"
+    ],
+    "baseStats": {
+      "hp": 35,
+      "atk": 40,
+      "def": 100,
+      "spa": 90,
+      "spd": 55,
+      "spe": 35
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 120,
+    "growthRate": "MediumFast"
+  },
+  "Omastar": {
+    "types": [
+      "rock",
+      "water"
+    ],
+    "baseStats": {
+      "hp": 70,
+      "atk": 60,
+      "def": 125,
+      "spa": 115,
+      "spd": 70,
+      "spe": 55
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 199,
+    "growthRate": "MediumFast"
+  },
+  "Kabuto": {
+    "types": [
+      "rock",
+      "water"
+    ],
+    "baseStats": {
+      "hp": 30,
+      "atk": 80,
+      "def": 90,
+      "spa": 55,
+      "spd": 45,
+      "spe": 55
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 119,
+    "growthRate": "MediumFast"
+  },
+  "Kabutops": {
+    "types": [
+      "rock",
+      "water"
+    ],
+    "baseStats": {
+      "hp": 60,
+      "atk": 115,
+      "def": 105,
+      "spa": 65,
+      "spd": 70,
+      "spe": 80
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 201,
+    "growthRate": "MediumFast"
+  },
+  "Aerodactyl": {
+    "types": [
+      "rock",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 80,
+      "atk": 105,
+      "def": 65,
+      "spa": 60,
+      "spd": 75,
+      "spe": 130
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "baseExp": 202,
+    "growthRate": "Slow"
+  },
+  "Snorlax": {
+    "types": [
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 160,
+      "atk": 110,
+      "def": 65,
+      "spa": 65,
+      "spd": 110,
+      "spe": 30
+    },
+    "evYield": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 154,
+    "growthRate": "Slow"
+  },
+  "Articuno": {
+    "types": [
+      "ice",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 90,
+      "atk": 85,
+      "def": 100,
+      "spa": 95,
+      "spd": 125,
+      "spe": 85
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 3,
+      "spe": 0
+    },
+    "baseExp": 215,
+    "growthRate": "Slow"
+  },
+  "Zapdos": {
+    "types": [
+      "electric",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 90,
+      "atk": 90,
+      "def": 85,
+      "spa": 125,
+      "spd": 90,
+      "spe": 100
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 3,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 216,
+    "growthRate": "Slow"
+  },
+  "Moltres": {
+    "types": [
+      "fire",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 90,
+      "atk": 100,
+      "def": 90,
+      "spa": 125,
+      "spd": 85,
+      "spe": 90
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 3,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 217,
+    "growthRate": "Slow"
+  },
+  "Dratini": {
+    "types": [
+      "dragon"
+    ],
+    "baseStats": {
+      "hp": 41,
+      "atk": 64,
+      "def": 45,
+      "spa": 50,
+      "spd": 50,
+      "spe": 50
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 67,
+    "growthRate": "Slow"
+  },
+  "Dragonair": {
+    "types": [
+      "dragon"
+    ],
+    "baseStats": {
+      "hp": 61,
+      "atk": 84,
+      "def": 65,
+      "spa": 70,
+      "spd": 70,
+      "spe": 70
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 144,
+    "growthRate": "Slow"
+  },
+  "Dragonite": {
+    "types": [
+      "dragon",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 91,
+      "atk": 134,
+      "def": 95,
+      "spa": 100,
+      "spd": 100,
+      "spe": 80
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 3,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 218,
+    "growthRate": "Slow"
+  },
+  "Mewtwo": {
+    "types": [
+      "psychic"
+    ],
+    "baseStats": {
+      "hp": 106,
+      "atk": 110,
+      "def": 90,
+      "spa": 154,
+      "spd": 90,
+      "spe": 130
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 3,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 220,
+    "growthRate": "Slow"
+  },
+  "Mew": {
+    "types": [
+      "psychic"
+    ],
+    "baseStats": {
+      "hp": 100,
+      "atk": 100,
+      "def": 100,
+      "spa": 100,
+      "spd": 100,
+      "spe": 100
+    },
+    "evYield": {
+      "hp": 3,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 64,
+    "growthRate": "MediumSlow"
+  },
+  "Chikorita": {
+    "types": [
+      "grass"
+    ],
+    "baseStats": {
+      "hp": 45,
+      "atk": 49,
+      "def": 65,
+      "spa": 49,
+      "spd": 65,
+      "spe": 45
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "baseExp": 64,
+    "growthRate": "MediumSlow"
+  },
+  "Bayleef": {
+    "types": [
+      "grass"
+    ],
+    "baseStats": {
+      "hp": 60,
+      "atk": 62,
+      "def": 80,
+      "spa": 63,
+      "spd": 80,
+      "spe": 60
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "baseExp": 141,
+    "growthRate": "MediumSlow"
+  },
+  "Meganium": {
+    "types": [
+      "grass"
+    ],
+    "baseStats": {
+      "hp": 80,
+      "atk": 82,
+      "def": 100,
+      "spa": 83,
+      "spd": 100,
+      "spe": 80
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 2,
+      "spe": 0
+    },
+    "baseExp": 208,
+    "growthRate": "MediumSlow"
+  },
+  "Cyndaquil": {
+    "types": [
+      "fire"
+    ],
+    "baseStats": {
+      "hp": 39,
+      "atk": 52,
+      "def": 43,
+      "spa": 60,
+      "spd": 50,
+      "spe": 65
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "baseExp": 65,
+    "growthRate": "MediumSlow"
+  },
+  "Quilava": {
+    "types": [
+      "fire"
+    ],
+    "baseStats": {
+      "hp": 58,
+      "atk": 64,
+      "def": 58,
+      "spa": 80,
+      "spd": 65,
+      "spe": 80
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 1
+    },
+    "baseExp": 142,
+    "growthRate": "MediumSlow"
+  },
+  "Typhlosion": {
+    "types": [
+      "fire"
+    ],
+    "baseStats": {
+      "hp": 78,
+      "atk": 84,
+      "def": 78,
+      "spa": 109,
+      "spd": 85,
+      "spe": 100
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 3,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 209,
+    "growthRate": "MediumSlow"
+  },
+  "Totodile": {
+    "types": [
+      "water"
+    ],
+    "baseStats": {
+      "hp": 50,
+      "atk": 65,
+      "def": 64,
+      "spa": 44,
+      "spd": 48,
+      "spe": 43
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 66,
+    "growthRate": "MediumSlow"
+  },
+  "Croconaw": {
+    "types": [
+      "water"
+    ],
+    "baseStats": {
+      "hp": 65,
+      "atk": 80,
+      "def": 80,
+      "spa": 59,
+      "spd": 63,
+      "spe": 58
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 1,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 143,
+    "growthRate": "MediumSlow"
+  },
+  "Feraligatr": {
+    "types": [
+      "water"
+    ],
+    "baseStats": {
+      "hp": 85,
+      "atk": 105,
+      "def": 100,
+      "spa": 79,
+      "spd": 83,
+      "spe": 78
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 2,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 210,
+    "growthRate": "MediumSlow"
+  },
+  "Sentret": {
+    "types": [
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 35,
+      "atk": 46,
+      "def": 34,
+      "spa": 35,
+      "spd": 45,
+      "spe": 20
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 57,
+    "growthRate": "MediumFast"
+  },
+  "Furret": {
+    "types": [
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 85,
+      "atk": 76,
+      "def": 64,
+      "spa": 45,
+      "spd": 55,
+      "spe": 90
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "baseExp": 116,
+    "growthRate": "MediumFast"
+  },
+  "Hoothoot": {
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 60,
+      "atk": 30,
+      "def": 30,
+      "spa": 36,
+      "spd": 56,
+      "spe": 50
+    },
+    "evYield": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 58,
+    "growthRate": "MediumFast"
+  },
+  "Noctowl": {
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 100,
+      "atk": 50,
+      "def": 50,
+      "spa": 76,
+      "spd": 96,
+      "spe": 70
+    },
+    "evYield": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 162,
+    "growthRate": "MediumFast"
+  },
+  "Ledyba": {
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 40,
+      "atk": 20,
+      "def": 30,
+      "spa": 40,
+      "spd": 80,
+      "spe": 55
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "baseExp": 54,
+    "growthRate": "Fast"
+  },
+  "Ledian": {
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 55,
+      "atk": 35,
+      "def": 50,
+      "spa": 55,
+      "spd": 110,
+      "spe": 85
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 2,
+      "spe": 0
+    },
+    "baseExp": 134,
+    "growthRate": "Fast"
+  },
+  "Spinarak": {
+    "types": [
+      "bug",
+      "poison"
+    ],
+    "baseStats": {
+      "hp": 40,
+      "atk": 60,
+      "def": 40,
+      "spa": 40,
+      "spd": 40,
+      "spe": 30
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 54,
+    "growthRate": "Fast"
+  },
+  "Ariados": {
+    "types": [
+      "bug",
+      "poison"
+    ],
+    "baseStats": {
+      "hp": 70,
+      "atk": 90,
+      "def": 70,
+      "spa": 60,
+      "spd": 60,
+      "spe": 40
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 134,
+    "growthRate": "Fast"
+  },
+  "Crobat": {
+    "types": [
+      "poison",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 85,
+      "atk": 90,
+      "def": 80,
+      "spa": 70,
+      "spd": 80,
+      "spe": 130
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 3
+    },
+    "baseExp": 204,
+    "growthRate": "MediumFast"
+  },
+  "Chinchou": {
+    "types": [
+      "water",
+      "electric"
+    ],
+    "baseStats": {
+      "hp": 75,
+      "atk": 38,
+      "def": 38,
+      "spa": 56,
+      "spd": 56,
+      "spe": 67
+    },
+    "evYield": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 90,
+    "growthRate": "Slow"
+  },
+  "Lanturn": {
+    "types": [
+      "water",
+      "electric"
+    ],
+    "baseStats": {
+      "hp": 125,
+      "atk": 58,
+      "def": 58,
+      "spa": 76,
+      "spd": 76,
+      "spe": 67
+    },
+    "evYield": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 156,
+    "growthRate": "Slow"
+  },
+  "Pichu": {
+    "types": [
+      "electric"
+    ],
+    "baseStats": {
+      "hp": 20,
+      "atk": 40,
+      "def": 15,
+      "spa": 35,
+      "spd": 35,
+      "spe": 60
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "baseExp": 42,
+    "growthRate": "MediumFast"
+  },
+  "Cleffa": {
+    "types": [
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 50,
+      "atk": 25,
+      "def": 28,
+      "spa": 45,
+      "spd": 55,
+      "spe": 15
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "baseExp": 37,
+    "growthRate": "Fast"
+  },
+  "Igglybuff": {
+    "types": [
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 90,
+      "atk": 30,
+      "def": 15,
+      "spa": 40,
+      "spd": 20,
+      "spe": 15
+    },
+    "evYield": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 39,
+    "growthRate": "Fast"
+  },
+  "Togepi": {
+    "types": [
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 35,
+      "atk": 20,
+      "def": 65,
+      "spa": 40,
+      "spd": 65,
+      "spe": 20
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "baseExp": 74,
+    "growthRate": "Fast"
+  },
+  "Togetic": {
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 55,
+      "atk": 40,
+      "def": 85,
+      "spa": 80,
+      "spd": 105,
+      "spe": 40
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 2,
+      "spe": 0
+    },
+    "baseExp": 114,
+    "growthRate": "Fast"
+  },
+  "Natu": {
+    "types": [
+      "psychic",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 40,
+      "atk": 50,
+      "def": 45,
+      "spa": 70,
+      "spd": 45,
+      "spe": 70
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 73,
+    "growthRate": "MediumFast"
+  },
+  "Xatu": {
+    "types": [
+      "psychic",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 65,
+      "atk": 75,
+      "def": 70,
+      "spa": 95,
+      "spd": 70,
+      "spe": 95
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 1
+    },
+    "baseExp": 171,
+    "growthRate": "MediumFast"
+  },
+  "Mareep": {
+    "types": [
+      "electric"
+    ],
+    "baseStats": {
+      "hp": 55,
+      "atk": 40,
+      "def": 40,
+      "spa": 65,
+      "spd": 45,
+      "spe": 35
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 59,
+    "growthRate": "MediumSlow"
+  },
+  "Flaaffy": {
+    "types": [
+      "electric"
+    ],
+    "baseStats": {
+      "hp": 70,
+      "atk": 55,
+      "def": 55,
+      "spa": 80,
+      "spd": 60,
+      "spe": 45
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 117,
+    "growthRate": "MediumSlow"
+  },
+  "Ampharos": {
+    "types": [
+      "electric"
+    ],
+    "baseStats": {
+      "hp": 90,
+      "atk": 75,
+      "def": 75,
+      "spa": 115,
+      "spd": 90,
+      "spe": 55
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 3,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 194,
+    "growthRate": "MediumSlow"
+  },
+  "Bellossom": {
+    "types": [
+      "grass"
+    ],
+    "baseStats": {
+      "hp": 75,
+      "atk": 80,
+      "def": 85,
+      "spa": 90,
+      "spd": 100,
+      "spe": 50
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 3,
+      "spe": 0
+    },
+    "baseExp": 184,
+    "growthRate": "MediumSlow"
+  },
+  "Marill": {
+    "types": [
+      "water"
+    ],
+    "baseStats": {
+      "hp": 70,
+      "atk": 20,
+      "def": 50,
+      "spa": 20,
+      "spd": 50,
+      "spe": 40
+    },
+    "evYield": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 58,
+    "growthRate": "Fast"
+  },
+  "Azumarill": {
+    "types": [
+      "water"
+    ],
+    "baseStats": {
+      "hp": 100,
+      "atk": 50,
+      "def": 80,
+      "spa": 50,
+      "spd": 80,
+      "spe": 50
+    },
+    "evYield": {
+      "hp": 3,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 153,
+    "growthRate": "Fast"
+  },
+  "Sudowoodo": {
+    "types": [
+      "rock"
+    ],
+    "baseStats": {
+      "hp": 70,
+      "atk": 100,
+      "def": 115,
+      "spa": 30,
+      "spd": 65,
+      "spe": 30
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 135,
+    "growthRate": "MediumFast"
+  },
+  "Politoed": {
+    "types": [
+      "water"
+    ],
+    "baseStats": {
+      "hp": 90,
+      "atk": 75,
+      "def": 75,
+      "spa": 90,
+      "spd": 100,
+      "spe": 70
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 3,
+      "spe": 0
+    },
+    "baseExp": 185,
+    "growthRate": "MediumSlow"
+  },
+  "Hoppip": {
+    "types": [
+      "grass",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 35,
+      "atk": 35,
+      "def": 40,
+      "spa": 35,
+      "spd": 55,
+      "spe": 50
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "baseExp": 74,
+    "growthRate": "MediumSlow"
+  },
+  "Skiploom": {
+    "types": [
+      "grass",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 55,
+      "atk": 45,
+      "def": 50,
+      "spa": 45,
+      "spd": 65,
+      "spe": 80
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "baseExp": 136,
+    "growthRate": "MediumSlow"
+  },
+  "Jumpluff": {
+    "types": [
+      "grass",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 75,
+      "atk": 55,
+      "def": 70,
+      "spa": 55,
+      "spd": 85,
+      "spe": 110
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 3
+    },
+    "baseExp": 176,
+    "growthRate": "MediumSlow"
+  },
+  "Aipom": {
+    "types": [
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 55,
+      "atk": 70,
+      "def": 55,
+      "spa": 40,
+      "spd": 55,
+      "spe": 85
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "baseExp": 94,
+    "growthRate": "Fast"
+  },
+  "Sunkern": {
+    "types": [
+      "grass"
+    ],
+    "baseStats": {
+      "hp": 30,
+      "atk": 30,
+      "def": 30,
+      "spa": 30,
+      "spd": 30,
+      "spe": 30
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 52,
+    "growthRate": "MediumSlow"
+  },
+  "Sunflora": {
+    "types": [
+      "grass"
+    ],
+    "baseStats": {
+      "hp": 75,
+      "atk": 75,
+      "def": 55,
+      "spa": 105,
+      "spd": 85,
+      "spe": 30
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 146,
+    "growthRate": "MediumSlow"
+  },
+  "Yanma": {
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 65,
+      "atk": 65,
+      "def": 45,
+      "spa": 75,
+      "spd": 45,
+      "spe": 95
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "baseExp": 147,
+    "growthRate": "MediumFast"
+  },
+  "Wooper": {
+    "types": [
+      "water",
+      "ground"
+    ],
+    "baseStats": {
+      "hp": 55,
+      "atk": 45,
+      "def": 45,
+      "spa": 25,
+      "spd": 25,
+      "spe": 15
+    },
+    "evYield": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 52,
+    "growthRate": "MediumFast"
+  },
+  "Quagsire": {
+    "types": [
+      "water",
+      "ground"
+    ],
+    "baseStats": {
+      "hp": 95,
+      "atk": 85,
+      "def": 85,
+      "spa": 65,
+      "spd": 65,
+      "spe": 35
+    },
+    "evYield": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 137,
+    "growthRate": "MediumFast"
+  },
+  "Espeon": {
+    "types": [
+      "psychic"
+    ],
+    "baseStats": {
+      "hp": 65,
+      "atk": 65,
+      "def": 60,
+      "spa": 130,
+      "spd": 95,
+      "spe": 110
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 197,
+    "growthRate": "MediumFast"
+  },
+  "Umbreon": {
+    "types": [
+      "dark"
+    ],
+    "baseStats": {
+      "hp": 95,
+      "atk": 65,
+      "def": 110,
+      "spa": 60,
+      "spd": 130,
+      "spe": 65
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 2,
+      "spe": 0
+    },
+    "baseExp": 197,
+    "growthRate": "MediumFast"
+  },
+  "Murkrow": {
+    "types": [
+      "dark",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 60,
+      "atk": 85,
+      "def": 42,
+      "spa": 85,
+      "spd": 42,
+      "spe": 91
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "baseExp": 107,
+    "growthRate": "MediumSlow"
+  },
+  "Slowking": {
+    "types": [
+      "water",
+      "psychic"
+    ],
+    "baseStats": {
+      "hp": 95,
+      "atk": 75,
+      "def": 80,
+      "spa": 100,
+      "spd": 110,
+      "spe": 30
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 3,
+      "spe": 0
+    },
+    "baseExp": 164,
+    "growthRate": "MediumFast"
+  },
+  "Misdreavus": {
+    "types": [
+      "ghost"
+    ],
+    "baseStats": {
+      "hp": 60,
+      "atk": 60,
+      "def": 60,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 1,
+      "spe": 0
+    },
+    "baseExp": 147,
+    "growthRate": "Fast"
+  },
+  "Unown": {
+    "types": [
+      "psychic"
+    ],
+    "baseStats": {
+      "hp": 48,
+      "atk": 72,
+      "def": 48,
+      "spa": 72,
+      "spd": 48,
+      "spe": 48
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 61,
+    "growthRate": "MediumFast"
+  },
+  "Wobbuffet": {
+    "types": [
+      "psychic"
+    ],
+    "baseStats": {
+      "hp": 190,
+      "atk": 33,
+      "def": 58,
+      "spa": 33,
+      "spd": 58,
+      "spe": 33
+    },
+    "evYield": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 177,
+    "growthRate": "MediumFast"
+  },
+  "Girafarig": {
+    "types": [
+      "normal",
+      "psychic"
+    ],
+    "baseStats": {
+      "hp": 70,
+      "atk": 80,
+      "def": 65,
+      "spa": 90,
+      "spd": 65,
+      "spe": 85
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 149,
+    "growthRate": "MediumFast"
+  },
+  "Pineco": {
+    "types": [
+      "bug"
+    ],
+    "baseStats": {
+      "hp": 50,
+      "atk": 65,
+      "def": 90,
+      "spa": 35,
+      "spd": 35,
+      "spe": 15
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 60,
+    "growthRate": "MediumFast"
+  },
+  "Forretress": {
+    "types": [
+      "bug",
+      "steel"
+    ],
+    "baseStats": {
+      "hp": 75,
+      "atk": 90,
+      "def": 140,
+      "spa": 60,
+      "spd": 60,
+      "spe": 40
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 118,
+    "growthRate": "MediumFast"
+  },
+  "Dunsparce": {
+    "types": [
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 100,
+      "atk": 70,
+      "def": 70,
+      "spa": 65,
+      "spd": 65,
+      "spe": 45
+    },
+    "evYield": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 75,
+    "growthRate": "MediumFast"
+  },
+  "Gligar": {
+    "types": [
+      "ground",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 65,
+      "atk": 75,
+      "def": 105,
+      "spa": 35,
+      "spd": 65,
+      "spe": 85
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 108,
+    "growthRate": "MediumSlow"
+  },
+  "Steelix": {
+    "types": [
+      "steel",
+      "ground"
+    ],
+    "baseStats": {
+      "hp": 75,
+      "atk": 85,
+      "def": 200,
+      "spa": 55,
+      "spd": 65,
+      "spe": 30
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 196,
+    "growthRate": "MediumFast"
+  },
+  "Snubbull": {
+    "types": [
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 60,
+      "atk": 80,
+      "def": 50,
+      "spa": 40,
+      "spd": 40,
+      "spe": 30
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 63,
+    "growthRate": "Fast"
+  },
+  "Granbull": {
+    "types": [
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 90,
+      "atk": 120,
+      "def": 75,
+      "spa": 60,
+      "spd": 60,
+      "spe": 45
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 178,
+    "growthRate": "Fast"
+  },
+  "Qwilfish": {
+    "types": [
+      "water",
+      "poison"
+    ],
+    "baseStats": {
+      "hp": 65,
+      "atk": 95,
+      "def": 75,
+      "spa": 55,
+      "spd": 55,
+      "spe": 85
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 100,
+    "growthRate": "MediumFast"
+  },
+  "Scizor": {
+    "types": [
+      "bug",
+      "steel"
+    ],
+    "baseStats": {
+      "hp": 70,
+      "atk": 130,
+      "def": 100,
+      "spa": 55,
+      "spd": 80,
+      "spe": 65
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 200,
+    "growthRate": "MediumFast"
+  },
+  "Shuckle": {
+    "types": [
+      "bug",
+      "rock"
+    ],
+    "baseStats": {
+      "hp": 20,
+      "atk": 10,
+      "def": 230,
+      "spa": 10,
+      "spd": 230,
+      "spe": 5
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "baseExp": 80,
+    "growthRate": "MediumSlow"
+  },
+  "Heracross": {
+    "types": [
+      "bug",
+      "fighting"
+    ],
+    "baseStats": {
+      "hp": 80,
+      "atk": 125,
+      "def": 75,
+      "spa": 40,
+      "spd": 95,
+      "spe": 85
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 200,
+    "growthRate": "Slow"
+  },
+  "Sneasel": {
+    "types": [
+      "dark",
+      "ice"
+    ],
+    "baseStats": {
+      "hp": 55,
+      "atk": 95,
+      "def": 55,
+      "spa": 35,
+      "spd": 75,
+      "spe": 115
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "baseExp": 132,
+    "growthRate": "MediumSlow"
+  },
+  "Teddiursa": {
+    "types": [
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 60,
+      "atk": 80,
+      "def": 50,
+      "spa": 50,
+      "spd": 50,
+      "spe": 40
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 124,
+    "growthRate": "MediumFast"
+  },
+  "Ursaring": {
+    "types": [
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 90,
+      "atk": 130,
+      "def": 75,
+      "spa": 75,
+      "spd": 75,
+      "spe": 55
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 189,
+    "growthRate": "MediumFast"
+  },
+  "Slugma": {
+    "types": [
+      "fire"
+    ],
+    "baseStats": {
+      "hp": 40,
+      "atk": 40,
+      "def": 40,
+      "spa": 70,
+      "spd": 40,
+      "spe": 20
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 78,
+    "growthRate": "MediumFast"
+  },
+  "Magcargo": {
+    "types": [
+      "fire",
+      "rock"
+    ],
+    "baseStats": {
+      "hp": 50,
+      "atk": 50,
+      "def": 120,
+      "spa": 80,
+      "spd": 80,
+      "spe": 30
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 154,
+    "growthRate": "MediumFast"
+  },
+  "Swinub": {
+    "types": [
+      "ice",
+      "ground"
+    ],
+    "baseStats": {
+      "hp": 50,
+      "atk": 50,
+      "def": 40,
+      "spa": 30,
+      "spd": 30,
+      "spe": 50
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 78,
+    "growthRate": "Slow"
+  },
+  "Piloswine": {
+    "types": [
+      "ice",
+      "ground"
+    ],
+    "baseStats": {
+      "hp": 100,
+      "atk": 100,
+      "def": 80,
+      "spa": 60,
+      "spd": 60,
+      "spe": 50
+    },
+    "evYield": {
+      "hp": 1,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 160,
+    "growthRate": "Slow"
+  },
+  "Corsola": {
+    "types": [
+      "water",
+      "rock"
+    ],
+    "baseStats": {
+      "hp": 55,
+      "atk": 55,
+      "def": 85,
+      "spa": 65,
+      "spd": 85,
+      "spe": 35
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "baseExp": 113,
+    "growthRate": "Fast"
+  },
+  "Remoraid": {
+    "types": [
+      "water"
+    ],
+    "baseStats": {
+      "hp": 35,
+      "atk": 65,
+      "def": 35,
+      "spa": 65,
+      "spd": 35,
+      "spe": 65
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 78,
+    "growthRate": "MediumFast"
+  },
+  "Octillery": {
+    "types": [
+      "water"
+    ],
+    "baseStats": {
+      "hp": 75,
+      "atk": 105,
+      "def": 75,
+      "spa": 105,
+      "spd": 75,
+      "spe": 45
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 164,
+    "growthRate": "MediumFast"
+  },
+  "Delibird": {
+    "types": [
+      "ice",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 45,
+      "atk": 55,
+      "def": 45,
+      "spa": 65,
+      "spd": 45,
+      "spe": 75
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "baseExp": 183,
+    "growthRate": "Fast"
+  },
+  "Mantine": {
+    "types": [
+      "water",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 65,
+      "atk": 40,
+      "def": 70,
+      "spa": 80,
+      "spd": 140,
+      "spe": 70
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 2,
+      "spe": 0
+    },
+    "baseExp": 168,
+    "growthRate": "Slow"
+  },
+  "Skarmory": {
+    "types": [
+      "steel",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 65,
+      "atk": 80,
+      "def": 140,
+      "spa": 40,
+      "spd": 70,
+      "spe": 70
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 168,
+    "growthRate": "Slow"
+  },
+  "Houndour": {
+    "types": [
+      "dark",
+      "fire"
+    ],
+    "baseStats": {
+      "hp": 45,
+      "atk": 60,
+      "def": 30,
+      "spa": 80,
+      "spd": 50,
+      "spe": 65
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 114,
+    "growthRate": "Slow"
+  },
+  "Houndoom": {
+    "types": [
+      "dark",
+      "fire"
+    ],
+    "baseStats": {
+      "hp": 75,
+      "atk": 90,
+      "def": 50,
+      "spa": 110,
+      "spd": 80,
+      "spe": 95
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 204,
+    "growthRate": "Slow"
+  },
+  "Kingdra": {
+    "types": [
+      "water",
+      "dragon"
+    ],
+    "baseStats": {
+      "hp": 75,
+      "atk": 95,
+      "def": 95,
+      "spa": 95,
+      "spd": 95,
+      "spe": 85
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 1,
+      "spd": 1,
+      "spe": 0
+    },
+    "baseExp": 207,
+    "growthRate": "MediumFast"
+  },
+  "Phanpy": {
+    "types": [
+      "ground"
+    ],
+    "baseStats": {
+      "hp": 90,
+      "atk": 60,
+      "def": 60,
+      "spa": 40,
+      "spd": 40,
+      "spe": 40
+    },
+    "evYield": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 124,
+    "growthRate": "MediumFast"
+  },
+  "Donphan": {
+    "types": [
+      "ground"
+    ],
+    "baseStats": {
+      "hp": 90,
+      "atk": 120,
+      "def": 120,
+      "spa": 60,
+      "spd": 60,
+      "spe": 50
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 1,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 189,
+    "growthRate": "MediumFast"
+  },
+  "Porygon2": {
+    "types": [
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 85,
+      "atk": 80,
+      "def": 90,
+      "spa": 105,
+      "spd": 95,
+      "spe": 60
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 180,
+    "growthRate": "MediumFast"
+  },
+  "Stantler": {
+    "types": [
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 73,
+      "atk": 95,
+      "def": 62,
+      "spa": 85,
+      "spd": 65,
+      "spe": 85
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 165,
+    "growthRate": "Slow"
+  },
+  "Smeargle": {
+    "types": [
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 55,
+      "atk": 20,
+      "def": 35,
+      "spa": 20,
+      "spd": 45,
+      "spe": 75
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "baseExp": 106,
+    "growthRate": "Fast"
+  },
+  "Tyrogue": {
+    "types": [
+      "fighting"
+    ],
+    "baseStats": {
+      "hp": 35,
+      "atk": 35,
+      "def": 35,
+      "spa": 35,
+      "spd": 35,
+      "spe": 35
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 91,
+    "growthRate": "MediumFast"
+  },
+  "Hitmontop": {
+    "types": [
+      "fighting"
+    ],
+    "baseStats": {
+      "hp": 50,
+      "atk": 95,
+      "def": 95,
+      "spa": 35,
+      "spd": 110,
+      "spe": 70
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 2,
+      "spe": 0
+    },
+    "baseExp": 138,
+    "growthRate": "MediumFast"
+  },
+  "Smoochum": {
+    "types": [
+      "ice",
+      "psychic"
+    ],
+    "baseStats": {
+      "hp": 45,
+      "atk": 30,
+      "def": 15,
+      "spa": 85,
+      "spd": 65,
+      "spe": 65
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 87,
+    "growthRate": "MediumFast"
+  },
+  "Elekid": {
+    "types": [
+      "electric"
+    ],
+    "baseStats": {
+      "hp": 45,
+      "atk": 63,
+      "def": 37,
+      "spa": 65,
+      "spd": 55,
+      "spe": 95
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "baseExp": 106,
+    "growthRate": "MediumFast"
+  },
+  "Magby": {
+    "types": [
+      "fire"
+    ],
+    "baseStats": {
+      "hp": 45,
+      "atk": 75,
+      "def": 37,
+      "spa": 70,
+      "spd": 55,
+      "spe": 83
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "baseExp": 117,
+    "growthRate": "MediumFast"
+  },
+  "Miltank": {
+    "types": [
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 95,
+      "atk": 80,
+      "def": 105,
+      "spa": 40,
+      "spd": 70,
+      "spe": 100
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 200,
+    "growthRate": "Slow"
+  },
+  "Blissey": {
+    "types": [
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 255,
+      "atk": 10,
+      "def": 10,
+      "spa": 75,
+      "spd": 135,
+      "spe": 55
+    },
+    "evYield": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 255,
+    "growthRate": "Fast"
+  },
+  "Raikou": {
+    "types": [
+      "electric"
+    ],
+    "baseStats": {
+      "hp": 90,
+      "atk": 85,
+      "def": 75,
+      "spa": 115,
+      "spd": 100,
+      "spe": 115
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 2
+    },
+    "baseExp": 216,
+    "growthRate": "Slow"
+  },
+  "Entei": {
+    "types": [
+      "fire"
+    ],
+    "baseStats": {
+      "hp": 115,
+      "atk": 115,
+      "def": 85,
+      "spa": 90,
+      "spd": 75,
+      "spe": 100
+    },
+    "evYield": {
+      "hp": 1,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 217,
+    "growthRate": "Slow"
+  },
+  "Suicune": {
+    "types": [
+      "water"
+    ],
+    "baseStats": {
+      "hp": 100,
+      "atk": 75,
+      "def": 115,
+      "spa": 90,
+      "spd": 115,
+      "spe": 85
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 2,
+      "spe": 0
+    },
+    "baseExp": 215,
+    "growthRate": "Slow"
+  },
+  "Larvitar": {
+    "types": [
+      "rock",
+      "ground"
+    ],
+    "baseStats": {
+      "hp": 50,
+      "atk": 64,
+      "def": 50,
+      "spa": 45,
+      "spd": 50,
+      "spe": 41
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 67,
+    "growthRate": "Slow"
+  },
+  "Pupitar": {
+    "types": [
+      "rock",
+      "ground"
+    ],
+    "baseStats": {
+      "hp": 70,
+      "atk": 84,
+      "def": 70,
+      "spa": 65,
+      "spd": 70,
+      "spe": 51
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 144,
+    "growthRate": "Slow"
+  },
+  "Tyranitar": {
+    "types": [
+      "rock",
+      "dark"
+    ],
+    "baseStats": {
+      "hp": 100,
+      "atk": 134,
+      "def": 110,
+      "spa": 95,
+      "spd": 100,
+      "spe": 61
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 3,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 218,
+    "growthRate": "Slow"
+  },
+  "Lugia": {
+    "types": [
+      "psychic",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 106,
+      "atk": 90,
+      "def": 130,
+      "spa": 90,
+      "spd": 154,
+      "spe": 110
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 3,
+      "spe": 0
+    },
+    "baseExp": 220,
+    "growthRate": "Slow"
+  },
+  "Ho_oh": {
+    "types": [
+      "fire",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 106,
+      "atk": 130,
+      "def": 90,
+      "spa": 110,
+      "spd": 154,
+      "spe": 90
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 3,
+      "spe": 0
+    },
+    "baseExp": 220,
+    "growthRate": "Slow"
+  },
+  "Celebi": {
+    "types": [
+      "psychic",
+      "grass"
+    ],
+    "baseStats": {
+      "hp": 100,
+      "atk": 100,
+      "def": 100,
+      "spa": 100,
+      "spd": 100,
+      "spe": 100
+    },
+    "evYield": {
+      "hp": 3,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 64,
+    "growthRate": "MediumSlow"
+  },
+  "Treecko": {
+    "types": [
+      "grass"
+    ],
+    "baseStats": {
+      "hp": 40,
+      "atk": 45,
+      "def": 35,
+      "spa": 65,
+      "spd": 55,
+      "spe": 70
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "baseExp": 65,
+    "growthRate": "MediumSlow"
+  },
+  "Grovyle": {
+    "types": [
+      "grass"
+    ],
+    "baseStats": {
+      "hp": 50,
+      "atk": 65,
+      "def": 45,
+      "spa": 85,
+      "spd": 65,
+      "spe": 95
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "baseExp": 141,
+    "growthRate": "MediumSlow"
+  },
+  "Sceptile": {
+    "types": [
+      "grass"
+    ],
+    "baseStats": {
+      "hp": 70,
+      "atk": 85,
+      "def": 65,
+      "spa": 105,
+      "spd": 85,
+      "spe": 120
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 3
+    },
+    "baseExp": 208,
+    "growthRate": "MediumSlow"
+  },
+  "Torchic": {
+    "types": [
+      "fire"
+    ],
+    "baseStats": {
+      "hp": 45,
+      "atk": 60,
+      "def": 40,
+      "spa": 70,
+      "spd": 50,
+      "spe": 45
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 65,
+    "growthRate": "MediumSlow"
+  },
+  "Combusken": {
+    "types": [
+      "fire",
+      "fighting"
+    ],
+    "baseStats": {
+      "hp": 60,
+      "atk": 85,
+      "def": 60,
+      "spa": 85,
+      "spd": 60,
+      "spe": 55
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 142,
+    "growthRate": "MediumSlow"
+  },
+  "Blaziken": {
+    "types": [
+      "fire",
+      "fighting"
+    ],
+    "baseStats": {
+      "hp": 80,
+      "atk": 120,
+      "def": 70,
+      "spa": 110,
+      "spd": 70,
+      "spe": 80
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 3,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 209,
+    "growthRate": "MediumSlow"
+  },
+  "Mudkip": {
+    "types": [
+      "water"
+    ],
+    "baseStats": {
+      "hp": 50,
+      "atk": 70,
+      "def": 50,
+      "spa": 50,
+      "spd": 50,
+      "spe": 40
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 65,
+    "growthRate": "MediumSlow"
+  },
+  "Marshtomp": {
+    "types": [
+      "water",
+      "ground"
+    ],
+    "baseStats": {
+      "hp": 70,
+      "atk": 85,
+      "def": 70,
+      "spa": 60,
+      "spd": 70,
+      "spe": 50
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 143,
+    "growthRate": "MediumSlow"
+  },
+  "Swampert": {
+    "types": [
+      "water",
+      "ground"
+    ],
+    "baseStats": {
+      "hp": 100,
+      "atk": 110,
+      "def": 90,
+      "spa": 85,
+      "spd": 90,
+      "spe": 60
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 3,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 210,
+    "growthRate": "MediumSlow"
+  },
+  "Poochyena": {
+    "types": [
+      "dark"
+    ],
+    "baseStats": {
+      "hp": 35,
+      "atk": 55,
+      "def": 35,
+      "spa": 30,
+      "spd": 30,
+      "spe": 35
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 55,
+    "growthRate": "MediumFast"
+  },
+  "Mightyena": {
+    "types": [
+      "dark"
+    ],
+    "baseStats": {
+      "hp": 70,
+      "atk": 90,
+      "def": 70,
+      "spa": 60,
+      "spd": 60,
+      "spe": 70
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 128,
+    "growthRate": "MediumFast"
+  },
+  "Zigzagoon": {
+    "types": [
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 38,
+      "atk": 30,
+      "def": 41,
+      "spa": 30,
+      "spd": 41,
+      "spe": 60
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "baseExp": 60,
+    "growthRate": "MediumFast"
+  },
+  "Linoone": {
+    "types": [
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 78,
+      "atk": 70,
+      "def": 61,
+      "spa": 50,
+      "spd": 61,
+      "spe": 100
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "baseExp": 128,
+    "growthRate": "MediumFast"
+  },
+  "Wurmple": {
+    "types": [
+      "bug"
+    ],
+    "baseStats": {
+      "hp": 45,
+      "atk": 45,
+      "def": 35,
+      "spa": 20,
+      "spd": 30,
+      "spe": 20
+    },
+    "evYield": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 54,
+    "growthRate": "MediumFast"
+  },
+  "Silcoon": {
+    "types": [
+      "bug"
+    ],
+    "baseStats": {
+      "hp": 50,
+      "atk": 35,
+      "def": 55,
+      "spa": 25,
+      "spd": 25,
+      "spe": 15
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 71,
+    "growthRate": "MediumFast"
+  },
+  "Beautifly": {
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 60,
+      "atk": 70,
+      "def": 50,
+      "spa": 90,
+      "spd": 50,
+      "spe": 65
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 3,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 161,
+    "growthRate": "MediumFast"
+  },
+  "Cascoon": {
+    "types": [
+      "bug"
+    ],
+    "baseStats": {
+      "hp": 50,
+      "atk": 35,
+      "def": 55,
+      "spa": 25,
+      "spd": 25,
+      "spe": 15
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 72,
+    "growthRate": "MediumFast"
+  },
+  "Dustox": {
+    "types": [
+      "bug",
+      "poison"
+    ],
+    "baseStats": {
+      "hp": 60,
+      "atk": 50,
+      "def": 70,
+      "spa": 50,
+      "spd": 90,
+      "spe": 65
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 3,
+      "spe": 0
+    },
+    "baseExp": 160,
+    "growthRate": "MediumFast"
+  },
+  "Lotad": {
+    "types": [
+      "water",
+      "grass"
+    ],
+    "baseStats": {
+      "hp": 40,
+      "atk": 30,
+      "def": 30,
+      "spa": 40,
+      "spd": 50,
+      "spe": 30
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "baseExp": 74,
+    "growthRate": "MediumSlow"
+  },
+  "Lombre": {
+    "types": [
+      "water",
+      "grass"
+    ],
+    "baseStats": {
+      "hp": 60,
+      "atk": 50,
+      "def": 50,
+      "spa": 60,
+      "spd": 70,
+      "spe": 50
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 2,
+      "spe": 0
+    },
+    "baseExp": 141,
+    "growthRate": "MediumSlow"
+  },
+  "Ludicolo": {
+    "types": [
+      "water",
+      "grass"
+    ],
+    "baseStats": {
+      "hp": 80,
+      "atk": 70,
+      "def": 70,
+      "spa": 90,
+      "spd": 100,
+      "spe": 70
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 3,
+      "spe": 0
+    },
+    "baseExp": 181,
+    "growthRate": "MediumSlow"
+  },
+  "Seedot": {
+    "types": [
+      "grass"
+    ],
+    "baseStats": {
+      "hp": 40,
+      "atk": 40,
+      "def": 50,
+      "spa": 30,
+      "spd": 30,
+      "spe": 30
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 74,
+    "growthRate": "MediumSlow"
+  },
+  "Nuzleaf": {
+    "types": [
+      "grass",
+      "dark"
+    ],
+    "baseStats": {
+      "hp": 70,
+      "atk": 70,
+      "def": 40,
+      "spa": 60,
+      "spd": 40,
+      "spe": 60
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 141,
+    "growthRate": "MediumSlow"
+  },
+  "Shiftry": {
+    "types": [
+      "grass",
+      "dark"
+    ],
+    "baseStats": {
+      "hp": 90,
+      "atk": 100,
+      "def": 60,
+      "spa": 90,
+      "spd": 60,
+      "spe": 80
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 3,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 181,
+    "growthRate": "MediumSlow"
+  },
+  "Nincada": {
+    "types": [
+      "bug",
+      "ground"
+    ],
+    "baseStats": {
+      "hp": 31,
+      "atk": 45,
+      "def": 90,
+      "spa": 30,
+      "spd": 30,
+      "spe": 40
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 65,
+    "growthRate": "Erratic"
+  },
+  "Ninjask": {
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 61,
+      "atk": 90,
+      "def": 45,
+      "spa": 50,
+      "spd": 50,
+      "spe": 160
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "baseExp": 155,
+    "growthRate": "Erratic"
+  },
+  "Shedinja": {
+    "types": [
+      "bug",
+      "ghost"
+    ],
+    "baseStats": {
+      "hp": 1,
+      "atk": 90,
+      "def": 45,
+      "spa": 30,
+      "spd": 30,
+      "spe": 40
+    },
+    "evYield": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 95,
+    "growthRate": "Erratic"
+  },
+  "Taillow": {
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 40,
+      "atk": 55,
+      "def": 30,
+      "spa": 30,
+      "spd": 30,
+      "spe": 85
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "baseExp": 59,
+    "growthRate": "MediumSlow"
+  },
+  "Swellow": {
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 60,
+      "atk": 85,
+      "def": 60,
+      "spa": 50,
+      "spd": 50,
+      "spe": 125
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "baseExp": 162,
+    "growthRate": "MediumSlow"
+  },
+  "Shroomish": {
+    "types": [
+      "grass"
+    ],
+    "baseStats": {
+      "hp": 60,
+      "atk": 40,
+      "def": 60,
+      "spa": 40,
+      "spd": 60,
+      "spe": 35
+    },
+    "evYield": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 65,
+    "growthRate": "Fluctuating"
+  },
+  "Breloom": {
+    "types": [
+      "grass",
+      "fighting"
+    ],
+    "baseStats": {
+      "hp": 60,
+      "atk": 130,
+      "def": 80,
+      "spa": 60,
+      "spd": 60,
+      "spe": 70
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 165,
+    "growthRate": "Fluctuating"
+  },
+  "Spinda": {
+    "types": [
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 60,
+      "atk": 60,
+      "def": 60,
+      "spa": 60,
+      "spd": 60,
+      "spe": 60
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 85,
+    "growthRate": "Fast"
+  },
+  "Wingull": {
+    "types": [
+      "water",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 40,
+      "atk": 30,
+      "def": 30,
+      "spa": 55,
+      "spd": 30,
+      "spe": 85
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "baseExp": 64,
+    "growthRate": "MediumFast"
+  },
+  "Pelipper": {
+    "types": [
+      "water",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 60,
+      "atk": 50,
+      "def": 100,
+      "spa": 85,
+      "spd": 70,
+      "spe": 65
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 164,
+    "growthRate": "MediumFast"
+  },
+  "Surskit": {
+    "types": [
+      "bug",
+      "water"
+    ],
+    "baseStats": {
+      "hp": 40,
+      "atk": 30,
+      "def": 32,
+      "spa": 50,
+      "spd": 52,
+      "spe": 65
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "baseExp": 63,
+    "growthRate": "MediumFast"
+  },
+  "Masquerain": {
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 70,
+      "atk": 60,
+      "def": 62,
+      "spa": 80,
+      "spd": 82,
+      "spe": 60
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 1,
+      "spe": 0
+    },
+    "baseExp": 128,
+    "growthRate": "MediumFast"
+  },
+  "Wailmer": {
+    "types": [
+      "water"
+    ],
+    "baseStats": {
+      "hp": 130,
+      "atk": 70,
+      "def": 35,
+      "spa": 70,
+      "spd": 35,
+      "spe": 60
+    },
+    "evYield": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 137,
+    "growthRate": "Fluctuating"
+  },
+  "Wailord": {
+    "types": [
+      "water"
+    ],
+    "baseStats": {
+      "hp": 170,
+      "atk": 90,
+      "def": 45,
+      "spa": 90,
+      "spd": 45,
+      "spe": 60
+    },
+    "evYield": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 206,
+    "growthRate": "Fluctuating"
+  },
+  "Skitty": {
+    "types": [
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 50,
+      "atk": 45,
+      "def": 45,
+      "spa": 35,
+      "spd": 35,
+      "spe": 50
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "baseExp": 65,
+    "growthRate": "Fast"
+  },
+  "Delcatty": {
+    "types": [
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 70,
+      "atk": 65,
+      "def": 65,
+      "spa": 55,
+      "spd": 55,
+      "spe": 70
+    },
+    "evYield": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "baseExp": 138,
+    "growthRate": "Fast"
+  },
+  "Kecleon": {
+    "types": [
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 60,
+      "atk": 90,
+      "def": 70,
+      "spa": 60,
+      "spd": 120,
+      "spe": 40
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "baseExp": 132,
+    "growthRate": "MediumSlow"
+  },
+  "Baltoy": {
+    "types": [
+      "ground",
+      "psychic"
+    ],
+    "baseStats": {
+      "hp": 40,
+      "atk": 40,
+      "def": 55,
+      "spa": 40,
+      "spd": 70,
+      "spe": 55
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "baseExp": 58,
+    "growthRate": "MediumFast"
+  },
+  "Claydol": {
+    "types": [
+      "ground",
+      "psychic"
+    ],
+    "baseStats": {
+      "hp": 60,
+      "atk": 70,
+      "def": 105,
+      "spa": 70,
+      "spd": 120,
+      "spe": 75
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 2,
+      "spe": 0
+    },
+    "baseExp": 189,
+    "growthRate": "MediumFast"
+  },
+  "Nosepass": {
+    "types": [
+      "rock"
+    ],
+    "baseStats": {
+      "hp": 30,
+      "atk": 45,
+      "def": 135,
+      "spa": 45,
+      "spd": 90,
+      "spe": 30
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 108,
+    "growthRate": "MediumFast"
+  },
+  "Torkoal": {
+    "types": [
+      "fire"
+    ],
+    "baseStats": {
+      "hp": 70,
+      "atk": 85,
+      "def": 140,
+      "spa": 85,
+      "spd": 70,
+      "spe": 20
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 161,
+    "growthRate": "MediumFast"
+  },
+  "Sableye": {
+    "types": [
+      "dark",
+      "ghost"
+    ],
+    "baseStats": {
+      "hp": 50,
+      "atk": 75,
+      "def": 75,
+      "spa": 65,
+      "spd": 65,
+      "spe": 50
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 1,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 98,
+    "growthRate": "MediumSlow"
+  },
+  "Barboach": {
+    "types": [
+      "water",
+      "ground"
+    ],
+    "baseStats": {
+      "hp": 50,
+      "atk": 48,
+      "def": 43,
+      "spa": 46,
+      "spd": 41,
+      "spe": 60
+    },
+    "evYield": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 92,
+    "growthRate": "MediumFast"
+  },
+  "Whiscash": {
+    "types": [
+      "water",
+      "ground"
+    ],
+    "baseStats": {
+      "hp": 110,
+      "atk": 78,
+      "def": 73,
+      "spa": 76,
+      "spd": 71,
+      "spe": 60
+    },
+    "evYield": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 158,
+    "growthRate": "MediumFast"
+  },
+  "Luvdisc": {
+    "types": [
+      "water"
+    ],
+    "baseStats": {
+      "hp": 43,
+      "atk": 30,
+      "def": 55,
+      "spa": 40,
+      "spd": 65,
+      "spe": 97
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "baseExp": 110,
+    "growthRate": "Fast"
+  },
+  "Corphish": {
+    "types": [
+      "water"
+    ],
+    "baseStats": {
+      "hp": 43,
+      "atk": 80,
+      "def": 65,
+      "spa": 50,
+      "spd": 35,
+      "spe": 35
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 111,
+    "growthRate": "Fluctuating"
+  },
+  "Crawdaunt": {
+    "types": [
+      "water",
+      "dark"
+    ],
+    "baseStats": {
+      "hp": 63,
+      "atk": 120,
+      "def": 85,
+      "spa": 90,
+      "spd": 55,
+      "spe": 55
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 161,
+    "growthRate": "Fluctuating"
+  },
+  "Feebas": {
+    "types": [
+      "water"
+    ],
+    "baseStats": {
+      "hp": 20,
+      "atk": 15,
+      "def": 20,
+      "spa": 10,
+      "spd": 55,
+      "spe": 80
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "baseExp": 61,
+    "growthRate": "Erratic"
+  },
+  "Milotic": {
+    "types": [
+      "water"
+    ],
+    "baseStats": {
+      "hp": 95,
+      "atk": 60,
+      "def": 79,
+      "spa": 100,
+      "spd": 125,
+      "spe": 81
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 2,
+      "spe": 0
+    },
+    "baseExp": 213,
+    "growthRate": "Erratic"
+  },
+  "Carvanha": {
+    "types": [
+      "water",
+      "dark"
+    ],
+    "baseStats": {
+      "hp": 45,
+      "atk": 90,
+      "def": 20,
+      "spa": 65,
+      "spd": 20,
+      "spe": 65
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 88,
+    "growthRate": "Slow"
+  },
+  "Sharpedo": {
+    "types": [
+      "water",
+      "dark"
+    ],
+    "baseStats": {
+      "hp": 70,
+      "atk": 120,
+      "def": 40,
+      "spa": 95,
+      "spd": 40,
+      "spe": 95
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 175,
+    "growthRate": "Slow"
+  },
+  "Trapinch": {
+    "types": [
+      "ground"
+    ],
+    "baseStats": {
+      "hp": 45,
+      "atk": 100,
+      "def": 45,
+      "spa": 45,
+      "spd": 45,
+      "spe": 10
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 73,
+    "growthRate": "MediumSlow"
+  },
+  "Vibrava": {
+    "types": [
+      "ground",
+      "dragon"
+    ],
+    "baseStats": {
+      "hp": 50,
+      "atk": 70,
+      "def": 50,
+      "spa": 50,
+      "spd": 50,
+      "spe": 70
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "baseExp": 126,
+    "growthRate": "MediumSlow"
+  },
+  "Flygon": {
+    "types": [
+      "ground",
+      "dragon"
+    ],
+    "baseStats": {
+      "hp": 80,
+      "atk": 100,
+      "def": 80,
+      "spa": 80,
+      "spd": 80,
+      "spe": 100
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "baseExp": 197,
+    "growthRate": "MediumSlow"
+  },
+  "Makuhita": {
+    "types": [
+      "fighting"
+    ],
+    "baseStats": {
+      "hp": 72,
+      "atk": 60,
+      "def": 30,
+      "spa": 20,
+      "spd": 30,
+      "spe": 25
+    },
+    "evYield": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 87,
+    "growthRate": "Fluctuating"
+  },
+  "Hariyama": {
+    "types": [
+      "fighting"
+    ],
+    "baseStats": {
+      "hp": 144,
+      "atk": 120,
+      "def": 60,
+      "spa": 40,
+      "spd": 60,
+      "spe": 50
+    },
+    "evYield": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 184,
+    "growthRate": "Fluctuating"
+  },
+  "Electrike": {
+    "types": [
+      "electric"
+    ],
+    "baseStats": {
+      "hp": 40,
+      "atk": 45,
+      "def": 40,
+      "spa": 65,
+      "spd": 40,
+      "spe": 65
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "baseExp": 104,
+    "growthRate": "Slow"
+  },
+  "Manectric": {
+    "types": [
+      "electric"
+    ],
+    "baseStats": {
+      "hp": 70,
+      "atk": 75,
+      "def": 60,
+      "spa": 105,
+      "spd": 60,
+      "spe": 105
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "baseExp": 168,
+    "growthRate": "Slow"
+  },
+  "Numel": {
+    "types": [
+      "fire",
+      "ground"
+    ],
+    "baseStats": {
+      "hp": 60,
+      "atk": 60,
+      "def": 40,
+      "spa": 65,
+      "spd": 45,
+      "spe": 35
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 88,
+    "growthRate": "MediumFast"
+  },
+  "Camerupt": {
+    "types": [
+      "fire",
+      "ground"
+    ],
+    "baseStats": {
+      "hp": 70,
+      "atk": 100,
+      "def": 70,
+      "spa": 105,
+      "spd": 75,
+      "spe": 40
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 175,
+    "growthRate": "MediumFast"
+  },
+  "Spheal": {
+    "types": [
+      "ice",
+      "water"
+    ],
+    "baseStats": {
+      "hp": 70,
+      "atk": 40,
+      "def": 50,
+      "spa": 55,
+      "spd": 50,
+      "spe": 25
+    },
+    "evYield": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 75,
+    "growthRate": "MediumSlow"
+  },
+  "Sealeo": {
+    "types": [
+      "ice",
+      "water"
+    ],
+    "baseStats": {
+      "hp": 90,
+      "atk": 60,
+      "def": 70,
+      "spa": 75,
+      "spd": 70,
+      "spe": 45
+    },
+    "evYield": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 128,
+    "growthRate": "MediumSlow"
+  },
+  "Walrein": {
+    "types": [
+      "ice",
+      "water"
+    ],
+    "baseStats": {
+      "hp": 110,
+      "atk": 80,
+      "def": 90,
+      "spa": 95,
+      "spd": 90,
+      "spe": 65
+    },
+    "evYield": {
+      "hp": 3,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 192,
+    "growthRate": "MediumSlow"
+  },
+  "Cacnea": {
+    "types": [
+      "grass"
+    ],
+    "baseStats": {
+      "hp": 50,
+      "atk": 85,
+      "def": 40,
+      "spa": 85,
+      "spd": 40,
+      "spe": 35
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 97,
+    "growthRate": "MediumSlow"
+  },
+  "Cacturne": {
+    "types": [
+      "grass",
+      "dark"
+    ],
+    "baseStats": {
+      "hp": 70,
+      "atk": 115,
+      "def": 60,
+      "spa": 115,
+      "spd": 60,
+      "spe": 55
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 177,
+    "growthRate": "MediumSlow"
+  },
+  "Snorunt": {
+    "types": [
+      "ice"
+    ],
+    "baseStats": {
+      "hp": 50,
+      "atk": 50,
+      "def": 50,
+      "spa": 50,
+      "spd": 50,
+      "spe": 50
+    },
+    "evYield": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 74,
+    "growthRate": "MediumFast"
+  },
+  "Glalie": {
+    "types": [
+      "ice"
+    ],
+    "baseStats": {
+      "hp": 80,
+      "atk": 80,
+      "def": 80,
+      "spa": 80,
+      "spd": 80,
+      "spe": 80
+    },
+    "evYield": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 187,
+    "growthRate": "MediumFast"
+  },
+  "Lunatone": {
+    "types": [
+      "rock",
+      "psychic"
+    ],
+    "baseStats": {
+      "hp": 70,
+      "atk": 55,
+      "def": 65,
+      "spa": 95,
+      "spd": 85,
+      "spe": 70
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 150,
+    "growthRate": "Fast"
+  },
+  "Solrock": {
+    "types": [
+      "rock",
+      "psychic"
+    ],
+    "baseStats": {
+      "hp": 70,
+      "atk": 95,
+      "def": 85,
+      "spa": 55,
+      "spd": 65,
+      "spe": 70
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 150,
+    "growthRate": "Fast"
+  },
+  "Azurill": {
+    "types": [
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 50,
+      "atk": 20,
+      "def": 40,
+      "spa": 20,
+      "spd": 40,
+      "spe": 20
+    },
+    "evYield": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 33,
+    "growthRate": "Fast"
+  },
+  "Spoink": {
+    "types": [
+      "psychic"
+    ],
+    "baseStats": {
+      "hp": 60,
+      "atk": 25,
+      "def": 35,
+      "spa": 70,
+      "spd": 80,
+      "spe": 60
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "baseExp": 89,
+    "growthRate": "Fast"
+  },
+  "Grumpig": {
+    "types": [
+      "psychic"
+    ],
+    "baseStats": {
+      "hp": 80,
+      "atk": 45,
+      "def": 65,
+      "spa": 90,
+      "spd": 110,
+      "spe": 80
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 2,
+      "spe": 0
+    },
+    "baseExp": 164,
+    "growthRate": "Fast"
+  },
+  "Plusle": {
+    "types": [
+      "electric"
+    ],
+    "baseStats": {
+      "hp": 60,
+      "atk": 50,
+      "def": 40,
+      "spa": 85,
+      "spd": 75,
+      "spe": 95
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "baseExp": 120,
+    "growthRate": "MediumFast"
+  },
+  "Minun": {
+    "types": [
+      "electric"
+    ],
+    "baseStats": {
+      "hp": 60,
+      "atk": 40,
+      "def": 50,
+      "spa": 75,
+      "spd": 85,
+      "spe": 95
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "baseExp": 120,
+    "growthRate": "MediumFast"
+  },
+  "Mawile": {
+    "types": [
+      "steel"
+    ],
+    "baseStats": {
+      "hp": 50,
+      "atk": 85,
+      "def": 85,
+      "spa": 55,
+      "spd": 55,
+      "spe": 50
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 1,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 98,
+    "growthRate": "Fast"
+  },
+  "Meditite": {
+    "types": [
+      "fighting",
+      "psychic"
+    ],
+    "baseStats": {
+      "hp": 30,
+      "atk": 40,
+      "def": 55,
+      "spa": 40,
+      "spd": 55,
+      "spe": 60
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "baseExp": 91,
+    "growthRate": "MediumFast"
+  },
+  "Medicham": {
+    "types": [
+      "fighting",
+      "psychic"
+    ],
+    "baseStats": {
+      "hp": 60,
+      "atk": 60,
+      "def": 75,
+      "spa": 60,
+      "spd": 75,
+      "spe": 80
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "baseExp": 153,
+    "growthRate": "MediumFast"
+  },
+  "Swablu": {
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 45,
+      "atk": 40,
+      "def": 60,
+      "spa": 40,
+      "spd": 75,
+      "spe": 50
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "baseExp": 74,
+    "growthRate": "Erratic"
+  },
+  "Altaria": {
+    "types": [
+      "dragon",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 75,
+      "atk": 70,
+      "def": 90,
+      "spa": 70,
+      "spd": 105,
+      "spe": 80
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 2,
+      "spe": 0
+    },
+    "baseExp": 188,
+    "growthRate": "Erratic"
+  },
+  "Wynaut": {
+    "types": [
+      "psychic"
+    ],
+    "baseStats": {
+      "hp": 95,
+      "atk": 23,
+      "def": 48,
+      "spa": 23,
+      "spd": 48,
+      "spe": 23
+    },
+    "evYield": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 44,
+    "growthRate": "MediumFast"
+  },
+  "Duskull": {
+    "types": [
+      "ghost"
+    ],
+    "baseStats": {
+      "hp": 20,
+      "atk": 40,
+      "def": 90,
+      "spa": 30,
+      "spd": 90,
+      "spe": 25
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "baseExp": 97,
+    "growthRate": "Fast"
+  },
+  "Dusclops": {
+    "types": [
+      "ghost"
+    ],
+    "baseStats": {
+      "hp": 40,
+      "atk": 70,
+      "def": 130,
+      "spa": 60,
+      "spd": 130,
+      "spe": 25
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 2,
+      "spe": 0
+    },
+    "baseExp": 179,
+    "growthRate": "Fast"
+  },
+  "Roselia": {
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "baseStats": {
+      "hp": 50,
+      "atk": 60,
+      "def": 45,
+      "spa": 100,
+      "spd": 80,
+      "spe": 65
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 152,
+    "growthRate": "MediumSlow"
+  },
+  "Slakoth": {
+    "types": [
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 60,
+      "atk": 60,
+      "def": 60,
+      "spa": 35,
+      "spd": 35,
+      "spe": 30
+    },
+    "evYield": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 83,
+    "growthRate": "Slow"
+  },
+  "Vigoroth": {
+    "types": [
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 80,
+      "atk": 80,
+      "def": 80,
+      "spa": 55,
+      "spd": 55,
+      "spe": 90
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 2
+    },
+    "baseExp": 126,
+    "growthRate": "Slow"
+  },
+  "Slaking": {
+    "types": [
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 150,
+      "atk": 160,
+      "def": 100,
+      "spa": 95,
+      "spd": 65,
+      "spe": 100
+    },
+    "evYield": {
+      "hp": 3,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 210,
+    "growthRate": "Slow"
+  },
+  "Gulpin": {
+    "types": [
+      "poison"
+    ],
+    "baseStats": {
+      "hp": 70,
+      "atk": 43,
+      "def": 53,
+      "spa": 43,
+      "spd": 53,
+      "spe": 40
+    },
+    "evYield": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 75,
+    "growthRate": "Fluctuating"
+  },
+  "Swalot": {
+    "types": [
+      "poison"
+    ],
+    "baseStats": {
+      "hp": 100,
+      "atk": 73,
+      "def": 83,
+      "spa": 73,
+      "spd": 83,
+      "spe": 55
+    },
+    "evYield": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 168,
+    "growthRate": "Fluctuating"
+  },
+  "Tropius": {
+    "types": [
+      "grass",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 99,
+      "atk": 68,
+      "def": 83,
+      "spa": 72,
+      "spd": 87,
+      "spe": 51
+    },
+    "evYield": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 169,
+    "growthRate": "Slow"
+  },
+  "Whismur": {
+    "types": [
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 64,
+      "atk": 51,
+      "def": 23,
+      "spa": 51,
+      "spd": 23,
+      "spe": 28
+    },
+    "evYield": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 68,
+    "growthRate": "MediumSlow"
+  },
+  "Loudred": {
+    "types": [
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 84,
+      "atk": 71,
+      "def": 43,
+      "spa": 71,
+      "spd": 43,
+      "spe": 48
+    },
+    "evYield": {
+      "hp": 2,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 126,
+    "growthRate": "MediumSlow"
+  },
+  "Exploud": {
+    "types": [
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 104,
+      "atk": 91,
+      "def": 63,
+      "spa": 91,
+      "spd": 63,
+      "spe": 68
+    },
+    "evYield": {
+      "hp": 3,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 184,
+    "growthRate": "MediumSlow"
+  },
+  "Clamperl": {
+    "types": [
+      "water"
+    ],
+    "baseStats": {
+      "hp": 35,
+      "atk": 64,
+      "def": 85,
+      "spa": 74,
+      "spd": 55,
+      "spe": 32
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 142,
+    "growthRate": "Erratic"
+  },
+  "Huntail": {
+    "types": [
+      "water"
+    ],
+    "baseStats": {
+      "hp": 55,
+      "atk": 104,
+      "def": 105,
+      "spa": 94,
+      "spd": 75,
+      "spe": 52
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 1,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 178,
+    "growthRate": "Erratic"
+  },
+  "Gorebyss": {
+    "types": [
+      "water"
+    ],
+    "baseStats": {
+      "hp": 55,
+      "atk": 84,
+      "def": 105,
+      "spa": 114,
+      "spd": 75,
+      "spe": 52
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 178,
+    "growthRate": "Erratic"
+  },
+  "Absol": {
+    "types": [
+      "dark"
+    ],
+    "baseStats": {
+      "hp": 65,
+      "atk": 130,
+      "def": 60,
+      "spa": 75,
+      "spd": 60,
+      "spe": 75
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 174,
+    "growthRate": "MediumSlow"
+  },
+  "Shuppet": {
+    "types": [
+      "ghost"
+    ],
+    "baseStats": {
+      "hp": 44,
+      "atk": 75,
+      "def": 35,
+      "spa": 63,
+      "spd": 33,
+      "spe": 45
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 97,
+    "growthRate": "Fast"
+  },
+  "Banette": {
+    "types": [
+      "ghost"
+    ],
+    "baseStats": {
+      "hp": 64,
+      "atk": 115,
+      "def": 65,
+      "spa": 83,
+      "spd": 63,
+      "spe": 65
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 179,
+    "growthRate": "Fast"
+  },
+  "Seviper": {
+    "types": [
+      "poison"
+    ],
+    "baseStats": {
+      "hp": 73,
+      "atk": 100,
+      "def": 60,
+      "spa": 100,
+      "spd": 60,
+      "spe": 65
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 165,
+    "growthRate": "Fluctuating"
+  },
+  "Zangoose": {
+    "types": [
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 73,
+      "atk": 115,
+      "def": 60,
+      "spa": 60,
+      "spd": 60,
+      "spe": 90
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 165,
+    "growthRate": "Erratic"
+  },
+  "Relicanth": {
+    "types": [
+      "water",
+      "rock"
+    ],
+    "baseStats": {
+      "hp": 100,
+      "atk": 90,
+      "def": 130,
+      "spa": 45,
+      "spd": 65,
+      "spe": 55
+    },
+    "evYield": {
+      "hp": 1,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 198,
+    "growthRate": "Slow"
+  },
+  "Aron": {
+    "types": [
+      "steel",
+      "rock"
+    ],
+    "baseStats": {
+      "hp": 50,
+      "atk": 70,
+      "def": 100,
+      "spa": 40,
+      "spd": 40,
+      "spe": 30
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 96,
+    "growthRate": "Slow"
+  },
+  "Lairon": {
+    "types": [
+      "steel",
+      "rock"
+    ],
+    "baseStats": {
+      "hp": 60,
+      "atk": 90,
+      "def": 140,
+      "spa": 50,
+      "spd": 50,
+      "spe": 40
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 152,
+    "growthRate": "Slow"
+  },
+  "Aggron": {
+    "types": [
+      "steel",
+      "rock"
+    ],
+    "baseStats": {
+      "hp": 70,
+      "atk": 110,
+      "def": 180,
+      "spa": 60,
+      "spd": 60,
+      "spe": 50
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 3,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 205,
+    "growthRate": "Slow"
+  },
+  "Castform": {
+    "types": [
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 70,
+      "atk": 70,
+      "def": 70,
+      "spa": 70,
+      "spd": 70,
+      "spe": 70
+    },
+    "evYield": {
+      "hp": 1,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 145,
+    "growthRate": "MediumFast"
+  },
+  "Volbeat": {
+    "types": [
+      "bug"
+    ],
+    "baseStats": {
+      "hp": 65,
+      "atk": 73,
+      "def": 55,
+      "spa": 47,
+      "spd": 75,
+      "spe": 85
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "baseExp": 146,
+    "growthRate": "Erratic"
+  },
+  "Illumise": {
+    "types": [
+      "bug"
+    ],
+    "baseStats": {
+      "hp": 65,
+      "atk": 47,
+      "def": 55,
+      "spa": 73,
+      "spd": 75,
+      "spe": 85
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 1
+    },
+    "baseExp": 146,
+    "growthRate": "Fluctuating"
+  },
+  "Lileep": {
+    "types": [
+      "rock",
+      "grass"
+    ],
+    "baseStats": {
+      "hp": 66,
+      "atk": 41,
+      "def": 77,
+      "spa": 61,
+      "spd": 87,
+      "spe": 23
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "baseExp": 121,
+    "growthRate": "Erratic"
+  },
+  "Cradily": {
+    "types": [
+      "rock",
+      "grass"
+    ],
+    "baseStats": {
+      "hp": 86,
+      "atk": 81,
+      "def": 97,
+      "spa": 81,
+      "spd": 107,
+      "spe": 43
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 2,
+      "spe": 0
+    },
+    "baseExp": 201,
+    "growthRate": "Erratic"
+  },
+  "Anorith": {
+    "types": [
+      "rock",
+      "bug"
+    ],
+    "baseStats": {
+      "hp": 45,
+      "atk": 95,
+      "def": 50,
+      "spa": 40,
+      "spd": 50,
+      "spe": 75
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 119,
+    "growthRate": "Erratic"
+  },
+  "Armaldo": {
+    "types": [
+      "rock",
+      "bug"
+    ],
+    "baseStats": {
+      "hp": 75,
+      "atk": 125,
+      "def": 100,
+      "spa": 70,
+      "spd": 80,
+      "spe": 45
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 200,
+    "growthRate": "Erratic"
+  },
+  "Ralts": {
+    "types": [
+      "psychic"
+    ],
+    "baseStats": {
+      "hp": 28,
+      "atk": 25,
+      "def": 25,
+      "spa": 45,
+      "spd": 35,
+      "spe": 40
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 70,
+    "growthRate": "Slow"
+  },
+  "Kirlia": {
+    "types": [
+      "psychic"
+    ],
+    "baseStats": {
+      "hp": 38,
+      "atk": 35,
+      "def": 35,
+      "spa": 65,
+      "spd": 55,
+      "spe": 50
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 2,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 140,
+    "growthRate": "Slow"
+  },
+  "Gardevoir": {
+    "types": [
+      "psychic"
+    ],
+    "baseStats": {
+      "hp": 68,
+      "atk": 65,
+      "def": 65,
+      "spa": 125,
+      "spd": 115,
+      "spe": 80
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 3,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 208,
+    "growthRate": "Slow"
+  },
+  "Bagon": {
+    "types": [
+      "dragon"
+    ],
+    "baseStats": {
+      "hp": 45,
+      "atk": 75,
+      "def": 60,
+      "spa": 40,
+      "spd": 30,
+      "spe": 50
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 89,
+    "growthRate": "Slow"
+  },
+  "Shelgon": {
+    "types": [
+      "dragon"
+    ],
+    "baseStats": {
+      "hp": 65,
+      "atk": 95,
+      "def": 100,
+      "spa": 60,
+      "spd": 50,
+      "spe": 50
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 144,
+    "growthRate": "Slow"
+  },
+  "Salamence": {
+    "types": [
+      "dragon",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 95,
+      "atk": 135,
+      "def": 80,
+      "spa": 110,
+      "spd": 80,
+      "spe": 100
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 3,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 218,
+    "growthRate": "Slow"
+  },
+  "Beldum": {
+    "types": [
+      "steel",
+      "psychic"
+    ],
+    "baseStats": {
+      "hp": 40,
+      "atk": 55,
+      "def": 80,
+      "spa": 35,
+      "spd": 60,
+      "spe": 30
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 1,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 103,
+    "growthRate": "Slow"
+  },
+  "Metang": {
+    "types": [
+      "steel",
+      "psychic"
+    ],
+    "baseStats": {
+      "hp": 60,
+      "atk": 75,
+      "def": 100,
+      "spa": 55,
+      "spd": 80,
+      "spe": 50
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 153,
+    "growthRate": "Slow"
+  },
+  "Metagross": {
+    "types": [
+      "steel",
+      "psychic"
+    ],
+    "baseStats": {
+      "hp": 80,
+      "atk": 135,
+      "def": 130,
+      "spa": 95,
+      "spd": 90,
+      "spe": 70
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 3,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 210,
+    "growthRate": "Slow"
+  },
+  "Regirock": {
+    "types": [
+      "rock"
+    ],
+    "baseStats": {
+      "hp": 80,
+      "atk": 100,
+      "def": 200,
+      "spa": 50,
+      "spd": 100,
+      "spe": 50
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 3,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 217,
+    "growthRate": "Slow"
+  },
+  "Regice": {
+    "types": [
+      "ice"
+    ],
+    "baseStats": {
+      "hp": 80,
+      "atk": 50,
+      "def": 100,
+      "spa": 100,
+      "spd": 200,
+      "spe": 50
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 3,
+      "spe": 0
+    },
+    "baseExp": 216,
+    "growthRate": "Slow"
+  },
+  "Registeel": {
+    "types": [
+      "steel"
+    ],
+    "baseStats": {
+      "hp": 80,
+      "atk": 75,
+      "def": 150,
+      "spa": 75,
+      "spd": 150,
+      "spe": 50
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 2,
+      "spa": 0,
+      "spd": 1,
+      "spe": 0
+    },
+    "baseExp": 215,
+    "growthRate": "Slow"
+  },
+  "Kyogre": {
+    "types": [
+      "water"
+    ],
+    "baseStats": {
+      "hp": 100,
+      "atk": 100,
+      "def": 90,
+      "spa": 150,
+      "spd": 140,
+      "spe": 90
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 3,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 218,
+    "growthRate": "Slow"
+  },
+  "Groudon": {
+    "types": [
+      "ground"
+    ],
+    "baseStats": {
+      "hp": 100,
+      "atk": 150,
+      "def": 140,
+      "spa": 100,
+      "spd": 90,
+      "spe": 90
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 3,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 218,
+    "growthRate": "Slow"
+  },
+  "Rayquaza": {
+    "types": [
+      "dragon",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 105,
+      "atk": 150,
+      "def": 90,
+      "spa": 150,
+      "spd": 90,
+      "spe": 95
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 2,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 220,
+    "growthRate": "Slow"
+  },
+  "Latias": {
+    "types": [
+      "dragon",
+      "psychic"
+    ],
+    "baseStats": {
+      "hp": 80,
+      "atk": 80,
+      "def": 90,
+      "spa": 110,
+      "spd": 130,
+      "spe": 110
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 3,
+      "spe": 0
+    },
+    "baseExp": 211,
+    "growthRate": "Slow"
+  },
+  "Latios": {
+    "types": [
+      "dragon",
+      "psychic"
+    ],
+    "baseStats": {
+      "hp": 80,
+      "atk": 90,
+      "def": 80,
+      "spa": 130,
+      "spd": 110,
+      "spe": 110
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 3,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 211,
+    "growthRate": "Slow"
+  },
+  "Jirachi": {
+    "types": [
+      "steel",
+      "psychic"
+    ],
+    "baseStats": {
+      "hp": 100,
+      "atk": 100,
+      "def": 100,
+      "spa": 100,
+      "spd": 100,
+      "spe": 100
+    },
+    "evYield": {
+      "hp": 3,
+      "atk": 0,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 0
+    },
+    "baseExp": 215,
+    "growthRate": "Slow"
+  },
+  "Deoxys": {
+    "types": [
+      "psychic"
+    ],
+    "baseStats": {
+      "hp": 50,
+      "atk": 150,
+      "def": 50,
+      "spa": 150,
+      "spd": 50,
+      "spe": 150
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 1,
+      "def": 0,
+      "spa": 1,
+      "spd": 0,
+      "spe": 1
+    },
+    "baseExp": 215,
+    "growthRate": "Slow"
+  },
+  "Chimecho": {
+    "types": [
+      "psychic"
+    ],
+    "baseStats": {
+      "hp": 65,
+      "atk": 50,
+      "def": 70,
+      "spa": 95,
+      "spd": 80,
+      "spe": 65
+    },
+    "evYield": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "spa": 1,
+      "spd": 1,
+      "spe": 0
+    },
+    "baseExp": 147,
+    "growthRate": "Fast"
+  }
+};
