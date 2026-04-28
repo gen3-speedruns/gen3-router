@@ -1,7 +1,9 @@
 import { create } from "zustand";
 import type { Nature } from "../core/data/natures";
 import type { StatsTable, GrowthRate } from "../core/types";
-import { getExpAtLevel } from "../core/mechanics/experience";
+import { calculateExpYield, getExpAtLevel } from "../core/mechanics/experience";
+import { PokemonData } from "../core/data/pokemon";
+import { calcHealth } from "../core/mechanics/stats";
 
 export interface PlayerState {
   species: string;
@@ -21,16 +23,16 @@ export interface PlayerState {
 }
 
 interface AppState {
-  player: PlayerState;
+  player: PlayerState | null;
 
   initPlayer: (
     species: string,
-    growthRate: GrowthRate,
+    level: number,
     nature: Nature,
     ivs: StatsTable,
   ) => void;
   evolve: (newSpecies: string) => void;
-  gainEncounter: (expGained: number, evYield: StatsTable) => void;
+  gainEncounter: (species: string, level: number, isTrainer: boolean) => void;
   modifyHp: (amount: number) => void;
   applyStatStage: (stat: keyof StatsTable, amount: number) => void;
   resetCombatState: () => void;
@@ -46,46 +48,61 @@ const initialStats: StatsTable = {
   spe: 0,
 };
 
-const STARTING_LEVEL = 5;
-const STARTING_GROWTH: GrowthRate = "MediumSlow";
-const STARTING_EXP = getExpAtLevel(STARTING_LEVEL, STARTING_GROWTH);
-
 export const useRunStore = create<AppState>((set) => ({
-  player: {
-    species: "Squirtle",
-    nature: "Hardy",
-    growthRate: "MediumSlow",
-    ivs: { ...initialStats },
-    evs: { ...initialStats },
-    totalExp: STARTING_EXP,
-    currentHp: 20,
-    stages: { ...initialStats },
-    badges: { boulder: false, thunder: false, soul: false, volcano: false },
-  },
+  player: null,
 
   rules: {
     badges: { boulder: false, cascade: false, thunder: false, volcano: false },
   },
 
-  initPlayer: (species, growthRate, nature, ivs) =>
-    set((state) => ({
-      player: {
-        ...state.player,
-        species,
-        growthRate,
-        nature,
-        ivs: { ...ivs },
-      },
-    })),
+  initPlayer: (species, level, nature, ivs) =>
+    set(() => {
+      const data = PokemonData[species];
+      const startingExp = getExpAtLevel(level, data.growthRate);
+      const startingMaxHp = calcHealth(data.baseStats.hp, level, ivs.hp, 0);
+
+      return {
+        player: {
+          species,
+          growthRate: data.growthRate,
+          nature,
+          ivs: { ...ivs },
+          evs: { ...initialStats },
+          totalExp: startingExp,
+          currentHp: startingMaxHp,
+          stages: { ...initialStats },
+          badges: {
+            boulder: false,
+            thunder: false,
+            soul: false,
+            volcano: false,
+          },
+        },
+      };
+    }),
 
   evolve: (newSpecies) =>
-    set((state) => ({
-      player: { ...state.player, species: newSpecies },
-    })),
-
-  gainEncounter: (expGained, evYield) =>
     set((state) => {
+      if (!state.player) return state;
+      return {
+        player: { ...state.player, species: newSpecies },
+      };
+    }),
+
+  gainEncounter: (species, level, isTrainer) =>
+    set((state) => {
+      if (!state.player) return state;
       const p = state.player;
+
+      const data = PokemonData[species];
+      if (!data) {
+        console.error(`Pokemon ${species} not found in database!`);
+        return state;
+      }
+
+      const expGained = calculateExpYield(data.baseExp, level, isTrainer);
+      const evYield = data.evYield;
+
       return {
         player: {
           ...p,
@@ -101,17 +118,20 @@ export const useRunStore = create<AppState>((set) => ({
         },
       };
     }),
-
   modifyHp: (amount) =>
-    set((state) => ({
-      player: {
-        ...state.player,
-        currentHp: Math.max(0, state.player.currentHp + amount),
-      },
-    })),
+    set((state) => {
+      if (!state.player) return state;
+      return {
+        player: {
+          ...state.player,
+          currentHp: Math.max(0, state.player.currentHp + amount),
+        },
+      };
+    }),
 
   applyStatStage: (stat, amount) =>
     set((state) => {
+      if (!state.player) return state;
       const current = state.player.stages[stat];
       return {
         player: {
@@ -125,21 +145,27 @@ export const useRunStore = create<AppState>((set) => ({
     }),
 
   resetCombatState: () =>
-    set((state) => ({
-      player: {
-        ...state.player,
-        stages: { ...initialStats },
-      },
-    })),
+    set((state) => {
+      if (!state.player) return state;
+      return {
+        player: {
+          ...state.player,
+          stages: { ...initialStats },
+        },
+      };
+    }),
 
   toggleBadge: (badge, active) =>
-    set((state) => ({
-      player: {
-        ...state.player,
-        badges: {
-          ...state.player.badges,
-          [badge]: active,
+    set((state) => {
+      if (!state.player) return state;
+      return {
+        player: {
+          ...state.player,
+          badges: {
+            ...state.player.badges,
+            [badge]: active,
+          },
         },
-      },
-    })),
+      };
+    }),
 }));

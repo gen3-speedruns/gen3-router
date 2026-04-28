@@ -6,11 +6,8 @@ export function calcHealth(
   iv: number,
   ev: number,
 ): number {
-  return (
-    Math.trunc(((2 * base + iv + Math.trunc(ev / 4)) * level) / 100) +
-    level +
-    10
-  );
+  const stat = 2 * Number(base) + Number(iv) + Math.trunc(Number(ev) / 4);
+  return Math.trunc((stat * Number(level)) / 100) + Number(level) + 10;
 }
 
 export type StatName = "atk" | "def" | "spa" | "spd" | "spe";
@@ -24,7 +21,11 @@ export function calcStat(
   nature: Nature,
 ): number {
   let val =
-    Math.trunc(((2 * base + iv + Math.trunc(ev / 4)) * level) / 100) + 5;
+    Math.trunc(
+      ((2 * Number(base) + Number(iv) + Math.trunc(Number(ev) / 4)) *
+        Number(level)) /
+        100,
+    ) + 5;
 
   const mod = NatureModifiers[nature];
   if (mod.plus === statName) val = Math.trunc(val * 1.1);
