@@ -5,8 +5,8 @@ import { Encounter } from "./components/Encounter";
 import { Starter } from "./components/Starter";
 import { Sidebar } from "./components/Sidebar";
 import { SpeedCheck } from "./components/SpeedCheck";
-import { DamageOut } from "./components/DamageOut";
 import { DamageIn } from "./components/DamageIn";
+import { KoChance } from "./components/KoChance";
 
 const routeSource = `
 # Pallet Town
@@ -27,8 +27,9 @@ The first major roadblock. Do not heal before this fight if you are in Pinch ran
 
 **Strategy:**
 Spam Bubble. If you are in Torrent range, it is guaranteed.
-{% damage-out move="Bubble" /%}
-{% damage-out move="Bubble" pinch=true /%}
+{% ko-chance move="Bubble" pinch=true /%}
+{% ko-chance move="Bubble" hits=2 pinch=true /%}
+
 
 **Threats:**
 {% damage-in move="Tackle" /%}
@@ -45,8 +46,8 @@ export default function App() {
       Encounter: Encounter,
       Starter: Starter,
       SpeedCheck: SpeedCheck,
-      DamageOut: DamageOut,
       DamageIn: DamageIn,
+      KoChance: KoChance,
     },
   });
 

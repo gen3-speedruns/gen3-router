@@ -1,24 +1,14 @@
 import { MoveData } from "../gamedata/moves";
 import {
-  calcDamageOut,
   calcDamageIn,
   type DamageResult,
+  calcKoChance,
+  type KoChanceResult,
 } from "../mechanics/damage";
 import { calcSpeedCheck, type SpeedResult } from "../mechanics/speed";
 import type { PlayerSpec, EnemySpec } from "../gamedata/types";
 
 export type { DamageResult, SpeedResult };
-
-export function getDamageOut(
-  player: PlayerSpec,
-  enemy: EnemySpec,
-  moveName: string,
-  opts: { pinch?: boolean; stages?: number } = {},
-): DamageResult | null {
-  const move = MoveData[moveName];
-  if (!move) return null;
-  return calcDamageOut(player, enemy, move, opts);
-}
 
 export function getDamageIn(
   enemy: EnemySpec,
@@ -37,4 +27,20 @@ export function getSpeedCheck(
   stages = 0,
 ): SpeedResult {
   return calcSpeedCheck(player, enemy, stages);
+}
+
+export function getKoChance(
+  player: PlayerSpec,
+  enemy: EnemySpec,
+  moveNames: string[],
+  opts: { pinch?: boolean; stages?: number },
+): KoChanceResult | null {
+  const moves = moveNames.map((name) => MoveData[name]);
+  if (!moves.filter((move) => move)) {
+    console.log(moves);
+
+    return null;
+  }
+
+  return calcKoChance(player, enemy, moves, opts);
 }

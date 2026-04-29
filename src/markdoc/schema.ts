@@ -24,19 +24,21 @@ export const markdocConfig: Config = {
       render: "SpeedCheck",
       attributes: { stages: { type: Number } },
     },
-    "damage-out": {
-      render: "DamageOut",
-      attributes: {
-        move: { type: String, required: true },
-        pinch: { type: Boolean },
-        stages: { type: Number },
-      },
-    },
     "damage-in": {
       render: "DamageIn",
       attributes: {
         move: { type: String, required: true },
         stages: { type: Number },
+      },
+    },
+    "ko-chance": {
+      render: "KoChance",
+      attributes: {
+        move: { type: String },
+        moves: { type: Array },
+        hits: { type: Number, default: 1 },
+        pinch: { type: Boolean, default: false },
+        stages: { type: Number, default: 0 },
       },
     },
   },

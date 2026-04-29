@@ -14,7 +14,7 @@ export interface DamageResult {
   isLethal: boolean;
 }
 
-export function calcDamageOut(
+function calcDamageOut(
   player: PlayerSpec,
   enemy: EnemySpec,
   move: Move,
@@ -60,6 +60,44 @@ export function calcDamageIn(
     false,
   );
   return toResult(rolls, player.stats.hp);
+}
+
+export interface KoChanceResult {
+  chance: number;
+  outOf: number;
+  pct: number;
+  guaranteed: boolean;
+}
+
+export function calcKoChance(
+  player: PlayerSpec,
+  enemy: EnemySpec,
+  moves: Move[],
+  opts: { pinch?: boolean; stages?: number },
+): KoChanceResult {
+  const rollSets = moves.map(
+    (move) => calcDamageOut(player, enemy, move, opts).rolls,
+  );
+
+  let combos: number[] = rollSets[0];
+  for (let i = 1; i < rollSets.length; i++) {
+    const next: number[] = [];
+    for (const a of combos) {
+      for (const b of rollSets[i]) {
+        next.push(a + b);
+      }
+    }
+    combos = next;
+  }
+
+  const outOf = combos.length;
+  const winning = combos.filter((total) => total >= enemy.stats.hp).length;
+  return {
+    chance: winning,
+    outOf,
+    pct: Math.round((winning / outOf) * 100),
+    guaranteed: combos[0] >= enemy.stats.hp,
+  };
 }
 
 interface Combatant {
