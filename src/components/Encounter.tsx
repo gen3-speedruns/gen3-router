@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from "react";
 import { useRunStore } from "../store/runState";
 import { EncounterProvider } from "./EncounterContext";
-import { buildEnemySpec } from "../selectors/playerSelectors";
+import { buildEnemySpec, buildPlayerSpec } from "../selectors/playerSelectors";
 
 interface EncounterProps {
   species: string;
@@ -20,10 +20,16 @@ export const Encounter: React.FC<EncounterProps> = ({
 }) => {
   const [defeated, setDefeated] = useState(false);
   const gainEncounter = useRunStore((state) => state.gainEncounter);
+  const player = useRunStore((s) => s.player);
 
   const enemySpec = useMemo(
     () => buildEnemySpec(species, level, fixedIv),
     [species, level, fixedIv],
+  );
+
+  const playerSpec = useMemo(
+    () => (player ? buildPlayerSpec(player) : null),
+    [player],
   );
 
   if (!enemySpec)
@@ -33,8 +39,15 @@ export const Encounter: React.FC<EncounterProps> = ({
       </div>
     );
 
+  if (!playerSpec)
+    return (
+      <div className="text-slate-400 italic p-4">
+        Initialize your starter to see calculations.
+      </div>
+    );
+
   return (
-    <EncounterProvider value={enemySpec}>
+    <EncounterProvider value={{ player: playerSpec, enemy: enemySpec }}>
       <div
         className={`border-l-4 p-5 my-6 rounded-lg shadow-sm bg-white border-blue-500 ${defeated && "opacity-60 grayscale-[0.5]"}`}
       >

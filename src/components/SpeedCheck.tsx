@@ -1,17 +1,13 @@
 import React from "react";
-import { useRunStore } from "../store/runState";
 import { useEncounter } from "./EncounterContext";
 import { getSpeedCheck } from "../selectors/damageSelectors";
-import { buildPlayerSpec } from "../selectors/playerSelectors";
 
 export const SpeedCheck: React.FC<{ stages?: number }> = ({ stages = 0 }) => {
-  const player = useRunStore((s) => s.player);
-  const enemy = useEncounter();
-
+  const { player, enemy } = useEncounter();
   if (!player) return null;
 
   const { outcome, playerFinal, enemySpeed } = getSpeedCheck(
-    buildPlayerSpec(player),
+    player,
     enemy,
     stages,
   );
