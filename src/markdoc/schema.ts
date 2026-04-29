@@ -17,7 +17,7 @@ export const markdocConfig: Config = {
         species: { type: String, required: true },
         level: { type: Number, required: true },
         isTrainer: { type: Boolean, default: false },
-        enemySpeed: { type: Number },
+        fixedIv: { type: Number, default: 0 },
       },
     },
     "speed-check": {
