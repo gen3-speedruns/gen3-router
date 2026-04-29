@@ -1,26 +1,22 @@
 import React from "react";
 import { useRunStore } from "../store/runState";
-import {
-  getPlayerSnapshot,
-  type PlayerSnapshot,
-} from "../selectors/playerSelectors";
+import { buildPlayerSpec } from "../selectors/playerSelectors";
+import type { PlayerSpec } from "../gamedata/types";
 
 export const Sidebar: React.FC = () => {
   const player = useRunStore((state) => state.player);
 
   const {
     level,
-    maxHp,
     pinchThreshold,
-    stats: { spe },
+    stats: { hp, spe },
   } = player
-    ? getPlayerSnapshot(player)
+    ? buildPlayerSpec(player)
     : ({
         level: 0,
-        maxHp: 0,
         pinchThreshold: 0,
-        stats: { spe: 0 },
-      } as PlayerSnapshot);
+        stats: { hp: 0, spe: 0 },
+      } as PlayerSpec);
 
   return (
     <div className="w-80 bg-slate-900 text-white p-6 shadow-xl flex flex-col gap-6 fixed h-full overflow-y-auto">
@@ -58,7 +54,7 @@ export const Sidebar: React.FC = () => {
               {/* Active Combat Info */}
               <div className="flex justify-between items-center pt-1">
                 <span>Max HP:</span>
-                <span className="font-mono font-bold text-white">{maxHp}</span>
+                <span className="font-mono font-bold text-white">{hp}</span>
               </div>
               <div className="flex justify-between items-center">
                 <span>Pinch Range:</span>

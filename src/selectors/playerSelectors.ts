@@ -1,61 +1,91 @@
 import { getLevelFromExp } from "../mechanics/experience";
-import {
-  calcHealth,
-  calcStat,
-  calcPinchThreshold,
-  type StatName,
-} from "../mechanics/stats";
+import { calcHealth, calcStat, calcPinchThreshold } from "../mechanics/stats";
 import { PokemonData } from "../gamedata/pokemon";
 import type { PlayerState } from "../store/runState";
-import type { StatsTable } from "../gamedata/types";
+import type { PlayerSpec, EnemySpec, StatsTable } from "../gamedata/types";
 
-export interface PlayerSnapshot {
-  level: number;
-  maxHp: number;
-  pinchThreshold: number;
-  stats: StatsTable;
-}
-
-export function getPlayerSnapshot(player: PlayerState): PlayerSnapshot {
+export function buildPlayerSpec(player: PlayerState): PlayerSpec {
   const data = PokemonData[player.species];
   const level = getLevelFromExp(player.totalExp, player.growthRate);
+  const { badges, ivs, evs, nature } = player;
 
-  const maxHp = calcHealth(
-    data.baseStats.hp,
-    level,
-    player.ivs.hp,
-    player.evs.hp,
-  );
+  const hp = calcHealth(data.baseStats.hp, level, ivs.hp, evs.hp);
 
-  const statNames: StatName[] = ["atk", "def", "spa", "spd", "spe"];
-  const badgeMap: Record<StatName, boolean> = {
-    atk: player.badges.boulder,
-    def: player.badges.soul,
-    spa: player.badges.volcano,
-    spd: player.badges.volcano,
-    spe: player.badges.thunder,
+  const stats: StatsTable = {
+    hp,
+    atk: calcStat(
+      "atk",
+      data.baseStats.atk,
+      level,
+      ivs.atk,
+      evs.atk,
+      nature,
+      badges.boulder,
+    ),
+    def: calcStat(
+      "def",
+      data.baseStats.def,
+      level,
+      ivs.def,
+      evs.def,
+      nature,
+      badges.soul,
+    ),
+    spa: calcStat(
+      "spa",
+      data.baseStats.spa,
+      level,
+      ivs.spa,
+      evs.spa,
+      nature,
+      badges.volcano,
+    ),
+    spd: calcStat(
+      "spd",
+      data.baseStats.spd,
+      level,
+      ivs.spd,
+      evs.spd,
+      nature,
+      badges.volcano,
+    ),
+    spe: calcStat(
+      "spe",
+      data.baseStats.spe,
+      level,
+      ivs.spe,
+      evs.spe,
+      nature,
+      badges.thunder,
+    ),
   };
-
-  const stats = statNames.reduce(
-    (acc, name) => {
-      acc[name] = calcStat(
-        name,
-        data.baseStats[name],
-        level,
-        player.ivs[name],
-        player.evs[name],
-        player.nature,
-        badgeMap[name],
-      );
-      return acc;
-    },
-    { hp: maxHp } as StatsTable,
-  );
 
   return {
     level,
-    maxHp,
-    pinchThreshold: calcPinchThreshold(maxHp),
+    types: data.types,
     stats,
+    pinchThreshold: calcPinchThreshold(hp),
   };
+}
+
+export function buildEnemySpec(
+  species: string,
+  level: number,
+  fixedIv = 0,
+): EnemySpec | null {
+  const data = PokemonData[species];
+  if (!data) return null;
+
+  const iv = Math.floor((fixedIv * 31) / 255);
+
+  const stats: StatsTable = {
+    hp: calcHealth(data.baseStats.hp, level, iv, 0),
+    atk: calcStat("atk", data.baseStats.atk, level, iv, 0, "Hardy"),
+    def: calcStat("def", data.baseStats.def, level, iv, 0, "Hardy"),
+    spa: calcStat("spa", data.baseStats.spa, level, iv, 0, "Hardy"),
+    spd: calcStat("spd", data.baseStats.spd, level, iv, 0, "Hardy"),
+    spe: calcStat("spe", data.baseStats.spe, level, iv, 0, "Hardy"),
+  };
+
+  return { species, level, types: data.types, stats };
 }

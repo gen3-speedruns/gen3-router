@@ -31,3 +31,17 @@ export interface Move {
   accuracy: number;
   pp: number;
 }
+
+export interface PlayerSpec {
+  level: number;
+  types: PokemonType[];
+  stats: StatsTable;
+  pinchThreshold: number;
+}
+
+export interface EnemySpec {
+  species: string;
+  level: number;
+  types: PokemonType[];
+  stats: StatsTable;
+}

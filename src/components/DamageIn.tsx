@@ -2,6 +2,7 @@ import React from "react";
 import { useRunStore } from "../store/runState";
 import { useEncounter } from "./EncounterContext";
 import { getDamageIn } from "../selectors/damageSelectors";
+import { buildPlayerSpec } from "../selectors/playerSelectors";
 
 export const DamageIn: React.FC<{ move: string; stages?: number }> = ({
   move,
@@ -12,14 +13,12 @@ export const DamageIn: React.FC<{ move: string; stages?: number }> = ({
 
   if (!player) return null;
 
-  const damage = getDamageIn(player, enemy, move, { stages });
+  const playerSpec = buildPlayerSpec(player);
+  const damage = getDamageIn(enemy, playerSpec, move, { stages });
   if (!damage)
     return <span className="text-red-500">Move {move} not found!</span>;
 
-  const {
-    roll: { min, max },
-    isLethal,
-  } = damage;
+  const { min, max, isLethal } = damage;
 
   return (
     <div

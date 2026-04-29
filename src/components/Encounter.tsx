@@ -1,14 +1,13 @@
 import React, { useState, useMemo } from "react";
 import { useRunStore } from "../store/runState";
-import { PokemonData } from "../gamedata/pokemon";
-import { calcHealth, calcStat } from "../mechanics/stats";
 import { EncounterProvider } from "./EncounterContext";
+import { buildEnemySpec } from "../selectors/playerSelectors";
 
 interface EncounterProps {
   species: string;
   level: number;
   isTrainer?: boolean;
-  enemySpeed?: number;
+  fixedIv?: number;
   children: React.ReactNode;
 }
 
@@ -16,30 +15,18 @@ export const Encounter: React.FC<EncounterProps> = ({
   species,
   level,
   isTrainer = false,
-  enemySpeed,
+  fixedIv,
   children,
 }) => {
   const [defeated, setDefeated] = useState(false);
   const gainEncounter = useRunStore((state) => state.gainEncounter);
 
-  const enemyData = useMemo(() => {
-    const data = PokemonData[species];
-    if (!data) return null;
+  const enemySpec = useMemo(
+    () => buildEnemySpec(species, level, fixedIv),
+    [species, level, fixedIv],
+  );
 
-    const stats = {
-      hp: calcHealth(data.baseStats.hp, level, 0, 0),
-      atk: calcStat("atk", data.baseStats.atk, level, 0, 0, "Hardy"),
-      def: calcStat("def", data.baseStats.def, level, 0, 0, "Hardy"),
-      spa: calcStat("spa", data.baseStats.spa, level, 0, 0, "Hardy"),
-      spd: calcStat("spd", data.baseStats.spd, level, 0, 0, "Hardy"),
-      spe:
-        enemySpeed ?? calcStat("spe", data.baseStats.spe, level, 0, 0, "Hardy"),
-    };
-
-    return { species, level, types: data.types, stats };
-  }, [species, level, enemySpeed]);
-
-  if (!enemyData)
+  if (!enemySpec)
     return (
       <div className="text-red-500 underline">
         Error: Species {species} not found
@@ -47,7 +34,7 @@ export const Encounter: React.FC<EncounterProps> = ({
     );
 
   return (
-    <EncounterProvider value={enemyData}>
+    <EncounterProvider value={enemySpec}>
       <div
         className={`border-l-4 p-5 my-6 rounded-lg shadow-sm bg-white border-blue-500 ${defeated && "opacity-60 grayscale-[0.5]"}`}
       >

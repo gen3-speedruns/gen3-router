@@ -2,6 +2,7 @@ import React from "react";
 import { useRunStore } from "../store/runState";
 import { useEncounter } from "./EncounterContext";
 import { getDamageOut } from "../selectors/damageSelectors";
+import { buildPlayerSpec } from "../selectors/playerSelectors";
 
 export const DamageOut: React.FC<{
   move: string;
@@ -13,14 +14,14 @@ export const DamageOut: React.FC<{
 
   if (!player) return null;
 
-  const damage = getDamageOut(player, enemy, move, { pinch, stages });
+  const damage = getDamageOut(buildPlayerSpec(player), enemy, move, {
+    pinch,
+    stages,
+  });
   if (!damage)
     return <span className="text-red-500">Move {move} not found!</span>;
 
-  const {
-    roll: { min, max },
-    ohkoPct,
-  } = damage;
+  const { min, max, ohkoPct } = damage;
 
   return (
     <div className="bg-blue-50 border border-blue-200 p-2 rounded text-sm text-blue-900 my-1 flex justify-between items-center">

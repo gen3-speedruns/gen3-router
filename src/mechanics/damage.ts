@@ -1,7 +1,68 @@
-import { type PokemonType, getTypeFactor } from "../gamedata/typeChart";
-import type { Move } from "../gamedata/types";
+import {
+  type PokemonType,
+  getTypeFactor,
+  isSpecialType,
+} from "../gamedata/typeChart";
+import type { EnemySpec, Move, PlayerSpec } from "../gamedata/types";
 
-export interface Combatant {
+export interface DamageResult {
+  rolls: number[];
+  min: number;
+  max: number;
+  ohkoCount: number;
+  ohkoPct: number;
+  isLethal: boolean;
+}
+
+export function calcDamageOut(
+  player: PlayerSpec,
+  enemy: EnemySpec,
+  move: Move,
+  opts: { pinch?: boolean; stages?: number } = {},
+): DamageResult {
+  const isSpecial = isSpecialType(move.type);
+  const atkStat = isSpecial ? player.stats.spa : player.stats.atk;
+  const defStat = isSpecial ? enemy.stats.spd : enemy.stats.def;
+
+  const rolls = calcDmgRange(
+    {
+      level: player.level,
+      types: player.types,
+      stat: atkStat,
+      stages: opts.stages ?? 0,
+    },
+    { level: enemy.level, types: enemy.types, stat: defStat, stages: 0 },
+    move,
+    opts.pinch ?? false,
+  );
+  return toResult(rolls, enemy.stats.hp);
+}
+
+export function calcDamageIn(
+  enemy: EnemySpec,
+  player: PlayerSpec,
+  move: Move,
+  opts: { stages?: number } = {},
+): DamageResult {
+  const isSpecial = isSpecialType(move.type);
+  const atkStat = isSpecial ? enemy.stats.spa : enemy.stats.atk;
+  const defStat = isSpecial ? player.stats.spd : player.stats.def;
+
+  const rolls = calcDmgRange(
+    { level: enemy.level, types: enemy.types, stat: atkStat, stages: 0 },
+    {
+      level: player.level,
+      types: player.types,
+      stat: defStat,
+      stages: opts.stages ?? 0,
+    },
+    move,
+    false,
+  );
+  return toResult(rolls, player.stats.hp);
+}
+
+interface Combatant {
   level: number;
   types: PokemonType[];
   stat: number;
@@ -9,7 +70,7 @@ export interface Combatant {
   badgeBoost?: boolean;
 }
 
-export function calcDmgRange(
+function calcDmgRange(
   attacker: Combatant,
   defender: Combatant,
   move: Move,
@@ -65,4 +126,16 @@ export function calcDmgRange(
   }
 
   return range;
+}
+
+function toResult(rolls: number[], defenderHp: number): DamageResult {
+  const ohkoCount = rolls.filter((r) => r >= defenderHp).length;
+  return {
+    rolls,
+    min: rolls[0],
+    max: rolls[15],
+    ohkoCount,
+    ohkoPct: Math.round((ohkoCount / 16) * 100),
+    isLethal: rolls[15] >= defenderHp,
+  };
 }
