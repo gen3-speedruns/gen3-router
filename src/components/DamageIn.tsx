@@ -12,8 +12,7 @@ export const DamageIn: React.FC<{ move: string; stages?: number }> = ({
   if (!damage)
     return <span className="text-error text-sm">Move {move} not found!</span>;
 
-  const { min, max, isLethal } = damage;
-
+  const { rolls, isLethal } = damage;
   return (
     <div
       className={`flex justify-between items-center text-sm px-3 py-1.5 my-1 rounded border ${
@@ -25,12 +24,37 @@ export const DamageIn: React.FC<{ move: string; stages?: number }> = ({
       <span>
         <strong>{move}</strong>
       </span>
-      <span className={isLethal ? "font-bold" : ""}>
-        {min} – {max}
-        {isLethal && (
-          <span className="ml-2 badge badge-error badge-xs">Lethal</span>
-        )}
+      <span>
+        <strong>
+          {formatDmgRange(rolls)}
+          {isLethal && (
+            <span className="ml-2 badge badge-error badge-xs">Lethal</span>
+          )}
+        </strong>
       </span>
     </div>
   );
 };
+
+function formatDmgRange(rolls: number[]): string {
+  const min = rolls[0];
+  const second = rolls[1];
+  const penult = rolls[rolls.length - 2];
+  const max = rolls[rolls.length - 1];
+
+  const minIsOutlier = min !== second;
+  const maxIsOutlier = max !== penult;
+
+  const prefix = minIsOutlier ? `(${min})` : "";
+  const core = formatInterval(
+    minIsOutlier ? second : min,
+    maxIsOutlier ? penult : max,
+  );
+  const suffix = maxIsOutlier ? `(${max})` : "";
+
+  return `${prefix}${core}${suffix}`;
+}
+
+function formatInterval(lo: number, hi: number): string {
+  return lo === hi ? `${lo}` : `${lo}–${hi}`;
+}
