@@ -23,10 +23,10 @@ export const DamageIn: React.FC<{ move: string; stages?: number }> = ({
       }`}
     >
       <span>
-        Enemy <strong>{move}</strong>
+        <strong>{move}</strong>
       </span>
       <span className={isLethal ? "font-bold" : ""}>
-        {min} – {max} dmg
+        {min} – {max}
         {isLethal && (
           <span className="ml-2 badge badge-error badge-xs">Lethal</span>
         )}

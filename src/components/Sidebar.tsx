@@ -23,7 +23,7 @@ export const Sidebar: React.FC = () => {
       <SidebarShell>
         <div className="card bg-base-200 border border-base-content/10">
           <div className="card-body text-base-content/50 text-center italic py-4">
-            Waiting for starter...
+            No starter set
           </div>
         </div>
       </SidebarShell>

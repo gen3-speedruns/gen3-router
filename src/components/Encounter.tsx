@@ -42,7 +42,7 @@ export const Encounter: React.FC<EncounterProps> = ({
   if (!playerSpec)
     return (
       <div className="text-slate-400 italic p-4">
-        Initialize your starter to see calculations.
+        Set your starter to see calcs.
       </div>
     );
 
@@ -70,7 +70,7 @@ export const Encounter: React.FC<EncounterProps> = ({
               disabled={defeated}
               className={`btn btn-xs ${defeated ? "btn-disabled" : "btn-primary"}`}
             >
-              {defeated ? "Defeated" : "Mark Defeat"}
+              {defeated ? "Defeated" : "Defeat"}
             </button>
           </div>
           <div className="prose prose-sm max-w-none dark:prose-invert">
