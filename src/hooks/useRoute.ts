@@ -5,7 +5,7 @@ import {
 } from "../markdoc/frontmatter";
 import Markdoc from "@markdoc/markdoc";
 
-const DEFAULT_ROUTE = "/routes/frlg-anypct-squirtle.mdoc";
+const DEFAULT_ROUTE = "/routes/frlg-anypct-squirtle-high-exp.mdoc";
 
 export interface RouteData {
   content: string;
