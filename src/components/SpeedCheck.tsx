@@ -12,22 +12,19 @@ export const SpeedCheck: React.FC<{ stages?: number }> = ({ stages = 0 }) => {
     stages,
   );
 
-  const result =
+  const [label, colorClass] =
     outcome === "outspeed"
-      ? "Outspeed"
+      ? ["Outspeed", "text-success"]
       : outcome === "outsped"
-        ? "Outsped"
-        : "Speed Tie";
-  const color =
-    outcome === "outspeed"
-      ? "text-green-600"
-      : outcome === "outsped"
-        ? "text-red-600"
-        : "text-amber-600";
+        ? ["Outsped", "text-error"]
+        : ["Speed Tie", "text-warning"];
 
   return (
-    <span className={`font-bold ${color}`}>
-      {result} ({playerFinal} vs {enemySpeed})
+    <span className={`font-bold ${colorClass}`}>
+      {label}
+      <span className="text-base-content/40 text-xs font-normal ml-1">
+        ({playerFinal} vs {enemySpeed})
+      </span>
     </span>
   );
 };

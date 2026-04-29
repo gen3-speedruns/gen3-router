@@ -38,63 +38,61 @@ export const Starter: React.FC<StarterProps> = ({
 
   if (isInitialized) {
     return (
-      <div className="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 my-4 rounded">
-        <p className="font-bold">Run Initialized!</p>
-        <p className="text-sm">
-          Locked in {species} (Lv. {level}). Good luck on the run!
-        </p>
+      <div className="alert alert-success my-4">
+        <span className="font-bold">Run Initialized!</span>
+        <span className="text-sm">
+          Locked in {species} (Lv. {level}). Good luck!
+        </span>
       </div>
     );
   }
 
   return (
-    <form
-      onSubmit={handleStart}
-      className="bg-slate-800 text-white p-6 my-4 rounded-lg shadow-lg"
-    >
-      <h3 className="text-xl font-bold text-blue-400 mb-4">
-        Initialize Starter: {species} (Lv. {level})
-      </h3>
+    <form onSubmit={handleStart} className="card bg-base-100 shadow-lg my-4">
+      <div className="card-body gap-4">
+        <h3 className="card-title text-primary">
+          Initialize Starter: {species} (Lv. {level})
+        </h3>
 
-      <div className="mb-4">
-        <label className="block text-sm text-slate-300 mb-1">Nature</label>
-        <select
-          value={nature}
-          onChange={(e) => setNature(e.target.value as Nature)}
-          className="w-full bg-slate-700 border border-slate-600 rounded p-2 text-white"
-        >
-          {natures.map((n) => (
-            <option key={n} value={n}>
-              {n}
-            </option>
+        <div className="form-control">
+          <label className="label">
+            <span className="label-text">Nature</span>
+          </label>
+          <select
+            value={nature}
+            onChange={(e) => setNature(e.target.value as Nature)}
+            className="select select-bordered w-full"
+          >
+            {natures.map((n) => (
+              <option key={n} value={n}>
+                {n}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        <div className="grid grid-cols-3 gap-3">
+          {(Object.keys(ivs) as Array<keyof typeof ivs>).map((stat) => (
+            <div key={stat} className="form-control">
+              <label className="label">
+                <span className="label-text uppercase text-xs">{stat}</span>
+              </label>
+              <input
+                type="number"
+                min="0"
+                max="31"
+                value={ivs[stat]}
+                onChange={(e) => handleIvChange(stat, e.target.value)}
+                className="input input-bordered input-sm font-mono w-full"
+              />
+            </div>
           ))}
-        </select>
-      </div>
+        </div>
 
-      <div className="grid grid-cols-3 gap-4 mb-6">
-        {(Object.keys(ivs) as Array<keyof typeof ivs>).map((stat) => (
-          <div key={stat}>
-            <label className="block text-sm text-slate-300 uppercase mb-1">
-              {stat}
-            </label>
-            <input
-              type="number"
-              min="0"
-              max="31"
-              value={ivs[stat]}
-              onChange={(e) => handleIvChange(stat, e.target.value)}
-              className="w-full bg-slate-700 border border-slate-600 rounded p-2 text-white font-mono"
-            />
-          </div>
-        ))}
+        <button type="submit" className="btn btn-primary w-full">
+          Begin Run
+        </button>
       </div>
-
-      <button
-        type="submit"
-        className="w-full bg-blue-500 hover:bg-blue-600 font-bold py-2 px-4 rounded transition-colors"
-      >
-        Begin Run
-      </button>
     </form>
   );
 };

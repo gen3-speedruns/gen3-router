@@ -21,25 +21,43 @@ const components = {
 export default function App() {
   const route = useRoute();
 
+  const toggleTheme = () => {
+    const html = document.documentElement;
+    html.setAttribute(
+      "data-theme",
+      html.getAttribute("data-theme") === "dark" ? "light" : "dark",
+    );
+  };
+
   return (
-    <div className="min-h-screen bg-gray-100 flex font-sans text-gray-900">
+    <div className="min-h-screen bg-base-200 flex font-sans">
       <Sidebar />
       <div className="ml-80 flex-1 p-10">
+        <button
+          onClick={toggleTheme}
+          className="btn btn-ghost btn-sm btn-circle fixed top-4 right-4"
+        >
+          🌙
+        </button>
         <div className="max-w-3xl mx-auto">
-          {route.status === "ready" && route.data.frontmatter && (
-            <RouteHeader frontmatter={route.data.frontmatter} />
+          {route.status === "loading" && (
+            <span className="loading loading-spinner loading-md" />
           )}
-          <div className="prose prose-blue prose-headings:font-black">
-            {route.status === "loading" && (
-              <p className="text-gray-400 italic">Loading route...</p>
-            )}
-            {route.status === "error" && (
-              <p className="text-red-500 font-bold">{route.message}</p>
-            )}
-            {route.status === "ready" && (
-              <RouteRenderer content={route.data.content} />
-            )}
-          </div>
+          {route.status === "error" && (
+            <div className="alert alert-error">
+              <span>{route.message}</span>
+            </div>
+          )}
+          {route.status === "ready" && (
+            <>
+              {route.data.frontmatter && (
+                <RouteHeader frontmatter={route.data.frontmatter} />
+              )}
+              <div className="prose prose-sm sm:prose max-w-none dark:prose-invert">
+                <RouteRenderer content={route.data.content} />
+              </div>
+            </>
+          )}
         </div>
       </div>
     </div>

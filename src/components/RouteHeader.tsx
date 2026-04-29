@@ -15,17 +15,15 @@ export const RouteHeader: React.FC<{ frontmatter: RouteFrontmatter }> = ({
     : null;
 
   return (
-    <div className="mb-8 pb-6 border-b border-gray-200">
-      <div className="flex items-center gap-2 mb-1">
-        <span className="text-xs font-bold uppercase tracking-widest bg-blue-100 text-blue-700 px-2 py-0.5 rounded">
+    <div className="mb-8 pb-6 border-b border-base-content/10">
+      <div className="flex items-center gap-2 mb-2">
+        <span className="badge badge-primary badge-outline">
           {getGameLabel(game)}
         </span>
-        <span className="text-xs font-bold uppercase tracking-widest bg-gray-100 text-gray-600 px-2 py-0.5 rounded">
-          {category}
-        </span>
+        <span className="badge badge-secondary badge-outline">{category}</span>
       </div>
-      <h1 className="text-3xl font-black tracking-tight mt-2">{title}</h1>
-      <p className="text-sm text-gray-400 mt-1">
+      <h1 className="text-4xl font-black tracking-tight">{title}</h1>
+      <p className="text-base-content/50 text-sm mt-1">
         by {author}
         {formattedDate && (
           <>

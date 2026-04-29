@@ -2,152 +2,101 @@ import React from "react";
 import { useRunStore } from "../store/runState";
 import { buildPlayerSpec } from "../selectors/playerSelectors";
 
+const SidebarShell: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => (
+  <div className="w-80 bg-base-300 p-6 shadow-xl flex flex-col gap-6 fixed h-full overflow-y-auto">
+    <div>
+      <h1 className="text-2xl font-black text-primary tracking-tight">
+        Gen3 Router
+      </h1>
+    </div>
+    {children}
+  </div>
+);
+
 export const Sidebar: React.FC = () => {
   const player = useRunStore((state) => state.player);
 
-  const header = (
-    <div>
-      <h1 className="text-2xl font-black text-blue-400 tracking-tight">
-        Gen3 Router
-      </h1>
-      <p className="text-slate-400 text-sm mt-1">Live State Engine</p>
-    </div>
-  );
-
   if (!player) {
     return (
-      <div className="w-80 bg-slate-900 text-white p-6 shadow-xl flex flex-col gap-6 fixed h-full overflow-y-auto">
-        {header}
-        <div className="bg-slate-800 p-4 rounded-lg border border-slate-700 text-slate-400 text-center italic">
-          Waiting for starter...
+      <SidebarShell>
+        <div className="card bg-base-200 border border-base-content/10">
+          <div className="card-body text-base-content/50 text-center italic py-4">
+            Waiting for starter...
+          </div>
         </div>
-      </div>
+      </SidebarShell>
     );
   }
 
   const { level, pinchThreshold, stats } = buildPlayerSpec(player);
+
   return (
-    <div className="w-80 bg-slate-900 text-white p-6 shadow-xl flex flex-col gap-6 fixed h-full overflow-y-auto">
-      {header}
-
-      {/* Main Info Panel */}
-      <div className="bg-slate-800 p-4 rounded-lg border border-slate-700">
-        <h2 className="text-xl font-bold border-b border-slate-700 pb-2 mb-2">
-          {player.species}{" "}
-          <span className="text-blue-400 float-right">Lv. {level}</span>
-        </h2>
-
-        <div className="text-sm text-slate-300 space-y-1">
-          {/* Static Info */}
-          <div className="flex justify-between pt-1">
-            <span>Total EXP:</span>
-            <span className="font-mono text-white">{player.totalExp}</span>
+    <SidebarShell>
+      {/* Main Info */}
+      <div className="card bg-base-200 border border-base-content/10">
+        <div className="card-body p-4 gap-2">
+          <div className="flex justify-between items-center border-b border-base-content/10 pb-2 mb-1">
+            <h2 className="card-title text-lg">{player.species}</h2>
+            <span className="badge badge-primary">Lv. {level}</span>
           </div>
-          <div className="flex justify-between mb-2 pb-2 border-b border-slate-700">
-            <span>Nature:</span>
-            <span className="text-white">{player.nature}</span>
-          </div>
-
-          {/* Active Combat Info */}
-          <div className="flex justify-between items-center pt-1">
-            <span>Max HP:</span>
-            <span className="font-mono font-bold text-white">{stats.hp}</span>
-          </div>
-          <div className="flex justify-between items-center">
-            <span>Pinch Range:</span>
-            <span className="font-mono font-bold text-white">
-              ≤ {pinchThreshold}
-            </span>
-          </div>
-          <div className="flex justify-between items-center">
-            <span>Speed:</span>
-            <span className="font-mono font-bold text-white">{stats.spe}</span>
+          <div className="text-sm space-y-1">
+            <div className="flex justify-between">
+              <span className="text-base-content/60">Total EXP</span>
+              <span className="font-mono">{player.totalExp}</span>
+            </div>
+            <div className="flex justify-between border-b border-base-content/10 pb-2 mb-1">
+              <span className="text-base-content/60">Nature</span>
+              <span>{player.nature}</span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-base-content/60">Max HP</span>
+              <span className="font-mono font-bold">{stats.hp}</span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-base-content/60">Pinch Range</span>
+              <span className="font-mono font-bold text-warning">
+                ≤ {pinchThreshold}
+              </span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-base-content/60">Speed</span>
+              <span className="font-mono font-bold">{stats.spe}</span>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* IVs AND EVs BLOCK */}
-      <div className="bg-slate-800 p-4 rounded-lg border border-slate-700">
-        <div className="grid grid-cols-2 gap-6">
-          {/* IVs Column */}
-          <div>
-            <h3 className="font-bold mb-2 text-slate-200 border-b border-slate-600 pb-1">
-              IVs
-            </h3>
-            <ul className="text-sm space-y-1 text-slate-400">
-              <li className="flex justify-between">
-                <span>HP</span>{" "}
-                <span className="text-slate-200 font-mono">
-                  {player.ivs.hp}
-                </span>
-              </li>
-              <li className="flex justify-between">
-                <span>Atk</span>{" "}
-                <span className="text-slate-200 font-mono">
-                  {player.ivs.atk}
-                </span>
-              </li>
-              <li className="flex justify-between">
-                <span>Def</span>{" "}
-                <span className="text-slate-200 font-mono">
-                  {player.ivs.def}
-                </span>
-              </li>
-              <li className="flex justify-between">
-                <span>SpA</span>{" "}
-                <span className="text-slate-200 font-mono">
-                  {player.ivs.spa}
-                </span>
-              </li>
-              <li className="flex justify-between">
-                <span>SpD</span>{" "}
-                <span className="text-slate-200 font-mono">
-                  {player.ivs.spd}
-                </span>
-              </li>
-              <li className="flex justify-between">
-                <span>Spe</span>{" "}
-                <span className="text-slate-200 font-mono">
-                  {player.ivs.spe}
-                </span>
-              </li>
-            </ul>
-          </div>
-
-          {/* EVs Column */}
-          <div>
-            <h3 className="font-bold mb-2 text-slate-200 border-b border-slate-600 pb-1">
-              EVs
-            </h3>
-            <ul className="text-sm space-y-1 text-slate-400">
-              <li className="flex justify-between">
-                <span>HP</span>{" "}
-                <span className="text-white font-mono">{player.evs.hp}</span>
-              </li>
-              <li className="flex justify-between">
-                <span>Atk</span>{" "}
-                <span className="text-white font-mono">{player.evs.atk}</span>
-              </li>
-              <li className="flex justify-between">
-                <span>Def</span>{" "}
-                <span className="text-white font-mono">{player.evs.def}</span>
-              </li>
-              <li className="flex justify-between">
-                <span>SpA</span>{" "}
-                <span className="text-white font-mono">{player.evs.spa}</span>
-              </li>
-              <li className="flex justify-between">
-                <span>SpD</span>{" "}
-                <span className="text-white font-mono">{player.evs.spd}</span>
-              </li>
-              <li className="flex justify-between">
-                <span>Spe</span>{" "}
-                <span className="text-white font-mono">{player.evs.spe}</span>
-              </li>
-            </ul>
+      {/* IVs / EVs */}
+      <div className="card bg-base-200 border border-base-content/10">
+        <div className="card-body p-4">
+          <div className="grid grid-cols-2 gap-4">
+            {(["IVs", "EVs"] as const).map((label) => {
+              const data = label === "IVs" ? player.ivs : player.evs;
+              return (
+                <div key={label}>
+                  <h3 className="font-bold text-sm border-b border-base-content/10 pb-1 mb-2">
+                    {label}
+                  </h3>
+                  <ul className="text-sm space-y-1">
+                    {(Object.entries(data) as [string, number][]).map(
+                      ([stat, val]) => (
+                        <li key={stat} className="flex justify-between">
+                          <span className="text-base-content/50 uppercase">
+                            {stat}
+                          </span>
+                          <span className="font-mono">{val}</span>
+                        </li>
+                      ),
+                    )}
+                  </ul>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
-    </div>
+    </SidebarShell>
   );
 };

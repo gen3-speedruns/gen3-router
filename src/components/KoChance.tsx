@@ -21,24 +21,29 @@ export const KoChance: React.FC<KoChanceProps> = ({
 
   const moveList = moves ?? Array(hits).fill(move);
   if (moveList.some((m) => !m))
-    return <span className="text-red-500">KoChance: no move specified</span>;
+    return (
+      <span className="text-error text-sm">KoChance: no move specified</span>
+    );
 
   const result = getKoChance(player, enemy, moveList, { pinch, stages });
   if (!result)
-    return <span className="text-red-500">Unknown move in ko-chance</span>;
+    return (
+      <span className="text-error text-sm">Unknown move in ko-chance</span>
+    );
 
   const { pct, chance, outOf, guaranteed } = result;
   const label = moveList.length === 1 ? "OHKO" : `${moveList.length}HKO`;
-  const color = guaranteed
-    ? "text-green-600"
+
+  const colorClass = guaranteed
+    ? "text-success"
     : pct >= 50
-      ? "text-amber-600"
-      : "text-red-600";
+      ? "text-warning"
+      : "text-error";
 
   return (
-    <span className={`font-bold ${color}`}>
+    <span className={`font-bold ${colorClass}`}>
       {guaranteed ? `Guaranteed ${label}` : `${pct}% ${label}`}
-      <span className="text-xs font-normal text-gray-500 ml-1">
+      <span className="text-base-content/40 text-xs font-normal ml-1">
         ({chance}/{outOf})
       </span>
     </span>

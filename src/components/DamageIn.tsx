@@ -10,18 +10,26 @@ export const DamageIn: React.FC<{ move: string; stages?: number }> = ({
 
   const damage = getDamageIn(enemy, player, move, { stages });
   if (!damage)
-    return <span className="text-red-500">Move {move} not found!</span>;
+    return <span className="text-error text-sm">Move {move} not found!</span>;
 
   const { min, max, isLethal } = damage;
+
   return (
     <div
-      className={`p-2 rounded text-sm my-1 flex justify-between items-center ${isLethal ? "bg-red-50 border border-red-200 text-red-900" : "bg-gray-50 border border-gray-200 text-gray-800"}`}
+      className={`flex justify-between items-center text-sm px-3 py-1.5 my-1 rounded border ${
+        isLethal
+          ? "bg-error/10 border-error/30 text-error"
+          : "bg-base-200 border-base-content/10 text-base-content"
+      }`}
     >
       <span>
         Enemy <strong>{move}</strong>
       </span>
       <span className={isLethal ? "font-bold" : ""}>
-        Takes {min} - {max} dmg
+        {min} – {max} dmg
+        {isLethal && (
+          <span className="ml-2 badge badge-error badge-xs">Lethal</span>
+        )}
       </span>
     </div>
   );
