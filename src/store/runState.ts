@@ -3,6 +3,7 @@ import type { Nature } from "../gamedata/natures";
 import type { StatsTable, GrowthRate } from "../gamedata/types";
 import { calculateExpYield, getExpAtLevel } from "../mechanics/experience";
 import { PokemonData } from "../gamedata/pokemon";
+import type { BadgeSet } from "../mechanics/stats";
 
 export interface PlayerState {
   species: string;
@@ -11,12 +12,7 @@ export interface PlayerState {
   ivs: StatsTable;
   evs: StatsTable;
   totalExp: number;
-  badges: {
-    boulder: boolean; // 1.1x Attack
-    thunder: boolean; // 1.1x Speed
-    soul: boolean; // 1.1x Defense
-    volcano: boolean; // 1.1x SpA & SpD
-  };
+  badges: BadgeSet;
 }
 
 interface AppState {
