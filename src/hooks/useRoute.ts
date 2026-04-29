@@ -1,10 +1,20 @@
 import { useState, useEffect } from "react";
+import {
+  parseFrontmatter,
+  type RouteFrontmatter,
+} from "../markdoc/frontmatter";
+import Markdoc from "@markdoc/markdoc";
 
 const DEFAULT_ROUTE = "/routes/frlg-anypct-squirtle.mdoc";
 
+export interface RouteData {
+  content: string;
+  frontmatter: RouteFrontmatter | null;
+}
+
 type RouteState =
   | { status: "loading" }
-  | { status: "ready"; content: string }
+  | { status: "ready"; data: RouteData }
   | { status: "error"; message: string };
 
 export function useRoute(): RouteState {
@@ -19,7 +29,11 @@ export function useRoute(): RouteState {
         if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
         return res.text();
       })
-      .then((content) => setState({ status: "ready", content }))
+      .then((content) => {
+        const ast = Markdoc.parse(content);
+        const frontmatter = parseFrontmatter(ast.attributes.frontmatter);
+        setState({ status: "ready", data: { content, frontmatter } });
+      })
       .catch((err) =>
         setState({
           status: "error",
