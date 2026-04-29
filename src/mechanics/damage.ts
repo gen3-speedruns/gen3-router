@@ -116,8 +116,8 @@ function calcDmgRange(
 
   // 6. Calculate the 16 Random Rolls (85% to 100%)
   const range: number[] = [];
-  for (let rnd = 0.85; rnd <= 1.0; rnd += 0.01) {
-    range.push(Math.trunc(baseDmg * rnd));
+  for (let i = 85; i <= 100; i++) {
+    range.push(Math.trunc((baseDmg * i) / 100));
   }
 
   return range;
