@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from "react";
 import { useRunStore } from "../store/runState";
-import { PokemonData } from "../core/data/pokemon";
-import { calcHealth, calcStat } from "../core/mechanics/stats";
+import { PokemonData } from "../gamedata/pokemon";
+import { calcHealth, calcStat } from "../mechanics/stats";
 import { EncounterProvider } from "./EncounterContext";
 
 interface EncounterProps {

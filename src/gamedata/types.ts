@@ -1,4 +1,4 @@
-import type { PokemonType } from "./data/typeChart";
+import type { PokemonType } from "./typeChart";
 
 export interface StatsTable {
   hp: number;

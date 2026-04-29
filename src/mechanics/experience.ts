@@ -1,4 +1,4 @@
-import type { GrowthRate } from "../types";
+import type { GrowthRate } from "../gamedata/types";
 
 export function getExpAtLevel(level: number, rate: GrowthRate): number {
   if (level <= 1) return 0;

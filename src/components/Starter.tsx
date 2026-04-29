@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useRunStore } from "../store/runState";
-import type { Nature } from "../core/data/natures";
+import type { Nature } from "../gamedata/natures";
 
 interface StarterProps {
   species: string;

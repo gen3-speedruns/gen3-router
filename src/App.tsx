@@ -1,6 +1,6 @@
 import React from "react";
 import Markdoc from "@markdoc/markdoc";
-import { markdocConfig } from "./engine/schema";
+import { markdocConfig } from "./markdoc/schema";
 import { Encounter } from "./components/Encounter";
 import { Starter } from "./components/Starter";
 import { Sidebar } from "./components/Sidebar";

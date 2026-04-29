@@ -1,7 +1,7 @@
 import { createContext, useContext } from "react";
-import type { PokemonType } from "../core/data/typeChart";
+import type { PokemonType } from "../gamedata/typeChart";
 
-interface EnemyData {
+export interface EnemyState {
   species: string;
   level: number;
   types: PokemonType[];
@@ -15,7 +15,7 @@ interface EnemyData {
   };
 }
 
-const EncounterContext = createContext<EnemyData | null>(null);
+const EncounterContext = createContext<EnemyState | null>(null);
 
 export const useEncounter = () => {
   const context = useContext(EncounterContext);

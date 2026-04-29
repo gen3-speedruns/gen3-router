@@ -1,46 +1,26 @@
 import React from "react";
 import { useRunStore } from "../store/runState";
-import { getLevelFromExp } from "../core/mechanics/experience";
 import {
-  calcHealth,
-  calcPinchThreshold,
-  calcStat,
-} from "../core/mechanics/stats";
-import { PokemonData } from "../core/data/pokemon";
+  getPlayerSnapshot,
+  type PlayerSnapshot,
+} from "../selectors/playerSelectors";
 
 export const Sidebar: React.FC = () => {
   const player = useRunStore((state) => state.player);
 
-  const currentLevel = player
-    ? getLevelFromExp(player.totalExp, player.growthRate)
-    : 0;
-
-  let maxHp = 0;
-  let pinchHp = 0;
-  let currentSpeed = 0;
-
-  if (player) {
-    const data = PokemonData[player.species];
-    if (data) {
-      maxHp = calcHealth(
-        data.baseStats.hp,
-        currentLevel,
-        player.ivs.hp,
-        player.evs.hp,
-      );
-      pinchHp = calcPinchThreshold(maxHp);
-
-      currentSpeed = calcStat(
-        "spe",
-        data.baseStats.spe,
-        currentLevel,
-        player.ivs.spe,
-        player.evs.spe,
-        player.nature,
-        player.badges.thunder,
-      );
-    }
-  }
+  const {
+    level,
+    maxHp,
+    pinchThreshold,
+    stats: { spe },
+  } = player
+    ? getPlayerSnapshot(player)
+    : ({
+        level: 0,
+        maxHp: 0,
+        pinchThreshold: 0,
+        stats: { spe: 0 },
+      } as PlayerSnapshot);
 
   return (
     <div className="w-80 bg-slate-900 text-white p-6 shadow-xl flex flex-col gap-6 fixed h-full overflow-y-auto">
@@ -61,9 +41,7 @@ export const Sidebar: React.FC = () => {
           <div className="bg-slate-800 p-4 rounded-lg border border-slate-700">
             <h2 className="text-xl font-bold border-b border-slate-700 pb-2 mb-2">
               {player.species}{" "}
-              <span className="text-blue-400 float-right">
-                Lv. {currentLevel}
-              </span>
+              <span className="text-blue-400 float-right">Lv. {level}</span>
             </h2>
 
             <div className="text-sm text-slate-300 space-y-1">
@@ -85,14 +63,12 @@ export const Sidebar: React.FC = () => {
               <div className="flex justify-between items-center">
                 <span>Pinch Range:</span>
                 <span className="font-mono font-bold text-white">
-                  ≤ {pinchHp}
+                  ≤ {pinchThreshold}
                 </span>
               </div>
               <div className="flex justify-between items-center">
                 <span>Speed:</span>
-                <span className="font-mono font-bold text-white">
-                  {currentSpeed}
-                </span>
+                <span className="font-mono font-bold text-white">{spe}</span>
               </div>
             </div>
           </div>

@@ -1,5 +1,5 @@
-import { type PokemonType, getTypeFactor } from "../data/typeChart";
-import type { Move } from "../types";
+import { type PokemonType, getTypeFactor } from "../gamedata/typeChart";
+import type { Move } from "../gamedata/types";
 
 export interface Combatant {
   level: number;

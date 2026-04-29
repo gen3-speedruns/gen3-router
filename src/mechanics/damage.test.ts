@@ -1,6 +1,6 @@
 import { expect, test, describe } from "vitest";
 import { calcDmgRange, type Combatant } from "./damage";
-import type { Move } from "../types";
+import type { Move } from "../gamedata/types";
 
 describe("Damage Calculation Mechanics", () => {
   test("calcDmgRange applies STAB and 4x Weakness correctly", () => {

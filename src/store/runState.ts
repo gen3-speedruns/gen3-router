@@ -1,8 +1,8 @@
 import { create } from "zustand";
-import type { Nature } from "../core/data/natures";
-import type { StatsTable, GrowthRate } from "../core/types";
-import { calculateExpYield, getExpAtLevel } from "../core/mechanics/experience";
-import { PokemonData } from "../core/data/pokemon";
+import type { Nature } from "../gamedata/natures";
+import type { StatsTable, GrowthRate } from "../gamedata/types";
+import { calculateExpYield, getExpAtLevel } from "../mechanics/experience";
+import { PokemonData } from "../gamedata/pokemon";
 
 export interface PlayerState {
   species: string;

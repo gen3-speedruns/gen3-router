@@ -1,9 +1,9 @@
 import React from "react";
 import { useRunStore } from "../store/runState";
 import { useEncounter } from "./EncounterContext";
-import { calcStat, applyStatStage } from "../core/mechanics/stats";
-import { getLevelFromExp } from "../core/mechanics/experience";
-import { PokemonData } from "../core/data/pokemon";
+import { calcStat, applyStatStage } from "../mechanics/stats";
+import { getLevelFromExp } from "../mechanics/experience";
+import { PokemonData } from "../gamedata/pokemon";
 
 export const SpeedCheck: React.FC<{ stages?: number }> = ({ stages = 0 }) => {
   const player = useRunStore((s) => s.player);

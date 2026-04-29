@@ -1,4 +1,4 @@
-import { type Nature, NatureModifiers } from "../data/natures";
+import { type Nature, NatureModifiers } from "../gamedata/natures";
 
 export function calcHealth(
   base: number,
