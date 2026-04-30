@@ -12,6 +12,7 @@ import { RouteHeader } from "./components/RouteHeader";
 import { Calcs } from "./components/Calcs";
 import { Strategy } from "./components/Strategy";
 import { Moon, Sun } from "lucide-react";
+import { PoisonDamage } from "./components/PoisonDamage";
 
 const components = {
   Encounter,
@@ -21,6 +22,7 @@ const components = {
   SpeedCheck,
   DamageIn,
   KoChance,
+  PoisonDamage,
 };
 
 export default function App() {

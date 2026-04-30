@@ -17,6 +17,7 @@ export const markdocConfig: Config = {
         species: { type: String, required: true },
         level: { type: Number, required: true },
         isTrainer: { type: Boolean, default: false },
+        optional: { type: Boolean, default: false },
         fixedIv: { type: Number, default: 0 },
       },
     },
@@ -50,6 +51,10 @@ export const markdocConfig: Config = {
         pinch: { type: Boolean, default: false },
         stages: { type: Number, default: 0 },
       },
+    },
+    "poison-damage": {
+      render: "PoisonDamage",
+      attributes: {},
     },
   },
 };

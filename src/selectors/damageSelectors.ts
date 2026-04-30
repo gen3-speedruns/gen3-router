@@ -4,6 +4,7 @@ import {
   type DamageResult,
   calcKoChance,
   type KoChanceResult,
+  calcPoisonDamage,
 } from "../mechanics/damage";
 import { calcSpeedCheck, type SpeedResult } from "../mechanics/speed";
 import type { PlayerSpec, EnemySpec } from "../gamedata/types";
@@ -43,4 +44,8 @@ export function getKoChance(
   }
 
   return calcKoChance(player, enemy, moves, opts);
+}
+
+export function getPoisonDamage(player: PlayerSpec): number {
+  return calcPoisonDamage(player);
 }

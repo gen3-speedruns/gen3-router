@@ -7,14 +7,16 @@ interface EncounterProps {
   species: string;
   level: number;
   isTrainer?: boolean;
+  optional?: boolean;
   fixedIv?: number;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 export const Encounter: React.FC<EncounterProps> = ({
   species,
   level,
   isTrainer = false,
+  optional = false,
   fixedIv,
   children,
 }) => {
@@ -63,6 +65,9 @@ export const Encounter: React.FC<EncounterProps> = ({
                 <span className="text-sm font-normal text-base-content/50">
                   Lv. {level}
                 </span>
+                {optional && !defeated && (
+                  <span className="text-xs text-base-content/35">optional</span>
+                )}
               </div>
             </div>
 
@@ -80,7 +85,7 @@ export const Encounter: React.FC<EncounterProps> = ({
             </div>
           </header>
 
-          <div className="space-y-3">{children}</div>
+          {children && <div className="space-y-3">{children}</div>}
         </div>
       </section>
     </EncounterProvider>

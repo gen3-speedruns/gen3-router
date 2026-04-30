@@ -100,6 +100,10 @@ export function calcKoChance(
   };
 }
 
+export function calcPoisonDamage(player: PlayerSpec) {
+  return Math.trunc(player.stats.hp / 8);
+}
+
 interface Combatant {
   level: number;
   types: PokemonType[];
