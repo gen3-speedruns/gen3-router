@@ -33,6 +33,7 @@ export const KoChance: React.FC<KoChanceProps> = ({
 
   const { pct, chance, outOf, guaranteed } = result;
   const label = moveList.length === 1 ? "OHKO" : `${moveList.length}HKO`;
+  const moveName = [...new Set(moveList)].join(" + ");
 
   const colorClass = guaranteed
     ? "text-success"
@@ -41,11 +42,21 @@ export const KoChance: React.FC<KoChanceProps> = ({
       : "text-error";
 
   return (
-    <span className={`font-bold ${colorClass}`}>
-      {guaranteed ? `Guaranteed ${label}` : `${pct}% ${label}`}
-      <span className="text-base-content/40 text-xs font-normal ml-1">
-        ({chance}/{outOf})
+    <div className="flex items-center gap-2 px-3 py-1.5 text-sm">
+      <span className="badge badge-xs badge-success shrink-0">KO%</span>
+      <span className="flex-1">
+        {moveName}
+        {pinch && (
+          <span className="ml-1 text-base-content/40 text-xs">(pinch)</span>
+        )}
+        <span className="ml-1 text-base-content/40 text-xs">{label}</span>
       </span>
-    </span>
+      <span className={`font-bold ${colorClass}`}>
+        {guaranteed ? "Guaranteed" : `${pct}%`}
+        <span className="text-base-content/40 text-xs font-normal ml-1">
+          ({chance}/{outOf})
+        </span>
+      </span>
+    </div>
   );
 };

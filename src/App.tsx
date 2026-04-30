@@ -9,10 +9,14 @@ import { DamageIn } from "./components/DamageIn";
 import { KoChance } from "./components/KoChance";
 import { useRoute } from "./hooks/useRoute";
 import { RouteHeader } from "./components/RouteHeader";
+import { Calcs } from "./components/Calcs";
+import { Strategy } from "./components/Strategy";
 
 const components = {
   Encounter,
   Starter,
+  Strategy,
+  Calcs,
   SpeedCheck,
   DamageIn,
   KoChance,

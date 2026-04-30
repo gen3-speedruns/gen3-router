@@ -49,16 +49,16 @@ export const Encounter: React.FC<EncounterProps> = ({
   return (
     <EncounterProvider value={{ player: playerSpec, enemy: enemySpec }}>
       <div
-        className={`card bg-base-100 border-l-4 border-primary shadow-sm my-6 ${defeated && "opacity-60 grayscale-[0.5]"}`}
+        className={`card bg-base-100 border-l-4 border-primary my-4 ${defeated ? "opacity-60" : ""}`}
       >
-        <div className="card-body p-5">
-          <div className="flex justify-between items-start mb-2">
-            <h3 className="card-title text-lg">
-              <span className="badge badge-outline badge-sm mr-1">
+        <div className="card-body gap-2 p-3">
+          <div className="card-title justify-between">
+            <h3 className="flex items-center gap-2 text-sm font-bold">
+              <span className="badge badge-outline badge-xs">
                 {isTrainer ? "TRAINER" : "WILD"}
               </span>
-              {species}{" "}
-              <span className="text-base-content/40 text-base ml-1">
+              {species}
+              <span className="text-base-content/40 font-normal">
                 Lv.{level}
               </span>
             </h3>
@@ -70,12 +70,11 @@ export const Encounter: React.FC<EncounterProps> = ({
               disabled={defeated}
               className={`btn btn-xs ${defeated ? "btn-disabled" : "btn-primary"}`}
             >
-              {defeated ? "Defeated" : "Defeat"}
+              {defeated ? "Fainted" : "Faint"}
             </button>
           </div>
-          <div className="prose prose-sm max-w-none dark:prose-invert">
-            {children}
-          </div>
+
+          {children}
         </div>
       </div>
     </EncounterProvider>

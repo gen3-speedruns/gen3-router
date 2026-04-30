@@ -1,35 +1,46 @@
 ---
-title: Squirtle High EXP Route
+title: Squirtle High Exp Route
 game: frlg
 category: Any%
 author: Xargot
 date: 2026-04-29
 ---
 
-# Pallet Town
-Initialize your starter.
+This guide is an interactive version of [PulseEffect's High Exp Route](https://docs.google.com/document/d/1j4fqPzBkLTsCEeLguL0I5xhiXimfVwhbLYwVpi4uRYA/edit?usp=sharing).
+Please check the **Before Starting** section of it when you are new to the game.
+
+## New Game
+
+- Choosing the boy or girl is preference.
+- Give yourself a 1-character name ("A" is fastest).
+- Give your rival a 1-character name ("A" is also the fastest).
+
+## Pallet Town
+
+- Check and insert your Trainer ID into the RNG Manipulation Program.
+- Walk outside then head north towards the grass have Oak stop you.
+- Mash through text until you can pick and manipulate Squirtle.
+- Head down and fight your rival.
+- Enter your Squirtle:
+
 {% starter species="Squirtle" level="5" natures=["Modest", "Mild", "Rash"] /%}
 
-# Route 1
-Kill the mandatory Pidgey.
-{% encounter species="Pidgey" level="3" /%}
+### Rival 1
 
-# Pewter City Gym
-The first major roadblock. Do not heal before this fight if you are in Pinch range!
+{% encounter species="Bulbasaur" level="5" isTrainer=true %}
 
-{% encounter species="Geodude" level="12" isTrainer=true %}
+{% strategy %}
+Tackle
+{% /strategy %}
 
-**Speed Check:**
-{% speed-check stages="0" /%} *(If hit by Rock Tomb: {% speed-check stages="-1" /%})*
+Reset if Bulbasaur ever outspeeds you.
 
-**Strategy:**
-Spam Bubble. If you are in Torrent range, it is guaranteed.
-{% ko-chance move="Bubble" pinch=true /%}
-{% ko-chance move="Bubble" hits=2 pinch=true /%}
-
-
-**Threats:**
+{% calcs %}
+{% speed-check /%}
+{% ko-chance move="Bubble" hits=2 /%}
+{% damage-in move="Rock Tomb" /%}
+{% damage-in move="Rock Tomb" stages=1 /%}
 {% damage-in move="Tackle" /%}
-{% damage-in move="Rock Throw" /%}
+{% /calcs %}
 
 {% /encounter %}

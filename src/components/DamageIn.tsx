@@ -13,24 +13,20 @@ export const DamageIn: React.FC<{ move: string; stages?: number }> = ({
     return <span className="text-error text-sm">Move {move} not found!</span>;
 
   const { rolls, isLethal } = damage;
+  const label =
+    stages !== 0 ? `${move} (${stages > 0 ? "+" : ""}${stages} Def)` : move;
+
   return (
     <div
-      className={`flex justify-between items-center text-sm px-3 py-1.5 my-1 rounded border ${
-        isLethal
-          ? "bg-error/10 border-error/30 text-error"
-          : "bg-base-200 border-base-content/10 text-base-content"
-      }`}
+      className={`flex items-center gap-2 px-3 py-1.5 text-sm ${isLethal ? "text-error" : "text-base-content"}`}
     >
-      <span>
-        <strong>{move}</strong>
-      </span>
-      <span>
-        <strong>
-          {formatDmgRange(rolls)}
-          {isLethal && (
-            <span className="ml-2 badge badge-error badge-xs">Lethal</span>
-          )}
-        </strong>
+      <span className="badge badge-xs badge-error shrink-0">DMG</span>
+      <span className="flex-1">{label}</span>
+      <span className={`font-mono ${isLethal ? "font-bold" : ""}`}>
+        {formatDmgRange(rolls)}
+        {isLethal && (
+          <span className="ml-2 badge badge-error badge-xs">Lethal</span>
+        )}
       </span>
     </div>
   );

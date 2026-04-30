@@ -20,11 +20,15 @@ export const SpeedCheck: React.FC<{ stages?: number }> = ({ stages = 0 }) => {
         : ["Speed Tie", "text-warning"];
 
   return (
-    <span className={`font-bold ${colorClass}`}>
-      {label}
-      <span className="text-base-content/40 text-xs font-normal ml-1">
-        ({playerFinal} vs {enemySpeed})
+    <div className="flex items-center gap-2 px-3 py-1.5 text-sm">
+      <span className="badge badge-xs badge-warning shrink-0">SPD</span>
+      <span className="flex-1 text-base-content/60">Speed</span>
+      <span className={`font-bold ${colorClass}`}>
+        {label}
+        <span className="text-base-content/40 text-xs font-normal ml-1">
+          ({playerFinal} vs {enemySpeed})
+        </span>
       </span>
-    </span>
+    </div>
   );
 };

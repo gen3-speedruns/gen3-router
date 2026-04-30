@@ -20,6 +20,16 @@ export const markdocConfig: Config = {
         fixedIv: { type: Number, default: 0 },
       },
     },
+    strategy: {
+      render: "Strategy",
+      selfClosing: false,
+      attributes: {},
+    },
+    calcs: {
+      render: "Calcs",
+      selfClosing: false,
+      attributes: {},
+    },
     "speed-check": {
       render: "SpeedCheck",
       attributes: { stages: { type: Number } },
