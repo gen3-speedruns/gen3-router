@@ -9,6 +9,7 @@ import type {
 
 const NO_BADGES: BadgeBoosts = {
   boulder: false,
+  thunder: false,
   soul: false,
   volcano: false,
 };

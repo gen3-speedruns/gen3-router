@@ -14,7 +14,11 @@ export function calcSpeedCheck(
   enemy: EnemySpec,
   stages = 0,
 ): SpeedResult {
-  const playerFinal = applyStatStage(player.stats.spe, stages);
+  let playerFinal = applyStatStage(player.stats.spe, stages);
+  if (player.badges.thunder) {
+    playerFinal = Math.floor((playerFinal * 110) / 100);
+  }
+
   const diff = playerFinal - enemy.stats.spe;
   return {
     outcome: diff > 0 ? "outspeed" : diff < 0 ? "outsped" : "tie",

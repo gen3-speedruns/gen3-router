@@ -34,6 +34,7 @@ export interface Move {
 
 export interface BadgeBoosts {
   boulder: boolean;
+  thunder: boolean;
   soul: boolean;
   volcano: boolean;
 }
