@@ -17,13 +17,13 @@ export function buildPlayerSpec(player: PlayerState): PlayerSpec {
     player.ivs,
     player.evs,
     player.nature,
-    player.badges,
   );
   return {
     level,
     types: data.types,
     stats,
     pinchThreshold: calcPinchThreshold(stats.hp),
+    badges: player.badges,
   };
 }
 

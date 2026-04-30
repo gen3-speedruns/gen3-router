@@ -4,11 +4,13 @@ import {
   isSpecialType,
 } from "../gamedata/typeChart";
 import type {
+  BadgeBoosts,
   EnemySpec,
   Move,
   PlayerSpec,
   StatsTable,
 } from "../gamedata/types";
+import { applyStatStage } from "./stats";
 
 export interface DamageResult {
   rolls: number[];
@@ -32,6 +34,7 @@ export function calcDamageIn(
       types: player.types,
       stats: player.stats,
       stages: opts.stages ?? 0,
+      badges: player.badges,
     },
     move,
     false,
@@ -68,6 +71,7 @@ export function calcKoChance(
         types: player.types,
         stats: player.stats,
         stages: opts.stages ?? 0,
+        badges: player.badges,
       },
       { level: enemy.level, types: enemy.types, stats: enemy.stats, stages: 0 },
       move,
@@ -101,67 +105,55 @@ interface Combatant {
   types: PokemonType[];
   stats: StatsTable;
   stages: number;
-}
-
-const STAT_STAGE_RATIOS: [number, number][] = [
-  [10, 40],
-  [10, 35],
-  [10, 30],
-  [10, 25],
-  [10, 20],
-  [10, 15],
-  [10, 10],
-  [15, 10],
-  [20, 10],
-  [25, 10],
-  [30, 10],
-  [35, 10],
-  [40, 10],
-];
-
-function applyStatStage(stat: number, stage: number): number {
-  if (stage === 0) return stat;
-  const [num, den] = STAT_STAGE_RATIOS[stage + 6];
-  return Math.trunc((stat * num) / den);
+  badges?: BadgeBoosts;
 }
 
 function calcDmgRange(
   attacker: Combatant,
   defender: Combatant,
   move: Move,
-  isPinchAbilityActive: boolean = false,
+  isPinchAbilityActive: boolean,
 ): number[] {
   const isSpecial = isSpecialType(move.type);
   let atkStat = isSpecial ? attacker.stats.spa : attacker.stats.atk;
   let defStat = isSpecial ? defender.stats.spd : defender.stats.def;
 
-  // 1. Apply Stat Stages
+  // Apply Stat Stages
   atkStat = applyStatStage(atkStat, attacker.stages);
   defStat = applyStatStage(defStat, defender.stages);
 
-  // 2. Apply Pinch Ability (Torrent / Blaze / Overgrow / Swarm)
+  // Badge boosts
+  if (isSpecial) {
+    if (attacker.badges?.volcano) atkStat = Math.trunc((110 * atkStat) / 100);
+    if (defender.badges?.volcano) defStat = Math.trunc((110 * defStat) / 100);
+  } else {
+    if (attacker.badges?.boulder) atkStat = Math.trunc((110 * atkStat) / 100);
+    if (defender.badges?.soul) defStat = Math.trunc((110 * defStat) / 100);
+  }
+
+  // Apply Pinch Ability (Torrent / Blaze / Overgrow / Swarm)
   const power = isPinchAbilityActive
     ? Math.trunc((150 * move.power) / 100)
     : move.power;
 
-  // 3. Base Damage Formula
+  // Base Damage Formula
   let baseDmg = Math.trunc((2 * attacker.level) / 5) + 2;
   baseDmg = baseDmg * power * atkStat;
   baseDmg = Math.trunc(baseDmg / defStat);
   baseDmg = Math.trunc(baseDmg / 50);
   baseDmg += 2;
 
-  // 4. STAB (Same Type Attack Bonus)
+  // STAB (Same Type Attack Bonus)
   if (attacker.types.includes(move.type)) {
     baseDmg = Math.trunc((15 * baseDmg) / 10);
   }
 
-  // 5. Type Effectiveness
+  // Type Effectiveness
   for (const defType of defender.types) {
     baseDmg = Math.trunc(baseDmg * getTypeFactor(move.type, defType));
   }
 
-  // 6. Calculate the 16 Random Rolls (85% to 100%)
+  // Calculate the 16 Random Rolls (85% to 100%)
   const range: number[] = [];
   for (let i = 85; i <= 100; i++) {
     range.push(Math.trunc((baseDmg * i) / 100));

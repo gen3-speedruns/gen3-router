@@ -32,11 +32,18 @@ export interface Move {
   pp: number;
 }
 
+export interface BadgeBoosts {
+  boulder: boolean;
+  soul: boolean;
+  volcano: boolean;
+}
+
 export interface PlayerSpec {
   level: number;
   types: PokemonType[];
   stats: StatsTable;
   pinchThreshold: number;
+  badges: BadgeBoosts;
 }
 
 export interface EnemySpec {
