@@ -34,14 +34,14 @@ export const Encounter: React.FC<EncounterProps> = ({
 
   if (!enemySpec)
     return (
-      <div className="text-red-500 underline">
+      <div className="text-error underline">
         Error: Species {species} not found
       </div>
     );
 
   if (!playerSpec)
     return (
-      <div className="text-slate-400 italic p-4">
+      <div className="text-base-content/50 italic p-4">
         Set your starter to see calcs.
       </div>
     );
@@ -49,7 +49,7 @@ export const Encounter: React.FC<EncounterProps> = ({
   return (
     <EncounterProvider value={{ player: playerSpec, enemy: enemySpec }}>
       <div
-        className={`card bg-base-100 border-l-4 border-primary my-4 ${defeated ? "opacity-60" : ""}`}
+        className={`card bg-base-100 border border-base-content/10 shadow-sm my-4 ${defeated ? "opacity-60" : ""}`}
       >
         <div className="card-body gap-2 p-3">
           <div className="card-title justify-between">
@@ -68,9 +68,9 @@ export const Encounter: React.FC<EncounterProps> = ({
                 setDefeated(true);
               }}
               disabled={defeated}
-              className={`btn btn-xs ${defeated ? "btn-disabled" : "btn-primary"}`}
+              className="btn btn-xs btn-primary"
             >
-              {defeated ? "Fainted" : "Faint"}
+              {defeated ? "Defeated" : "Defeat"}
             </button>
           </div>
 

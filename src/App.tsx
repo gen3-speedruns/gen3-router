@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Markdoc from "@markdoc/markdoc";
 import { markdocConfig } from "./markdoc/schema";
 import { Encounter } from "./components/Encounter";
@@ -11,6 +11,7 @@ import { useRoute } from "./hooks/useRoute";
 import { RouteHeader } from "./components/RouteHeader";
 import { Calcs } from "./components/Calcs";
 import { Strategy } from "./components/Strategy";
+import { Moon, Sun } from "lucide-react";
 
 const components = {
   Encounter,
@@ -24,13 +25,17 @@ const components = {
 
 export default function App() {
   const route = useRoute();
+  const [isDark, setIsDark] = useState(
+    () => document.documentElement.getAttribute("data-theme") === "dark",
+  );
 
   const toggleTheme = () => {
-    const html = document.documentElement;
-    html.setAttribute(
+    const next = !isDark;
+    document.documentElement.setAttribute(
       "data-theme",
-      html.getAttribute("data-theme") === "dark" ? "light" : "dark",
+      next ? "dark" : "light",
     );
+    setIsDark(next);
   };
 
   return (
@@ -41,7 +46,7 @@ export default function App() {
           onClick={toggleTheme}
           className="btn btn-ghost btn-sm btn-circle fixed top-4 right-4"
         >
-          🌙
+          {isDark ? <Sun /> : <Moon />}
         </button>
         <div className="max-w-3xl mx-auto">
           {route.status === "loading" && (

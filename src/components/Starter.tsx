@@ -38,7 +38,7 @@ export const Starter: React.FC<StarterProps> = ({
 
   if (isInitialized) {
     return (
-      <div className="card bg-base-100 border-l-4 border-primary shadow-sm my-6 opacity-60 grayscale-[0.5]">
+      <div className="card bg-base-100 border border-base-content/10 shadow-sm my-4 opacity-60 grayscale-[0.5]">
         <div className="card-body p-5">
           <div className="flex justify-between items-start">
             <h3 className="card-title text-lg">
@@ -48,7 +48,9 @@ export const Starter: React.FC<StarterProps> = ({
                 Lv.{level}
               </span>
             </h3>
-            <span className="btn btn-xs btn-disabled">Started</span>
+            <button disabled className="btn btn-xs">
+              Started
+            </button>
           </div>
           <div className="text-sm flex flex-wrap gap-x-4 gap-y-1 text-base-content/70 mt-2">
             <span>
@@ -69,7 +71,7 @@ export const Starter: React.FC<StarterProps> = ({
   return (
     <form
       onSubmit={handleStart}
-      className="card bg-base-100 border-l-4 border-primary shadow-sm my-6"
+      className="card bg-base-100 border border-base-content/10 shadow-sm my-4"
     >
       <div className="card-body p-5">
         <div className="flex justify-between items-start mb-4">
@@ -86,16 +88,16 @@ export const Starter: React.FC<StarterProps> = ({
         </div>
 
         <div className="grid grid-cols-2 gap-4">
-          <div className="form-control col-span-2">
+          <div className="flex flex-col gap-1 col-span-2">
             <label className="label py-0 mb-1">
-              <span className="label-text text-base-content/60 uppercase text-xs">
+              <span className="text-base-content/60 uppercase text-xs">
                 Nature
               </span>
             </label>
             <select
               value={nature}
               onChange={(e) => setNature(e.target.value as Nature)}
-              className="select select-bordered select-sm w-full"
+              className="select select-sm w-full"
             >
               {natures.map((n) => (
                 <option key={n} value={n}>
@@ -106,9 +108,9 @@ export const Starter: React.FC<StarterProps> = ({
           </div>
 
           {(Object.keys(ivs) as Array<keyof typeof ivs>).map((stat) => (
-            <div key={stat} className="form-control">
+            <div key={stat} className="flex flex-col gap-1">
               <label className="label py-0 mb-1">
-                <span className="label-text text-base-content/60 uppercase text-xs">
+                <span className="text-base-content/60 uppercase text-xs">
                   {stat}
                 </span>
               </label>
@@ -118,7 +120,7 @@ export const Starter: React.FC<StarterProps> = ({
                 max="31"
                 value={ivs[stat]}
                 onChange={(e) => handleIvChange(stat, e.target.value)}
-                className="input input-bordered input-sm font-mono w-full"
+                className="input input-sm font-mono w-full"
               />
             </div>
           ))}
