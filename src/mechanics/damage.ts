@@ -3,7 +3,12 @@ import {
   getTypeFactor,
   isSpecialType,
 } from "../gamedata/typeChart";
-import type { EnemySpec, Move, PlayerSpec } from "../gamedata/types";
+import type {
+  EnemySpec,
+  Move,
+  PlayerSpec,
+  StatsTable,
+} from "../gamedata/types";
 
 export interface DamageResult {
   rolls: number[];
@@ -14,52 +19,33 @@ export interface DamageResult {
   isLethal: boolean;
 }
 
-function calcDamageOut(
-  player: PlayerSpec,
-  enemy: EnemySpec,
-  move: Move,
-  opts: { pinch?: boolean; stages?: number } = {},
-): DamageResult {
-  const isSpecial = isSpecialType(move.type);
-  const atkStat = isSpecial ? player.stats.spa : player.stats.atk;
-  const defStat = isSpecial ? enemy.stats.spd : enemy.stats.def;
-
-  const rolls = calcDmgRange(
-    {
-      level: player.level,
-      types: player.types,
-      stat: atkStat,
-      stages: opts.stages ?? 0,
-    },
-    { level: enemy.level, types: enemy.types, stat: defStat, stages: 0 },
-    move,
-    opts.pinch ?? false,
-  );
-  return toResult(rolls, enemy.stats.hp);
-}
-
 export function calcDamageIn(
   enemy: EnemySpec,
   player: PlayerSpec,
   move: Move,
   opts: { stages?: number } = {},
 ): DamageResult {
-  const isSpecial = isSpecialType(move.type);
-  const atkStat = isSpecial ? enemy.stats.spa : enemy.stats.atk;
-  const defStat = isSpecial ? player.stats.spd : player.stats.def;
-
   const rolls = calcDmgRange(
-    { level: enemy.level, types: enemy.types, stat: atkStat, stages: 0 },
+    { level: enemy.level, types: enemy.types, stats: enemy.stats, stages: 0 },
     {
       level: player.level,
       types: player.types,
-      stat: defStat,
+      stats: player.stats,
       stages: opts.stages ?? 0,
     },
     move,
     false,
   );
-  return toResult(rolls, player.stats.hp);
+
+  const ohkoCount = rolls.filter((r) => r >= player.stats.hp).length;
+  return {
+    rolls,
+    min: rolls[0],
+    max: rolls[15],
+    ohkoCount,
+    ohkoPct: Math.round((ohkoCount / 16) * 100),
+    isLethal: rolls[15] >= player.stats.hp,
+  };
 }
 
 export interface KoChanceResult {
@@ -75,8 +61,18 @@ export function calcKoChance(
   moves: Move[],
   opts: { pinch?: boolean; stages?: number },
 ): KoChanceResult {
-  const rollSets = moves.map(
-    (move) => calcDamageOut(player, enemy, move, opts).rolls,
+  const rollSets = moves.map((move) =>
+    calcDmgRange(
+      {
+        level: player.level,
+        types: player.types,
+        stats: player.stats,
+        stages: opts.stages ?? 0,
+      },
+      { level: enemy.level, types: enemy.types, stats: enemy.stats, stages: 0 },
+      move,
+      opts.pinch ?? false,
+    ),
   );
 
   let combos: number[] = rollSets[0];
@@ -103,8 +99,30 @@ export function calcKoChance(
 interface Combatant {
   level: number;
   types: PokemonType[];
-  stat: number;
+  stats: StatsTable;
   stages: number;
+}
+
+const STAT_STAGE_RATIOS: [number, number][] = [
+  [10, 40],
+  [10, 35],
+  [10, 30],
+  [10, 25],
+  [10, 20],
+  [10, 15],
+  [10, 10],
+  [15, 10],
+  [20, 10],
+  [25, 10],
+  [30, 10],
+  [35, 10],
+  [40, 10],
+];
+
+function applyStatStage(stat: number, stage: number): number {
+  if (stage === 0) return stat;
+  const [num, den] = STAT_STAGE_RATIOS[stage + 6];
+  return Math.trunc((stat * num) / den);
 }
 
 function calcDmgRange(
@@ -113,38 +131,29 @@ function calcDmgRange(
   move: Move,
   isPinchAbilityActive: boolean = false,
 ): number[] {
-  let atkStat = attacker.stat;
-  let defStat = defender.stat;
-  let power = move.power;
+  const isSpecial = isSpecialType(move.type);
+  let atkStat = isSpecial ? attacker.stats.spa : attacker.stats.atk;
+  let defStat = isSpecial ? defender.stats.spd : defender.stats.def;
 
   // 1. Apply Stat Stages
-  if (attacker.stages) {
-    const factor =
-      attacker.stages > 0
-        ? (2 + attacker.stages) / 2
-        : 2 / (2 - attacker.stages);
-    atkStat = Math.trunc(atkStat * factor);
-  }
-  if (defender.stages) {
-    const factor =
-      defender.stages > 0
-        ? (2 + defender.stages) / 2
-        : 2 / (2 - defender.stages);
-    defStat = Math.trunc(defStat * factor);
-  }
+  atkStat = applyStatStage(atkStat, attacker.stages);
+  defStat = applyStatStage(defStat, defender.stages);
 
   // 2. Apply Pinch Ability (Torrent / Blaze / Overgrow / Swarm)
-  if (isPinchAbilityActive) {
-    power = Math.trunc(power * 1.5);
-  }
+  const power = isPinchAbilityActive
+    ? Math.trunc((150 * move.power) / 100)
+    : move.power;
 
-  // 3. Base Damage Formula (Restored exact order of operations)
-  let baseDmg = (Math.trunc((2 * attacker.level) / 5) + 2) * power;
-  baseDmg = Math.trunc(Math.trunc(baseDmg * (atkStat / defStat)) / 50) + 2;
+  // 3. Base Damage Formula
+  let baseDmg = Math.trunc((2 * attacker.level) / 5) + 2;
+  baseDmg = baseDmg * power * atkStat;
+  baseDmg = Math.trunc(baseDmg / defStat);
+  baseDmg = Math.trunc(baseDmg / 50);
+  baseDmg += 2;
 
   // 4. STAB (Same Type Attack Bonus)
   if (attacker.types.includes(move.type)) {
-    baseDmg = Math.trunc(baseDmg * 1.5);
+    baseDmg = Math.trunc((15 * baseDmg) / 10);
   }
 
   // 5. Type Effectiveness
@@ -159,16 +168,4 @@ function calcDmgRange(
   }
 
   return range;
-}
-
-function toResult(rolls: number[], defenderHp: number): DamageResult {
-  const ohkoCount = rolls.filter((r) => r >= defenderHp).length;
-  return {
-    rolls,
-    min: rolls[0],
-    max: rolls[15],
-    ohkoCount,
-    ohkoPct: Math.round((ohkoCount / 16) * 100),
-    isLethal: rolls[15] >= defenderHp,
-  };
 }
