@@ -20,43 +20,52 @@ export const KoChance: React.FC<KoChanceProps> = ({
   const { player, enemy } = useEncounter();
 
   const moveList = moves ?? Array(hits).fill(move);
-  if (moveList.some((m) => !m))
+  if (moveList.some((m) => !m)) {
     return (
-      <span className="text-error text-sm">KoChance: no move specified</span>
+      <div className="px-4 py-2 text-sm text-error">
+        KoChance: no move specified
+      </div>
     );
+  }
 
   const result = getKoChance(player, enemy, moveList, { pinch, stages });
-  if (!result)
+  if (!result) {
     return (
-      <span className="text-error text-sm">Unknown move in ko-chance</span>
+      <div className="px-4 py-2 text-sm text-error">
+        Unknown move in ko-chance
+      </div>
     );
+  }
 
   const { pct, chance, outOf, guaranteed } = result;
   const label = moveList.length === 1 ? "OHKO" : `${moveList.length}HKO`;
   const moveName = [...new Set(moveList)].join(" + ");
 
-  const colorClass = guaranteed
+  const resultColorClass = guaranteed
     ? "text-success"
     : pct >= 50
       ? "text-warning"
       : "text-error";
 
   return (
-    <div className="flex items-center gap-2 px-3 py-1.5 text-sm">
-      <span className="badge badge-xs badge-success shrink-0">KO%</span>
-      <span className="flex-1">
+    <div className="grid grid-cols-[5rem_1fr_auto] items-center gap-3 px-4 py-2 text-sm">
+      <div className="text-xs font-medium uppercase tracking-wide text-base-content/45">
+        {label}
+      </div>
+
+      <div className="text-base-content">
         {moveName}
         {pinch && (
-          <span className="ml-1 text-base-content/40 text-xs">(pinch)</span>
+          <span className="ml-1.5 text-xs text-base-content/40">(pinch)</span>
         )}
-        <span className="ml-1 text-base-content/40 text-xs">{label}</span>
-      </span>
-      <span className={`font-bold ${colorClass}`}>
+      </div>
+
+      <div className={`text-right font-bold ${resultColorClass}`}>
         {guaranteed ? "Guaranteed" : `${pct}%`}
-        <span className="text-base-content/40 text-xs font-normal ml-1">
+        <span className="ml-1.5 font-normal text-xs text-base-content/40">
           ({chance}/{outOf})
         </span>
-      </span>
+      </div>
     </div>
   );
 };

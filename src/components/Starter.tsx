@@ -26,9 +26,9 @@ export const Starter: React.FC<StarterProps> = ({
     spe: 31,
   });
 
-  const handleStart = (e: React.FormEvent) => {
+  const handleStart = (e: React.SubmitEvent) => {
     e.preventDefault();
-    initPlayer(species, level, nature, ivs);
+    if (!isInitialized) initPlayer(species, level, nature, ivs);
   };
 
   const handleIvChange = (stat: keyof typeof ivs, val: string) => {
@@ -36,95 +36,82 @@ export const Starter: React.FC<StarterProps> = ({
     setIvs((prev) => ({ ...prev, [stat]: num }));
   };
 
-  if (isInitialized) {
-    return (
-      <div className="card bg-base-100 border border-base-content/10 shadow-sm my-4 opacity-60 grayscale-[0.5]">
-        <div className="card-body p-5">
-          <div className="flex justify-between items-start">
-            <h3 className="card-title text-lg">
-              <span className="badge badge-outline badge-sm mr-1">STARTER</span>
-              {species}
-              <span className="text-base-content/40 text-base ml-1">
-                Lv.{level}
-              </span>
-            </h3>
-            <button disabled className="btn btn-xs">
-              Started
-            </button>
-          </div>
-          <div className="text-sm flex flex-wrap gap-x-4 gap-y-1 text-base-content/70 mt-2">
-            <span>
-              Nature: <strong className="text-base-content">{nature}</strong>
-            </span>
-            {(Object.entries(ivs) as [string, number][]).map(([stat, val]) => (
-              <span key={stat}>
-                <span className="uppercase">{stat}</span>{" "}
-                <strong className="font-mono text-base-content">{val}</strong>
-              </span>
-            ))}
-          </div>
-        </div>
-      </div>
-    );
-  }
-
   return (
     <form
       onSubmit={handleStart}
-      className="card bg-base-100 border border-base-content/10 shadow-sm my-4"
+      className={`card my-5 border border-base-content/10 bg-base-100 shadow-sm ${
+        isInitialized ? "opacity-70" : ""
+      }`}
     >
-      <div className="card-body p-5">
-        <div className="flex justify-between items-start mb-4">
-          <h3 className="card-title text-lg">
-            <span className="badge badge-outline badge-sm mr-1">STARTER</span>
-            {species}
-            <span className="text-base-content/40 text-base ml-1">
-              Lv.{level}
+      <div className="card-body gap-4 p-4">
+        <header className="flex items-start justify-between gap-3">
+          <div className="card-title flex items-baseline gap-2">
+            <span>{species}</span>
+            <span className="text-sm font-normal text-base-content/50">
+              Lv. {level}
             </span>
-          </h3>
-          <button type="submit" className="btn btn-xs btn-primary">
-            Start Run
-          </button>
-        </div>
-
-        <div className="grid grid-cols-2 gap-4">
-          <div className="flex flex-col gap-1 col-span-2">
-            <label className="label py-0 mb-1">
-              <span className="text-base-content/60 uppercase text-xs">
-                Nature
-              </span>
-            </label>
-            <select
-              value={nature}
-              onChange={(e) => setNature(e.target.value as Nature)}
-              className="select select-sm w-full"
-            >
-              {natures.map((n) => (
-                <option key={n} value={n}>
-                  {n}
-                </option>
-              ))}
-            </select>
           </div>
 
-          {(Object.keys(ivs) as Array<keyof typeof ivs>).map((stat) => (
-            <div key={stat} className="flex flex-col gap-1">
-              <label className="label py-0 mb-1">
-                <span className="text-base-content/60 uppercase text-xs">
+          <div className="card-actions">
+            <button
+              type="submit"
+              disabled={isInitialized}
+              className="btn btn-xs btn-primary"
+            >
+              {isInitialized ? "Active" : "Start Run"}
+            </button>
+          </div>
+        </header>
+
+        <section className="rounded-box border border-base-content/10 bg-base-200">
+          <div className="grid grid-cols-2 gap-x-4 gap-y-3 px-4 py-3 sm:grid-cols-3">
+            {/* Nature — spans full width, sits above IVs */}
+            <label className="col-span-2 flex items-center justify-between gap-3 border-b border-base-content/10 pb-3 sm:col-span-3">
+              <span className="text-xs font-medium uppercase tracking-wide text-base-content/45">
+                Nature
+              </span>
+              {isInitialized ? (
+                <span className="text-sm font-medium">{nature}</span>
+              ) : (
+                <select
+                  value={nature}
+                  onChange={(e) => setNature(e.target.value as Nature)}
+                  className="select select-sm w-40 bg-base-100"
+                >
+                  {natures.map((n) => (
+                    <option key={n} value={n}>
+                      {n}
+                    </option>
+                  ))}
+                </select>
+              )}
+            </label>
+
+            {/* IV rows */}
+            {(Object.keys(ivs) as Array<keyof typeof ivs>).map((stat) => (
+              <label
+                key={stat}
+                className="flex items-center justify-between gap-3"
+              >
+                <span className="text-xs font-medium uppercase tracking-wide text-base-content/45">
                   {stat}
                 </span>
+                {isInitialized ? (
+                  <span className="font-mono text-sm">{ivs[stat]}</span>
+                ) : (
+                  <input
+                    type="number"
+                    min="0"
+                    max="31"
+                    value={ivs[stat]}
+                    onChange={(e) => handleIvChange(stat, e.target.value)}
+                    className="input input-sm w-16 bg-base-100 text-right font-mono"
+                  />
+                )}
               </label>
-              <input
-                type="number"
-                min="0"
-                max="31"
-                value={ivs[stat]}
-                onChange={(e) => handleIvChange(stat, e.target.value)}
-                className="input input-sm font-mono w-full"
-              />
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </section>
       </div>
     </form>
   );

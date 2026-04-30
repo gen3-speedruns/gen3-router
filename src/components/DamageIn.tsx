@@ -7,27 +7,36 @@ export const DamageIn: React.FC<{ move: string; stages?: number }> = ({
   stages = 0,
 }) => {
   const { player, enemy } = useEncounter();
-
   const damage = getDamageIn(enemy, player, move, { stages });
-  if (!damage)
-    return <span className="text-error text-sm">Move {move} not found!</span>;
+
+  if (!damage) {
+    return (
+      <div className="px-4 py-2 text-sm text-error">Move {move} not found!</div>
+    );
+  }
 
   const { rolls, isLethal } = damage;
   const label =
     stages !== 0 ? `${move} (${stages > 0 ? "+" : ""}${stages} Def)` : move;
 
   return (
-    <div
-      className={`flex items-center gap-2 px-3 py-1.5 text-sm ${isLethal ? "text-error" : "text-base-content"}`}
-    >
-      <span className="badge badge-xs badge-error shrink-0">DMG</span>
-      <span className="flex-1">{label}</span>
-      <span className={`font-mono ${isLethal ? "font-bold" : ""}`}>
-        {formatDmgRange(rolls)}
+    <div className="grid grid-cols-[5rem_1fr_auto] items-center gap-3 px-4 py-2 text-sm">
+      <div className="text-xs font-medium uppercase tracking-wide text-base-content/45">
+        Damage
+      </div>
+      <div className={isLethal ? "text-error" : "text-base-content"}>
+        {label}
+      </div>
+      <div className="text-right font-mono">
+        <span className={isLethal ? "font-bold text-error" : ""}>
+          {formatDmgRange(rolls)}
+        </span>
         {isLethal && (
-          <span className="ml-2 badge badge-error badge-xs">Lethal</span>
+          <span className="ml-2 text-xs font-medium uppercase tracking-wide text-error">
+            lethal
+          </span>
         )}
-      </span>
+      </div>
     </div>
   );
 };

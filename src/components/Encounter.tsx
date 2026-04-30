@@ -32,51 +32,57 @@ export const Encounter: React.FC<EncounterProps> = ({
     [player],
   );
 
-  if (!enemySpec)
+  if (!enemySpec) {
     return (
       <div className="text-error underline">
         Error: Species {species} not found
       </div>
     );
+  }
 
-  if (!playerSpec)
+  if (!playerSpec) {
     return (
       <div className="text-base-content/50 italic p-4">
         Set your starter to see calcs.
       </div>
     );
+  }
 
   return (
     <EncounterProvider value={{ player: playerSpec, enemy: enemySpec }}>
-      <div
-        className={`card bg-base-100 border border-base-content/10 shadow-sm my-4 ${defeated ? "opacity-60" : ""}`}
+      <section
+        className={`card my-5 border border-base-content/10 bg-base-100 shadow-sm ${
+          defeated ? "opacity-60" : ""
+        }`}
       >
-        <div className="card-body gap-2 p-3">
-          <div className="card-title justify-between">
-            <h3 className="flex items-center gap-2 text-sm font-bold">
-              <span className="badge badge-outline badge-xs">
-                {isTrainer ? "TRAINER" : "WILD"}
-              </span>
-              {species}
-              <span className="text-base-content/40 font-normal">
-                Lv.{level}
-              </span>
-            </h3>
-            <button
-              onClick={() => {
-                gainEncounter(species, level, isTrainer);
-                setDefeated(true);
-              }}
-              disabled={defeated}
-              className="btn btn-xs btn-primary"
-            >
-              {defeated ? "Defeated" : "Defeat"}
-            </button>
-          </div>
+        <div className="card-body gap-4 p-4">
+          <header className="flex items-start justify-between gap-3">
+            <div className="min-w-0 space-y-2">
+              <div className="card-title flex items-baseline gap-2">
+                <span>{species}</span>
+                <span className="text-sm font-normal text-base-content/50">
+                  Lv. {level}
+                </span>
+              </div>
+            </div>
 
-          {children}
+            <div className="card-actions">
+              <button
+                onClick={() => {
+                  gainEncounter(species, level, isTrainer);
+                  setDefeated(true);
+                }}
+                disabled={defeated}
+                className="btn btn-xs btn-primary"
+              >
+                {defeated ? "Defeated" : "Defeat"}
+              </button>
+            </div>
+          </header>
+
+          <div className="space-y-3">{children}</div>
         </div>
-      </div>
+      </section>
     </EncounterProvider>
   );
 };

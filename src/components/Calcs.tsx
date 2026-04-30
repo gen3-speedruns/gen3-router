@@ -2,8 +2,10 @@ import React from "react";
 
 export const Calcs: React.FC<{ children: React.ReactNode }> = ({
   children,
-}) => (
-  <div className="flex flex-col divide-y divide-base-content/10 border-t border-base-content/10">
-    {children}
-  </div>
-);
+}) => {
+  return (
+    <section className="rounded-box border border-base-content/10 bg-base-200">
+      <div className="divide-y divide-base-content/10">{children}</div>
+    </section>
+  );
+};

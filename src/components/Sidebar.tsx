@@ -83,7 +83,7 @@ export const Sidebar: React.FC = () => {
                     {(Object.entries(data) as [string, number][]).map(
                       ([stat, val]) => (
                         <li key={stat} className="flex justify-between">
-                          <span className="text-base-content/50 uppercase">
+                          <span className="text-xs font-medium uppercase tracking-wide text-base-content/45">
                             {stat}
                           </span>
                           <span className="font-mono">{val}</span>
