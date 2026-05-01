@@ -87,7 +87,7 @@ export const markdocConfig: Config = {
       },
     },
     badge: {
-      render: "Badge",
+      render: "GymBadge",
       selfClosing: true,
       attributes: {
         id: { type: String, required: true },

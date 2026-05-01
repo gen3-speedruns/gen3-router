@@ -63,7 +63,7 @@ export const Encounter: React.FC<EncounterProps> = ({
           <header className="flex items-center justify-between gap-3">
             <div className="flex items-center min-w-0">
               <PokemonSprite dexId={enemySpec.dexId} name={species} />
-              <div className="card-title flex-wrap items-baseline gap-x-2 gap-y-1">
+              <div className="card-title flex-wrap items-baseline gap-x-2 gap-y-1 pl-2">
                 <span>{species}</span>
                 <span className="text-sm font-normal text-base-content/50">
                   Lv. {level}

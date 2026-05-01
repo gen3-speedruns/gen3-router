@@ -17,7 +17,7 @@ import { LevelUpHpGain } from "./components/LevelUpHpGain";
 import { Choice } from "./components/Choice";
 import { Option } from "./components/Option";
 import { Enemy } from "./components/Enemy";
-import { Badge } from "./components/Badge";
+import { GymBadge } from "./components/GymBadge";
 
 const components = {
   Encounter,
@@ -32,7 +32,7 @@ const components = {
   Choice,
   Option,
   Enemy,
-  Badge,
+  GymBadge,
 };
 
 export default function App() {
