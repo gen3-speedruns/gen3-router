@@ -78,5 +78,13 @@ export const markdocConfig: Config = {
         label: { type: String, required: true },
       },
     },
+    enemy: {
+      render: "Enemy",
+      attributes: {
+        species: { type: String, required: true },
+        level: { type: Number, required: true },
+        fixedIv: { type: Number, default: 0 },
+      },
+    },
   },
 };

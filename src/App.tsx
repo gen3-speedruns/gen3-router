@@ -16,6 +16,7 @@ import { PoisonDamage } from "./components/PoisonDamage";
 import { LevelUpHpGain } from "./components/LevelUpHpGain";
 import { Choice } from "./components/Choice";
 import { Option } from "./components/Option";
+import { Enemy } from "./components/Enemy";
 
 const components = {
   Encounter,
@@ -29,6 +30,7 @@ const components = {
   LevelUpHpGain,
   Choice,
   Option,
+  Enemy,
 };
 
 export default function App() {

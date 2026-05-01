@@ -245,10 +245,12 @@ Water Gun* (x2)
   - Use Repel.
 - Grab this Rare Candy near the Bug Catcher (after fighting him if you are fighting him). ![Rare Candy](images/frlg/MtMoonRareCandy.png)
 - Fight **ONE** of the following optional trainers for EXP depending on the situation ![Mt Moon Trainers](images/frlg/MtMoonTrainers.png)
+  {% enemy species="Rattata" level=13 %}
   {% calcs %}
   {% level-up-hp-gain level=16 /%}
-  TODO: Add Hyperfang Damage
+  {% damage-in move="Hyper Fang" /%}
   {% /calcs %}
+  {% /enemy %}
 
 {% choice label="Choose trainer" %}
 {% option value="robby" label="Bug Catcher Robby" %}
