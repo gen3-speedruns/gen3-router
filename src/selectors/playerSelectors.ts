@@ -35,7 +35,7 @@ export function buildEnemySpec(
   const data = PokemonData[species];
   if (!data) return null;
   const stats = buildEnemyStats(data.baseStats, level, fixedIv);
-  return { species, level, types: data.types, stats };
+  return { species, dexId: data.dexId, level, types: data.types, stats };
 }
 
 export function getLevelUpHpGain(player: PlayerState, level: number): number {

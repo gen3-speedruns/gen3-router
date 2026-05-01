@@ -145,13 +145,17 @@ async function main() {
   // Filter for Gen 1-3
   const pokemonKeys = Object.keys(pokedex).slice(0, 386);
   const gen3Pokedex = {};
-  pokemonKeys.forEach((k) => (gen3Pokedex[k] = pokedex[k]));
-
-  const pokeContent = `import type { Pokemon } from '../types';\n\nexport const PokemonData: Record<string, Pokemon> = ${JSON.stringify(gen3Pokedex, null, 2)};\n`;
-  fs.writeFileSync("./src/core/data/pokemon.ts", pokeContent);
-  console.log(
-    `Saved ${pokemonKeys.length} Pokemon to src/core/data/pokemon.ts`,
+  pokemonKeys.forEach(
+    (k, i) =>
+      (gen3Pokedex[k] = {
+        ...pokedex[k],
+        dexId: i + 1,
+      }),
   );
+
+  const pokeContent = `import type { Pokemon } from './types';\n\nexport const PokemonData: Record<string, Pokemon> = ${JSON.stringify(gen3Pokedex, null, 2)};\n`;
+  fs.writeFileSync("./src/gamedata/pokemon.ts", pokeContent);
+  console.log(`Saved ${pokemonKeys.length} Pokemon to src/gamedata/pokemon.ts`);
 
   // 2. Fetch and Parse Moves
   const rawMoves = await fetchDecompData(MOVES_URL);
@@ -162,9 +166,9 @@ async function main() {
   const gen3Moves = {};
   moveKeys.forEach((k) => (gen3Moves[k] = moveDex[k]));
 
-  const moveContent = `import type { Move } from '../types';\n\nexport const MoveData: Record<string, Move> = ${JSON.stringify(gen3Moves, null, 2)};\n`;
-  fs.writeFileSync("./src/core/data/moves.ts", moveContent);
-  console.log(`Saved ${moveKeys.length} Moves to src/core/data/moves.ts`);
+  const moveContent = `import type { Move } from './types';\n\nexport const MoveData: Record<string, Move> = ${JSON.stringify(gen3Moves, null, 2)};\n`;
+  fs.writeFileSync("./src/gamedata/moves.ts", moveContent);
+  console.log(`Saved ${moveKeys.length} Moves to src/gamedata/moves.ts`);
 }
 
 main();

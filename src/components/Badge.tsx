@@ -12,7 +12,7 @@ export const Badge: React.FC<BadgeProps> = ({ id }) => {
 
   return (
     <section
-      className={`card my-5 border border-base-content/10 bg-base-100 shadow-sm ${
+      className={`card my-4 border border-base-content/10 bg-base-100 shadow-sm ${
         alreadyObtained ? "opacity-60" : ""
       }`}
     >

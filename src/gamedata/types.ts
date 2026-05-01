@@ -18,6 +18,7 @@ export type GrowthRate =
   | "Fluctuating";
 
 export interface Pokemon {
+  dexId: number;
   types: PokemonType[];
   baseStats: StatsTable;
   evYield: StatsTable;
@@ -49,6 +50,7 @@ export interface PlayerSpec {
 
 export interface EnemySpec {
   species: string;
+  dexId: number;
   level: number;
   types: PokemonType[];
   stats: StatsTable;

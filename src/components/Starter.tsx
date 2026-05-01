@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useRunStore } from "../store/runState";
 import type { Nature } from "../gamedata/natures";
+import { PokemonData } from "../gamedata/pokemon";
+import { PokemonSprite } from "./PokemonSprite";
 
 interface StarterProps {
   species: string;
@@ -39,17 +41,20 @@ export const Starter: React.FC<StarterProps> = ({
   return (
     <form
       onSubmit={handleStart}
-      className={`card my-5 border border-base-content/10 bg-base-100 shadow-sm ${
+      className={`card my-4 border border-base-content/10 bg-base-100 shadow-sm ${
         isInitialized ? "opacity-70" : ""
       }`}
     >
       <div className="card-body gap-4 p-4">
-        <header className="flex items-start justify-between gap-3">
-          <div className="card-title flex items-baseline gap-2">
-            <span>{species}</span>
-            <span className="text-sm font-normal text-base-content/50">
-              Lv. {level}
-            </span>
+        <header className="flex items-center justify-between gap-3">
+          <div className="flex items-center min-w-0">
+            <PokemonSprite dexId={PokemonData[species].dexId} name={species} />
+            <div className="card-title flex-wrap items-baseline gap-x-2 gap-y-1">
+              <span>{species}</span>
+              <span className="text-sm font-normal text-base-content/50">
+                Lv. {level}
+              </span>
+            </div>
           </div>
 
           <div className="card-actions">
@@ -65,7 +70,6 @@ export const Starter: React.FC<StarterProps> = ({
 
         <section className="rounded-box border border-base-content/10 bg-base-200">
           <div className="grid grid-cols-2 gap-x-4 gap-y-3 px-4 py-3 sm:grid-cols-3">
-            {/* Nature — spans full width, sits above IVs */}
             <label className="col-span-2 flex items-center justify-between gap-3 border-b border-base-content/10 pb-3 sm:col-span-3">
               <span className="text-xs font-medium uppercase tracking-wide text-base-content/45">
                 Nature
@@ -87,7 +91,6 @@ export const Starter: React.FC<StarterProps> = ({
               )}
             </label>
 
-            {/* IV rows */}
             {(Object.keys(ivs) as Array<keyof typeof ivs>).map((stat) => (
               <label
                 key={stat}

@@ -2,6 +2,8 @@ import React, { useState, useMemo } from "react";
 import { useRunStore } from "../store/runState";
 import { EncounterProvider } from "./EncounterContext";
 import { buildEnemySpec, buildPlayerSpec } from "../selectors/playerSelectors";
+import { TypeBadge } from "./TypeBadge";
+import { PokemonSprite } from "./PokemonSprite";
 
 interface EncounterProps {
   species: string;
@@ -53,20 +55,24 @@ export const Encounter: React.FC<EncounterProps> = ({
   return (
     <EncounterProvider value={{ player: playerSpec, enemy: enemySpec }}>
       <section
-        className={`card my-5 border border-base-content/10 bg-base-100 shadow-sm ${
-          defeated ? "opacity-60" : ""
+        className={`card my-4 border border-base-content/10 bg-base-100 shadow-sm ${
+          defeated ? "opacity-70" : ""
         }`}
       >
         <div className="card-body gap-4 p-4">
-          <header className="flex items-start justify-between gap-3">
-            <div className="min-w-0 space-y-2">
-              <div className="card-title flex items-baseline gap-2">
+          <header className="flex items-center justify-between gap-3">
+            <div className="flex items-center min-w-0">
+              <PokemonSprite dexId={enemySpec.dexId} name={species} />
+              <div className="card-title flex-wrap items-baseline gap-x-2 gap-y-1">
                 <span>{species}</span>
                 <span className="text-sm font-normal text-base-content/50">
                   Lv. {level}
                 </span>
+                {enemySpec.types.map((t) => (
+                  <TypeBadge key={t} type={t} />
+                ))}
                 {optional && !defeated && (
-                  <span className="text-xs text-base-content/35">optional</span>
+                  <span className="badge badge-sm badge-ghost">optional</span>
                 )}
               </div>
             </div>
