@@ -128,6 +128,8 @@ Bubble* (x2)
 {% /calcs %}
 {% /encounter %}
 
+TODO: Add badge boost
+
 - Head straight to the mart and buy
   - 8x Potion (↓)
   - 3x Antidote (↓)
@@ -177,7 +179,7 @@ Water Gun* (x2)
 
 ### Bug Catcher Greg
 
-{% encounter species="Weedle" level=10 isTrainer=true %}
+{% encounter species="Weedle" level=9 isTrainer=true %}
 {% strategy %}
 Water Gun*
 {% /strategy %}
@@ -185,3 +187,157 @@ Water Gun*
 {% speed-check playerStages=-1 /%}
 {% /calcs %}
 {% /encounter %}
+
+{% encounter species="Caterpie" level=9 isTrainer=true %}
+{% strategy %}
+Water Gun (x2)
+{% /strategy %}
+{% calcs %}
+{% speed-check playerStages=-1 /%}
+{% /calcs %}
+{% /encounter %}
+
+{% encounter species="Kakuna" level=9 isTrainer=true %}
+{% strategy %}
+Water Gun* (x2)
+{% /strategy %}
+{% /encounter %}
+
+{% encounter species="Metapod" level=9 isTrainer=true %}
+{% strategy %}
+Water Gun* (x2)
+{% /strategy %}
+{% calcs %}
+{% speed-check playerStages=-2 /%}
+{% /calcs %}
+{% /encounter %}
+
+### Bug Catcher James
+
+{% encounter species="Caterpie" level=11 isTrainer=true %}
+{% strategy %}
+Water Gun (x2)
+{% /strategy %}
+{% calcs %}
+{% speed-check playerStages=-1 /%}
+{% /calcs %}
+{% /encounter %}
+
+{% encounter species="Metapod" level=11 isTrainer=true %}
+{% strategy %}
+Water Gun* (x2)
+{% /strategy %}
+{% calcs %}
+{% speed-check playerStages=-2 /%}
+{% /calcs %}
+{% /encounter %}
+
+- If you did not catch Pidgey on Route 1, catch a Spearow / Pidgey now in the grass below the lass (Bubble to weaken, Tackle if in torrent).
+  - If no HM Slaves, can catch Nidoran for Cut and Strength.
+  - Can Bag Manip the Lass for a free pass.
+- Grab this Persim Berry if the chart below says to grab it. ![Persim Berry](images/frlg/PersimBerry.png) ![Persim Berry Chart](images/frlg/PersimBerryChart.png)
+
+## Mt. Moon
+
+- Run up 8 tiles then
+  - Register TM Case.
+  - Equip Persim Berry from the Berry Pouch if you got it.
+  - Use Repel.
+- Grab this Rare Candy near the Bug Catcher (after fighting him if you are fighting him). ![Rare Candy](images/frlg/MtMoonRareCandy.png)
+- Fight **ONE** of the following optional trainers for EXP depending on the situation ![Mt Moon Trainers](images/frlg/MtMoonTrainers.png)
+  {% calcs %}
+  {% level-up-hp-gain level=16 /%}
+  TODO: Add Hyperfang Damage
+  {% /calcs %}
+
+{% choice label="Choose trainer" %}
+{% option value="robby" label="Bug Catcher Robby" %}
+  {% encounter species="Caterpie" level=10 isTrainer=true %}
+  {% strategy %}
+  Water Gun*
+  {% /strategy %}
+  {% /encounter %}
+
+  {% encounter species="Metapod" level=10 isTrainer=true %}
+  {% strategy %}
+  Water Gun*
+  {% /strategy %}
+  {% /encounter %}
+
+  {% encounter species="Caterpie" level=10 isTrainer=true %}
+  {% strategy %}
+  Water Gun*
+  {% /strategy %}
+  {% /encounter %}
+{% /option %}
+
+{% option value="josh" label="Youngster Josh" %}
+  {% encounter species="Rattata" level=10 isTrainer=true %}
+  {% strategy %}
+  Water Gun*
+  {% /strategy %}
+  {% calcs %}
+  {% speed-check /%}
+  {% damage-in move="Quick Attack" /%}
+  {% /calcs %}
+  {% /encounter %}
+
+  {% encounter species="Rattata" level=10 isTrainer=true %}
+  {% strategy %}
+  Water Gun*
+  {% /strategy %}
+  {% calcs %}
+  {% speed-check /%}
+  {% damage-in move="Quick Attack" /%}
+  {% /calcs %}
+  {% /encounter %}
+
+  {% encounter species="Zubat" level=10 isTrainer=true %}
+  {% strategy %}
+  Water Gun* (x2)
+  {% /strategy %}
+  {% calcs %}
+  {% ko-chance move="Water Gun" pinch=true /%}
+  {% /calcs %}
+  {% /encounter %}
+{% /option %}
+
+{% option value="rocket" label="Rocket Spinner" %}
+  {% encounter species="Rattata" level=13 isTrainer=true %}
+  {% strategy %}
+  Water Gun (x2)
+  {% /strategy %}
+  {% calcs %}
+  {% ko-chance move="Water Gun" pinch=true /%}
+  {% damage-in move="Hyper Fang" /%}
+  {% damage-in move="Quick Attack" /%}
+  {% /calcs %}
+  {% /encounter %}
+  
+  {% encounter species="Sandshrew" level=13 isTrainer=true %}
+  {% strategy %}
+  Water Gun
+  {% /strategy %}
+  {% /encounter %}
+{% /option %}
+
+{% option value="hiker" label="Hiker Marcos" %}
+  {% encounter species="Geodude" level=10 isTrainer=true %}
+  {% strategy %}
+  Bubble
+  {% /strategy %}
+  {% /encounter %}
+
+  {% encounter species="Geodude" level=10 isTrainer=true %}
+  {% strategy %}
+  Bubble
+  {% /strategy %}
+  {% /encounter %}
+
+  {% encounter species="Onix" level=10 isTrainer=true %}
+  {% strategy %}
+  Bubble
+  {% /strategy %}
+  {% /encounter %}
+{% /option %}
+{% /choice %}

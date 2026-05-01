@@ -65,5 +65,18 @@ export const markdocConfig: Config = {
         level: { type: Number, required: true },
       },
     },
+    choice: {
+      render: "Choice",
+      attributes: {
+        label: { type: String },
+      },
+    },
+    option: {
+      render: "Option",
+      attributes: {
+        value: { type: String, required: true },
+        label: { type: String, required: true },
+      },
+    },
   },
 };

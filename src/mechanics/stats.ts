@@ -54,7 +54,6 @@ const STAT_STAGE_RATIOS: [number, number][] = [
 export function applyStatStage(stat: number, stage: number): number {
   if (stage === 0) return stat;
 
-  console.log(stage);
   const [num, den] = STAT_STAGE_RATIOS[stage + 6];
   return Math.trunc((stat * num) / den);
 }

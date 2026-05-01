@@ -14,6 +14,8 @@ import { Strategy } from "./components/Strategy";
 import { Moon, Sun } from "lucide-react";
 import { PoisonDamage } from "./components/PoisonDamage";
 import { LevelUpHpGain } from "./components/LevelUpHpGain";
+import { Choice } from "./components/Choice";
+import { Option } from "./components/Option";
 
 const components = {
   Encounter,
@@ -25,6 +27,8 @@ const components = {
   KoChance,
   PoisonDamage,
   LevelUpHpGain,
+  Choice,
+  Option,
 };
 
 export default function App() {

@@ -39,8 +39,6 @@ export function getKoChance(
 ): KoChanceResult | null {
   const moves = moveNames.map((name) => MoveData[name]);
   if (!moves.filter((move) => move)) {
-    console.log(moves);
-
     return null;
   }
 

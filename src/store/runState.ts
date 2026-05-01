@@ -1,9 +1,8 @@
 import { create } from "zustand";
 import type { Nature } from "../gamedata/natures";
-import type { StatsTable, GrowthRate } from "../gamedata/types";
+import type { StatsTable, GrowthRate, BadgeBoosts } from "../gamedata/types";
 import { calculateExpYield, getExpAtLevel } from "../mechanics/experience";
 import { PokemonData } from "../gamedata/pokemon";
-import type { BadgeSet } from "../mechanics/stats";
 
 export interface PlayerState {
   species: string;
@@ -12,7 +11,7 @@ export interface PlayerState {
   ivs: StatsTable;
   evs: StatsTable;
   totalExp: number;
-  badges: BadgeSet;
+  badges: BadgeBoosts;
 }
 
 interface AppState {

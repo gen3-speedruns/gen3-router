@@ -90,6 +90,8 @@ export function calcKoChance(
     combos = next;
   }
 
+  console.log(`${enemy.species} ${enemy.level} ${enemy.stats.hp} ${combos}`);
+
   const outOf = combos.length;
   const winning = combos.filter((total) => total >= enemy.stats.hp).length;
   return {
