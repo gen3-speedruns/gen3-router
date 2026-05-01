@@ -23,11 +23,11 @@ Please check the **Before Starting** section of it when you are new to the game.
 - Head down and fight your rival.
 - Enter your Squirtle:
 
-{% starter species="Squirtle" level="5" natures=["Modest", "Mild", "Rash"] /%}
+{% starter species="Squirtle" level=5 natures=["Modest", "Mild", "Rash"] /%}
 
 ### Rival 1
 
-{% encounter species="Bulbasaur" level="5" isTrainer=true %}
+{% encounter species="Bulbasaur" level=5 isTrainer=true %}
 {% strategy %}
 Spam Tackle
 {% /strategy %}
@@ -44,16 +44,16 @@ Spam Tackle
 
 - Grab the Potion from mart guy.
 - Kill any level 2 or 3 Pidgey / Rattata along the way.
-  {% encounter species="Pidgey" level="2" optional=true /%}
-  {% encounter species="Rattata" level="2" optional=true /%}
+  {% encounter species="Pidgey" level=2 optional=true /%}
+  {% encounter species="Rattata" level=2 optional=true /%}
 
   Do **not** kill a level 3 Pidgey if Modest or less than 21 ATK.
 
-  {% encounter species="Pidgey" level="3" optional=true /%}
-  {% encounter species="Rattata" level="3" optional=true /%}
+  {% encounter species="Pidgey" level=3 optional=true /%}
+  {% encounter species="Rattata" level=3 optional=true /%}
 - If 31 speed IV, attempt to kill an extra Pidgey / Rattata on Route 1.
-  {% encounter species="Pidgey" level="2" optional=true /%}
-  {% encounter species="Pidgey" level="3" optional=true /%}
+  {% encounter species="Pidgey" level=2 optional=true /%}
+  {% encounter species="Pidgey" level=3 optional=true /%}
 - Grab the parcel at the mart then head back to Oak's lab.
 - Catch Pidgey / Rattata if you come across them (Tackle once to weaken). Do **not** try to force an encounter since there are backups later.
 - On Route 2 cut through the grass before the Viridian Forest entrance (2nd tile to the right) it is 1% to get an encounter.
@@ -67,7 +67,7 @@ Spam Tackle
 
 ### Bug Catcher Sammy
 
-{% encounter species="Weedle" level="9" isTrainer=true %}
+{% encounter species="Weedle" level=9 isTrainer=true %}
 {% strategy %}
 Tail Whip x1-2, Tackle x4-6 / Spam Bubble if level 7
 {% /strategy %}
@@ -75,8 +75,57 @@ Tail Whip x1-2, Tackle x4-6 / Spam Bubble if level 7
 - Swap Tail Whip with Tackle turn 1 before using it (Right + Select, A + A).
 
 {% calcs %}
-{% speed-check /%}
 {% damage-in move="Poison Sting" /%}
 {% poison-damage /%}
+{% /calcs %}
+{% /encounter %}
+
+- If poisoned, Antidote on the HP in the chart below. ![Antidote Chart](images/frlg/AntidoteChart.png)
+
+## Pewter City
+
+- Head straight to the gym.
+
+### Camper Liam
+
+{% encounter species="Geodude" level=10 isTrainer=true %}
+{% strategy %}
+Bubble* (x2)
+{% /strategy %}
+{% /encounter %}
+
+{% encounter species="Sandshrew" level=11 isTrainer=true %}
+{% strategy %}
+Bubble* x2-4
+{% /strategy %}
+
+{% calcs %}
+{% damage-in move="Scratch" /%}
+{% /calcs %}
+{% /encounter %}
+
+### Leader Brock
+
+{% encounter species="Geodude" level=12 isTrainer=true %}
+{% strategy %}
+Bubble* (x2)
+{% /strategy %}
+
+- Consider Withdraw Turn 1 if HP is too high for Torrent.
+
+{% calcs %}
+{% ko-chance move="Bubble" pinch=true /%}
+{% damage-in move="Tackle" /%}
+{% damage-in move="Tackle" stages=1 /%}
+{% /calcs %}
+{% /encounter %}
+
+{% encounter species="Onix" level=14 isTrainer=true %}
+{% strategy %}
+Bubble* x2-4
+{% /strategy %}
+
+{% calcs %}
+{% damage-in move="Scratch" /%}
 {% /calcs %}
 {% /encounter %}

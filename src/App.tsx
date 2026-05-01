@@ -77,6 +77,25 @@ export default function App() {
 
 function RouteRenderer({ content }: { content: string }) {
   const ast = Markdoc.parse(content);
+  const errors = Markdoc.validate(ast, markdocConfig);
+
+  if (errors.length > 0 && import.meta.env.DEV) {
+    return (
+      <div className="rounded-box border border-error/30 bg-error/10 p-4 text-sm font-mono">
+        <div className="mb-2 font-bold text-error">
+          Schema validation errors
+        </div>
+        <ul className="space-y-1">
+          {errors.map((e, i) => (
+            <li key={i} className="text-error/80">
+              Line {e.lines?.[0]}: {e.error.message}
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  }
+
   const transformed = Markdoc.transform(ast, markdocConfig);
   return Markdoc.renderers.react(transformed, React, { components });
 }
