@@ -33,7 +33,10 @@ export const markdocConfig: Config = {
     },
     "speed-check": {
       render: "SpeedCheck",
-      attributes: { stages: { type: Number } },
+      attributes: {
+        playerStages: { type: Number, default: 0 },
+        enemyStages: { type: Number, default: 0 },
+      },
     },
     "damage-in": {
       render: "DamageIn",
@@ -55,6 +58,12 @@ export const markdocConfig: Config = {
     "poison-damage": {
       render: "PoisonDamage",
       attributes: {},
+    },
+    "level-up-hp-gain": {
+      render: "LevelUpHpGain",
+      attributes: {
+        level: { type: Number, required: true },
+      },
     },
   },
 };

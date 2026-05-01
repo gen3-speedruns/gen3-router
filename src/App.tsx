@@ -13,6 +13,7 @@ import { Calcs } from "./components/Calcs";
 import { Strategy } from "./components/Strategy";
 import { Moon, Sun } from "lucide-react";
 import { PoisonDamage } from "./components/PoisonDamage";
+import { LevelUpHpGain } from "./components/LevelUpHpGain";
 
 const components = {
   Encounter,
@@ -23,6 +24,7 @@ const components = {
   DamageIn,
   KoChance,
   PoisonDamage,
+  LevelUpHpGain,
 };
 
 export default function App() {

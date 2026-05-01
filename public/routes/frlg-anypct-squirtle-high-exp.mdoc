@@ -31,10 +31,8 @@ Please check the **Before Starting** section of it when you are new to the game.
 {% strategy %}
 Spam Tackle
 {% /strategy %}
-
 - **Tail Whip** turn 1 if Modest or 0-3 ATK Rash/Mild.
 - Reset if Bulbasaur ever outspeeds you.
-
 {% calcs %}
 {% speed-check /%}
 {% /calcs %}
@@ -71,9 +69,7 @@ Spam Tackle
 {% strategy %}
 Tail Whip x1-2, Tackle x4-6 / Spam Bubble if level 7
 {% /strategy %}
-
 - Swap Tail Whip with Tackle turn 1 before using it (Right + Select, A + A).
-
 {% calcs %}
 {% damage-in move="Poison Sting" /%}
 {% poison-damage /%}
@@ -98,7 +94,6 @@ Bubble* (x2)
 {% strategy %}
 Bubble* x2-4
 {% /strategy %}
-
 {% calcs %}
 {% damage-in move="Scratch" /%}
 {% /calcs %}
@@ -110,9 +105,7 @@ Bubble* x2-4
 {% strategy %}
 Bubble* (x2)
 {% /strategy %}
-
 - Consider Withdraw Turn 1 if HP is too high for Torrent.
-
 {% calcs %}
 {% ko-chance move="Bubble" pinch=true /%}
 {% damage-in move="Tackle" /%}
@@ -122,10 +115,73 @@ Bubble* (x2)
 
 {% encounter species="Onix" level=14 isTrainer=true %}
 {% strategy %}
-Bubble* x2-4
+Bubble* (x2)
 {% /strategy %}
-
+- If you drop Onix Speed with Bubble, it will Rock Tomb you at 24+ Speed.
 {% calcs %}
-{% damage-in move="Scratch" /%}
+{% speed-check enemyStages=-1 /%}
+{% ko-chance move="Bubble" pinch=true /%}
+{% damage-in move="Rock Tomb" /%}
+{% damage-in move="Rock Tomb" stages=1 /%}
+{% damage-in move="Tackle" /%}
+{% damage-in move="Tackle" stages=1 /%}
+{% /calcs %}
+{% /encounter %}
+
+- Head straight to the mart and buy
+  - 8x Potion (↓)
+  - 3x Antidote (↓)
+  - 3x Awakening (↓↓)
+  - 3x Repel (↓↓↓)
+  - **If you run FireRed and need Paras**, then buy 7x Potions and a Paralyze Heal instead.
+
+- Head to Route 3 to get your running shoes.
+
+## Route 3
+
+- Attempt to get torrent in as little turns as possible on this route.
+  - If no torrent for level 14, get it off the 2nd level 10 Caterpie.
+  - If no torrent for level 15, get it off the level 11 Caterpie.
+  {% calcs %}
+  {% level-up-hp-gain level=14 /%}
+  {% level-up-hp-gain level=15 /%}
+  {% /calcs %}
+
+### Bug Catcher Colton
+
+{% encounter species="Caterpie" level=10 isTrainer=true %}
+{% strategy %}
+Water Gun* (x2)
+{% /strategy %}
+{% calcs %}
+{% ko-chance move="Water Gun" pinch=true /%}
+{% /calcs %}
+{% /encounter %}
+
+{% encounter species="Weedle" level=10 isTrainer=true %}
+{% strategy %}
+Water Gun* (x2)
+{% /strategy %}
+{% /encounter %}
+
+{% encounter species="Caterpie" level=10 isTrainer=true %}
+{% strategy %}
+Water Gun* (x2)
+{% /strategy %}
+{% calcs %}
+{% ko-chance move="Water Gun" pinch=true /%}
+{% /calcs %}
+{% /encounter %}
+
+- Go above shorts guy and fight the next bug catcher.
+
+### Bug Catcher Greg
+
+{% encounter species="Weedle" level=10 isTrainer=true %}
+{% strategy %}
+Water Gun*
+{% /strategy %}
+{% calcs %}
+{% speed-check playerStages=-1 /%}
 {% /calcs %}
 {% /encounter %}

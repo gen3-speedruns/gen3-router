@@ -25,9 +25,10 @@ export function getDamageIn(
 export function getSpeedCheck(
   player: PlayerSpec,
   enemy: EnemySpec,
-  stages = 0,
+  playerStages: number,
+  enemyStages: number,
 ): SpeedResult {
-  return calcSpeedCheck(player, enemy, stages);
+  return calcSpeedCheck(player, enemy, playerStages, enemyStages);
 }
 
 export function getKoChance(
