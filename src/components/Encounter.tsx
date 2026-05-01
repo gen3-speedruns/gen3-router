@@ -78,7 +78,7 @@ export const Encounter: React.FC<EncounterProps> = ({
                   setDefeated(true);
                 }}
                 disabled={defeated}
-                className="btn btn-xs btn-primary"
+                className="btn btn-sm btn-primary"
               >
                 {defeated ? "Defeated" : "Defeat"}
               </button>

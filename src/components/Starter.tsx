@@ -56,7 +56,7 @@ export const Starter: React.FC<StarterProps> = ({
             <button
               type="submit"
               disabled={isInitialized}
-              className="btn btn-xs btn-primary"
+              className="btn btn-sm btn-primary"
             >
               {isInitialized ? "Active" : "Start Run"}
             </button>

@@ -86,5 +86,12 @@ export const markdocConfig: Config = {
         fixedIv: { type: Number, default: 0 },
       },
     },
+    badge: {
+      render: "Badge",
+      selfClosing: true,
+      attributes: {
+        id: { type: String, required: true },
+      },
+    },
   },
 };
