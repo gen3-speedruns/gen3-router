@@ -223,13 +223,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 20,
+        "iv": 2,
         "level": 17,
         "species": "Rattata",
         "moves": []
       },
       {
-        "iv": 20,
+        "iv": 2,
         "level": 17,
         "species": "Ekans",
         "moves": []
@@ -1478,13 +1478,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 30,
+        "iv": 3,
         "level": 29,
         "species": "Rhyhorn",
         "moves": []
       },
       {
-        "iv": 30,
+        "iv": 3,
         "level": 29,
         "species": "Lickitung",
         "moves": []
@@ -1497,13 +1497,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 30,
+        "iv": 3,
         "level": 20,
         "species": "Cubone",
         "moves": []
       },
       {
-        "iv": 30,
+        "iv": 3,
         "level": 20,
         "species": "Slowpoke",
         "moves": []
@@ -1516,19 +1516,19 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 30,
+        "iv": 3,
         "level": 20,
         "species": "Slowpoke",
         "moves": []
       },
       {
-        "iv": 30,
+        "iv": 3,
         "level": 20,
         "species": "Slowpoke",
         "moves": []
       },
       {
-        "iv": 30,
+        "iv": 3,
         "level": 20,
         "species": "Slowpoke",
         "moves": []
@@ -1541,13 +1541,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 30,
+        "iv": 3,
         "level": 22,
         "species": "Charmander",
         "moves": []
       },
       {
-        "iv": 30,
+        "iv": 3,
         "level": 22,
         "species": "Cubone",
         "moves": []
@@ -1560,7 +1560,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 30,
+        "iv": 3,
         "level": 25,
         "species": "Slowpoke",
         "moves": []
@@ -1573,19 +1573,19 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 30,
+        "iv": 3,
         "level": 40,
         "species": "Charmeleon",
         "moves": []
       },
       {
-        "iv": 30,
+        "iv": 3,
         "level": 40,
         "species": "Lapras",
         "moves": []
       },
       {
-        "iv": 30,
+        "iv": 3,
         "level": 40,
         "species": "Lickitung",
         "moves": []
@@ -1598,13 +1598,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 30,
+        "iv": 3,
         "level": 23,
         "species": "Cubone",
         "moves": []
       },
       {
-        "iv": 30,
+        "iv": 3,
         "level": 23,
         "species": "Slowpoke",
         "moves": []
@@ -4261,25 +4261,25 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 50,
+        "iv": 6,
         "level": 31,
         "species": "Kadabra",
         "moves": []
       },
       {
-        "iv": 50,
+        "iv": 6,
         "level": 31,
         "species": "Slowpoke",
         "moves": []
       },
       {
-        "iv": 50,
+        "iv": 6,
         "level": 31,
         "species": "Mr Mime",
         "moves": []
       },
       {
-        "iv": 50,
+        "iv": 6,
         "level": 31,
         "species": "Kadabra",
         "moves": []
@@ -4292,13 +4292,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 50,
+        "iv": 6,
         "level": 34,
         "species": "Mr Mime",
         "moves": []
       },
       {
-        "iv": 50,
+        "iv": 6,
         "level": 34,
         "species": "Kadabra",
         "moves": []
@@ -4311,19 +4311,19 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 50,
+        "iv": 6,
         "level": 33,
         "species": "Slowpoke",
         "moves": []
       },
       {
-        "iv": 50,
+        "iv": 6,
         "level": 33,
         "species": "Slowpoke",
         "moves": []
       },
       {
-        "iv": 50,
+        "iv": 6,
         "level": 33,
         "species": "Slowbro",
         "moves": []
@@ -4336,7 +4336,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 50,
+        "iv": 6,
         "level": 38,
         "species": "Slowbro",
         "moves": []
@@ -4594,13 +4594,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 40,
+        "iv": 4,
         "level": 34,
         "species": "Sandslash",
         "moves": []
       },
       {
-        "iv": 40,
+        "iv": 4,
         "level": 34,
         "species": "Arbok",
         "moves": []
@@ -4613,19 +4613,19 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 40,
+        "iv": 4,
         "level": 33,
         "species": "Arbok",
         "moves": []
       },
       {
-        "iv": 40,
+        "iv": 4,
         "level": 33,
         "species": "Sandslash",
         "moves": []
       },
       {
-        "iv": 40,
+        "iv": 4,
         "level": 33,
         "species": "Arbok",
         "moves": []
@@ -4638,7 +4638,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 40,
+        "iv": 4,
         "level": 43,
         "species": "Rhyhorn",
         "moves": []
@@ -4651,13 +4651,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 40,
+        "iv": 4,
         "level": 39,
         "species": "Arbok",
         "moves": []
       },
       {
-        "iv": 40,
+        "iv": 4,
         "level": 39,
         "species": "Tauros",
         "moves": []
@@ -4670,13 +4670,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 40,
+        "iv": 4,
         "level": 44,
         "species": "Persian",
         "moves": []
       },
       {
-        "iv": 40,
+        "iv": 4,
         "level": 44,
         "species": "Golduck",
         "moves": []
@@ -4689,25 +4689,25 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 40,
+        "iv": 4,
         "level": 42,
         "species": "Rhyhorn",
         "moves": []
       },
       {
-        "iv": 40,
+        "iv": 4,
         "level": 42,
         "species": "Primeape",
         "moves": []
       },
       {
-        "iv": 40,
+        "iv": 4,
         "level": 42,
         "species": "Arbok",
         "moves": []
       },
       {
-        "iv": 40,
+        "iv": 4,
         "level": 42,
         "species": "Tauros",
         "moves": []
@@ -5133,14 +5133,14 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 100,
+        "iv": 12,
         "level": 37,
         "species": "Hitmonlee",
         "moves": [],
         "heldItem": "ITEM_BLACK_BELT"
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 37,
         "species": "Hitmonchan",
         "moves": [],
@@ -5154,21 +5154,21 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 100,
+        "iv": 12,
         "level": 31,
         "species": "Mankey",
         "moves": [],
         "heldItem": "ITEM_BLACK_BELT"
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 31,
         "species": "Mankey",
         "moves": [],
         "heldItem": "ITEM_BLACK_BELT"
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 31,
         "species": "Primeape",
         "moves": [],
@@ -5182,14 +5182,14 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 100,
+        "iv": 12,
         "level": 32,
         "species": "Machop",
         "moves": [],
         "heldItem": "ITEM_BLACK_BELT"
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 32,
         "species": "Machoke",
         "moves": [],
@@ -5203,7 +5203,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 100,
+        "iv": 12,
         "level": 36,
         "species": "Primeape",
         "moves": [],
@@ -5217,21 +5217,21 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 100,
+        "iv": 12,
         "level": 31,
         "species": "Machop",
         "moves": [],
         "heldItem": "ITEM_BLACK_BELT"
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 31,
         "species": "Mankey",
         "moves": [],
         "heldItem": "ITEM_BLACK_BELT"
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 31,
         "species": "Primeape",
         "moves": [],
@@ -5245,14 +5245,14 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 100,
+        "iv": 12,
         "level": 40,
         "species": "Machop",
         "moves": [],
         "heldItem": "ITEM_BLACK_BELT"
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 40,
         "species": "Machoke",
         "moves": [],
@@ -5266,7 +5266,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 100,
+        "iv": 12,
         "level": 43,
         "species": "Machoke",
         "moves": [],
@@ -5280,21 +5280,21 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 100,
+        "iv": 12,
         "level": 38,
         "species": "Machoke",
         "moves": [],
         "heldItem": "ITEM_BLACK_BELT"
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 38,
         "species": "Machop",
         "moves": [],
         "heldItem": "ITEM_BLACK_BELT"
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 38,
         "species": "Machoke",
         "moves": [],
@@ -5308,21 +5308,21 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 100,
+        "iv": 12,
         "level": 43,
         "species": "Machoke",
         "moves": [],
         "heldItem": "ITEM_BLACK_BELT"
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 43,
         "species": "Machop",
         "moves": [],
         "heldItem": "ITEM_BLACK_BELT"
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 43,
         "species": "Machoke",
         "moves": [],
@@ -5375,7 +5375,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 50,
+        "iv": 6,
         "level": 9,
         "species": "Pidgey",
         "moves": [
@@ -5384,7 +5384,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 50,
+        "iv": 6,
         "level": 9,
         "species": "Squirtle",
         "moves": [
@@ -5400,7 +5400,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 50,
+        "iv": 6,
         "level": 9,
         "species": "Pidgey",
         "moves": [
@@ -5409,7 +5409,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 50,
+        "iv": 6,
         "level": 9,
         "species": "Bulbasaur",
         "moves": [
@@ -5425,7 +5425,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 50,
+        "iv": 6,
         "level": 9,
         "species": "Pidgey",
         "moves": [
@@ -5434,7 +5434,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 50,
+        "iv": 6,
         "level": 9,
         "species": "Charmander",
         "moves": [
@@ -5450,7 +5450,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 50,
+        "iv": 6,
         "level": 17,
         "species": "Pidgeotto",
         "moves": [
@@ -5461,7 +5461,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 50,
+        "iv": 6,
         "level": 16,
         "species": "Abra",
         "moves": [
@@ -5469,7 +5469,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 50,
+        "iv": 6,
         "level": 15,
         "species": "Rattata",
         "moves": [
@@ -5479,7 +5479,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 18,
         "species": "Squirtle",
         "moves": [
@@ -5497,7 +5497,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 50,
+        "iv": 6,
         "level": 17,
         "species": "Pidgeotto",
         "moves": [
@@ -5508,7 +5508,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 50,
+        "iv": 6,
         "level": 16,
         "species": "Abra",
         "moves": [
@@ -5516,7 +5516,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 50,
+        "iv": 6,
         "level": 15,
         "species": "Rattata",
         "moves": [
@@ -5526,7 +5526,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 18,
         "species": "Bulbasaur",
         "moves": [
@@ -5544,7 +5544,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 50,
+        "iv": 6,
         "level": 17,
         "species": "Pidgeotto",
         "moves": [
@@ -5555,7 +5555,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 50,
+        "iv": 6,
         "level": 16,
         "species": "Abra",
         "moves": [
@@ -5563,7 +5563,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 50,
+        "iv": 6,
         "level": 15,
         "species": "Rattata",
         "moves": [
@@ -5573,7 +5573,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 18,
         "species": "Charmander",
         "moves": [
@@ -5982,19 +5982,19 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 250,
+        "iv": 30,
         "level": 25,
         "species": "Onix",
         "moves": []
       },
       {
-        "iv": 250,
+        "iv": 30,
         "level": 24,
         "species": "Rhyhorn",
         "moves": []
       },
       {
-        "iv": 250,
+        "iv": 30,
         "level": 29,
         "species": "Kangaskhan",
         "moves": []
@@ -6007,25 +6007,25 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 250,
+        "iv": 30,
         "level": 37,
         "species": "Nidorino",
         "moves": []
       },
       {
-        "iv": 250,
+        "iv": 30,
         "level": 35,
         "species": "Kangaskhan",
         "moves": []
       },
       {
-        "iv": 250,
+        "iv": 30,
         "level": 37,
         "species": "Rhyhorn",
         "moves": []
       },
       {
-        "iv": 250,
+        "iv": 30,
         "level": 41,
         "species": "Nidoqueen",
         "moves": []
@@ -7108,7 +7108,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 100,
+        "iv": 12,
         "level": 37,
         "species": "Sandslash",
         "moves": [
@@ -7119,7 +7119,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 37,
         "species": "Sandslash",
         "moves": [
@@ -7130,7 +7130,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 38,
         "species": "Rhyhorn",
         "moves": [
@@ -7141,7 +7141,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 39,
         "species": "Nidorino",
         "moves": [
@@ -7152,7 +7152,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 39,
         "species": "Nidoking",
         "moves": [
@@ -7170,7 +7170,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Exeggutor",
         "moves": [
@@ -7181,7 +7181,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Sandslash",
         "moves": [
@@ -7192,7 +7192,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Cloyster",
         "moves": [
@@ -7203,7 +7203,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Electrode",
         "moves": [
@@ -7214,7 +7214,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Arcanine",
         "moves": [
@@ -7232,7 +7232,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 100,
+        "iv": 12,
         "level": 41,
         "species": "Kingler",
         "moves": [
@@ -7243,7 +7243,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Poliwhirl",
         "moves": [
@@ -7254,7 +7254,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Tentacruel",
         "moves": [
@@ -7265,7 +7265,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Seadra",
         "moves": [
@@ -7276,7 +7276,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 43,
         "species": "Blastoise",
         "moves": [
@@ -7294,7 +7294,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Slowpoke",
         "moves": [
@@ -7305,7 +7305,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Shellder",
         "moves": [
@@ -7316,7 +7316,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Kingler",
         "moves": [
@@ -7327,7 +7327,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Starmie",
         "moves": [
@@ -7338,7 +7338,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Golduck",
         "moves": [
@@ -7356,7 +7356,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Raticate",
         "moves": [
@@ -7367,7 +7367,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Ivysaur",
         "moves": [
@@ -7378,7 +7378,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Wartortle",
         "moves": [
@@ -7389,7 +7389,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Charmeleon",
         "moves": [
@@ -7400,7 +7400,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Charizard",
         "moves": [
@@ -7418,7 +7418,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Pidgeotto",
         "moves": [
@@ -7429,7 +7429,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Fearow",
         "moves": [
@@ -7440,7 +7440,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Persian",
         "moves": [
@@ -7451,7 +7451,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Lickitung",
         "moves": [
@@ -7462,7 +7462,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Tauros",
         "moves": [
@@ -7480,7 +7480,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Nidorino",
         "moves": [
@@ -7491,7 +7491,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Nidorina",
         "moves": [
@@ -7502,7 +7502,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Raticate",
         "moves": [
@@ -7513,7 +7513,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Sandslash",
         "moves": [
@@ -7524,7 +7524,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Rhyhorn",
         "moves": [
@@ -7542,7 +7542,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Seel",
         "moves": [
@@ -7553,7 +7553,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Graveler",
         "moves": [
@@ -7564,7 +7564,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Kingler",
         "moves": [
@@ -7575,7 +7575,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Onix",
         "moves": [
@@ -7586,7 +7586,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Cloyster",
         "moves": [
@@ -7604,7 +7604,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 100,
+        "iv": 12,
         "level": 38,
         "species": "Sandslash",
         "moves": [
@@ -7615,7 +7615,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 38,
         "species": "Graveler",
         "moves": [
@@ -7626,7 +7626,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 38,
         "species": "Onix",
         "moves": [
@@ -7637,7 +7637,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 38,
         "species": "Graveler",
         "moves": [
@@ -7648,7 +7648,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 38,
         "species": "Marowak",
         "moves": [
@@ -7666,7 +7666,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 100,
+        "iv": 12,
         "level": 37,
         "species": "Marowak",
         "moves": [
@@ -7677,7 +7677,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 37,
         "species": "Marowak",
         "moves": [
@@ -7688,7 +7688,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 38,
         "species": "Rhyhorn",
         "moves": [
@@ -7699,7 +7699,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 39,
         "species": "Nidorina",
         "moves": [
@@ -7710,7 +7710,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 39,
         "species": "Nidoqueen",
         "moves": [
@@ -7728,7 +7728,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 100,
+        "iv": 12,
         "level": 22,
         "species": "Bellsprout",
         "moves": [
@@ -7739,7 +7739,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 22,
         "species": "Oddish",
         "moves": [
@@ -7750,7 +7750,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 22,
         "species": "Weepinbell",
         "moves": [
@@ -7761,7 +7761,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 22,
         "species": "Gloom",
         "moves": [
@@ -7772,7 +7772,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 22,
         "species": "Ivysaur",
         "moves": [
@@ -7790,7 +7790,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Bellsprout",
         "moves": [
@@ -7801,7 +7801,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Weepinbell",
         "moves": [
@@ -7812,7 +7812,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Victreebel",
         "moves": [
@@ -7823,7 +7823,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Paras",
         "moves": [
@@ -7834,7 +7834,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Parasect",
         "moves": [
@@ -7852,7 +7852,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Clefairy",
         "moves": [
@@ -7863,7 +7863,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Jigglypuff",
         "moves": [
@@ -7874,7 +7874,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Persian",
         "moves": [
@@ -7885,7 +7885,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Dewgong",
         "moves": [
@@ -7896,7 +7896,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Chansey",
         "moves": [
@@ -7914,7 +7914,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Beedrill",
         "moves": [
@@ -7925,7 +7925,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Butterfree",
         "moves": [
@@ -7936,7 +7936,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Parasect",
         "moves": [
@@ -7947,7 +7947,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Venonat",
         "moves": [
@@ -7958,7 +7958,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Venomoth",
         "moves": [
@@ -7976,7 +7976,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Persian",
         "moves": [
@@ -7987,7 +7987,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Ponyta",
         "moves": [
@@ -7998,7 +7998,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Rapidash",
         "moves": [
@@ -8009,7 +8009,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Vulpix",
         "moves": [
@@ -8020,7 +8020,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Ninetales",
         "moves": [
@@ -8038,7 +8038,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Tangela",
         "moves": [
@@ -8049,7 +8049,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Gloom",
         "moves": [
@@ -8060,7 +8060,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Vileplume",
         "moves": [
@@ -8071,7 +8071,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Ivysaur",
         "moves": [
@@ -8082,7 +8082,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Venusaur",
         "moves": [
@@ -8100,7 +8100,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Rhyhorn",
         "moves": [
@@ -8111,7 +8111,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Nidorina",
         "moves": [
@@ -8122,7 +8122,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Nidoqueen",
         "moves": [
@@ -8133,7 +8133,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Nidorino",
         "moves": [
@@ -8144,7 +8144,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Nidoking",
         "moves": [
@@ -8162,7 +8162,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Persian",
         "moves": [
@@ -8173,7 +8173,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Ninetales",
         "moves": [
@@ -8184,7 +8184,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Rapidash",
         "moves": [
@@ -8195,7 +8195,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Pikachu",
         "moves": [
@@ -8206,7 +8206,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 42,
         "species": "Raichu",
         "moves": [
@@ -8224,7 +8224,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 250,
+        "iv": 30,
         "level": 52,
         "species": "Dewgong",
         "moves": [
@@ -8235,7 +8235,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 250,
+        "iv": 30,
         "level": 51,
         "species": "Cloyster",
         "moves": [
@@ -8246,7 +8246,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 250,
+        "iv": 30,
         "level": 52,
         "species": "Slowbro",
         "moves": [
@@ -8257,7 +8257,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 250,
+        "iv": 30,
         "level": 54,
         "species": "Jynx",
         "moves": [
@@ -8268,7 +8268,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 250,
+        "iv": 30,
         "level": 54,
         "species": "Lapras",
         "moves": [
@@ -8287,7 +8287,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 250,
+        "iv": 30,
         "level": 51,
         "species": "Onix",
         "moves": [
@@ -8298,7 +8298,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 250,
+        "iv": 30,
         "level": 53,
         "species": "Hitmonchan",
         "moves": [
@@ -8309,7 +8309,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 250,
+        "iv": 30,
         "level": 53,
         "species": "Hitmonlee",
         "moves": [
@@ -8320,7 +8320,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 250,
+        "iv": 30,
         "level": 54,
         "species": "Onix",
         "moves": [
@@ -8331,7 +8331,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 250,
+        "iv": 30,
         "level": 56,
         "species": "Machamp",
         "moves": [
@@ -8350,7 +8350,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 250,
+        "iv": 30,
         "level": 54,
         "species": "Gengar",
         "moves": [
@@ -8361,7 +8361,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 250,
+        "iv": 30,
         "level": 54,
         "species": "Golbat",
         "moves": [
@@ -8372,7 +8372,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 250,
+        "iv": 30,
         "level": 53,
         "species": "Haunter",
         "moves": [
@@ -8383,7 +8383,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 250,
+        "iv": 30,
         "level": 56,
         "species": "Arbok",
         "moves": [
@@ -8394,7 +8394,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 250,
+        "iv": 30,
         "level": 58,
         "species": "Gengar",
         "moves": [
@@ -8413,7 +8413,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 250,
+        "iv": 30,
         "level": 56,
         "species": "Gyarados",
         "moves": [
@@ -8424,7 +8424,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 250,
+        "iv": 30,
         "level": 54,
         "species": "Dragonair",
         "moves": [
@@ -8435,7 +8435,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 250,
+        "iv": 30,
         "level": 54,
         "species": "Dragonair",
         "moves": [
@@ -8446,7 +8446,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 250,
+        "iv": 30,
         "level": 58,
         "species": "Aerodactyl",
         "moves": [
@@ -8457,7 +8457,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 250,
+        "iv": 30,
         "level": 60,
         "species": "Dragonite",
         "moves": [
@@ -8847,25 +8847,25 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 50,
+        "iv": 6,
         "level": 19,
         "species": "Pidgeotto",
         "moves": []
       },
       {
-        "iv": 50,
+        "iv": 6,
         "level": 16,
         "species": "Raticate",
         "moves": []
       },
       {
-        "iv": 50,
+        "iv": 6,
         "level": 18,
         "species": "Kadabra",
         "moves": []
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 20,
         "species": "Wartortle",
         "moves": []
@@ -8878,25 +8878,25 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 50,
+        "iv": 6,
         "level": 19,
         "species": "Pidgeotto",
         "moves": []
       },
       {
-        "iv": 50,
+        "iv": 6,
         "level": 16,
         "species": "Raticate",
         "moves": []
       },
       {
-        "iv": 50,
+        "iv": 6,
         "level": 18,
         "species": "Kadabra",
         "moves": []
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 20,
         "species": "Ivysaur",
         "moves": []
@@ -8909,25 +8909,25 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 50,
+        "iv": 6,
         "level": 19,
         "species": "Pidgeotto",
         "moves": []
       },
       {
-        "iv": 50,
+        "iv": 6,
         "level": 16,
         "species": "Raticate",
         "moves": []
       },
       {
-        "iv": 50,
+        "iv": 6,
         "level": 18,
         "species": "Kadabra",
         "moves": []
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 20,
         "species": "Charmeleon",
         "moves": []
@@ -8940,31 +8940,31 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 100,
+        "iv": 12,
         "level": 25,
         "species": "Pidgeotto",
         "moves": []
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 23,
         "species": "Growlithe",
         "moves": []
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 22,
         "species": "Exeggcute",
         "moves": []
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 20,
         "species": "Kadabra",
         "moves": []
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 25,
         "species": "Wartortle",
         "moves": []
@@ -8977,31 +8977,31 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 100,
+        "iv": 12,
         "level": 25,
         "species": "Pidgeotto",
         "moves": []
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 23,
         "species": "Gyarados",
         "moves": []
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 22,
         "species": "Growlithe",
         "moves": []
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 20,
         "species": "Kadabra",
         "moves": []
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 25,
         "species": "Ivysaur",
         "moves": []
@@ -9014,31 +9014,31 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 100,
+        "iv": 12,
         "level": 25,
         "species": "Pidgeotto",
         "moves": []
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 23,
         "species": "Exeggcute",
         "moves": []
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 22,
         "species": "Gyarados",
         "moves": []
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 20,
         "species": "Kadabra",
         "moves": []
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 25,
         "species": "Charmeleon",
         "moves": []
@@ -9051,31 +9051,31 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 100,
+        "iv": 12,
         "level": 37,
         "species": "Pidgeot",
         "moves": []
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 38,
         "species": "Growlithe",
         "moves": []
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 35,
         "species": "Exeggcute",
         "moves": []
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 35,
         "species": "Alakazam",
         "moves": []
       },
       {
-        "iv": 150,
+        "iv": 18,
         "level": 40,
         "species": "Blastoise",
         "moves": []
@@ -9088,31 +9088,31 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 100,
+        "iv": 12,
         "level": 37,
         "species": "Pidgeot",
         "moves": []
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 38,
         "species": "Gyarados",
         "moves": []
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 35,
         "species": "Growlithe",
         "moves": []
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 35,
         "species": "Alakazam",
         "moves": []
       },
       {
-        "iv": 150,
+        "iv": 18,
         "level": 40,
         "species": "Venusaur",
         "moves": []
@@ -9125,31 +9125,31 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 100,
+        "iv": 12,
         "level": 37,
         "species": "Pidgeot",
         "moves": []
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 38,
         "species": "Exeggcute",
         "moves": []
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 35,
         "species": "Gyarados",
         "moves": []
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 35,
         "species": "Alakazam",
         "moves": []
       },
       {
-        "iv": 150,
+        "iv": 18,
         "level": 40,
         "species": "Charizard",
         "moves": []
@@ -9162,7 +9162,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 150,
+        "iv": 18,
         "level": 47,
         "species": "Pidgeot",
         "moves": [
@@ -9173,7 +9173,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 150,
+        "iv": 18,
         "level": 45,
         "species": "Rhyhorn",
         "moves": [
@@ -9184,7 +9184,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 150,
+        "iv": 18,
         "level": 45,
         "species": "Growlithe",
         "moves": [
@@ -9195,7 +9195,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 150,
+        "iv": 18,
         "level": 45,
         "species": "Exeggcute",
         "moves": [
@@ -9206,7 +9206,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 150,
+        "iv": 18,
         "level": 47,
         "species": "Alakazam",
         "moves": [
@@ -9217,7 +9217,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 250,
+        "iv": 30,
         "level": 53,
         "species": "Blastoise",
         "moves": [
@@ -9235,7 +9235,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 150,
+        "iv": 18,
         "level": 47,
         "species": "Pidgeot",
         "moves": [
@@ -9246,7 +9246,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 150,
+        "iv": 18,
         "level": 45,
         "species": "Rhyhorn",
         "moves": [
@@ -9257,7 +9257,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 150,
+        "iv": 18,
         "level": 45,
         "species": "Gyarados",
         "moves": [
@@ -9268,7 +9268,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 150,
+        "iv": 18,
         "level": 45,
         "species": "Growlithe",
         "moves": [
@@ -9279,7 +9279,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 150,
+        "iv": 18,
         "level": 47,
         "species": "Alakazam",
         "moves": [
@@ -9290,7 +9290,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 250,
+        "iv": 30,
         "level": 53,
         "species": "Venusaur",
         "moves": [
@@ -9308,7 +9308,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 150,
+        "iv": 18,
         "level": 47,
         "species": "Pidgeot",
         "moves": [
@@ -9319,7 +9319,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 150,
+        "iv": 18,
         "level": 45,
         "species": "Rhyhorn",
         "moves": [
@@ -9330,7 +9330,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 150,
+        "iv": 18,
         "level": 45,
         "species": "Exeggcute",
         "moves": [
@@ -9341,7 +9341,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 150,
+        "iv": 18,
         "level": 45,
         "species": "Gyarados",
         "moves": [
@@ -9352,7 +9352,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 150,
+        "iv": 18,
         "level": 47,
         "species": "Alakazam",
         "moves": [
@@ -9363,7 +9363,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 250,
+        "iv": 30,
         "level": 53,
         "species": "Charizard",
         "moves": [
@@ -9381,7 +9381,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 255,
+        "iv": 31,
         "level": 59,
         "species": "Pidgeot",
         "moves": [
@@ -9392,7 +9392,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 255,
+        "iv": 31,
         "level": 57,
         "species": "Alakazam",
         "moves": [
@@ -9403,7 +9403,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 255,
+        "iv": 31,
         "level": 59,
         "species": "Rhydon",
         "moves": [
@@ -9414,7 +9414,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 255,
+        "iv": 31,
         "level": 59,
         "species": "Arcanine",
         "moves": [
@@ -9425,7 +9425,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 255,
+        "iv": 31,
         "level": 61,
         "species": "Exeggutor",
         "moves": [
@@ -9436,7 +9436,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 255,
+        "iv": 31,
         "level": 63,
         "species": "Blastoise",
         "moves": [
@@ -9455,7 +9455,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 255,
+        "iv": 31,
         "level": 59,
         "species": "Pidgeot",
         "moves": [
@@ -9466,7 +9466,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 255,
+        "iv": 31,
         "level": 57,
         "species": "Alakazam",
         "moves": [
@@ -9477,7 +9477,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 255,
+        "iv": 31,
         "level": 59,
         "species": "Rhydon",
         "moves": [
@@ -9488,7 +9488,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 255,
+        "iv": 31,
         "level": 59,
         "species": "Gyarados",
         "moves": [
@@ -9499,7 +9499,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 255,
+        "iv": 31,
         "level": 61,
         "species": "Arcanine",
         "moves": [
@@ -9510,7 +9510,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 255,
+        "iv": 31,
         "level": 63,
         "species": "Venusaur",
         "moves": [
@@ -9529,7 +9529,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 255,
+        "iv": 31,
         "level": 59,
         "species": "Pidgeot",
         "moves": [
@@ -9540,7 +9540,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 255,
+        "iv": 31,
         "level": 57,
         "species": "Alakazam",
         "moves": [
@@ -9551,7 +9551,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 255,
+        "iv": 31,
         "level": 59,
         "species": "Rhydon",
         "moves": [
@@ -9562,7 +9562,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 255,
+        "iv": 31,
         "level": 59,
         "species": "Exeggutor",
         "moves": [
@@ -9573,7 +9573,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 255,
+        "iv": 31,
         "level": 61,
         "species": "Gyarados",
         "moves": [
@@ -9584,7 +9584,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 255,
+        "iv": 31,
         "level": 63,
         "species": "Charizard",
         "moves": [
@@ -10424,7 +10424,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": true,
     "party": [
       {
-        "iv": 100,
+        "iv": 12,
         "level": 45,
         "species": "Nidoqueen",
         "moves": [
@@ -10435,7 +10435,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 45,
         "species": "Nidoking",
         "moves": [
@@ -10491,14 +10491,14 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": true,
     "party": [
       {
-        "iv": 50,
+        "iv": 6,
         "level": 29,
         "species": "Hitmonchan",
         "moves": [],
         "heldItem": "ITEM_BLACK_BELT"
       },
       {
-        "iv": 50,
+        "iv": 6,
         "level": 29,
         "species": "Hitmonlee",
         "moves": [],
@@ -10569,13 +10569,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 60,
+        "iv": 7,
         "level": 28,
         "species": "Raticate",
         "moves": []
       },
       {
-        "iv": 60,
+        "iv": 7,
         "level": 28,
         "species": "Ekans",
         "moves": []
@@ -10588,13 +10588,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 120,
+        "iv": 14,
         "level": 48,
         "species": "Raticate",
         "moves": []
       },
       {
-        "iv": 120,
+        "iv": 14,
         "level": 48,
         "species": "Arbok",
         "moves": []
@@ -10607,13 +10607,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 20,
+        "iv": 2,
         "level": 20,
         "species": "Ekans",
         "moves": []
       },
       {
-        "iv": 20,
+        "iv": 2,
         "level": 20,
         "species": "Sandshrew",
         "moves": []
@@ -10626,13 +10626,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 20,
+        "iv": 2,
         "level": 20,
         "species": "Pidgey",
         "moves": []
       },
       {
-        "iv": 20,
+        "iv": 2,
         "level": 20,
         "species": "Nidoran F",
         "moves": []
@@ -10645,13 +10645,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 60,
+        "iv": 7,
         "level": 28,
         "species": "Pidgeotto",
         "moves": []
       },
       {
-        "iv": 60,
+        "iv": 7,
         "level": 28,
         "species": "Nidorina",
         "moves": []
@@ -10664,19 +10664,19 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 20,
+        "iv": 2,
         "level": 19,
         "species": "Raticate",
         "moves": []
       },
       {
-        "iv": 20,
+        "iv": 2,
         "level": 19,
         "species": "Ekans",
         "moves": []
       },
       {
-        "iv": 20,
+        "iv": 2,
         "level": 19,
         "species": "Zubat",
         "moves": []
@@ -10689,19 +10689,19 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 60,
+        "iv": 7,
         "level": 27,
         "species": "Raticate",
         "moves": []
       },
       {
-        "iv": 60,
+        "iv": 7,
         "level": 27,
         "species": "Ekans",
         "moves": []
       },
       {
-        "iv": 60,
+        "iv": 7,
         "level": 27,
         "species": "Golbat",
         "moves": []
@@ -10714,19 +10714,19 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 120,
+        "iv": 14,
         "level": 52,
         "species": "Raticate",
         "moves": []
       },
       {
-        "iv": 120,
+        "iv": 14,
         "level": 52,
         "species": "Arbok",
         "moves": []
       },
       {
-        "iv": 120,
+        "iv": 14,
         "level": 52,
         "species": "Golbat",
         "moves": []
@@ -10739,13 +10739,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 60,
+        "iv": 7,
         "level": 28,
         "species": "Arbok",
         "moves": []
       },
       {
-        "iv": 60,
+        "iv": 7,
         "level": 28,
         "species": "Sandshrew",
         "moves": []
@@ -10758,13 +10758,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 20,
+        "iv": 2,
         "level": 20,
         "species": "Pidgeotto",
         "moves": []
       },
       {
-        "iv": 20,
+        "iv": 2,
         "level": 20,
         "species": "Pidgeotto",
         "moves": []
@@ -10777,13 +10777,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 60,
+        "iv": 7,
         "level": 28,
         "species": "Pidgeotto",
         "moves": []
       },
       {
-        "iv": 60,
+        "iv": 7,
         "level": 28,
         "species": "Pidgeotto",
         "moves": []
@@ -10796,13 +10796,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 80,
+        "iv": 9,
         "level": 48,
         "species": "Arbok",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 48,
         "species": "Sandslash",
         "moves": []
@@ -10815,13 +10815,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 40,
+        "iv": 4,
         "level": 25,
         "species": "Machoke",
         "moves": []
       },
       {
-        "iv": 40,
+        "iv": 4,
         "level": 25,
         "species": "Graveler",
         "moves": []
@@ -10853,7 +10853,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 100,
+        "iv": 12,
         "level": 48,
         "species": "Natu",
         "moves": [
@@ -10864,7 +10864,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 48,
         "species": "Slowbro",
         "moves": [
@@ -10875,7 +10875,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 49,
         "species": "Kadabra",
         "moves": [
@@ -10893,14 +10893,14 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 50,
+        "iv": 6,
         "level": 37,
         "species": "Mankey",
         "moves": [],
         "heldItem": "ITEM_BLACK_BELT"
       },
       {
-        "iv": 50,
+        "iv": 6,
         "level": 37,
         "species": "Primeape",
         "moves": [],
@@ -10939,19 +10939,19 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 30,
+        "iv": 3,
         "level": 48,
         "species": "Pikachu",
         "moves": []
       },
       {
-        "iv": 30,
+        "iv": 3,
         "level": 48,
         "species": "Clefairy",
         "moves": []
       },
       {
-        "iv": 30,
+        "iv": 3,
         "level": 48,
         "species": "Marill",
         "moves": []
@@ -10964,7 +10964,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 100,
+        "iv": 12,
         "level": 51,
         "species": "Weepinbell",
         "moves": [
@@ -10975,7 +10975,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 51,
         "species": "Victreebel",
         "moves": [
@@ -10993,7 +10993,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 100,
+        "iv": 12,
         "level": 51,
         "species": "Gloom",
         "moves": [
@@ -11004,7 +11004,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 51,
         "species": "Vileplume",
         "moves": [
@@ -11087,7 +11087,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 50,
+        "iv": 6,
         "level": 50,
         "species": "Smeargle",
         "moves": [
@@ -11209,13 +11209,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": true,
     "party": [
       {
-        "iv": 60,
+        "iv": 7,
         "level": 28,
         "species": "Clefairy",
         "moves": []
       },
       {
-        "iv": 60,
+        "iv": 7,
         "level": 28,
         "species": "Jigglypuff",
         "moves": []
@@ -11456,7 +11456,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 150,
+        "iv": 18,
         "level": 52,
         "species": "Muk",
         "moves": [
@@ -11467,7 +11467,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 150,
+        "iv": 18,
         "level": 53,
         "species": "Arbok",
         "moves": [
@@ -11478,7 +11478,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 150,
+        "iv": 18,
         "level": 54,
         "species": "Vileplume",
         "moves": [
@@ -11496,7 +11496,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 200,
+        "iv": 24,
         "level": 53,
         "species": "Golbat",
         "moves": [
@@ -11507,7 +11507,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 200,
+        "iv": 24,
         "level": 54,
         "species": "Weezing",
         "moves": [
@@ -11518,7 +11518,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 200,
+        "iv": 24,
         "level": 55,
         "species": "Houndoom",
         "moves": [
@@ -11742,14 +11742,14 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 50,
+        "iv": 6,
         "level": 38,
         "species": "Hitmonlee",
         "moves": [],
         "heldItem": "ITEM_BLACK_BELT"
       },
       {
-        "iv": 50,
+        "iv": 6,
         "level": 38,
         "species": "Hitmonchan",
         "moves": [],
@@ -11763,14 +11763,14 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 100,
+        "iv": 12,
         "level": 38,
         "species": "Machop",
         "moves": [],
         "heldItem": "ITEM_BLACK_BELT"
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 38,
         "species": "Machoke",
         "moves": [],
@@ -11784,14 +11784,14 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 100,
+        "iv": 12,
         "level": 37,
         "species": "Machop",
         "moves": [],
         "heldItem": "ITEM_BLACK_BELT"
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 37,
         "species": "Machoke",
         "moves": [],
@@ -11861,14 +11861,14 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": true,
     "party": [
       {
-        "iv": 50,
+        "iv": 6,
         "level": 39,
         "species": "Machoke",
         "moves": [],
         "heldItem": "ITEM_BLACK_BELT"
       },
       {
-        "iv": 50,
+        "iv": 6,
         "level": 39,
         "species": "Primeape",
         "moves": [],
@@ -11970,7 +11970,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 50,
+        "iv": 6,
         "level": 50,
         "species": "Smeargle",
         "moves": [
@@ -11988,7 +11988,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 50,
+        "iv": 6,
         "level": 50,
         "species": "Smeargle",
         "moves": [
@@ -12132,19 +12132,19 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 50,
+        "iv": 6,
         "level": 48,
         "species": "Ekans",
         "moves": []
       },
       {
-        "iv": 50,
+        "iv": 6,
         "level": 48,
         "species": "Gloom",
         "moves": []
       },
       {
-        "iv": 50,
+        "iv": 6,
         "level": 48,
         "species": "Gloom",
         "moves": []
@@ -12418,13 +12418,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 30,
+        "iv": 3,
         "level": 49,
         "species": "Rhyhorn",
         "moves": []
       },
       {
-        "iv": 30,
+        "iv": 3,
         "level": 49,
         "species": "Kangaskhan",
         "moves": []
@@ -12437,7 +12437,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 100,
+        "iv": 12,
         "level": 52,
         "species": "Girafarig",
         "moves": [
@@ -12455,7 +12455,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 100,
+        "iv": 12,
         "level": 48,
         "species": "Natu",
         "moves": [
@@ -12466,7 +12466,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 48,
         "species": "Drowzee",
         "moves": [
@@ -12477,7 +12477,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 50,
         "species": "Hypno",
         "moves": [
@@ -12584,21 +12584,21 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 50,
+        "iv": 6,
         "level": 48,
         "species": "Primeape",
         "moves": [],
         "heldItem": "ITEM_BLACK_BELT"
       },
       {
-        "iv": 50,
+        "iv": 6,
         "level": 48,
         "species": "Hitmontop",
         "moves": [],
         "heldItem": "ITEM_BLACK_BELT"
       },
       {
-        "iv": 50,
+        "iv": 6,
         "level": 48,
         "species": "Machoke",
         "moves": [],
@@ -12612,14 +12612,14 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 50,
+        "iv": 6,
         "level": 38,
         "species": "Hitmonchan",
         "moves": [],
         "heldItem": "ITEM_BLACK_BELT"
       },
       {
-        "iv": 50,
+        "iv": 6,
         "level": 38,
         "species": "Hitmonchan",
         "moves": [],
@@ -12633,19 +12633,19 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 40,
+        "iv": 4,
         "level": 48,
         "species": "Sandslash",
         "moves": []
       },
       {
-        "iv": 40,
+        "iv": 4,
         "level": 48,
         "species": "Lickitung",
         "moves": []
       },
       {
-        "iv": 40,
+        "iv": 4,
         "level": 49,
         "species": "Ursaring",
         "moves": []
@@ -12658,13 +12658,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 90,
+        "iv": 10,
         "level": 33,
         "species": "Rhyhorn",
         "moves": []
       },
       {
-        "iv": 90,
+        "iv": 10,
         "level": 33,
         "species": "Lickitung",
         "moves": []
@@ -12677,7 +12677,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 100,
+        "iv": 12,
         "level": 37,
         "species": "Exeggcute",
         "moves": [
@@ -12688,7 +12688,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 40,
         "species": "Exeggutor",
         "moves": [
@@ -12706,7 +12706,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 100,
+        "iv": 12,
         "level": 49,
         "species": "Tangela",
         "moves": [
@@ -12717,7 +12717,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 49,
         "species": "Exeggcute",
         "moves": [
@@ -12728,7 +12728,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 49,
         "species": "Exeggutor",
         "moves": [
@@ -12746,19 +12746,19 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 100,
+        "iv": 12,
         "level": 38,
         "species": "Bellsprout",
         "moves": []
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 38,
         "species": "Gloom",
         "moves": []
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 38,
         "species": "Gloom",
         "moves": []
@@ -12771,7 +12771,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 100,
+        "iv": 12,
         "level": 52,
         "species": "Chansey",
         "moves": [
@@ -12789,7 +12789,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 100,
+        "iv": 12,
         "level": 47,
         "species": "Rhydon",
         "moves": [
@@ -12800,7 +12800,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 48,
         "species": "Slowbro",
         "moves": [
@@ -12811,7 +12811,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 47,
         "species": "Kangaskhan",
         "moves": [
@@ -12822,7 +12822,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 48,
         "species": "Machoke",
         "moves": [
@@ -12833,7 +12833,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 50,
         "species": "Ursaring",
         "moves": [
@@ -12851,7 +12851,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 100,
+        "iv": 12,
         "level": 47,
         "species": "Persian",
         "moves": [
@@ -12862,7 +12862,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 47,
         "species": "Dewgong",
         "moves": [
@@ -12873,7 +12873,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 48,
         "species": "Ninetales",
         "moves": [
@@ -12884,7 +12884,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 48,
         "species": "Rapidash",
         "moves": [
@@ -12895,7 +12895,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 50,
         "species": "Girafarig",
         "moves": [
@@ -12913,7 +12913,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": true,
     "party": [
       {
-        "iv": 100,
+        "iv": 12,
         "level": 52,
         "species": "Miltank",
         "moves": [
@@ -12924,7 +12924,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 52,
         "species": "Tauros",
         "moves": [
@@ -12995,7 +12995,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 50,
+        "iv": 6,
         "level": 50,
         "species": "Smeargle",
         "moves": [
@@ -13088,19 +13088,19 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 100,
+        "iv": 12,
         "level": 48,
         "species": "Natu",
         "moves": []
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 48,
         "species": "Natu",
         "moves": []
       },
       {
-        "iv": 100,
+        "iv": 12,
         "level": 49,
         "species": "Xatu",
         "moves": []
@@ -13113,7 +13113,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 30,
+        "iv": 3,
         "level": 50,
         "species": "Chansey",
         "moves": []
@@ -13126,19 +13126,19 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 30,
+        "iv": 3,
         "level": 48,
         "species": "Clefairy",
         "moves": []
       },
       {
-        "iv": 30,
+        "iv": 3,
         "level": 48,
         "species": "Clefairy",
         "moves": []
       },
       {
-        "iv": 30,
+        "iv": 3,
         "level": 48,
         "species": "Clefable",
         "moves": []
@@ -13371,13 +13371,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 20,
+        "iv": 2,
         "level": 21,
         "species": "Nidoran M",
         "moves": []
       },
       {
-        "iv": 20,
+        "iv": 2,
         "level": 21,
         "species": "Nidoran F",
         "moves": []
@@ -13390,13 +13390,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 60,
+        "iv": 7,
         "level": 29,
         "species": "Nidorino",
         "moves": []
       },
       {
-        "iv": 60,
+        "iv": 7,
         "level": 29,
         "species": "Nidorina",
         "moves": []
@@ -13409,13 +13409,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 80,
+        "iv": 9,
         "level": 49,
         "species": "Nidorino",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 49,
         "species": "Nidorina",
         "moves": []
@@ -13428,7 +13428,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 20,
+        "iv": 2,
         "level": 22,
         "species": "Squirtle",
         "moves": []
@@ -13441,7 +13441,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 60,
+        "iv": 7,
         "level": 30,
         "species": "Wartortle",
         "moves": []
@@ -13454,7 +13454,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 120,
+        "iv": 14,
         "level": 55,
         "species": "Wartortle",
         "moves": []
@@ -13467,13 +13467,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 20,
+        "iv": 2,
         "level": 21,
         "species": "Spearow",
         "moves": []
       },
       {
-        "iv": 20,
+        "iv": 2,
         "level": 21,
         "species": "Raticate",
         "moves": []
@@ -13486,13 +13486,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 60,
+        "iv": 7,
         "level": 29,
         "species": "Fearow",
         "moves": []
       },
       {
-        "iv": 60,
+        "iv": 7,
         "level": 29,
         "species": "Raticate",
         "moves": []
@@ -13505,13 +13505,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 120,
+        "iv": 14,
         "level": 54,
         "species": "Fearow",
         "moves": []
       },
       {
-        "iv": 120,
+        "iv": 14,
         "level": 54,
         "species": "Raticate",
         "moves": []
@@ -13524,19 +13524,19 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 20,
+        "iv": 2,
         "level": 21,
         "species": "Pidgeotto",
         "moves": []
       },
       {
-        "iv": 20,
+        "iv": 2,
         "level": 21,
         "species": "Pidgeotto",
         "moves": []
       },
       {
-        "iv": 20,
+        "iv": 2,
         "level": 18,
         "species": "Pidgey",
         "moves": []
@@ -13549,19 +13549,19 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 60,
+        "iv": 7,
         "level": 29,
         "species": "Pidgeotto",
         "moves": []
       },
       {
-        "iv": 60,
+        "iv": 7,
         "level": 29,
         "species": "Pidgeotto",
         "moves": []
       },
       {
-        "iv": 60,
+        "iv": 7,
         "level": 26,
         "species": "Pidgeotto",
         "moves": []
@@ -13574,19 +13574,19 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 80,
+        "iv": 9,
         "level": 47,
         "species": "Pidgeotto",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 47,
         "species": "Pidgeotto",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 50,
         "species": "Pidgeot",
         "moves": []
@@ -13599,19 +13599,19 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 40,
+        "iv": 4,
         "level": 22,
         "species": "Rattata",
         "moves": []
       },
       {
-        "iv": 40,
+        "iv": 4,
         "level": 22,
         "species": "Raticate",
         "moves": []
       },
       {
-        "iv": 40,
+        "iv": 4,
         "level": 22,
         "species": "Raticate",
         "moves": []
@@ -13624,19 +13624,19 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 80,
+        "iv": 9,
         "level": 47,
         "species": "Raticate",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 47,
         "species": "Raticate",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 47,
         "species": "Raticate",
         "moves": []
@@ -13649,19 +13649,19 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 60,
+        "iv": 7,
         "level": 28,
         "species": "Magneton",
         "moves": []
       },
       {
-        "iv": 60,
+        "iv": 7,
         "level": 28,
         "species": "Magneton",
         "moves": []
       },
       {
-        "iv": 60,
+        "iv": 7,
         "level": 28,
         "species": "Magneton",
         "moves": []
@@ -13674,13 +13674,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 60,
+        "iv": 7,
         "level": 29,
         "species": "Growlithe",
         "moves": []
       },
       {
-        "iv": 60,
+        "iv": 7,
         "level": 29,
         "species": "Vulpix",
         "moves": []
@@ -13693,13 +13693,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 40,
+        "iv": 4,
         "level": 24,
         "species": "Growlithe",
         "moves": []
       },
       {
-        "iv": 40,
+        "iv": 4,
         "level": 24,
         "species": "Charmander",
         "moves": []
@@ -13712,13 +13712,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 60,
+        "iv": 7,
         "level": 29,
         "species": "Growlithe",
         "moves": []
       },
       {
-        "iv": 60,
+        "iv": 7,
         "level": 29,
         "species": "Charmeleon",
         "moves": []
@@ -13731,13 +13731,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 120,
+        "iv": 14,
         "level": 54,
         "species": "Arcanine",
         "moves": []
       },
       {
-        "iv": 120,
+        "iv": 14,
         "level": 54,
         "species": "Charmeleon",
         "moves": []
@@ -13750,7 +13750,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 40,
+        "iv": 4,
         "level": 25,
         "species": "Meowth",
         "moves": []
@@ -13763,7 +13763,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 60,
+        "iv": 7,
         "level": 30,
         "species": "Persian",
         "moves": []
@@ -13776,7 +13776,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 120,
+        "iv": 14,
         "level": 55,
         "species": "Persian",
         "moves": []
@@ -13789,13 +13789,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 60,
+        "iv": 7,
         "level": 30,
         "species": "Machoke",
         "moves": []
       },
       {
-        "iv": 60,
+        "iv": 7,
         "level": 28,
         "species": "Onix",
         "moves": []
@@ -13808,13 +13808,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 150,
+        "iv": 18,
         "level": 54,
         "species": "Rhydon",
         "moves": []
       },
       {
-        "iv": 150,
+        "iv": 18,
         "level": 54,
         "species": "Lickitung",
         "moves": []
@@ -13827,13 +13827,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 90,
+        "iv": 10,
         "level": 29,
         "species": "Marowak",
         "moves": []
       },
       {
-        "iv": 90,
+        "iv": 10,
         "level": 29,
         "species": "Slowbro",
         "moves": []
@@ -13846,13 +13846,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 150,
+        "iv": 18,
         "level": 54,
         "species": "Marowak",
         "moves": []
       },
       {
-        "iv": 150,
+        "iv": 18,
         "level": 54,
         "species": "Slowbro",
         "moves": []
@@ -13865,13 +13865,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 60,
+        "iv": 7,
         "level": 31,
         "species": "Onix",
         "moves": []
       },
       {
-        "iv": 60,
+        "iv": 7,
         "level": 31,
         "species": "Graveler",
         "moves": []
@@ -13884,31 +13884,31 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 40,
+        "iv": 4,
         "level": 22,
         "species": "Pidgeotto",
         "moves": []
       },
       {
-        "iv": 40,
+        "iv": 4,
         "level": 22,
         "species": "Raticate",
         "moves": []
       },
       {
-        "iv": 40,
+        "iv": 4,
         "level": 23,
         "species": "Nidoran M",
         "moves": []
       },
       {
-        "iv": 40,
+        "iv": 4,
         "level": 21,
         "species": "Meowth",
         "moves": []
       },
       {
-        "iv": 40,
+        "iv": 4,
         "level": 22,
         "species": "Pikachu",
         "moves": []
@@ -13921,31 +13921,31 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 80,
+        "iv": 9,
         "level": 46,
         "species": "Pidgeot",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 47,
         "species": "Raticate",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 47,
         "species": "Nidorino",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 47,
         "species": "Persian",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 48,
         "species": "Raichu",
         "moves": []
@@ -13958,19 +13958,19 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 60,
+        "iv": 7,
         "level": 28,
         "species": "Muk",
         "moves": []
       },
       {
-        "iv": 60,
+        "iv": 7,
         "level": 28,
         "species": "Muk",
         "moves": []
       },
       {
-        "iv": 60,
+        "iv": 7,
         "level": 28,
         "species": "Muk",
         "moves": []
@@ -13983,13 +13983,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 60,
+        "iv": 7,
         "level": 30,
         "species": "Growlithe",
         "moves": []
       },
       {
-        "iv": 60,
+        "iv": 7,
         "level": 30,
         "species": "Vulpix",
         "moves": []
@@ -14002,13 +14002,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 60,
+        "iv": 7,
         "level": 28,
         "species": "Muk",
         "moves": []
       },
       {
-        "iv": 60,
+        "iv": 7,
         "level": 30,
         "species": "Muk",
         "moves": []
@@ -14021,25 +14021,25 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 60,
+        "iv": 7,
         "level": 28,
         "species": "Poliwhirl",
         "moves": []
       },
       {
-        "iv": 60,
+        "iv": 7,
         "level": 28,
         "species": "Cloyster",
         "moves": []
       },
       {
-        "iv": 60,
+        "iv": 7,
         "level": 28,
         "species": "Seaking",
         "moves": []
       },
       {
-        "iv": 60,
+        "iv": 7,
         "level": 28,
         "species": "Seadra",
         "moves": []
@@ -14052,13 +14052,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 60,
+        "iv": 7,
         "level": 33,
         "species": "Electrode",
         "moves": []
       },
       {
-        "iv": 60,
+        "iv": 7,
         "level": 33,
         "species": "Electrode",
         "moves": []
@@ -14071,13 +14071,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 80,
+        "iv": 9,
         "level": 49,
         "species": "Clefairy",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 49,
         "species": "Persian",
         "moves": []
@@ -14090,25 +14090,25 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 60,
+        "iv": 7,
         "level": 28,
         "species": "Pidgeotto",
         "moves": []
       },
       {
-        "iv": 60,
+        "iv": 7,
         "level": 28,
         "species": "Pidgeotto",
         "moves": []
       },
       {
-        "iv": 60,
+        "iv": 7,
         "level": 28,
         "species": "Fearow",
         "moves": []
       },
       {
-        "iv": 60,
+        "iv": 7,
         "level": 28,
         "species": "Fearow",
         "moves": []
@@ -14121,25 +14121,25 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 80,
+        "iv": 9,
         "level": 47,
         "species": "Pidgeot",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 47,
         "species": "Pidgeot",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 47,
         "species": "Fearow",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 47,
         "species": "Fearow",
         "moves": []
@@ -14152,31 +14152,31 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 60,
+        "iv": 7,
         "level": 27,
         "species": "Pidgeotto",
         "moves": []
       },
       {
-        "iv": 60,
+        "iv": 7,
         "level": 27,
         "species": "Meowth",
         "moves": []
       },
       {
-        "iv": 60,
+        "iv": 7,
         "level": 27,
         "species": "Raticate",
         "moves": []
       },
       {
-        "iv": 60,
+        "iv": 7,
         "level": 27,
         "species": "Pikachu",
         "moves": []
       },
       {
-        "iv": 60,
+        "iv": 7,
         "level": 27,
         "species": "Meowth",
         "moves": []
@@ -14189,31 +14189,31 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 80,
+        "iv": 9,
         "level": 47,
         "species": "Pidgeotto",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 47,
         "species": "Persian",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 47,
         "species": "Raticate",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 47,
         "species": "Pikachu",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 47,
         "species": "Persian",
         "moves": []
@@ -14226,31 +14226,31 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 120,
+        "iv": 14,
         "level": 52,
         "species": "Pidgeot",
         "moves": []
       },
       {
-        "iv": 120,
+        "iv": 14,
         "level": 52,
         "species": "Persian",
         "moves": []
       },
       {
-        "iv": 120,
+        "iv": 14,
         "level": 52,
         "species": "Raticate",
         "moves": []
       },
       {
-        "iv": 120,
+        "iv": 14,
         "level": 52,
         "species": "Raichu",
         "moves": []
       },
       {
-        "iv": 120,
+        "iv": 14,
         "level": 52,
         "species": "Persian",
         "moves": []
@@ -14263,25 +14263,25 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 80,
+        "iv": 9,
         "level": 47,
         "species": "Koffing",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 47,
         "species": "Koffing",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 47,
         "species": "Muk",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 47,
         "species": "Weezing",
         "moves": []
@@ -14294,13 +14294,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 60,
+        "iv": 7,
         "level": 32,
         "species": "Fearow",
         "moves": []
       },
       {
-        "iv": 60,
+        "iv": 7,
         "level": 32,
         "species": "Fearow",
         "moves": []
@@ -14313,13 +14313,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 80,
+        "iv": 9,
         "level": 49,
         "species": "Fearow",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 49,
         "species": "Fearow",
         "moves": []
@@ -14332,19 +14332,19 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 60,
+        "iv": 7,
         "level": 30,
         "species": "Fearow",
         "moves": []
       },
       {
-        "iv": 60,
+        "iv": 7,
         "level": 30,
         "species": "Doduo",
         "moves": []
       },
       {
-        "iv": 60,
+        "iv": 7,
         "level": 30,
         "species": "Fearow",
         "moves": []
@@ -14357,19 +14357,19 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 80,
+        "iv": 9,
         "level": 48,
         "species": "Fearow",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 48,
         "species": "Dodrio",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 48,
         "species": "Fearow",
         "moves": []
@@ -14382,13 +14382,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 80,
+        "iv": 9,
         "level": 49,
         "species": "Pidgeot",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 49,
         "species": "Wigglytuff",
         "moves": []
@@ -14401,19 +14401,19 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 60,
+        "iv": 7,
         "level": 30,
         "species": "Dodrio",
         "moves": []
       },
       {
-        "iv": 60,
+        "iv": 7,
         "level": 30,
         "species": "Dodrio",
         "moves": []
       },
       {
-        "iv": 60,
+        "iv": 7,
         "level": 30,
         "species": "Doduo",
         "moves": []
@@ -14426,19 +14426,19 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 80,
+        "iv": 9,
         "level": 48,
         "species": "Dodrio",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 48,
         "species": "Dodrio",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 48,
         "species": "Dodrio",
         "moves": []
@@ -14451,13 +14451,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 60,
+        "iv": 7,
         "level": 32,
         "species": "Pikachu",
         "moves": []
       },
       {
-        "iv": 60,
+        "iv": 7,
         "level": 32,
         "species": "Raichu",
         "moves": []
@@ -14470,13 +14470,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 80,
+        "iv": 9,
         "level": 49,
         "species": "Pikachu",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 49,
         "species": "Raichu",
         "moves": []
@@ -14489,13 +14489,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 120,
+        "iv": 14,
         "level": 54,
         "species": "Raichu",
         "moves": []
       },
       {
-        "iv": 120,
+        "iv": 14,
         "level": 54,
         "species": "Raichu",
         "moves": []
@@ -14508,14 +14508,14 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": true,
     "party": [
       {
-        "iv": 110,
+        "iv": 13,
         "level": 33,
         "species": "Hitmonchan",
         "moves": [],
         "heldItem": "ITEM_BLACK_BELT"
       },
       {
-        "iv": 110,
+        "iv": 13,
         "level": 33,
         "species": "Hitmonlee",
         "moves": [],
@@ -14529,14 +14529,14 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": true,
     "party": [
       {
-        "iv": 130,
+        "iv": 15,
         "level": 51,
         "species": "Hitmonchan",
         "moves": [],
         "heldItem": "ITEM_BLACK_BELT"
       },
       {
-        "iv": 130,
+        "iv": 15,
         "level": 51,
         "species": "Hitmonlee",
         "moves": [],
@@ -14550,14 +14550,14 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": true,
     "party": [
       {
-        "iv": 170,
+        "iv": 20,
         "level": 56,
         "species": "Hitmonchan",
         "moves": [],
         "heldItem": "ITEM_BLACK_BELT"
       },
       {
-        "iv": 170,
+        "iv": 20,
         "level": 56,
         "species": "Hitmonlee",
         "moves": [],
@@ -14571,19 +14571,19 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 80,
+        "iv": 9,
         "level": 48,
         "species": "Weezing",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 48,
         "species": "Weezing",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 48,
         "species": "Weezing",
         "moves": []
@@ -14596,13 +14596,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 80,
+        "iv": 9,
         "level": 49,
         "species": "Primeape",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 49,
         "species": "Machoke",
         "moves": []
@@ -14615,13 +14615,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 80,
+        "iv": 9,
         "level": 49,
         "species": "Weezing",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 49,
         "species": "Muk",
         "moves": []
@@ -14634,13 +14634,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 80,
+        "iv": 9,
         "level": 49,
         "species": "Machoke",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 49,
         "species": "Machamp",
         "moves": []
@@ -14653,13 +14653,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 80,
+        "iv": 9,
         "level": 49,
         "species": "Primeape",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 49,
         "species": "Machamp",
         "moves": []
@@ -14672,25 +14672,25 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 60,
+        "iv": 7,
         "level": 28,
         "species": "Fearow",
         "moves": []
       },
       {
-        "iv": 60,
+        "iv": 7,
         "level": 28,
         "species": "Spearow",
         "moves": []
       },
       {
-        "iv": 60,
+        "iv": 7,
         "level": 28,
         "species": "Fearow",
         "moves": []
       },
       {
-        "iv": 60,
+        "iv": 7,
         "level": 28,
         "species": "Spearow",
         "moves": []
@@ -14703,25 +14703,25 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 80,
+        "iv": 9,
         "level": 47,
         "species": "Fearow",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 47,
         "species": "Fearow",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 47,
         "species": "Fearow",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 47,
         "species": "Fearow",
         "moves": []
@@ -14734,13 +14734,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 80,
+        "iv": 9,
         "level": 49,
         "species": "Seaking",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 49,
         "species": "Seaking",
         "moves": []
@@ -14753,25 +14753,25 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 120,
+        "iv": 14,
         "level": 52,
         "species": "Seadra",
         "moves": []
       },
       {
-        "iv": 120,
+        "iv": 14,
         "level": 52,
         "species": "Seadra",
         "moves": []
       },
       {
-        "iv": 120,
+        "iv": 14,
         "level": 52,
         "species": "Seadra",
         "moves": []
       },
       {
-        "iv": 120,
+        "iv": 14,
         "level": 52,
         "species": "Seadra",
         "moves": []
@@ -14784,13 +14784,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 80,
+        "iv": 9,
         "level": 49,
         "species": "Seaking",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 49,
         "species": "Seaking",
         "moves": []
@@ -14803,13 +14803,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 120,
+        "iv": 14,
         "level": 54,
         "species": "Seaking",
         "moves": []
       },
       {
-        "iv": 120,
+        "iv": 14,
         "level": 54,
         "species": "Seaking",
         "moves": []
@@ -14822,37 +14822,37 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 80,
+        "iv": 9,
         "level": 47,
         "species": "Magikarp",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 47,
         "species": "Magikarp",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 47,
         "species": "Magikarp",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 47,
         "species": "Magikarp",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 47,
         "species": "Magikarp",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 47,
         "species": "Magikarp",
         "moves": []
@@ -14865,7 +14865,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 80,
+        "iv": 9,
         "level": 50,
         "species": "Starmie",
         "moves": []
@@ -14878,13 +14878,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": true,
     "party": [
       {
-        "iv": 80,
+        "iv": 9,
         "level": 50,
         "species": "Seadra",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 50,
         "species": "Starmie",
         "moves": []
@@ -14897,13 +14897,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": true,
     "party": [
       {
-        "iv": 120,
+        "iv": 14,
         "level": 55,
         "species": "Seadra",
         "moves": []
       },
       {
-        "iv": 120,
+        "iv": 14,
         "level": 55,
         "species": "Starmie",
         "moves": []
@@ -14916,7 +14916,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 80,
+        "iv": 9,
         "level": 50,
         "species": "Starmie",
         "moves": []
@@ -14929,14 +14929,14 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 130,
+        "iv": 15,
         "level": 50,
         "species": "Mankey",
         "moves": [],
         "heldItem": "ITEM_BLACK_BELT"
       },
       {
-        "iv": 130,
+        "iv": 15,
         "level": 50,
         "species": "Primeape",
         "moves": [],
@@ -14950,14 +14950,14 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 170,
+        "iv": 20,
         "level": 55,
         "species": "Primeape",
         "moves": [],
         "heldItem": "ITEM_BLACK_BELT"
       },
       {
-        "iv": 170,
+        "iv": 20,
         "level": 55,
         "species": "Primeape",
         "moves": [],
@@ -14971,14 +14971,14 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 130,
+        "iv": 15,
         "level": 50,
         "species": "Hitmonlee",
         "moves": [],
         "heldItem": "ITEM_BLACK_BELT"
       },
       {
-        "iv": 130,
+        "iv": 15,
         "level": 50,
         "species": "Hitmonchan",
         "moves": [],
@@ -14992,14 +14992,14 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 170,
+        "iv": 20,
         "level": 55,
         "species": "Hitmonlee",
         "moves": [],
         "heldItem": "ITEM_BLACK_BELT"
       },
       {
-        "iv": 170,
+        "iv": 20,
         "level": 55,
         "species": "Hitmonchan",
         "moves": [],
@@ -15013,14 +15013,14 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 180,
+        "iv": 21,
         "level": 50,
         "species": "Machoke",
         "moves": [],
         "heldItem": "ITEM_BLACK_BELT"
       },
       {
-        "iv": 180,
+        "iv": 21,
         "level": 50,
         "species": "Machoke",
         "moves": [],
@@ -15034,14 +15034,14 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 220,
+        "iv": 26,
         "level": 55,
         "species": "Machoke",
         "moves": [],
         "heldItem": "ITEM_BLACK_BELT"
       },
       {
-        "iv": 220,
+        "iv": 26,
         "level": 55,
         "species": "Machamp",
         "moves": [],
@@ -15055,14 +15055,14 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 180,
+        "iv": 21,
         "level": 50,
         "species": "Machoke",
         "moves": [],
         "heldItem": "ITEM_BLACK_BELT"
       },
       {
-        "iv": 180,
+        "iv": 21,
         "level": 50,
         "species": "Machoke",
         "moves": [],
@@ -15076,14 +15076,14 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 220,
+        "iv": 26,
         "level": 55,
         "species": "Machoke",
         "moves": [],
         "heldItem": "ITEM_BLACK_BELT"
       },
       {
-        "iv": 220,
+        "iv": 26,
         "level": 55,
         "species": "Machamp",
         "moves": [],
@@ -15097,14 +15097,14 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": true,
     "party": [
       {
-        "iv": 130,
+        "iv": 15,
         "level": 51,
         "species": "Machoke",
         "moves": [],
         "heldItem": "ITEM_BLACK_BELT"
       },
       {
-        "iv": 130,
+        "iv": 15,
         "level": 51,
         "species": "Primeape",
         "moves": [],
@@ -15118,14 +15118,14 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": true,
     "party": [
       {
-        "iv": 170,
+        "iv": 20,
         "level": 56,
         "species": "Machamp",
         "moves": [],
         "heldItem": "ITEM_BLACK_BELT"
       },
       {
-        "iv": 170,
+        "iv": 20,
         "level": 56,
         "species": "Primeape",
         "moves": [],
@@ -15139,19 +15139,19 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 80,
+        "iv": 9,
         "level": 47,
         "species": "Poliwhirl",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 47,
         "species": "Poliwhirl",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 47,
         "species": "Poliwhirl",
         "moves": []
@@ -15164,13 +15164,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": true,
     "party": [
       {
-        "iv": 80,
+        "iv": 9,
         "level": 49,
         "species": "Clefairy",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 49,
         "species": "Clefairy",
         "moves": []
@@ -15183,7 +15183,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 120,
+        "iv": 14,
         "level": 54,
         "species": "Smeargle",
         "moves": [
@@ -15201,13 +15201,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 120,
+        "iv": 14,
         "level": 53,
         "species": "Raticate",
         "moves": []
       },
       {
-        "iv": 120,
+        "iv": 14,
         "level": 53,
         "species": "Pidgeot",
         "moves": []
@@ -15220,19 +15220,19 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 150,
+        "iv": 18,
         "level": 53,
         "species": "Pikachu",
         "moves": []
       },
       {
-        "iv": 150,
+        "iv": 18,
         "level": 53,
         "species": "Clefairy",
         "moves": []
       },
       {
-        "iv": 150,
+        "iv": 18,
         "level": 53,
         "species": "Marill",
         "moves": []
@@ -15245,13 +15245,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": true,
     "party": [
       {
-        "iv": 60,
+        "iv": 7,
         "level": 30,
         "species": "Nidorina",
         "moves": []
       },
       {
-        "iv": 60,
+        "iv": 7,
         "level": 30,
         "species": "Nidorino",
         "moves": []
@@ -15264,13 +15264,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": true,
     "party": [
       {
-        "iv": 120,
+        "iv": 14,
         "level": 55,
         "species": "Nidoking",
         "moves": []
       },
       {
-        "iv": 120,
+        "iv": 14,
         "level": 55,
         "species": "Nidoqueen",
         "moves": []
@@ -15283,13 +15283,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 120,
+        "iv": 14,
         "level": 53,
         "species": "Pidgeotto",
         "moves": []
       },
       {
-        "iv": 120,
+        "iv": 14,
         "level": 55,
         "species": "Pidgeot",
         "moves": []
@@ -15302,13 +15302,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 120,
+        "iv": 14,
         "level": 53,
         "species": "Fearow",
         "moves": []
       },
       {
-        "iv": 120,
+        "iv": 14,
         "level": 55,
         "species": "Fearow",
         "moves": []
@@ -15321,13 +15321,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 120,
+        "iv": 14,
         "level": 53,
         "species": "Noctowl",
         "moves": []
       },
       {
-        "iv": 120,
+        "iv": 14,
         "level": 55,
         "species": "Noctowl",
         "moves": []
@@ -15340,7 +15340,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 120,
+        "iv": 14,
         "level": 54,
         "species": "Marill",
         "moves": []
@@ -15353,7 +15353,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 220,
+        "iv": 26,
         "level": 52,
         "species": "Natu",
         "moves": [
@@ -15364,7 +15364,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 220,
+        "iv": 26,
         "level": 52,
         "species": "Slowbro",
         "moves": [
@@ -15375,7 +15375,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 220,
+        "iv": 26,
         "level": 54,
         "species": "Kadabra",
         "moves": [
@@ -15393,7 +15393,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 120,
+        "iv": 14,
         "level": 55,
         "species": "Gyarados",
         "moves": []
@@ -15406,13 +15406,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 120,
+        "iv": 14,
         "level": 54,
         "species": "Onix",
         "moves": []
       },
       {
-        "iv": 120,
+        "iv": 14,
         "level": 54,
         "species": "Machamp",
         "moves": []
@@ -15425,13 +15425,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 120,
+        "iv": 14,
         "level": 54,
         "species": "Machoke",
         "moves": []
       },
       {
-        "iv": 120,
+        "iv": 14,
         "level": 54,
         "species": "Machoke",
         "moves": []
@@ -15444,13 +15444,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 150,
+        "iv": 18,
         "level": 55,
         "species": "Rhydon",
         "moves": []
       },
       {
-        "iv": 150,
+        "iv": 18,
         "level": 55,
         "species": "Kangaskhan",
         "moves": []
@@ -15463,7 +15463,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 220,
+        "iv": 26,
         "level": 56,
         "species": "Girafarig",
         "moves": [
@@ -15481,7 +15481,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 220,
+        "iv": 26,
         "level": 53,
         "species": "Natu",
         "moves": [
@@ -15492,7 +15492,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 220,
+        "iv": 26,
         "level": 53,
         "species": "Hypno",
         "moves": [
@@ -15503,7 +15503,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 220,
+        "iv": 26,
         "level": 53,
         "species": "Hypno",
         "moves": [
@@ -15521,25 +15521,25 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 120,
+        "iv": 14,
         "level": 52,
         "species": "Electrode",
         "moves": []
       },
       {
-        "iv": 120,
+        "iv": 14,
         "level": 52,
         "species": "Pineco",
         "moves": []
       },
       {
-        "iv": 120,
+        "iv": 14,
         "level": 52,
         "species": "Electrode",
         "moves": []
       },
       {
-        "iv": 120,
+        "iv": 14,
         "level": 52,
         "species": "Pineco",
         "moves": []
@@ -15552,7 +15552,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 220,
+        "iv": 26,
         "level": 55,
         "species": "Victreebel",
         "moves": [
@@ -15563,7 +15563,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 220,
+        "iv": 26,
         "level": 55,
         "species": "Victreebel",
         "moves": [
@@ -15581,7 +15581,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 220,
+        "iv": 26,
         "level": 55,
         "species": "Vileplume",
         "moves": [
@@ -15592,7 +15592,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 220,
+        "iv": 26,
         "level": 55,
         "species": "Vileplume",
         "moves": [
@@ -15610,21 +15610,21 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 170,
+        "iv": 20,
         "level": 54,
         "species": "Primeape",
         "moves": [],
         "heldItem": "ITEM_BLACK_BELT"
       },
       {
-        "iv": 170,
+        "iv": 20,
         "level": 54,
         "species": "Hitmontop",
         "moves": [],
         "heldItem": "ITEM_BLACK_BELT"
       },
       {
-        "iv": 170,
+        "iv": 20,
         "level": 54,
         "species": "Machamp",
         "moves": [],
@@ -15638,19 +15638,19 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 160,
+        "iv": 19,
         "level": 52,
         "species": "Sandslash",
         "moves": []
       },
       {
-        "iv": 160,
+        "iv": 19,
         "level": 52,
         "species": "Lickitung",
         "moves": []
       },
       {
-        "iv": 160,
+        "iv": 19,
         "level": 55,
         "species": "Ursaring",
         "moves": []
@@ -15663,7 +15663,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 220,
+        "iv": 26,
         "level": 53,
         "species": "Tangela",
         "moves": [
@@ -15674,7 +15674,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 220,
+        "iv": 26,
         "level": 54,
         "species": "Exeggutor",
         "moves": [
@@ -15685,7 +15685,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 220,
+        "iv": 26,
         "level": 55,
         "species": "Exeggutor",
         "moves": [
@@ -15703,7 +15703,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 220,
+        "iv": 26,
         "level": 56,
         "species": "Chansey",
         "moves": [
@@ -15721,7 +15721,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 220,
+        "iv": 26,
         "level": 52,
         "species": "Rhydon",
         "moves": [
@@ -15732,7 +15732,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 220,
+        "iv": 26,
         "level": 54,
         "species": "Slowbro",
         "moves": [
@@ -15743,7 +15743,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 220,
+        "iv": 26,
         "level": 52,
         "species": "Kangaskhan",
         "moves": [
@@ -15754,7 +15754,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 220,
+        "iv": 26,
         "level": 52,
         "species": "Machamp",
         "moves": [
@@ -15765,7 +15765,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 220,
+        "iv": 26,
         "level": 55,
         "species": "Ursaring",
         "moves": [
@@ -15783,7 +15783,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 220,
+        "iv": 26,
         "level": 53,
         "species": "Persian",
         "moves": [
@@ -15794,7 +15794,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 220,
+        "iv": 26,
         "level": 53,
         "species": "Dewgong",
         "moves": [
@@ -15805,7 +15805,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 220,
+        "iv": 26,
         "level": 54,
         "species": "Ninetales",
         "moves": [
@@ -15816,7 +15816,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 220,
+        "iv": 26,
         "level": 54,
         "species": "Rapidash",
         "moves": [
@@ -15827,7 +15827,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 220,
+        "iv": 26,
         "level": 56,
         "species": "Girafarig",
         "moves": [
@@ -15845,7 +15845,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": true,
     "party": [
       {
-        "iv": 220,
+        "iv": 26,
         "level": 57,
         "species": "Miltank",
         "moves": [
@@ -15856,7 +15856,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 220,
+        "iv": 26,
         "level": 57,
         "species": "Tauros",
         "moves": [
@@ -15874,19 +15874,19 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 20,
+        "iv": 2,
         "level": 19,
         "species": "Metapod",
         "moves": []
       },
       {
-        "iv": 20,
+        "iv": 2,
         "level": 19,
         "species": "Weedle",
         "moves": []
       },
       {
-        "iv": 20,
+        "iv": 2,
         "level": 19,
         "species": "Metapod",
         "moves": []
@@ -15899,19 +15899,19 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 60,
+        "iv": 7,
         "level": 27,
         "species": "Butterfree",
         "moves": []
       },
       {
-        "iv": 60,
+        "iv": 7,
         "level": 27,
         "species": "Kakuna",
         "moves": []
       },
       {
-        "iv": 60,
+        "iv": 7,
         "level": 27,
         "species": "Butterfree",
         "moves": []
@@ -15924,19 +15924,19 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 120,
+        "iv": 14,
         "level": 51,
         "species": "Butterfree",
         "moves": []
       },
       {
-        "iv": 120,
+        "iv": 14,
         "level": 54,
         "species": "Beedrill",
         "moves": []
       },
       {
-        "iv": 120,
+        "iv": 14,
         "level": 51,
         "species": "Butterfree",
         "moves": []
@@ -15949,13 +15949,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 80,
+        "iv": 9,
         "level": 49,
         "species": "Poliwhirl",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 49,
         "species": "Poliwrath",
         "moves": []
@@ -15968,13 +15968,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 80,
+        "iv": 9,
         "level": 49,
         "species": "Seadra",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 49,
         "species": "Seadra",
         "moves": []
@@ -15987,13 +15987,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 80,
+        "iv": 9,
         "level": 49,
         "species": "Poliwhirl",
         "moves": []
       },
       {
-        "iv": 80,
+        "iv": 9,
         "level": 49,
         "species": "Seaking",
         "moves": []
@@ -16006,7 +16006,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 255,
+        "iv": 31,
         "level": 64,
         "species": "Dewgong",
         "moves": [
@@ -16017,7 +16017,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 255,
+        "iv": 31,
         "level": 63,
         "species": "Cloyster",
         "moves": [
@@ -16028,7 +16028,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 255,
+        "iv": 31,
         "level": 63,
         "species": "Piloswine",
         "moves": [
@@ -16039,7 +16039,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 255,
+        "iv": 31,
         "level": 66,
         "species": "Jynx",
         "moves": [
@@ -16050,7 +16050,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 255,
+        "iv": 31,
         "level": 66,
         "species": "Lapras",
         "moves": [
@@ -16069,7 +16069,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 255,
+        "iv": 31,
         "level": 65,
         "species": "Steelix",
         "moves": [
@@ -16080,7 +16080,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 255,
+        "iv": 31,
         "level": 65,
         "species": "Hitmonchan",
         "moves": [
@@ -16091,7 +16091,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 255,
+        "iv": 31,
         "level": 65,
         "species": "Hitmonlee",
         "moves": [
@@ -16102,7 +16102,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 255,
+        "iv": 31,
         "level": 66,
         "species": "Steelix",
         "moves": [
@@ -16113,7 +16113,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 255,
+        "iv": 31,
         "level": 68,
         "species": "Machamp",
         "moves": [
@@ -16132,7 +16132,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 255,
+        "iv": 31,
         "level": 66,
         "species": "Gengar",
         "moves": [
@@ -16143,7 +16143,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 255,
+        "iv": 31,
         "level": 66,
         "species": "Crobat",
         "moves": [
@@ -16154,7 +16154,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 255,
+        "iv": 31,
         "level": 65,
         "species": "Misdreavus",
         "moves": [
@@ -16165,7 +16165,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 255,
+        "iv": 31,
         "level": 68,
         "species": "Arbok",
         "moves": [
@@ -16176,7 +16176,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 255,
+        "iv": 31,
         "level": 70,
         "species": "Gengar",
         "moves": [
@@ -16195,7 +16195,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 255,
+        "iv": 31,
         "level": 68,
         "species": "Gyarados",
         "moves": [
@@ -16206,7 +16206,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 255,
+        "iv": 31,
         "level": 66,
         "species": "Dragonite",
         "moves": [
@@ -16217,7 +16217,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 255,
+        "iv": 31,
         "level": 66,
         "species": "Kingdra",
         "moves": [
@@ -16228,7 +16228,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 255,
+        "iv": 31,
         "level": 70,
         "species": "Aerodactyl",
         "moves": [
@@ -16239,7 +16239,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 255,
+        "iv": 31,
         "level": 72,
         "species": "Dragonite",
         "moves": [
@@ -16258,7 +16258,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 255,
+        "iv": 31,
         "level": 72,
         "species": "Heracross",
         "moves": [
@@ -16269,7 +16269,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 255,
+        "iv": 31,
         "level": 73,
         "species": "Alakazam",
         "moves": [
@@ -16280,7 +16280,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 255,
+        "iv": 31,
         "level": 72,
         "species": "Tyranitar",
         "moves": [
@@ -16291,7 +16291,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 255,
+        "iv": 31,
         "level": 73,
         "species": "Arcanine",
         "moves": [
@@ -16302,7 +16302,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 255,
+        "iv": 31,
         "level": 73,
         "species": "Exeggutor",
         "moves": [
@@ -16313,7 +16313,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 255,
+        "iv": 31,
         "level": 75,
         "species": "Blastoise",
         "moves": [
@@ -16332,7 +16332,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 255,
+        "iv": 31,
         "level": 72,
         "species": "Heracross",
         "moves": [
@@ -16343,7 +16343,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 255,
+        "iv": 31,
         "level": 73,
         "species": "Alakazam",
         "moves": [
@@ -16354,7 +16354,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 255,
+        "iv": 31,
         "level": 72,
         "species": "Tyranitar",
         "moves": [
@@ -16365,7 +16365,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 255,
+        "iv": 31,
         "level": 73,
         "species": "Gyarados",
         "moves": [
@@ -16376,7 +16376,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 255,
+        "iv": 31,
         "level": 73,
         "species": "Arcanine",
         "moves": [
@@ -16387,7 +16387,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 255,
+        "iv": 31,
         "level": 75,
         "species": "Venusaur",
         "moves": [
@@ -16406,7 +16406,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 255,
+        "iv": 31,
         "level": 72,
         "species": "Heracross",
         "moves": [
@@ -16417,7 +16417,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 255,
+        "iv": 31,
         "level": 73,
         "species": "Alakazam",
         "moves": [
@@ -16428,7 +16428,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 255,
+        "iv": 31,
         "level": 72,
         "species": "Tyranitar",
         "moves": [
@@ -16439,7 +16439,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 255,
+        "iv": 31,
         "level": 73,
         "species": "Exeggutor",
         "moves": [
@@ -16450,7 +16450,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 255,
+        "iv": 31,
         "level": 73,
         "species": "Gyarados",
         "moves": [
@@ -16461,7 +16461,7 @@ export const TrainerDataMap: Record<string, TrainerData> = {
         ]
       },
       {
-        "iv": 255,
+        "iv": 31,
         "level": 75,
         "species": "Charizard",
         "moves": [
@@ -16480,13 +16480,13 @@ export const TrainerDataMap: Record<string, TrainerData> = {
     "isDouble": false,
     "party": [
       {
-        "iv": 50,
+        "iv": 6,
         "level": 39,
         "species": "Weezing",
         "moves": []
       },
       {
-        "iv": 50,
+        "iv": 6,
         "level": 39,
         "species": "Muk",
         "moves": []

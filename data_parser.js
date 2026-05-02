@@ -270,7 +270,7 @@ function parseTrainerParties(tree) {
       const movesRaw = getField(fields, "moves", []);
 
       const member = {
-        iv: getField(fields, "iv", 0),
+        iv: Math.trunc((getField(fields, "iv", 0) / 255) * 31),
         level: getField(fields, "lvl", 0),
         species: speciesName(speciesRaw),
       };
