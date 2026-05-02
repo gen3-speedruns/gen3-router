@@ -344,3 +344,59 @@ Water Gun* (x2)
 {% /choice %}
 
 {% evolve into="Wartortle" /%}
+
+- Force the Rocket Grunt to walk up to you to save repel steps by running.
+
+### Rocket Grunt
+
+{% encounter species="Rattata" level=13 isTrainer=true %}
+{% strategy %}
+Water Gun (x2)
+{% /strategy %}
+{% calcs %}
+{% ko-chance move="Water Gun" pinch=true /%}
+{% /calcs %}
+{% /encounter %}
+
+{% encounter species="Zubat" level=13 isTrainer=true %}
+{% strategy %}
+Water Gun (x2)
+{% /strategy %}
+{% calcs %}
+{% ko-chance move="Water Gun" pinch=true /%}
+{% /calcs %}
+{% /encounter %}
+
+### Super Nerd Miguel
+
+{% encounter species="Grimer" level=12 isTrainer=true %}
+{% strategy %}
+Water Gun x2
+{% /strategy %}
+- If you can survive two turns of Poison and a Tackle then use Antidote on Voltorb.
+{% calcs %}
+{% poison-damage /%}
+{% /calcs %}
+{% /encounter %}
+
+{% encounter species="Voltorb" level=12 isTrainer=true %}
+{% strategy %}
+Water Gun* (x2)
+{% /strategy %}
+{% calcs %}
+{% speed-check /%}
+{% ko-chance move="Water Gun" pinch=true /%}
+{% damage-in move="Tackle" /%}
+{% /calcs %}
+{% /encounter %}
+
+{% encounter species="Koffing" level=12 isTrainer=true %}
+{% strategy %}
+Water Gun* (x2)
+{% /strategy %}
+- Swap Water Gun to Slot 2 (Select + A + A)
+{% calcs %}
+{% speed-check /%}
+{% ko-chance move="Water Gun" pinch=true /%}
+{% /calcs %}
+{% /encounter %}
