@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { ChoiceProvider } from "./ChoiceContext";
+import { useRouteAction } from "../hooks/useRouteAction";
+import { useRunStore } from "../store/runState";
 
 interface ChoiceProps {
   label?: string;
@@ -7,10 +9,14 @@ interface ChoiceProps {
 }
 
 export const Choice: React.FC<ChoiceProps> = ({ label, children }) => {
-  const [chosen, setChosen] = useState<string | null>(null);
+  const { id } = useRouteAction();
+  const chosen = useRunStore((s) => s.choices[id] ?? null);
+  const setChoice = useRunStore((s) => s.setChoice);
 
   return (
-    <ChoiceProvider value={{ chosen, onChoose: setChosen }}>
+    <ChoiceProvider
+      value={{ chosen, onChoose: (value) => setChoice(id, value) }}
+    >
       <section className="card my-5 border border-base-content/10 bg-base-100 shadow-sm">
         <div className="card-body gap-3 p-4">
           {label && (

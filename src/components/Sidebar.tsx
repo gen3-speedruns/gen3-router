@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useRunStore } from "../store/runState";
 import { buildPlayerSpec } from "../selectors/playerSelectors";
 
@@ -17,6 +17,8 @@ const SidebarShell: React.FC<{ children: React.ReactNode }> = ({
 
 export const Sidebar: React.FC = () => {
   const player = useRunStore((state) => state.player);
+  const reset = useRunStore((s) => s.reset);
+  const [confirming, setConfirming] = useState(false);
 
   if (!player) {
     return (
@@ -96,6 +98,40 @@ export const Sidebar: React.FC = () => {
             })}
           </div>
         </div>
+      </div>
+
+      <div className="mt-auto pt-4 border-t border-base-content/10">
+        {!confirming ? (
+          <button
+            className="btn btn-ghost btn-sm text-error w-full"
+            onClick={() => setConfirming(true)}
+          >
+            Reset Run
+          </button>
+        ) : (
+          <div className="flex flex-col gap-2">
+            <p className="text-xs text-center text-base-content/60">
+              This will clear all progress.
+            </p>
+            <div className="flex gap-2">
+              <button
+                className="btn btn-error btn-sm flex-1"
+                onClick={() => {
+                  reset();
+                  setConfirming(false);
+                }}
+              >
+                Confirm
+              </button>
+              <button
+                className="btn btn-ghost btn-sm flex-1"
+                onClick={() => setConfirming(false)}
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     </SidebarShell>
   );

@@ -19,6 +19,7 @@ import { Option } from "./components/Option";
 import { Enemy } from "./components/Enemy";
 import { GymBadge } from "./components/GymBadge";
 import { Evolve } from "./components/Evolve";
+import { RouteIndexProvider } from "./components/RouteIndexProvider";
 
 const components = {
   Encounter,
@@ -77,7 +78,9 @@ export default function App() {
                 <RouteHeader frontmatter={route.data.frontmatter} />
               )}
               <div className="prose prose-sm sm:prose max-w-none dark:prose-invert">
-                <RouteRenderer content={route.data.content} />
+                <RouteIndexProvider>
+                  <RouteRenderer content={route.data.content} />
+                </RouteIndexProvider>
               </div>
             </>
           )}

@@ -1,10 +1,11 @@
-import React, { useState, useMemo } from "react";
+import React, { useMemo } from "react";
 import { useRunStore } from "../store/runState";
 import { EncounterProvider } from "./EncounterContext";
 import { buildEnemySpec, buildPlayerSpec } from "../selectors/playerSelectors";
 import { TypeBadge } from "./TypeBadge";
 import { PokemonSprite } from "./PokemonSprite";
 import { RouteCard } from "./RouteCard";
+import { useRouteAction } from "../hooks/useRouteAction";
 
 interface EncounterProps {
   species: string;
@@ -23,7 +24,7 @@ export const Encounter: React.FC<EncounterProps> = ({
   fixedIv,
   children,
 }) => {
-  const [defeated, setDefeated] = useState(false);
+  const { completed, complete } = useRouteAction();
   const gainEncounter = useRunStore((state) => state.gainEncounter);
   const player = useRunStore((s) => s.player);
 
@@ -56,7 +57,7 @@ export const Encounter: React.FC<EncounterProps> = ({
   return (
     <EncounterProvider value={{ player: playerSpec, enemy: enemySpec }}>
       <RouteCard
-        faded={defeated}
+        faded={completed}
         left={<PokemonSprite dexId={enemySpec.dexId} name={species} />}
         title={
           <>
@@ -67,7 +68,7 @@ export const Encounter: React.FC<EncounterProps> = ({
             {enemySpec.types.map((t) => (
               <TypeBadge key={t} type={t} />
             ))}
-            {optional && !defeated && (
+            {optional && !completed && (
               <span className="badge badge-sm badge-ghost">optional</span>
             )}
           </>
@@ -76,12 +77,12 @@ export const Encounter: React.FC<EncounterProps> = ({
           <button
             onClick={() => {
               gainEncounter(species, level, isTrainer);
-              setDefeated(true);
+              complete();
             }}
-            disabled={defeated}
+            disabled={completed}
             className="btn btn-sm btn-primary"
           >
-            {defeated ? "Defeated" : "Defeat"}
+            {completed ? "Defeated" : "Defeat"}
           </button>
         }
       >
