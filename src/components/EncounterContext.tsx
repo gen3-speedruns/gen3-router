@@ -1,9 +1,10 @@
 import { createContext, useContext } from "react";
-import type { EnemySpec, PlayerSpec } from "../gamedata/types";
+import type { Runner } from "../domain/runner";
+import type { Encounter } from "../domain/encounter";
 
 interface EncounterContextValue {
-  player: PlayerSpec;
-  enemy: EnemySpec;
+  runner: Runner;
+  encounter: Encounter;
 }
 
 const EncounterContext = createContext<EncounterContextValue | null>(null);

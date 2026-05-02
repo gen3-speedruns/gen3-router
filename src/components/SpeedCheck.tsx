@@ -1,6 +1,6 @@
 import React from "react";
 import { useEncounter } from "./EncounterContext";
-import { getSpeedCheck } from "../selectors/damageSelectors";
+import { getSpeedCheck } from "../domain/combat";
 
 interface SpeedCheckProps {
   playerStages: number;
@@ -11,11 +11,10 @@ export const SpeedCheck: React.FC<SpeedCheckProps> = ({
   playerStages,
   enemyStages,
 }) => {
-  const { player, enemy } = useEncounter();
-
+  const { runner, encounter } = useEncounter();
   const { outcome, playerSpeed, enemySpeed } = getSpeedCheck(
-    player,
-    enemy,
+    runner,
+    encounter,
     playerStages,
     enemyStages,
   );

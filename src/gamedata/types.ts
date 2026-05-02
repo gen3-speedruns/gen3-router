@@ -1,5 +1,3 @@
-import type { PokemonType } from "./typeChart";
-
 export interface StatsTable {
   hp: number;
   atk: number;
@@ -9,6 +7,52 @@ export interface StatsTable {
   spe: number;
 }
 
+export type PokemonType =
+  | "normal"
+  | "fire"
+  | "water"
+  | "electric"
+  | "grass"
+  | "ice"
+  | "fighting"
+  | "poison"
+  | "ground"
+  | "flying"
+  | "psychic"
+  | "bug"
+  | "rock"
+  | "ghost"
+  | "dragon"
+  | "dark"
+  | "steel";
+
+export type Nature =
+  | "Hardy"
+  | "Lonely"
+  | "Brave"
+  | "Adamant"
+  | "Naughty"
+  | "Bold"
+  | "Docile"
+  | "Relaxed"
+  | "Impish"
+  | "Lax"
+  | "Timid"
+  | "Hasty"
+  | "Serious"
+  | "Jolly"
+  | "Naive"
+  | "Modest"
+  | "Mild"
+  | "Quiet"
+  | "Bashful"
+  | "Rash"
+  | "Calm"
+  | "Gentle"
+  | "Sassy"
+  | "Careful"
+  | "Quirky";
+
 export type GrowthRate =
   | "Erratic"
   | "Fast"
@@ -16,22 +60,6 @@ export type GrowthRate =
   | "MediumSlow"
   | "Slow"
   | "Fluctuating";
-
-export interface Pokemon {
-  dexId: number;
-  types: PokemonType[];
-  baseStats: StatsTable;
-  evYield: StatsTable;
-  baseExp: number;
-  growthRate: GrowthRate;
-}
-
-export interface Move {
-  type: PokemonType;
-  power: number;
-  accuracy: number;
-  pp: number;
-}
 
 export interface TrainerPartyMember {
   iv: number;
@@ -41,32 +69,25 @@ export interface TrainerPartyMember {
   heldItem?: string;
 }
 
+export interface PokemonData {
+  dexId: number;
+  types: PokemonType[];
+  baseStats: StatsTable;
+  evYield: StatsTable;
+  baseExp: number;
+  growthRate: GrowthRate;
+}
+
+export interface MoveData {
+  type: PokemonType;
+  power: number;
+  accuracy: number;
+  pp: number;
+}
+
 export interface TrainerData {
   name: string;
   isFemale: boolean;
   isDouble: boolean;
   party: TrainerPartyMember[];
-}
-
-export interface BadgeBoosts {
-  boulder: boolean;
-  thunder: boolean;
-  soul: boolean;
-  volcano: boolean;
-}
-
-export interface PlayerSpec {
-  level: number;
-  types: PokemonType[];
-  stats: StatsTable;
-  pinchThreshold: number;
-  badges: BadgeBoosts;
-}
-
-export interface EnemySpec {
-  species: string;
-  dexId: number;
-  level: number;
-  types: PokemonType[];
-  stats: StatsTable;
 }

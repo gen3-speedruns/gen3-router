@@ -1,6 +1,6 @@
-import type { Move } from './types';
+import type { MoveData } from './types';
 
-export const MoveData: Record<string, Move> = {
+export const MoveDataMap: Record<string, MoveData> = {
   "Pound": {
     "power": 40,
     "type": "normal",

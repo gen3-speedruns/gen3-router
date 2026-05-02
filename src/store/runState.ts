@@ -1,34 +1,27 @@
 import { create } from "zustand";
-import type { Nature } from "../gamedata/natures";
-import type { StatsTable, GrowthRate, BadgeBoosts } from "../gamedata/types";
-import { calculateExpYield, getExpAtLevel } from "../mechanics/experience";
-import { PokemonData } from "../gamedata/pokemon";
+import type { StatsTable, Nature } from "../gamedata/types";
 import { persist } from "zustand/middleware";
-
-export interface PlayerState {
-  species: string;
-  nature: Nature;
-  growthRate: GrowthRate;
-  ivs: StatsTable;
-  evs: StatsTable;
-  totalExp: number;
-  badges: BadgeBoosts;
-}
+import {
+  calcStartingExp,
+  type BadgeBoosts,
+  type RunnerRecord,
+} from "../domain/runner";
+import { calcEncounterYield, type Encounter } from "../domain/encounter";
 
 interface AppState {
-  player: PlayerState | null;
+  runner: RunnerRecord | null;
   completedActions: string[];
   choices: Record<string, string>;
 
-  initPlayer: (
+  initRunner: (
     species: string,
     level: number,
     nature: Nature,
     ivs: StatsTable,
   ) => void;
   evolve: (newSpecies: string) => void;
-  gainEncounter: (species: string, level: number, isTrainer: boolean) => void;
-  gainBadge: (badge: keyof PlayerState["badges"]) => void;
+  gainEncounter: (encounter: Encounter) => void;
+  gainBadge: (badge: keyof BadgeBoosts) => void;
   completeAction: (id: string) => void;
   setChoice: (id: string, value: string) => void;
   reset: () => void;
@@ -37,23 +30,19 @@ interface AppState {
 export const useRunStore = create<AppState>()(
   persist(
     (set) => ({
-      player: null,
+      runner: null,
       completedActions: [],
       choices: {},
 
-      initPlayer: (species, level, nature, ivs) =>
+      initRunner: (species, level, nature, ivs) =>
         set(() => {
-          const data = PokemonData[species];
-          const startingExp = getExpAtLevel(level, data.growthRate);
-
           return {
-            player: {
+            runner: {
               species,
-              growthRate: data.growthRate,
               nature,
-              ivs: { ...ivs },
+              ivs,
               evs: { hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0 },
-              totalExp: startingExp,
+              totalExp: calcStartingExp(species, level),
               badges: {
                 boulder: false,
                 thunder: false,
@@ -66,54 +55,42 @@ export const useRunStore = create<AppState>()(
 
       evolve: (newSpecies) =>
         set((state) => {
-          if (!state.player) return state;
-          const data = PokemonData[newSpecies];
+          if (!state.runner) return state;
           return {
-            player: {
-              ...state.player,
+            runner: {
+              ...state.runner,
               species: newSpecies,
-              growthRate: data.growthRate,
             },
           };
         }),
 
-      gainEncounter: (species, level, isTrainer) =>
+      gainEncounter: (encounter) =>
         set((state) => {
-          if (!state.player) return state;
-          const p = state.player;
-
-          const data = PokemonData[species];
-          if (!data) {
-            console.error(`Pokemon ${species} not found in database!`);
-            return state;
-          }
-
-          const expGained = calculateExpYield(data.baseExp, level, isTrainer);
-          const evYield = data.evYield;
-
+          if (!state.runner) return state;
+          const { exp, evs } = calcEncounterYield(encounter);
+          const r = state.runner;
           return {
-            player: {
-              ...p,
-              totalExp: p.totalExp + expGained,
+            runner: {
+              ...r,
+              totalExp: r.totalExp + exp,
               evs: {
-                hp: Math.min(255, p.evs.hp + evYield.hp),
-                atk: Math.min(255, p.evs.atk + evYield.atk),
-                def: Math.min(255, p.evs.def + evYield.def),
-                spa: Math.min(255, p.evs.spa + evYield.spa),
-                spd: Math.min(255, p.evs.spd + evYield.spd),
-                spe: Math.min(255, p.evs.spe + evYield.spe),
+                hp: Math.min(255, r.evs.hp + evs.hp),
+                atk: Math.min(255, r.evs.atk + evs.atk),
+                def: Math.min(255, r.evs.def + evs.def),
+                spa: Math.min(255, r.evs.spa + evs.spa),
+                spd: Math.min(255, r.evs.spd + evs.spd),
+                spe: Math.min(255, r.evs.spe + evs.spe),
               },
             },
           };
         }),
-
       gainBadge: (badge) =>
         set((state) => {
-          if (!state.player) return state;
+          if (!state.runner) return state;
           return {
-            player: {
-              ...state.player,
-              badges: { ...state.player.badges, [badge]: true },
+            runner: {
+              ...state.runner,
+              badges: { ...state.runner.badges, [badge]: true },
             },
           };
         }),
@@ -132,7 +109,7 @@ export const useRunStore = create<AppState>()(
 
       reset: () =>
         set(() => ({
-          player: null,
+          runner: null,
           completedActions: [],
           choices: {},
         })),

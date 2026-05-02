@@ -1,4 +1,4 @@
-import type { PokemonType } from "../gamedata/typeChart";
+import type { PokemonType } from "../gamedata/types";
 
 const TYPE_COLORS: Record<PokemonType, { bg: string; text: string }> = {
   normal: { bg: "#A8A878", text: "#fff" },

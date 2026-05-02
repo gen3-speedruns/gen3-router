@@ -1,11 +1,8 @@
 import { describe, expect, it } from "vitest";
 import { calcDamageIn, calcKoChance } from "./damage";
-import type {
-  BadgeBoosts,
-  EnemySpec,
-  Move,
-  PlayerSpec,
-} from "../gamedata/types";
+import type { BadgeBoosts, Runner } from "../runner";
+import type { MoveData } from "../../gamedata/types";
+import type { Encounter } from "../encounter";
 
 const NO_BADGES: BadgeBoosts = {
   boulder: false,
@@ -14,22 +11,32 @@ const NO_BADGES: BadgeBoosts = {
   volcano: false,
 };
 
-const physicalMove: Move = { type: "normal", power: 80, accuracy: 100, pp: 10 };
-const specialMove: Move = { type: "fire", power: 80, accuracy: 100, pp: 10 };
-const fightingMove: Move = {
+const physicalMove: MoveData = {
+  type: "normal",
+  power: 80,
+  accuracy: 100,
+  pp: 10,
+};
+const specialMove: MoveData = {
+  type: "fire",
+  power: 80,
+  accuracy: 100,
+  pp: 10,
+};
+const fightingMove: MoveData = {
   type: "fighting",
   power: 80,
   accuracy: 100,
   pp: 10,
 };
 
-const enemy: EnemySpec = {
+const enemy: Encounter = {
   species: "",
   level: 50,
   types: ["poison"],
   stats: { hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100 },
 };
-const player: PlayerSpec = {
+const player: Runner = {
   level: 50,
   types: ["water"],
   stats: { hp: 200, atk: 100, def: 100, spa: 100, spd: 100, spe: 100 },

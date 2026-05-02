@@ -404,12 +404,12 @@ async function main() {
 
   fs.writeFileSync(
     "./src/gamedata/pokemon.ts",
-    `import type { Pokemon } from './types';\n\nexport const PokemonData: Record<string, Pokemon> = ${JSON.stringify(gen3Pokemon, null, 2)};\n`,
+    `import type { PokemonData } from './types';\n\nexport const PokemonDataMap: Record<string, PokemonData> = ${JSON.stringify(gen3Pokemon, null, 2)};\n`,
   );
 
   fs.writeFileSync(
     "./src/gamedata/moves.ts",
-    `import type { Move } from './types';\n\nexport const MoveData: Record<string, Move> = ${JSON.stringify(gen3Moves, null, 2)};\n`,
+    `import type { MoveData } from './types';\n\nexport const MoveDataMap: Record<string, MoveData> = ${JSON.stringify(gen3Moves, null, 2)};\n`,
   );
 
   fs.writeFileSync(

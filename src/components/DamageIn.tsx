@@ -1,13 +1,13 @@
 import React from "react";
 import { useEncounter } from "./EncounterContext";
-import { getDamageIn } from "../selectors/damageSelectors";
+import { getDamageIn } from "../domain/combat";
 
 export const DamageIn: React.FC<{ move: string; stages?: number }> = ({
   move,
   stages = 0,
 }) => {
-  const { player, enemy } = useEncounter();
-  const damage = getDamageIn(enemy, player, move, { stages });
+  const { runner, encounter } = useEncounter();
+  const damage = getDamageIn(encounter, runner, move, stages);
 
   if (!damage) {
     return (

@@ -1,5 +1,5 @@
 import { useRunStore } from "../store/runState";
-import { PokemonData } from "../gamedata/pokemon";
+import { PokemonDataMap } from "../gamedata/pokemon";
 import { PokemonSprite } from "./PokemonSprite";
 import { RouteCard } from "./RouteCard";
 
@@ -9,9 +9,9 @@ interface EvolveProps {
 
 export const Evolve: React.FC<EvolveProps> = ({ into }) => {
   const evolve = useRunStore((s) => s.evolve);
-  const currentSpecies = useRunStore((s) => s.player?.species);
+  const currentSpecies = useRunStore((s) => s.runner?.species);
   const alreadyEvolved = currentSpecies === into;
-  const intoData = PokemonData[into];
+  const intoData = PokemonDataMap[into];
 
   if (!intoData) {
     return <div className="text-error text-sm">Unknown species: {into}</div>;

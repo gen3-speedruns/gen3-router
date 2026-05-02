@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useRunStore } from "../store/runState";
-import type { Nature } from "../gamedata/natures";
-import { PokemonData } from "../gamedata/pokemon";
+import { PokemonDataMap } from "../gamedata/pokemon";
 import { PokemonSprite } from "./PokemonSprite";
+import type { Nature } from "../gamedata/types";
 
 interface StarterProps {
   species: string;
@@ -15,8 +15,8 @@ export const Starter: React.FC<StarterProps> = ({
   level,
   natures,
 }) => {
-  const initPlayer = useRunStore((state) => state.initPlayer);
-  const isInitialized = useRunStore((state) => state.player !== null);
+  const initRunner = useRunStore((state) => state.initRunner);
+  const isInitialized = useRunStore((state) => state.runner !== null);
 
   const [nature, setNature] = useState<Nature>(natures[0]);
   const [ivs, setIvs] = useState({
@@ -30,7 +30,7 @@ export const Starter: React.FC<StarterProps> = ({
 
   const handleStart = (e: React.SubmitEvent) => {
     e.preventDefault();
-    if (!isInitialized) initPlayer(species, level, nature, ivs);
+    if (!isInitialized) initRunner(species, level, nature, ivs);
   };
 
   const handleIvChange = (stat: keyof typeof ivs, val: string) => {
@@ -48,7 +48,10 @@ export const Starter: React.FC<StarterProps> = ({
       <div className="card-body gap-4 p-4">
         <header className="flex items-center justify-between gap-3">
           <div className="flex items-center min-w-0">
-            <PokemonSprite dexId={PokemonData[species].dexId} name={species} />
+            <PokemonSprite
+              dexId={PokemonDataMap[species].dexId}
+              name={species}
+            />
             <div className="card-title flex-wrap items-baseline gap-x-2 gap-y-1 pl-2">
               <span>{species}</span>
               <span className="text-sm font-normal text-base-content/50">

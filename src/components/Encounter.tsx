@@ -1,11 +1,12 @@
 import React, { useMemo } from "react";
 import { useRunStore } from "../store/runState";
 import { EncounterProvider } from "./EncounterContext";
-import { buildEnemySpec, buildPlayerSpec } from "../selectors/playerSelectors";
 import { TypeBadge } from "./TypeBadge";
 import { PokemonSprite } from "./PokemonSprite";
 import { RouteCard } from "./RouteCard";
 import { useRouteAction } from "../hooks/useRouteAction";
+import { buildRunner } from "../domain/runner";
+import { resolveEncounter } from "../domain/encounter";
 
 interface EncounterProps {
   species: string;
@@ -26,19 +27,19 @@ export const Encounter: React.FC<EncounterProps> = ({
 }) => {
   const { completed, complete } = useRouteAction();
   const gainEncounter = useRunStore((state) => state.gainEncounter);
-  const player = useRunStore((s) => s.player);
+  const runnerRecord = useRunStore((s) => s.runner);
 
-  const enemySpec = useMemo(
-    () => buildEnemySpec(species, level, fixedIv),
-    [species, level, fixedIv],
+  const encounter = useMemo(
+    () => resolveEncounter(species, level, isTrainer, fixedIv),
+    [species, level, isTrainer, fixedIv],
   );
 
-  const playerSpec = useMemo(
-    () => (player ? buildPlayerSpec(player) : null),
-    [player],
+  const runner = useMemo(
+    () => (runnerRecord ? buildRunner(runnerRecord) : null),
+    [runnerRecord],
   );
 
-  if (!enemySpec) {
+  if (!encounter) {
     return (
       <div className="text-error underline">
         Error: Species {species} not found
@@ -46,7 +47,7 @@ export const Encounter: React.FC<EncounterProps> = ({
     );
   }
 
-  if (!playerSpec) {
+  if (!runner) {
     return (
       <div className="text-base-content/50 italic p-4">
         Set your starter to see calcs.
@@ -55,17 +56,17 @@ export const Encounter: React.FC<EncounterProps> = ({
   }
 
   return (
-    <EncounterProvider value={{ player: playerSpec, enemy: enemySpec }}>
+    <EncounterProvider value={{ runner: runner, encounter: encounter }}>
       <RouteCard
         faded={completed}
-        left={<PokemonSprite dexId={enemySpec.dexId} name={species} />}
+        left={<PokemonSprite dexId={encounter.dexId} name={species} />}
         title={
           <>
             <span>{species}</span>
             <span className="text-sm font-normal text-base-content/50">
               Lv. {level}
             </span>
-            {enemySpec.types.map((t) => (
+            {encounter.types.map((t) => (
               <TypeBadge key={t} type={t} />
             ))}
             {optional && !completed && (
@@ -76,7 +77,7 @@ export const Encounter: React.FC<EncounterProps> = ({
         action={
           <button
             onClick={() => {
-              gainEncounter(species, level, isTrainer);
+              gainEncounter(encounter);
               complete();
             }}
             disabled={completed}

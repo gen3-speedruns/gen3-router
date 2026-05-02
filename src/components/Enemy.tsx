@@ -1,7 +1,8 @@
 import React, { useMemo } from "react";
 import { useRunStore } from "../store/runState";
-import { buildEnemySpec, buildPlayerSpec } from "../selectors/playerSelectors";
 import { EncounterProvider } from "./EncounterContext";
+import { resolveEncounter } from "../domain/encounter";
+import { buildRunner } from "../domain/runner";
 
 interface EnemyProps {
   species: string;
@@ -16,26 +17,26 @@ export const Enemy: React.FC<EnemyProps> = ({
   fixedIv,
   children,
 }) => {
-  const player = useRunStore((s) => s.player);
+  const runnerRecord = useRunStore((s) => s.runner);
 
-  const enemySpec = useMemo(
-    () => buildEnemySpec(species, level, fixedIv),
+  const encounter = useMemo(
+    () => resolveEncounter(species, level, false, fixedIv),
     [species, level, fixedIv],
   );
 
-  const playerSpec = useMemo(
-    () => (player ? buildPlayerSpec(player) : null),
-    [player],
+  const runner = useMemo(
+    () => (runnerRecord ? buildRunner(runnerRecord) : null),
+    [runnerRecord],
   );
 
-  if (!enemySpec)
+  if (!encounter)
     return (
       <div className="text-error text-sm">
-        Enemy: Species {species} not found
+        Encounter: Species {species} not found
       </div>
     );
 
-  if (!playerSpec)
+  if (!runner)
     return (
       <div className="text-base-content/50 italic text-sm">
         Set your starter to see calcs.
@@ -43,7 +44,7 @@ export const Enemy: React.FC<EnemyProps> = ({
     );
 
   return (
-    <EncounterProvider value={{ player: playerSpec, enemy: enemySpec }}>
+    <EncounterProvider value={{ runner: runner, encounter: encounter }}>
       {children}
     </EncounterProvider>
   );

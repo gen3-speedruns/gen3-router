@@ -1,6 +1,6 @@
-import type { Pokemon } from './types';
+import type { PokemonData } from './types';
 
-export const PokemonData: Record<string, Pokemon> = {
+export const PokemonDataMap: Record<string, PokemonData> = {
   "Bulbasaur": {
     "types": [
       "grass",

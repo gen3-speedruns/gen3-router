@@ -1,5 +1,6 @@
 import { applyStatStage } from "./stats";
-import type { PlayerSpec, EnemySpec } from "../gamedata/types";
+import type { Runner } from "../runner";
+import type { Encounter } from "../encounter";
 
 export type SpeedOutcome = "outspeed" | "outsped" | "tie";
 
@@ -10,14 +11,14 @@ export interface SpeedResult {
 }
 
 export function calcSpeedCheck(
-  player: PlayerSpec,
-  enemy: EnemySpec,
+  runner: Runner,
+  encounter: Encounter,
   playerStages: number,
   enemyStages: number,
 ): SpeedResult {
-  const enemySpeed = applyStatStage(enemy.stats.spe, enemyStages);
-  let playerSpeed = applyStatStage(player.stats.spe, playerStages);
-  if (player.badges.thunder) {
+  const enemySpeed = applyStatStage(encounter.stats.spe, enemyStages);
+  let playerSpeed = applyStatStage(runner.stats.spe, playerStages);
+  if (runner.badges.thunder) {
     playerSpeed = Math.floor((playerSpeed * 110) / 100);
   }
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { useEncounter } from "./EncounterContext";
-import { getKoChance } from "../selectors/damageSelectors";
+import { getKoChance } from "../domain/combat";
 
 interface KoChanceProps {
   move?: string;
@@ -17,7 +17,7 @@ export const KoChance: React.FC<KoChanceProps> = ({
   pinch = false,
   stages = 0,
 }) => {
-  const { player, enemy } = useEncounter();
+  const { runner, encounter } = useEncounter();
 
   const moveList = moves ?? Array(hits).fill(move);
   if (moveList.some((m) => !m)) {
@@ -28,7 +28,7 @@ export const KoChance: React.FC<KoChanceProps> = ({
     );
   }
 
-  const result = getKoChance(player, enemy, moveList, { pinch, stages });
+  const result = getKoChance(runner, encounter, moveList, pinch, stages);
   if (!result) {
     return (
       <div className="px-4 py-2 text-sm text-error">
