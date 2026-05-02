@@ -33,6 +33,21 @@ export interface Move {
   pp: number;
 }
 
+export interface TrainerPartyMember {
+  iv: number;
+  level: number;
+  species: string;
+  moves?: string[];
+  heldItem?: string;
+}
+
+export interface TrainerData {
+  name: string;
+  isFemale: boolean;
+  isDouble: boolean;
+  party: TrainerPartyMember[];
+}
+
 export interface BadgeBoosts {
   boulder: boolean;
   thunder: boolean;

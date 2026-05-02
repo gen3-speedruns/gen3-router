@@ -8,7 +8,8 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test": "vitest"
+    "test": "vitest",
+    "parse": "node data_parser.js"
   },
   "dependencies": {
     "@markdoc/markdoc": "^0.5.7",
@@ -35,9 +36,11 @@
     "globals": "^17.5.0",
     "postcss": "^8.5.12",
     "tailwindcss": "^4.2.4",
+    "tree-sitter-c": "^0.24.1",
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.58.2",
     "vite": "^8.0.10",
-    "vitest": "^4.1.5"
+    "vitest": "^4.1.5",
+    "web-tree-sitter": "^0.26.8"
   }
 }

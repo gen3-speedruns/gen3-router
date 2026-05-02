@@ -686,7 +686,7 @@ export const PokemonData: Record<string, Pokemon> = {
     "growthRate": "MediumFast",
     "dexId": 28
   },
-  "Nidoran_f": {
+  "Nidoran F": {
     "types": [
       "poison"
     ],
@@ -759,7 +759,7 @@ export const PokemonData: Record<string, Pokemon> = {
     "growthRate": "MediumSlow",
     "dexId": 31
   },
-  "Nidoran_m": {
+  "Nidoran M": {
     "types": [
       "poison"
     ],
@@ -2956,7 +2956,7 @@ export const PokemonData: Record<string, Pokemon> = {
     "growthRate": "Slow",
     "dexId": 121
   },
-  "Mr_mime": {
+  "Mr Mime": {
     "types": [
       "psychic"
     ],
@@ -6085,7 +6085,7 @@ export const PokemonData: Record<string, Pokemon> = {
     "growthRate": "Slow",
     "dexId": 249
   },
-  "Ho_oh": {
+  "Ho Oh": {
     "types": [
       "fire",
       "flying"
