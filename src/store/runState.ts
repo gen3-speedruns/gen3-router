@@ -66,8 +66,13 @@ export const useRunStore = create<AppState>((set) => ({
   evolve: (newSpecies) =>
     set((state) => {
       if (!state.player) return state;
+      const data = PokemonData[newSpecies];
       return {
-        player: { ...state.player, species: newSpecies },
+        player: {
+          ...state.player,
+          species: newSpecies,
+          growthRate: data.growthRate,
+        },
       };
     }),
 

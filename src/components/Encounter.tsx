@@ -4,6 +4,7 @@ import { EncounterProvider } from "./EncounterContext";
 import { buildEnemySpec, buildPlayerSpec } from "../selectors/playerSelectors";
 import { TypeBadge } from "./TypeBadge";
 import { PokemonSprite } from "./PokemonSprite";
+import { RouteCard } from "./RouteCard";
 
 interface EncounterProps {
   species: string;
@@ -54,46 +55,38 @@ export const Encounter: React.FC<EncounterProps> = ({
 
   return (
     <EncounterProvider value={{ player: playerSpec, enemy: enemySpec }}>
-      <section
-        className={`card my-4 border border-base-content/10 bg-base-100 shadow-sm ${
-          defeated ? "opacity-70" : ""
-        }`}
+      <RouteCard
+        faded={defeated}
+        left={<PokemonSprite dexId={enemySpec.dexId} name={species} />}
+        title={
+          <>
+            <span>{species}</span>
+            <span className="text-sm font-normal text-base-content/50">
+              Lv. {level}
+            </span>
+            {enemySpec.types.map((t) => (
+              <TypeBadge key={t} type={t} />
+            ))}
+            {optional && !defeated && (
+              <span className="badge badge-sm badge-ghost">optional</span>
+            )}
+          </>
+        }
+        action={
+          <button
+            onClick={() => {
+              gainEncounter(species, level, isTrainer);
+              setDefeated(true);
+            }}
+            disabled={defeated}
+            className="btn btn-sm btn-primary"
+          >
+            {defeated ? "Defeated" : "Defeat"}
+          </button>
+        }
       >
-        <div className="card-body gap-4 p-4">
-          <header className="flex items-center justify-between gap-3">
-            <div className="flex items-center min-w-0">
-              <PokemonSprite dexId={enemySpec.dexId} name={species} />
-              <div className="card-title flex-wrap items-baseline gap-x-2 gap-y-1 pl-2">
-                <span>{species}</span>
-                <span className="text-sm font-normal text-base-content/50">
-                  Lv. {level}
-                </span>
-                {enemySpec.types.map((t) => (
-                  <TypeBadge key={t} type={t} />
-                ))}
-                {optional && !defeated && (
-                  <span className="badge badge-sm badge-ghost">optional</span>
-                )}
-              </div>
-            </div>
-
-            <div className="card-actions">
-              <button
-                onClick={() => {
-                  gainEncounter(species, level, isTrainer);
-                  setDefeated(true);
-                }}
-                disabled={defeated}
-                className="btn btn-sm btn-primary"
-              >
-                {defeated ? "Defeated" : "Defeat"}
-              </button>
-            </div>
-          </header>
-
-          {children && <div className="space-y-3">{children}</div>}
-        </div>
-      </section>
+        {children}
+      </RouteCard>
     </EncounterProvider>
   );
 };

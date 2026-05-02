@@ -93,5 +93,12 @@ export const markdocConfig: Config = {
         id: { type: String, required: true },
       },
     },
+    evolve: {
+      render: "Evolve",
+      selfClosing: true,
+      attributes: {
+        into: { type: String, required: true },
+      },
+    },
   },
 };

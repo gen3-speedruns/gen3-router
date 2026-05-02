@@ -18,6 +18,7 @@ import { Choice } from "./components/Choice";
 import { Option } from "./components/Option";
 import { Enemy } from "./components/Enemy";
 import { GymBadge } from "./components/GymBadge";
+import { Evolve } from "./components/Evolve";
 
 const components = {
   Encounter,
@@ -33,6 +34,7 @@ const components = {
   Option,
   Enemy,
   GymBadge,
+  Evolve,
 };
 
 export default function App() {
