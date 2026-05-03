@@ -1,5 +1,5 @@
-import { useRunStore } from "../store/runState";
 import { PokemonDataMap } from "../gamedata/pokemon";
+import { useRunStore } from "../store/runState";
 import { PokemonSprite } from "./PokemonSprite";
 import { RouteCard } from "./RouteCard";
 
@@ -9,7 +9,7 @@ interface EvolveProps {
 
 export const Evolve: React.FC<EvolveProps> = ({ into }) => {
   const evolve = useRunStore((s) => s.evolve);
-  const currentSpecies = useRunStore((s) => s.runner?.species);
+  const currentSpecies = useRunStore((s) => s.run?.species);
   const alreadyEvolved = currentSpecies === into;
   const intoData = PokemonDataMap[into];
 

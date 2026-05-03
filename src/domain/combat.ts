@@ -1,5 +1,5 @@
 import { MoveDataMap } from "../gamedata/moves";
-import type { Runner } from "./runner";
+import { PokemonDataMap } from "../gamedata/pokemon";
 import type { Encounter } from "./encounter";
 import {
   calcDamageIn,
@@ -9,41 +9,86 @@ import {
   type KoChanceResult,
 } from "./mechanics/damage";
 import { calcSpeedCheck, type SpeedResult } from "./mechanics/speed";
+import type { BattleStats } from "./mechanics/types";
+import { levelOf, statsOf, type Run } from "./run";
 
 export type { DamageResult, KoChanceResult, SpeedResult };
 
-export function getDamageIn(
-  attacker: Encounter,
-  defender: Runner,
+export function damageIn(
+  run: Run,
+  encounter: Encounter,
   moveName: string,
   stages?: number,
+  isPinchActive?: boolean,
 ): DamageResult | null {
   const move = MoveDataMap[moveName];
   if (!move) return null;
-  return calcDamageIn(attacker, defender, move, stages);
+
+  return calcDamageIn(
+    encounterBattleStats(encounter, stages, isPinchActive),
+    runBattleStats(run, stages, false),
+    move,
+  );
 }
 
-export function getKoChance(
-  attacker: Runner,
-  defender: Encounter,
+export function koChance(
+  run: Run,
+  encounter: Encounter,
   moveNames: string[],
-  pinch?: boolean,
   stages?: number,
+  isPinchActive?: boolean,
 ): KoChanceResult | null {
   const moves = moveNames.map((n) => MoveDataMap[n]).filter(Boolean);
-  if (!moves.length) return null;
-  return calcKoChance(attacker, defender, moves, pinch, stages);
+  if (!moves) return null;
+
+  return calcKoChance(
+    runBattleStats(run, stages, isPinchActive),
+    encounterBattleStats(encounter, 0, false),
+    moves,
+  );
 }
 
 export function getSpeedCheck(
-  runner: Runner,
+  run: Run,
   encounter: Encounter,
-  runnerStages = 0,
-  encounterStages = 0,
+  runnerStages?: number,
+  encounterStages?: number,
 ): SpeedResult {
-  return calcSpeedCheck(runner, encounter, runnerStages, encounterStages);
+  return calcSpeedCheck(
+    runBattleStats(run, runnerStages ?? 0, false),
+    encounterBattleStats(encounter, encounterStages ?? 0, false),
+  );
 }
 
-export function getPoisonDamage(runner: Runner): number {
-  return calcPoisonDamage(runner);
+export function poisonDamage(run: Run): number {
+  return calcPoisonDamage(runBattleStats(run).stats);
+}
+
+function runBattleStats(
+  run: Run,
+  stages?: number,
+  isPinchActive?: boolean,
+): BattleStats {
+  return {
+    level: levelOf(run),
+    types: PokemonDataMap[run.species].types,
+    stats: statsOf(run),
+    stages: stages ?? 0,
+    isPinchActive: isPinchActive ?? false,
+    badges: run.badges,
+  };
+}
+
+function encounterBattleStats(
+  encounter: Encounter,
+  stages?: number,
+  isPinchActive?: boolean,
+): BattleStats {
+  return {
+    level: encounter.level,
+    types: encounter.types,
+    stats: encounter.stats,
+    stages: stages ?? 0,
+    isPinchActive: isPinchActive ?? false,
+  };
 }

@@ -1,6 +1,5 @@
 import { PokemonDataMap } from "../gamedata/pokemon";
 import type { Nature, PokemonType, StatsTable } from "../gamedata/types";
-import { calculateExpYield } from "./mechanics/experience";
 import { calcHealth, calcStat } from "./mechanics/stats";
 
 export interface Encounter {
@@ -46,19 +45,4 @@ function buildStats(
     spd: calcStat("spd", base.spd, level, iv, 0, nature),
     spe: calcStat("spe", base.spe, level, iv, 0, nature),
   };
-}
-
-export interface EncounterYield {
-  exp: number;
-  evs: StatsTable;
-}
-
-export function calcEncounterYield(encounter: Encounter): EncounterYield {
-  const data = PokemonDataMap[encounter.species];
-  const exp = calculateExpYield(
-    data.baseExp,
-    encounter.level,
-    encounter.isTrainer,
-  );
-  return { exp, evs: data.evYield };
 }

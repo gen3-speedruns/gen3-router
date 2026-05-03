@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { useRunStore } from "../store/runState";
 import { PokemonDataMap } from "../gamedata/pokemon";
-import { PokemonSprite } from "./PokemonSprite";
 import type { Nature } from "../gamedata/types";
+import { useRunStore } from "../store/runState";
+import { PokemonSprite } from "./PokemonSprite";
 
 interface StarterProps {
   species: string;
@@ -15,8 +15,8 @@ export const Starter: React.FC<StarterProps> = ({
   level,
   natures,
 }) => {
-  const initRunner = useRunStore((state) => state.initRunner);
-  const isInitialized = useRunStore((state) => state.runner !== null);
+  const startRun = useRunStore((state) => state.startRun);
+  const isInitialized = useRunStore((state) => state.run !== null);
 
   const [nature, setNature] = useState<Nature>(natures[0]);
   const [ivs, setIvs] = useState({
@@ -30,7 +30,7 @@ export const Starter: React.FC<StarterProps> = ({
 
   const handleStart = (e: React.SubmitEvent) => {
     e.preventDefault();
-    if (!isInitialized) initRunner(species, level, nature, ivs);
+    if (!isInitialized) startRun(species, level, nature, ivs);
   };
 
   const handleIvChange = (stat: keyof typeof ivs, val: string) => {

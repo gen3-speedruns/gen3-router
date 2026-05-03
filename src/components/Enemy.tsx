@@ -1,8 +1,7 @@
 import React, { useMemo } from "react";
+import { resolveEncounter } from "../domain/encounter";
 import { useRunStore } from "../store/runState";
 import { EncounterProvider } from "./EncounterContext";
-import { resolveEncounter } from "../domain/encounter";
-import { buildRunner } from "../domain/runner";
 
 interface EnemyProps {
   species: string;
@@ -17,16 +16,10 @@ export const Enemy: React.FC<EnemyProps> = ({
   fixedIv,
   children,
 }) => {
-  const runnerRecord = useRunStore((s) => s.runner);
-
+  const run = useRunStore((s) => s.run);
   const encounter = useMemo(
     () => resolveEncounter(species, level, false, fixedIv),
     [species, level, fixedIv],
-  );
-
-  const runner = useMemo(
-    () => (runnerRecord ? buildRunner(runnerRecord) : null),
-    [runnerRecord],
   );
 
   if (!encounter)
@@ -36,7 +29,7 @@ export const Enemy: React.FC<EnemyProps> = ({
       </div>
     );
 
-  if (!runner)
+  if (!run)
     return (
       <div className="text-base-content/50 italic text-sm">
         Set your starter to see calcs.
@@ -44,8 +37,6 @@ export const Enemy: React.FC<EnemyProps> = ({
     );
 
   return (
-    <EncounterProvider value={{ runner: runner, encounter: encounter }}>
-      {children}
-    </EncounterProvider>
+    <EncounterProvider value={{ run, encounter }}>{children}</EncounterProvider>
   );
 };

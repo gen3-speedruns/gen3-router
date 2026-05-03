@@ -1,6 +1,6 @@
 import React, { useState } from "react";
+import { useRun } from "../hooks/useRun";
 import { useRunStore } from "../store/runState";
-import { buildRunner } from "../domain/runner";
 
 const SidebarShell: React.FC<{ children: React.ReactNode }> = ({
   children,
@@ -16,11 +16,11 @@ const SidebarShell: React.FC<{ children: React.ReactNode }> = ({
 );
 
 export const Sidebar: React.FC = () => {
-  const runnerRecord = useRunStore((state) => state.runner);
+  const runView = useRun();
   const reset = useRunStore((s) => s.reset);
   const [confirming, setConfirming] = useState(false);
 
-  if (!runnerRecord) {
+  if (!runView) {
     return (
       <SidebarShell>
         <div className="card bg-base-200 border border-base-content/10">
@@ -32,24 +32,24 @@ export const Sidebar: React.FC = () => {
     );
   }
 
-  const { level, pinchThreshold, stats } = buildRunner(runnerRecord);
+  const { run, level, stats, pinchThreshold } = runView;
   return (
     <SidebarShell>
       {/* Main Info */}
       <div className="card bg-base-200 border border-base-content/10">
         <div className="card-body p-4 gap-2">
           <div className="flex justify-between items-center border-b border-base-content/10 pb-2 mb-1">
-            <h2 className="card-title text-lg">{runnerRecord.species}</h2>
+            <h2 className="card-title text-lg">{run.species}</h2>
             <span className="badge badge-primary">Lv. {level}</span>
           </div>
           <div className="text-sm space-y-1">
             <div className="flex justify-between">
               <span className="text-base-content/60">Total EXP</span>
-              <span className="font-mono">{runnerRecord.totalExp}</span>
+              <span className="font-mono">{run.totalExp}</span>
             </div>
             <div className="flex justify-between border-b border-base-content/10 pb-2 mb-1">
               <span className="text-base-content/60">Nature</span>
-              <span>{runnerRecord.nature}</span>
+              <span>{run.nature}</span>
             </div>
             <div className="flex justify-between">
               <span className="text-base-content/60">Max HP</span>
@@ -74,8 +74,7 @@ export const Sidebar: React.FC = () => {
         <div className="card-body p-4">
           <div className="grid grid-cols-2 gap-4">
             {(["IVs", "EVs"] as const).map((label) => {
-              const data =
-                label === "IVs" ? runnerRecord.ivs : runnerRecord.evs;
+              const data = label === "IVs" ? run.ivs : run.evs;
               return (
                 <div key={label}>
                   <h3 className="font-bold text-sm border-b border-base-content/10 pb-1 mb-2">

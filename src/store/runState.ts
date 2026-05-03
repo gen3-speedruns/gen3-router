@@ -1,19 +1,20 @@
 import { create } from "zustand";
-import type { StatsTable, Nature } from "../gamedata/types";
 import { persist } from "zustand/middleware";
+import { type Encounter } from "../domain/encounter";
 import {
-  calcStartingExp,
+  applyEncounterYield,
+  startNewRun,
   type BadgeBoosts,
-  type RunnerRecord,
-} from "../domain/runner";
-import { calcEncounterYield, type Encounter } from "../domain/encounter";
+  type Run,
+} from "../domain/run";
+import type { Nature, StatsTable } from "../gamedata/types";
 
 interface AppState {
-  runner: RunnerRecord | null;
+  run: Run | null;
   completedActions: string[];
   choices: Record<string, string>;
 
-  initRunner: (
+  startRun: (
     species: string,
     level: number,
     nature: Nature,
@@ -30,35 +31,23 @@ interface AppState {
 export const useRunStore = create<AppState>()(
   persist(
     (set) => ({
-      runner: null,
+      run: null,
       completedActions: [],
       choices: {},
 
-      initRunner: (species, level, nature, ivs) =>
+      startRun: (species, level, nature, ivs) =>
         set(() => {
           return {
-            runner: {
-              species,
-              nature,
-              ivs,
-              evs: { hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0 },
-              totalExp: calcStartingExp(species, level),
-              badges: {
-                boulder: false,
-                thunder: false,
-                soul: false,
-                volcano: false,
-              },
-            },
+            run: startNewRun(species, level, nature, ivs),
           };
         }),
 
       evolve: (newSpecies) =>
         set((state) => {
-          if (!state.runner) return state;
+          if (!state.run) return state;
           return {
-            runner: {
-              ...state.runner,
+            run: {
+              ...state.run,
               species: newSpecies,
             },
           };
@@ -66,31 +55,19 @@ export const useRunStore = create<AppState>()(
 
       gainEncounter: (encounter) =>
         set((state) => {
-          if (!state.runner) return state;
-          const { exp, evs } = calcEncounterYield(encounter);
-          const r = state.runner;
+          if (!state.run) return state;
           return {
-            runner: {
-              ...r,
-              totalExp: r.totalExp + exp,
-              evs: {
-                hp: Math.min(255, r.evs.hp + evs.hp),
-                atk: Math.min(255, r.evs.atk + evs.atk),
-                def: Math.min(255, r.evs.def + evs.def),
-                spa: Math.min(255, r.evs.spa + evs.spa),
-                spd: Math.min(255, r.evs.spd + evs.spd),
-                spe: Math.min(255, r.evs.spe + evs.spe),
-              },
-            },
+            run: applyEncounterYield(state.run, encounter),
           };
         }),
+
       gainBadge: (badge) =>
         set((state) => {
-          if (!state.runner) return state;
+          if (!state.run) return state;
           return {
-            runner: {
-              ...state.runner,
-              badges: { ...state.runner.badges, [badge]: true },
+            run: {
+              ...state.run,
+              badges: { ...state.run.badges, [badge]: true },
             },
           };
         }),
@@ -109,7 +86,7 @@ export const useRunStore = create<AppState>()(
 
       reset: () =>
         set(() => ({
-          runner: null,
+          run: null,
           completedActions: [],
           choices: {},
         })),

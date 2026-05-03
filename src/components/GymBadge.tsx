@@ -1,4 +1,4 @@
-import type { BadgeBoosts } from "../domain/runner";
+import type { BadgeBoosts } from "../domain/run";
 import { useRunStore } from "../store/runState";
 import { RouteCard } from "./RouteCard";
 
@@ -19,7 +19,7 @@ interface GymBadgeProps {
 
 export const GymBadge: React.FC<GymBadgeProps> = ({ id }) => {
   const gainBadge = useRunStore((s) => s.gainBadge);
-  const alreadyObtained = useRunStore((s) => s.runner?.badges[id] ?? false);
+  const alreadyObtained = useRunStore((s) => s.run?.badges[id] ?? false);
   const meta = BADGE_META[id];
 
   return (

@@ -1,9 +1,9 @@
 import { createContext, useContext } from "react";
-import type { Runner } from "../domain/runner";
 import type { Encounter } from "../domain/encounter";
+import type { Run } from "../domain/run";
 
 interface EncounterContextValue {
-  runner: Runner;
+  run: Run;
   encounter: Encounter;
 }
 

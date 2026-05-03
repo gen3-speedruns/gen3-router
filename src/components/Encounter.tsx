@@ -1,12 +1,11 @@
 import React, { useMemo } from "react";
+import { resolveEncounter } from "../domain/encounter";
+import { useRouteAction } from "../hooks/useRouteAction";
 import { useRunStore } from "../store/runState";
 import { EncounterProvider } from "./EncounterContext";
-import { TypeBadge } from "./TypeBadge";
 import { PokemonSprite } from "./PokemonSprite";
 import { RouteCard } from "./RouteCard";
-import { useRouteAction } from "../hooks/useRouteAction";
-import { buildRunner } from "../domain/runner";
-import { resolveEncounter } from "../domain/encounter";
+import { TypeBadge } from "./TypeBadge";
 
 interface EncounterProps {
   species: string;
@@ -27,16 +26,10 @@ export const Encounter: React.FC<EncounterProps> = ({
 }) => {
   const { completed, complete } = useRouteAction();
   const gainEncounter = useRunStore((state) => state.gainEncounter);
-  const runnerRecord = useRunStore((s) => s.runner);
-
+  const run = useRunStore((s) => s.run);
   const encounter = useMemo(
     () => resolveEncounter(species, level, isTrainer, fixedIv),
     [species, level, isTrainer, fixedIv],
-  );
-
-  const runner = useMemo(
-    () => (runnerRecord ? buildRunner(runnerRecord) : null),
-    [runnerRecord],
   );
 
   if (!encounter) {
@@ -47,7 +40,7 @@ export const Encounter: React.FC<EncounterProps> = ({
     );
   }
 
-  if (!runner) {
+  if (!run) {
     return (
       <div className="text-base-content/50 italic p-4">
         Set your starter to see calcs.
@@ -56,7 +49,7 @@ export const Encounter: React.FC<EncounterProps> = ({
   }
 
   return (
-    <EncounterProvider value={{ runner: runner, encounter: encounter }}>
+    <EncounterProvider value={{ run, encounter }}>
       <RouteCard
         faded={completed}
         left={<PokemonSprite dexId={encounter.dexId} name={species} />}

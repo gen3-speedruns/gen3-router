@@ -1,8 +1,8 @@
 import { describe, expect, it } from "vitest";
-import { calcDamageIn, calcKoChance } from "./damage";
-import type { BadgeBoosts, Runner } from "../runner";
 import type { MoveData } from "../../gamedata/types";
-import type { Encounter } from "../encounter";
+import type { BadgeBoosts } from "../run";
+import { calcDamageIn, calcKoChance } from "./damage";
+import type { BattleStats } from "./types";
 
 const NO_BADGES: BadgeBoosts = {
   boulder: false,
@@ -30,22 +30,20 @@ const fightingMove: MoveData = {
   pp: 10,
 };
 
-const enemy: Encounter = {
-  species: "",
-  dexId: 0,
-  level: 50,
-  isTrainer: false,
-  types: ["poison"],
-  stats: { hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100 },
-};
-const player: Runner = {
-  species: "",
-  dexId: 0,
+const player: BattleStats = {
   level: 50,
   types: ["water"],
   stats: { hp: 200, atk: 100, def: 100, spa: 100, spd: 100, spe: 100 },
-  pinchThreshold: 66,
+  stages: 0,
+  isPinchActive: false,
   badges: NO_BADGES,
+};
+const enemy: BattleStats = {
+  level: 50,
+  types: ["poison"],
+  stats: { hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100 },
+  stages: 0,
+  isPinchActive: false,
 };
 
 describe("calcDamageIn — base formula", () => {
@@ -73,7 +71,7 @@ describe("calcDamageIn — base formula", () => {
   });
 
   it("uses Def for physical and SpD for special moves", () => {
-    const tankyPhysical: Runner = {
+    const tankyPhysical: BattleStats = {
       ...player,
       types: ["normal"],
       stats: { ...player.stats, def: 200, spd: 50 },
@@ -89,7 +87,7 @@ describe("calcDamageIn — base formula", () => {
 
 describe("calcDamageIn — STAB", () => {
   it("applies floor(15x/10) when attacker type matches move type", () => {
-    const stabEnemy: Encounter = { ...enemy, types: ["normal"] };
+    const stabEnemy: BattleStats = { ...enemy, types: ["normal"] };
     const { min, max } = calcDamageIn(stabEnemy, player, physicalMove);
     expect(min).toBe(46);
     expect(max).toBe(55);
@@ -143,29 +141,41 @@ describe("calcDamageIn — type effectiveness", () => {
 
 describe("calcDamageIn — defender stat stages", () => {
   it("increases damage at stage -1", () => {
-    const { min, max } = calcDamageIn(enemy, player, physicalMove, -1);
+    const { min, max } = calcDamageIn(
+      enemy,
+      { ...player, stages: -1 },
+      physicalMove,
+    );
     expect(min).toBe(46);
     expect(max).toBe(55);
   });
 
   it("decreases damage at stage +1", () => {
-    const { min, max } = calcDamageIn(enemy, player, physicalMove, 1);
+    const { min, max } = calcDamageIn(
+      enemy,
+      { ...player, stages: 1 },
+      physicalMove,
+    );
     expect(min).toBe(21);
     expect(max).toBe(25);
   });
 
   it("applies stage -6 (x1/4 via floor(stat*10/40))", () => {
-    expect(calcDamageIn(enemy, player, physicalMove, -6).max).toBe(142);
+    expect(
+      calcDamageIn(enemy, { ...player, stages: -6 }, physicalMove).max,
+    ).toBe(142);
   });
 
   it("applies stage +6 (x4 via floor(stat*40/10))", () => {
-    expect(calcDamageIn(enemy, player, physicalMove, 6).max).toBe(10);
+    expect(
+      calcDamageIn(enemy, { ...player, stages: 6 }, physicalMove).max,
+    ).toBe(10);
   });
 });
 
 describe("calcDamageIn — badge boosts (player as defender)", () => {
   it("Soul badge reduces incoming physical damage (110% def)", () => {
-    const badgedPlayer: Runner = {
+    const badgedPlayer: BattleStats = {
       ...player,
       badges: { ...NO_BADGES, soul: true },
     };
@@ -178,7 +188,7 @@ describe("calcDamageIn — badge boosts (player as defender)", () => {
   });
 
   it("Volcano badge reduces incoming special damage (110% spd)", () => {
-    const badgedPlayer: Runner = {
+    const badgedPlayer: BattleStats = {
       ...player,
       types: ["normal"], // neutral vs Fire
       badges: { ...NO_BADGES, volcano: true },
@@ -195,7 +205,7 @@ describe("calcDamageIn — badge boosts (player as defender)", () => {
   });
 
   it("Boulder badge has no effect on incoming physical damage (enemy has no badges)", () => {
-    const badgedPlayer: Runner = {
+    const badgedPlayer: BattleStats = {
       ...player,
       badges: { ...NO_BADGES, boulder: true },
     };
@@ -208,11 +218,11 @@ describe("calcDamageIn — badge boosts (player as defender)", () => {
 
 describe("calcKoChance — badge boosts (player as attacker)", () => {
   it("Boulder badge increases outgoing physical damage (110% atk)", () => {
-    const badgedPlayer: Runner = {
+    const badgedPlayer: BattleStats = {
       ...player,
       badges: { ...NO_BADGES, boulder: true },
     };
-    const borderEnemy: Encounter = {
+    const borderEnemy: BattleStats = {
       ...enemy,
       stats: { ...enemy.stats, hp: 40 },
     };
@@ -224,7 +234,7 @@ describe("calcKoChance — badge boosts (player as attacker)", () => {
   });
 
   it("Soul badge has no effect on outgoing physical damage (player is attacker)", () => {
-    const badgedPlayer: Runner = {
+    const badgedPlayer: BattleStats = {
       ...player,
       badges: { ...NO_BADGES, soul: true },
     };
@@ -237,7 +247,7 @@ describe("calcKoChance — badge boosts (player as attacker)", () => {
 
 describe("calcDamageIn — OHKO / lethality", () => {
   it("isLethal when max roll >= defender HP", () => {
-    const lowHpPlayer: Runner = {
+    const lowHpPlayer: BattleStats = {
       ...player,
       stats: { ...player.stats, hp: 30 },
     };
@@ -255,7 +265,7 @@ describe("calcDamageIn — OHKO / lethality", () => {
   });
 
   it("counts partial OHKO rolls — only the 100% roll hits at hp=37", () => {
-    const exactHpPlayer: Runner = {
+    const exactHpPlayer: BattleStats = {
       ...player,
       stats: { ...player.stats, hp: 37 },
     };
@@ -267,7 +277,7 @@ describe("calcDamageIn — OHKO / lethality", () => {
 
 describe("calcKoChance", () => {
   it("guaranteed KO when all combo rolls exceed enemy HP", () => {
-    const weakEnemy: Encounter = {
+    const weakEnemy: BattleStats = {
       ...enemy,
       stats: { ...enemy.stats, hp: 10 },
     };
@@ -285,7 +295,7 @@ describe("calcKoChance", () => {
   });
 
   it("produces 16^n combos for n moves", () => {
-    const unreachable: Encounter = {
+    const unreachable: BattleStats = {
       ...enemy,
       stats: { ...enemy.stats, hp: 9999 },
     };
@@ -303,7 +313,7 @@ describe("calcKoChance", () => {
   });
 
   it("guaranteed=false when minimum roll misses but some rolls hit", () => {
-    const edgeEnemy: Encounter = {
+    const edgeEnemy: BattleStats = {
       ...enemy,
       stats: { ...enemy.stats, hp: 32 },
     };
@@ -314,23 +324,29 @@ describe("calcKoChance", () => {
   });
 
   it("pinch ability boosts damage output", () => {
-    const borderEnemy: Encounter = {
+    const borderEnemy: BattleStats = {
       ...enemy,
       stats: { ...enemy.stats, hp: 50 },
     };
-    const noPinch = calcKoChance(player, borderEnemy, [physicalMove], false);
-    const pinch = calcKoChance(player, borderEnemy, [physicalMove], true);
+    const noPinch = calcKoChance(player, borderEnemy, [physicalMove]);
+    const pinch = calcKoChance(
+      { ...player, isPinchActive: true },
+      borderEnemy,
+      [physicalMove],
+    );
     expect(noPinch.chance).toBe(0);
     expect(pinch.chance).toBeGreaterThan(0);
   });
 
   it("attacker stat stages increase KO count", () => {
-    const borderEnemy: Encounter = {
+    const borderEnemy: BattleStats = {
       ...enemy,
       stats: { ...enemy.stats, hp: 50 },
     };
-    const noStage = calcKoChance(player, borderEnemy, [physicalMove], false, 0);
-    const boosted = calcKoChance(player, borderEnemy, [physicalMove], false, 1);
+    const noStage = calcKoChance(player, borderEnemy, [physicalMove]);
+    const boosted = calcKoChance({ ...player, stages: 1 }, borderEnemy, [
+      physicalMove,
+    ]);
     expect(noStage.chance).toBe(0);
     expect(boosted.chance).toBeGreaterThan(0);
   });

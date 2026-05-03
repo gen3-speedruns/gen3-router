@@ -1,15 +1,14 @@
 import React from "react";
+import { hpGainOnLevelUp } from "../domain/run";
 import { useRunStore } from "../store/runState";
-import { getLevelUpHpGain } from "../selectors/runnerSelector";
 
 interface LevelUpHpGainProps {
   level: number;
 }
 
 export const LevelUpHpGain: React.FC<LevelUpHpGainProps> = ({ level }) => {
-  const runner = useRunStore((s) => s.runner);
-
-  if (!runner) {
+  const run = useRunStore((s) => s.run);
+  if (!run) {
     return (
       <div className="px-4 py-2 text-sm text-base-content/50 italic">
         Set your starter to see HP gain.
@@ -17,7 +16,7 @@ export const LevelUpHpGain: React.FC<LevelUpHpGainProps> = ({ level }) => {
     );
   }
 
-  const gain = getLevelUpHpGain(runner, level);
+  const gain = hpGainOnLevelUp(run, level);
   return (
     <div className="grid grid-cols-[5rem_1fr_auto] items-center gap-3 px-4 py-2 text-sm">
       <div className="text-xs font-medium uppercase tracking-wide text-base-content/45">

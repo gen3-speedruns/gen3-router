@@ -1,7 +1,6 @@
 import type { MoveData, PokemonType, StatsTable } from "../../gamedata/types";
-import type { Encounter } from "../encounter";
-import type { BadgeBoosts, Runner } from "../runner";
 import { applyStatStage } from "./stats";
+import type { BattleStats } from "./types";
 
 export interface DamageResult {
   rolls: number[];
@@ -13,37 +12,19 @@ export interface DamageResult {
 }
 
 export function calcDamageIn(
-  encounter: Encounter,
-  runner: Runner,
+  attacker: BattleStats,
+  defender: BattleStats,
   move: MoveData,
-  stages?: number,
 ): DamageResult {
-  const rolls = calcDmgRange(
-    {
-      level: encounter.level,
-      types: encounter.types,
-      stats: encounter.stats,
-      stages: 0,
-    },
-    {
-      level: runner.level,
-      types: runner.types,
-      stats: runner.stats,
-      stages: stages ?? 0,
-      badges: runner.badges,
-    },
-    move,
-    false,
-  );
-
-  const ohkoCount = rolls.filter((r) => r >= runner.stats.hp).length;
+  const rolls = calcDmgRange(attacker, defender, move);
+  const ohkoCount = rolls.filter((r) => r >= defender.stats.hp).length;
   return {
     rolls,
     min: rolls[0],
     max: rolls[15],
     ohkoCount,
     ohkoPct: Math.round((ohkoCount / 16) * 100),
-    isLethal: rolls[15] >= runner.stats.hp,
+    isLethal: rolls[15] >= defender.stats.hp,
   };
 }
 
@@ -55,31 +36,11 @@ export interface KoChanceResult {
 }
 
 export function calcKoChance(
-  runner: Runner,
-  encounter: Encounter,
+  attacker: BattleStats,
+  defender: BattleStats,
   moves: MoveData[],
-  pinch?: boolean,
-  stages?: number,
 ): KoChanceResult {
-  const rollSets = moves.map((move) =>
-    calcDmgRange(
-      {
-        level: runner.level,
-        types: runner.types,
-        stats: runner.stats,
-        stages: stages ?? 0,
-        badges: runner.badges,
-      },
-      {
-        level: encounter.level,
-        types: encounter.types,
-        stats: encounter.stats,
-        stages: 0,
-      },
-      move,
-      pinch ?? false,
-    ),
-  );
+  const rollSets = moves.map((move) => calcDmgRange(attacker, defender, move));
 
   let combos: number[] = rollSets[0];
   for (let i = 1; i < rollSets.length; i++) {
@@ -93,25 +54,17 @@ export function calcKoChance(
   }
 
   const outOf = combos.length;
-  const winning = combos.filter((total) => total >= encounter.stats.hp).length;
+  const winning = combos.filter((total) => total >= defender.stats.hp).length;
   return {
     chance: winning,
     outOf,
     pct: Math.round((winning / outOf) * 100),
-    guaranteed: combos[0] >= encounter.stats.hp,
+    guaranteed: combos[0] >= defender.stats.hp,
   };
 }
 
-export function calcPoisonDamage(runner: Runner) {
-  return Math.trunc(runner.stats.hp / 8);
-}
-
-interface Combatant {
-  level: number;
-  types: PokemonType[];
-  stats: StatsTable;
-  stages: number;
-  badges?: BadgeBoosts;
+export function calcPoisonDamage(stats: StatsTable) {
+  return Math.trunc(stats.hp / 8);
 }
 
 const SPECIAL_TYPES: PokemonType[] = [
@@ -166,10 +119,9 @@ const TYPE_INDEX: Record<PokemonType, number> = {
 };
 
 function calcDmgRange(
-  attacker: Combatant,
-  defender: Combatant,
+  attacker: BattleStats,
+  defender: BattleStats,
   move: MoveData,
-  isPinchAbilityActive: boolean,
 ): number[] {
   const isSpecial = SPECIAL_TYPES.includes(move.type);
   let atkStat = isSpecial ? attacker.stats.spa : attacker.stats.atk;
@@ -189,7 +141,7 @@ function calcDmgRange(
   }
 
   // Apply Pinch Ability (Torrent / Blaze / Overgrow / Swarm)
-  const power = isPinchAbilityActive
+  const power = attacker.isPinchActive
     ? Math.trunc((150 * move.power) / 100)
     : move.power;
 
