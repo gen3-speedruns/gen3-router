@@ -19,13 +19,12 @@ export function damageIn(
   encounter: Encounter,
   moveName: string,
   stages?: number,
-  isPinchActive?: boolean,
 ): DamageResult | null {
   const move = MoveDataMap[moveName];
   if (!move) return null;
 
   return calcDamageIn(
-    encounterBattleStats(encounter, stages, isPinchActive),
+    encounterBattleStats(encounter, stages),
     runBattleStats(run, stages, false),
     move,
   );
