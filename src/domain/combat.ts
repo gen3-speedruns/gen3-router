@@ -25,7 +25,7 @@ export function damageIn(
 
   return calcDamageIn(
     encounterBattleStats(encounter, stages),
-    runBattleStats(run, stages, false),
+    runBattleStats(run, stages),
     move,
   );
 }
@@ -37,25 +37,26 @@ export function koChance(
   stages?: number,
   isPinchActive?: boolean,
 ): KoChanceResult | null {
-  const moves = moveNames.map((n) => MoveDataMap[n]).filter(Boolean);
-  if (!moves) return null;
+  const moves = moveNames.map((n) => MoveDataMap[n]);
+  if (!moves.length || moveNames.length != moves.length) return null;
 
   return calcKoChance(
-    runBattleStats(run, stages, isPinchActive),
-    encounterBattleStats(encounter, 0, false),
+    runBattleStats(run, stages),
+    encounterBattleStats(encounter, 0),
     moves,
+    isPinchActive ?? false,
   );
 }
 
-export function getSpeedCheck(
+export function speedCheck(
   run: Run,
   encounter: Encounter,
   runnerStages?: number,
   encounterStages?: number,
 ): SpeedResult {
   return calcSpeedCheck(
-    runBattleStats(run, runnerStages ?? 0, false),
-    encounterBattleStats(encounter, encounterStages ?? 0, false),
+    runBattleStats(run, runnerStages ?? 0),
+    encounterBattleStats(encounter, encounterStages ?? 0),
   );
 }
 
@@ -63,17 +64,12 @@ export function poisonDamage(run: Run): number {
   return calcPoisonDamage(runBattleStats(run).stats);
 }
 
-function runBattleStats(
-  run: Run,
-  stages?: number,
-  isPinchActive?: boolean,
-): BattleStats {
+function runBattleStats(run: Run, stages?: number): BattleStats {
   return {
     level: levelOf(run),
     types: PokemonDataMap[run.species].types,
     stats: statsOf(run),
     stages: stages ?? 0,
-    isPinchActive: isPinchActive ?? false,
     badges: run.badges,
   };
 }
@@ -81,13 +77,11 @@ function runBattleStats(
 function encounterBattleStats(
   encounter: Encounter,
   stages?: number,
-  isPinchActive?: boolean,
 ): BattleStats {
   return {
     level: encounter.level,
     types: encounter.types,
     stats: encounter.stats,
     stages: stages ?? 0,
-    isPinchActive: isPinchActive ?? false,
   };
 }

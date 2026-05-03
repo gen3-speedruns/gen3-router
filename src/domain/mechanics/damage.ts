@@ -39,8 +39,11 @@ export function calcKoChance(
   attacker: BattleStats,
   defender: BattleStats,
   moves: MoveData[],
+  isPinchActive?: boolean,
 ): KoChanceResult {
-  const rollSets = moves.map((move) => calcDmgRange(attacker, defender, move));
+  const rollSets = moves.map((move) =>
+    calcDmgRange(attacker, defender, move, isPinchActive),
+  );
 
   let combos: number[] = rollSets[0];
   for (let i = 1; i < rollSets.length; i++) {
@@ -122,6 +125,7 @@ function calcDmgRange(
   attacker: BattleStats,
   defender: BattleStats,
   move: MoveData,
+  isPinchActive?: boolean,
 ): number[] {
   const isSpecial = SPECIAL_TYPES.includes(move.type);
   let atkStat = isSpecial ? attacker.stats.spa : attacker.stats.atk;
@@ -141,7 +145,7 @@ function calcDmgRange(
   }
 
   // Apply Pinch Ability (Torrent / Blaze / Overgrow / Swarm)
-  const power = attacker.isPinchActive
+  const power = isPinchActive
     ? Math.trunc((150 * move.power) / 100)
     : move.power;
 

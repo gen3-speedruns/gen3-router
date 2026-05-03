@@ -1,12 +1,8 @@
 import { PokemonDataMap } from "../gamedata/pokemon";
 import type { Nature, StatsTable } from "../gamedata/types";
-import type { Encounter } from "./encounter";
-import {
-  calculateExpYield,
-  getExpAtLevel,
-  getLevelFromExp,
-} from "./mechanics/experience";
+import { getExpAtLevel, getLevelFromExp } from "./mechanics/experience";
 import { calcHealth, calcPinchThreshold, calcStat } from "./mechanics/stats";
+import type { EncounterYield } from "./mechanics/types";
 
 export interface BadgeBoosts {
   boulder: boolean;
@@ -45,18 +41,14 @@ export function startingExpFor(species: string, level: number): number {
   return getExpAtLevel(level, data.growthRate);
 }
 
-export function applyEncounterYield(run: Run, encounter: Encounter): Run {
-  const data = PokemonDataMap[encounter.species];
-  const exp = calculateExpYield(
-    data.baseExp,
-    encounter.level,
-    encounter.isTrainer,
-  );
-
+export function applyEncounterYield(
+  run: Run,
+  encounterYield: EncounterYield,
+): Run {
   return {
     ...run,
-    totalExp: run.totalExp + exp,
-    evs: addEvs(run.evs, data.evYield),
+    totalExp: run.totalExp + encounterYield.exp,
+    evs: addEvs(run.evs, encounterYield.evs),
   };
 }
 

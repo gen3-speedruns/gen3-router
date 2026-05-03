@@ -6,6 +6,10 @@ export interface BattleStats {
   types: PokemonType[];
   stats: StatsTable;
   stages: number;
-  isPinchActive: boolean;
   badges?: BadgeBoosts;
+}
+
+export interface EncounterYield {
+  exp: number;
+  evs: StatsTable;
 }

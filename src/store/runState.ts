@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import { type Encounter } from "../domain/encounter";
+import { calcEncounterYield, type Encounter } from "../domain/encounter";
 import {
   applyEncounterYield,
   startNewRun,
@@ -57,7 +57,7 @@ export const useRunStore = create<AppState>()(
         set((state) => {
           if (!state.run) return state;
           return {
-            run: applyEncounterYield(state.run, encounter),
+            run: applyEncounterYield(state.run, calcEncounterYield(encounter)),
           };
         }),
 

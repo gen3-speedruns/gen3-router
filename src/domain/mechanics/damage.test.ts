@@ -35,7 +35,6 @@ const player: BattleStats = {
   types: ["water"],
   stats: { hp: 200, atk: 100, def: 100, spa: 100, spd: 100, spe: 100 },
   stages: 0,
-  isPinchActive: false,
   badges: NO_BADGES,
 };
 const enemy: BattleStats = {
@@ -43,7 +42,6 @@ const enemy: BattleStats = {
   types: ["poison"],
   stats: { hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100 },
   stages: 0,
-  isPinchActive: false,
 };
 
 describe("calcDamageIn — base formula", () => {
@@ -329,11 +327,7 @@ describe("calcKoChance", () => {
       stats: { ...enemy.stats, hp: 50 },
     };
     const noPinch = calcKoChance(player, borderEnemy, [physicalMove]);
-    const pinch = calcKoChance(
-      { ...player, isPinchActive: true },
-      borderEnemy,
-      [physicalMove],
-    );
+    const pinch = calcKoChance(player, borderEnemy, [physicalMove], true);
     expect(noPinch.chance).toBe(0);
     expect(pinch.chance).toBeGreaterThan(0);
   });
