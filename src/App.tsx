@@ -13,7 +13,6 @@ import { Option } from "./components/Option";
 import { PoisonDamage } from "./components/PoisonDamage";
 import { RareCandy } from "./components/RareCandy";
 import { RouteHeader } from "./components/RouteHeader";
-import { RouteIndexProvider } from "./components/RouteIndexProvider";
 import { Sidebar } from "./components/Sidebar";
 import { SpeedCheck } from "./components/SpeedCheck";
 import { Starter } from "./components/Starter";
@@ -82,9 +81,7 @@ export default function App() {
                 <RouteHeader frontmatter={route.data.frontmatter} />
               )}
               <div className="prose prose-sm sm:prose max-w-none dark:prose-invert">
-                <RouteIndexProvider>
-                  <RouteRenderer content={route.data.content} />
-                </RouteIndexProvider>
+                <RouteRenderer content={route.data.content} />
               </div>
             </>
           )}

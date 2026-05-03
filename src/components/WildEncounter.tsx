@@ -5,6 +5,7 @@ import { BaseEncounter } from "./BaseEncounter";
 import { EncounterProvider } from "./EncounterContext";
 
 interface WildEncounterProps {
+  id: string;
   species: string;
   level: number;
   optional?: boolean;
@@ -12,6 +13,7 @@ interface WildEncounterProps {
 }
 
 export const WildEncounter: React.FC<WildEncounterProps> = ({
+  id,
   species,
   level,
   optional = false,
@@ -37,9 +39,14 @@ export const WildEncounter: React.FC<WildEncounterProps> = ({
     );
   }
 
+  const actionId = `wild-encounter-${id}`;
   return (
     <EncounterProvider value={{ run, encounter }}>
-      <BaseEncounter encounter={encounter} optional={optional}>
+      <BaseEncounter
+        actionId={actionId}
+        encounter={encounter}
+        optional={optional}
+      >
         {children}
       </BaseEncounter>
     </EncounterProvider>

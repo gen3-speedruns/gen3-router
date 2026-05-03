@@ -14,6 +14,7 @@ export const markdocConfig: Config = {
       render: "WildEncounter",
       selfClosing: false,
       attributes: {
+        id: { type: String, required: true },
         species: { type: String, required: true },
         level: { type: Number, required: true },
         optional: { type: Boolean, default: false },
@@ -82,6 +83,7 @@ export const markdocConfig: Config = {
     choice: {
       render: "Choice",
       attributes: {
+        id: { type: String, required: true },
         label: { type: String },
       },
     },
@@ -109,7 +111,9 @@ export const markdocConfig: Config = {
     "rare-candy": {
       render: "RareCandy",
       selfClosing: true,
-      attributes: {},
+      attributes: {
+        id: { type: String, required: true },
+      },
     },
   },
 };

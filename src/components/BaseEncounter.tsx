@@ -7,18 +7,20 @@ import { RouteCard } from "./RouteCard";
 import { TypeBadge } from "./TypeBadge";
 
 interface EncounterProps {
+  actionId: string;
   encounter: Encounter;
   optional?: boolean;
   children?: React.ReactNode;
 }
 
 export const BaseEncounter: React.FC<EncounterProps> = ({
+  actionId,
   encounter,
   optional = false,
   children,
 }) => {
   const gainEncounter = useRunStore((state) => state.gainEncounter);
-  const { completed, complete } = useRouteAction();
+  const { completed, complete } = useRouteAction(actionId);
   return (
     <RouteCard
       faded={completed}

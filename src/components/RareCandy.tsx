@@ -2,15 +2,17 @@ import { useRouteAction } from "../hooks/useRouteAction";
 import { useRunStore } from "../store/runState";
 import { RouteCard } from "./RouteCard";
 
-export const RareCandy: React.FC = () => {
-  const { id } = useRouteAction();
+interface RareCandyProps {
+  id: string;
+}
+
+export const RareCandy: React.FC<RareCandyProps> = ({ id }) => {
+  const { completed, complete } = useRouteAction(id);
   const gainRareCandy = useRunStore((s) => s.gainRareCandy);
-  const completeAction = useRunStore((s) => s.completeAction);
-  const isCompleted = useRunStore((s) => s.completedActions.includes(id));
 
   return (
     <RouteCard
-      faded={isCompleted}
+      faded={completed}
       left={
         <img
           src={`/sprites/items/rare-candy.png`}
@@ -31,12 +33,12 @@ export const RareCandy: React.FC = () => {
         <button
           onClick={() => {
             gainRareCandy();
-            completeAction(id);
+            complete();
           }}
-          disabled={isCompleted}
+          disabled={completed}
           className="btn btn-sm btn-primary"
         >
-          {isCompleted ? "Used" : "Use"}
+          {completed ? "Used" : "Use"}
         </button>
       }
     />

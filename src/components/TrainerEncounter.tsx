@@ -39,9 +39,14 @@ export const TrainerEncounter: React.FC<TrainerEncounterProps> = ({
     );
   }
 
+  const actionId = `trainer-encounter-${trainerId}-${slot}`;
   return (
     <EncounterProvider value={{ run, encounter }}>
-      <BaseEncounter encounter={encounter} optional={optional}>
+      <BaseEncounter
+        actionId={actionId}
+        encounter={encounter}
+        optional={optional}
+      >
         {children}
       </BaseEncounter>
     </EncounterProvider>

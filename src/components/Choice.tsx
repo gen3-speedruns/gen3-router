@@ -1,15 +1,14 @@
 import React from "react";
-import { ChoiceProvider } from "./ChoiceContext";
-import { useRouteAction } from "../hooks/useRouteAction";
 import { useRunStore } from "../store/runState";
+import { ChoiceProvider } from "./ChoiceContext";
 
 interface ChoiceProps {
+  id: string;
   label?: string;
   children: React.ReactNode;
 }
 
-export const Choice: React.FC<ChoiceProps> = ({ label, children }) => {
-  const { id } = useRouteAction();
+export const Choice: React.FC<ChoiceProps> = ({ id, label, children }) => {
   const chosen = useRunStore((s) => s.choices[id] ?? null);
   const setChoice = useRunStore((s) => s.setChoice);
 
