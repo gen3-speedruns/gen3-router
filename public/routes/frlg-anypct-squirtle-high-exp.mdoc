@@ -392,7 +392,7 @@ Water Gun* (x2)
 {% strategy %}
 Water Gun* (x2)
 {% /strategy %}
-- Swap Water Gun to Slot 2 (Select + A + A)
+- Swap Water Gun to Slot 2 (Select + A + A).
 - If poisoned, Antidote immediately if you need a Rattata / Sandshrew / Paras. Otherwise **skip** and revive with a Rare Candy in Cerulean City.
 {% calcs %}
 {% speed-check /%}
@@ -419,3 +419,323 @@ Water Gun* (x2)
     {% rare-candy id="cerulean-rare-candy-1" /%}
     {% rare-candy id="cerulean-rare-candy-2" /%}
   - Teach Bite over Bubble.
+- Head to the gym.
+- Skip both gym trainers and talk to Misty from the right side.
+
+### Leader Misty
+
+{% trainer-encounter trainerId="TRAINER_LEADER_MISTY" %}
+{% strategy %}
+Bite (x2)
+{% /strategy %}
+{% calcs %}
+{% ko-chance move="Bite" hits=2 /%}
+{% /calcs %}
+{% /trainer-encounter %}
+
+{% trainer-encounter trainerId="TRAINER_LEADER_MISTY" slot=1 %}
+{% strategy %}
+Bite, (Tackle), Bite
+{% /strategy %}
+- Tackle if low roll on the first Bite.
+{% calcs %}
+{% damage-in move="Swift" /%}
+{% damage-in move="Water Pulse" /%}
+{% /calcs %}
+{% /trainer-encounter %}
+
+- After the fight:
+  - Teach Water Pulse over Tackle (Slot 2).
+  - Heal for Rival so you can survive a Quick Attack and Vine Whip.
+  {% calcs-for trainerId="TRAINER_RIVAL_CERULEAN_BULBASAUR" %}
+  {% damage-in move="Quick Attack" /%}
+  {% /calcs-for %}
+  {% calcs-for trainerId="TRAINER_RIVAL_CERULEAN_BULBASAUR" slot=3 %}
+  {% damage-in move="Vine Whip" /%}
+  {% /calcs-for %}
+
+## Nugget Bridge
+
+### Rival
+
+{% trainer-encounter trainerId="TRAINER_RIVAL_CERULEAN_BULBASAUR" %}
+{% strategy %}
+Bite, Water Pulse
+{% /strategy %}
+{% calcs %}
+{% ko-chance move="Water Pulse" pinch=true /%}
+{% damage-in move="Quick Attack" /%}
+{% /calcs %}
+{% /trainer-encounter %}
+
+{% trainer-encounter trainerId="TRAINER_RIVAL_CERULEAN_BULBASAUR" slot=3 %}
+{% strategy %}
+Bite, Mega Kick
+{% /strategy %}
+{% calcs %}
+{% ko-chance moves=["Bite", "Mega Kick"] /%}
+{% damage-in move="Vine Whip" /%}
+{% /calcs %}
+{% /trainer-encounter %}
+
+{% trainer-encounter trainerId="TRAINER_RIVAL_CERULEAN_BULBASAUR" slot=1 %}
+{% strategy %}
+Water Pulse
+{% /strategy %}
+{% calcs %}
+{% speed-check /%}
+{% ko-chance move="Water Pulse" /%}
+{% /calcs %}
+{% /trainer-encounter %}
+
+{% trainer-encounter trainerId="TRAINER_RIVAL_CERULEAN_BULBASAUR" slot=2 %}
+{% strategy %}
+Water Pulse
+{% /strategy %}
+{% calcs %}
+{% damage-in move="Quick Attack" /%}
+{% /calcs %}
+{% /trainer-encounter %}
+
+### Bug Catcher Cale
+
+{% trainer-encounter trainerId="TRAINER_BUG_CATCHER_CALE" %}
+{% strategy %}
+Bite
+{% /strategy %}
+{% /trainer-encounter %}
+
+{% trainer-encounter trainerId="TRAINER_BUG_CATCHER_CALE" slot=1 %}
+{% strategy %}
+Bite
+{% /strategy %}
+{% /trainer-encounter %}
+
+{% trainer-encounter trainerId="TRAINER_BUG_CATCHER_CALE" slot=2 %}
+{% strategy %}
+Bite
+{% /strategy %}
+{% /trainer-encounter %}
+
+{% trainer-encounter trainerId="TRAINER_BUG_CATCHER_CALE" slot=3 %}
+{% strategy %}
+Bite
+{% /strategy %}
+{% /trainer-encounter %}
+
+### Lass Ali
+
+{% trainer-encounter trainerId="TRAINER_LASS_ALI" %}
+{% strategy %}
+Bite
+{% /strategy %}
+{% /trainer-encounter %}
+
+{% trainer-encounter trainerId="TRAINER_LASS_ALI" slot=1 %}
+{% strategy %}
+Mega Kick
+{% /strategy %}
+{% /trainer-encounter %}
+
+{% trainer-encounter trainerId="TRAINER_LASS_ALI" slot=2 %}
+{% strategy %}
+Bite
+{% /strategy %}
+{% /trainer-encounter %}
+
+### Youngster Timmy
+
+{% trainer-encounter trainerId="TRAINER_YOUNGSTER_TIMMY" %}
+{% strategy %}
+Bite
+{% /strategy %}
+{% /trainer-encounter %}
+
+{% trainer-encounter trainerId="TRAINER_YOUNGSTER_TIMMY" slot=1 %}
+{% strategy %}
+Water Pulse
+{% /strategy %}
+- Can Water Gun everything from here in Torrent.
+{% /trainer-encounter %}
+
+### Lass Reli
+
+{% trainer-encounter trainerId="TRAINER_LASS_RELI" %}
+{% strategy %}
+Water Pulse
+{% /strategy %}
+{% /trainer-encounter %}
+
+{% trainer-encounter trainerId="TRAINER_LASS_RELI" slot=1 %}
+{% strategy %}
+Water Pulse
+{% /strategy %}
+{% /trainer-encounter %}
+
+### Camper Ethan
+
+{% trainer-encounter trainerId="TRAINER_CAMPER_ETHAN" %}
+{% strategy %}
+Water Pulse
+{% /strategy %}
+{% /trainer-encounter %}
+
+### Rocket Grunt
+
+{% trainer-encounter trainerId="TRAINER_TEAM_ROCKET_GRUNT_6" slot=1 %}
+{% strategy %}
+Water Pulse
+{% /strategy %}
+{% /trainer-encounter %}
+
+{% trainer-encounter trainerId="TRAINER_TEAM_ROCKET_GRUNT_6" %}
+{% strategy %}
+Water Pulse
+{% /strategy %}
+{% /trainer-encounter %}
+
+## Route 25
+
+- Go above the Hiker and grab this hidden Elixir. ![Elixir](images/frlg/Route25Elixir.png)
+
+### Hiker Wayne
+
+{% trainer-encounter trainerId="TRAINER_HIKER_WAYNE" %}
+{% strategy %}
+Water Gun
+{% /strategy %}
+{% /trainer-encounter %}
+
+- Yolo the camper spinner and fight the girl below him (1/16 to hit you with proper movement).
+
+### Picknicker Kelsey
+
+{% trainer-encounter trainerId="TRAINER_PICNICKER_KELSEY" %}
+{% strategy %}
+Water Pulse
+{% /strategy %}
+{% /trainer-encounter %}
+
+{% trainer-encounter trainerId="TRAINER_PICNICKER_KELSEY" slot=1 %}
+{% strategy %}
+Water Pulse
+{% /strategy %}
+{% /trainer-encounter %}
+
+- TODO: Handle Nob route
+
+### Camper Flint
+
+{% trainer-encounter trainerId="TRAINER_CAMPER_FLINT" %}
+{% strategy %}
+Water Pulse
+{% /strategy %}
+{% /trainer-encounter %}
+
+{% trainer-encounter trainerId="TRAINER_CAMPER_FLINT" slot=1 %}
+{% strategy %}
+Water Pulse
+{% /strategy %}
+{% /trainer-encounter %}
+
+- Consider skipping the Oran Berry (can still grab for safety). ![Oran Berry](images/frlg/Route25OranBerry.png)
+
+### Lass Haley
+
+{% trainer-encounter trainerId="TRAINER_LASS_HALEY" %}
+{% strategy %}
+Mega Kick
+{% /strategy %}
+{% calcs %}
+{% ko-chance move="Water Pulse" pinch=true /%}
+{% /calcs %}
+{% /trainer-encounter %}
+
+{% trainer-encounter trainerId="TRAINER_LASS_HALEY" slot=2 %}
+{% strategy %}
+Mega Kick
+{% /strategy %}
+{% calcs %}
+{% ko-chance move="Water Pulse" pinch=true /%}
+{% /calcs %}
+{% /trainer-encounter %}
+
+{% trainer-encounter trainerId="TRAINER_LASS_HALEY" slot=1 %}
+{% strategy %}
+Bite
+{% /strategy %}
+{% calcs %}
+{% damage-in move="Quick Attack" /%}
+{% /calcs %}
+{% /trainer-encounter %}
+
+- Grab this hidden Ether (risky but can skip if Torrent at 26 and 2x Mega Kick left). ![Ether](images/frlg/Route25Ether.png)
+- Get the S.S. Ticket, then run back to Cerulean City and enter the Dig house.
+  - Ether before Drowzee / Raticate if you need the Mega Kicks (not in Torrent).
+
+## Cerulean City
+
+### Rocket Grunt
+
+{% trainer-encounter trainerId="TRAINER_TEAM_ROCKET_GRUNT_5" %}
+{% strategy %}
+Water Pulse
+{% /strategy %}
+{% /trainer-encounter %}
+
+{% trainer-encounter trainerId="TRAINER_TEAM_ROCKET_GRUNT_5" slot=1 %}
+{% strategy %}
+Mega Kick
+{% /strategy %}
+{% calcs %}
+{% ko-chance move="Water Pulse" pinch=true /%}
+{% damage-in move="Headbutt" /%}
+{% damage-in move="Confusion" /%}
+{% /calcs %}
+{% /trainer-encounter %}
+
+## Route 6
+
+- Grab this hidden Rare Candy. ![Rare Candy](images/frlg/Route6RareCandy.png)
+- Consider the Sitrus Berry with low Sp. Def. ![Sitrus Berry](images/frlg/Route6Sitrus.png)
+- Avoid the Bug Catcher and fight the Camper below the girl trainer.
+
+### Camper Jeff
+
+{% trainer-encounter trainerId="TRAINER_CAMPER_JEFF" %}
+{% strategy %}
+Water Pulse
+{% /strategy %}
+{% /trainer-encounter %}
+
+{% trainer-encounter trainerId="TRAINER_CAMPER_JEFF" slot=1 %}
+{% strategy %}
+Water Pulse* / Mega Kick
+{% /strategy %}
+{% calcs %}
+{% damage-in move="Quick Attack" /%}
+{% /calcs %}
+{% /trainer-encounter %}
+
+## Vermilion City
+
+- Head straight to the mart and buy
+  - 5x Super Potion (↓)
+  - 3x Paralyze Heal (↓↓)
+  - 3x Repel (↓↓↓)
+- Head to the S.S. Anne.
+
+## S.S. Anne
+
+Before fighting the rival:
+- Rare Candy to level 27 if you do not level out of torrent.
+- Ether Mega Kick if you have not already.
+- Keep Torrent if you are still in it and will not die to Quick Attack.
+
+  {% calcs-for trainerId="TRAINER_RIVAL_SS_ANNE_BULBASAUR" %}
+  {% level-up-hp-gain level=27 /%}
+  {% damage-in move="Quick Attack" /%}
+  {% /calcs-for %}
+
+### Rival
+
