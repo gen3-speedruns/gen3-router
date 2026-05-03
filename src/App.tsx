@@ -12,6 +12,7 @@ import { KoChance } from "./components/KoChance";
 import { LevelUpHpGain } from "./components/LevelUpHpGain";
 import { Option } from "./components/Option";
 import { PoisonDamage } from "./components/PoisonDamage";
+import { RareCandy } from "./components/RareCandy";
 import { RouteHeader } from "./components/RouteHeader";
 import { RouteIndexProvider } from "./components/RouteIndexProvider";
 import { Sidebar } from "./components/Sidebar";
@@ -36,6 +37,7 @@ const components = {
   Option,
   GymBadge,
   Evolve,
+  RareCandy,
 };
 
 export default function App() {

@@ -118,6 +118,11 @@ export const markdocConfig: Config = {
         into: { type: String, required: true },
       },
     },
+    "rare-candy": {
+      render: "RareCandy",
+      selfClosing: true,
+      attributes: {},
+    },
   },
 };
 

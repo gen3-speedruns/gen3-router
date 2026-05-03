@@ -130,3 +130,13 @@ export function hpGainOnLevelUp(run: Run, targetLevel: number): number {
   }).hp;
   return nextHp - currentHp;
 }
+
+export function applyRareCandy(run: Run): Run {
+  const data = PokemonDataMap[run.species];
+  const currentLevel = levelOf(run);
+  if (currentLevel >= 100) return run;
+  return {
+    ...run,
+    totalExp: getExpAtLevel(currentLevel + 1, data.growthRate),
+  };
+}

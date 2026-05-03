@@ -3,6 +3,7 @@ import { persist } from "zustand/middleware";
 import { calcEncounterYield, type Encounter } from "../domain/encounter";
 import {
   applyEncounterYield,
+  applyRareCandy,
   startNewRun,
   type BadgeBoosts,
   type Run,
@@ -23,6 +24,7 @@ interface AppState {
   evolve: (newSpecies: string) => void;
   gainEncounter: (encounter: Encounter) => void;
   gainBadge: (badge: keyof BadgeBoosts) => void;
+  gainRareCandy: () => void;
   completeAction: (id: string) => void;
   setChoice: (id: string, value: string) => void;
   reset: () => void;
@@ -70,6 +72,12 @@ export const useRunStore = create<AppState>()(
               badges: { ...state.run.badges, [badge]: true },
             },
           };
+        }),
+
+      gainRareCandy: () =>
+        set((state) => {
+          if (!state.run) return state;
+          return { run: applyRareCandy(state.run) };
         }),
 
       completeAction: (id) =>
