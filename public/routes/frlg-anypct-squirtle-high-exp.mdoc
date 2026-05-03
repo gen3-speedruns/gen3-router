@@ -27,7 +27,7 @@ Please check the **Before Starting** section of it when you are new to the game.
 
 ### Rival 1
 
-{% encounter trainerId="TRAINER_RIVAL_OAKS_LAB_BULBASAUR" %}
+{% trainer-encounter trainerId="TRAINER_RIVAL_OAKS_LAB_BULBASAUR" %}
 {% strategy %}
 Spam Tackle
 {% /strategy %}
@@ -36,22 +36,22 @@ Spam Tackle
 {% calcs %}
 {% speed-check /%}
 {% /calcs %}
-{% /encounter %}
+{% /trainer-encounter %}
 
 ## Route 1 & 2
 
 - Grab the Potion from mart guy.
 - Kill any level 2 or 3 Pidgey / Rattata along the way.
-  {% encounter species="Pidgey" level=2 optional=true /%}
-  {% encounter species="Rattata" level=2 optional=true /%}
+  {% wild-encounter species="Pidgey" level=2 optional=true /%}
+  {% wild-encounter species="Rattata" level=2 optional=true /%}
 
   Do **not** kill a level 3 Pidgey if Modest or less than 21 ATK.
 
-  {% encounter species="Pidgey" level=3 optional=true /%}
-  {% encounter species="Rattata" level=3 optional=true /%}
+  {% wild-encounter species="Pidgey" level=3 optional=true /%}
+  {% wild-encounter species="Rattata" level=3 optional=true /%}
 - If 31 speed IV, attempt to kill an extra Pidgey / Rattata on Route 1.
-  {% encounter species="Pidgey" level=2 optional=true /%}
-  {% encounter species="Pidgey" level=3 optional=true /%}
+  {% wild-encounter species="Pidgey" level=2 optional=true /%}
+  {% wild-encounter species="Pidgey" level=3 optional=true /%}
 - Grab the parcel at the mart then head back to Oak's lab.
 - Catch Pidgey / Rattata if you come across them (Tackle once to weaken). Do **not** try to force an encounter since there are backups later.
 - On Route 2 cut through the grass before the Viridian Forest entrance (2nd tile to the right) it is 1% to get an encounter.
@@ -65,7 +65,7 @@ Spam Tackle
 
 ### Bug Catcher Sammy
 
-{% encounter trainerId="TRAINER_BUG_CATCHER_SAMMY" %}
+{% trainer-encounter trainerId="TRAINER_BUG_CATCHER_SAMMY" %}
 {% strategy %}
 Tail Whip x1-2, Tackle x4-6 / Spam Bubble if level 7
 {% /strategy %}
@@ -74,7 +74,7 @@ Tail Whip x1-2, Tackle x4-6 / Spam Bubble if level 7
 {% damage-in move="Poison Sting" /%}
 {% poison-damage /%}
 {% /calcs %}
-{% /encounter %}
+{% /trainer-encounter %}
 
 - If poisoned, Antidote on the HP in the chart below. ![Antidote Chart](images/frlg/AntidoteChart.png)
 
@@ -84,24 +84,24 @@ Tail Whip x1-2, Tackle x4-6 / Spam Bubble if level 7
 
 ### Camper Liam
 
-{% encounter trainerId="TRAINER_CAMPER_LIAM" %}
+{% trainer-encounter trainerId="TRAINER_CAMPER_LIAM" %}
 {% strategy %}
 Bubble* (x2)
 {% /strategy %}
-{% /encounter %}
+{% /trainer-encounter %}
 
-{% encounter trainerId="TRAINER_CAMPER_LIAM" slot=1 %}
+{% trainer-encounter trainerId="TRAINER_CAMPER_LIAM" slot=1 %}
 {% strategy %}
 Bubble* x2-4
 {% /strategy %}
 {% calcs %}
 {% damage-in move="Scratch" /%}
 {% /calcs %}
-{% /encounter %}
+{% /trainer-encounter %}
 
 ### Leader Brock
 
-{% encounter trainerId="TRAINER_LEADER_BROCK" %}
+{% trainer-encounter trainerId="TRAINER_LEADER_BROCK" %}
 {% strategy %}
 Bubble* (x2)
 {% /strategy %}
@@ -111,9 +111,9 @@ Bubble* (x2)
 {% damage-in move="Tackle" /%}
 {% damage-in move="Tackle" stages=1 /%}
 {% /calcs %}
-{% /encounter %}
+{% /trainer-encounter %}
 
-{% encounter trainerId="TRAINER_LEADER_BROCK" slot=1 %}
+{% trainer-encounter trainerId="TRAINER_LEADER_BROCK" slot=1 %}
 {% strategy %}
 Bubble* (x2)
 {% /strategy %}
@@ -126,7 +126,7 @@ Bubble* (x2)
 {% damage-in move="Tackle" /%}
 {% damage-in move="Tackle" stages=1 /%}
 {% /calcs %}
-{% /encounter %}
+{% /trainer-encounter %}
 
 {% badge id="boulder" /%}
 
@@ -151,86 +151,86 @@ Bubble* (x2)
 
 ### Bug Catcher Colton
 
-{% encounter trainerId="TRAINER_BUG_CATCHER_COLTON" %}
+{% trainer-encounter trainerId="TRAINER_BUG_CATCHER_COLTON" %}
 {% strategy %}
 Water Gun* (x2)
 {% /strategy %}
 {% calcs %}
 {% ko-chance move="Water Gun" pinch=true /%}
 {% /calcs %}
-{% /encounter %}
+{% /trainer-encounter %}
 
-{% encounter trainerId="TRAINER_BUG_CATCHER_COLTON" slot=1 %}
+{% trainer-encounter trainerId="TRAINER_BUG_CATCHER_COLTON" slot=1 %}
 {% strategy %}
 Water Gun* (x2)
 {% /strategy %}
-{% /encounter %}
+{% /trainer-encounter %}
 
-{% encounter trainerId="TRAINER_BUG_CATCHER_COLTON" slot=2 %}
+{% trainer-encounter trainerId="TRAINER_BUG_CATCHER_COLTON" slot=2 %}
 {% strategy %}
 Water Gun* (x2)
 {% /strategy %}
 {% calcs %}
 {% ko-chance move="Water Gun" pinch=true /%}
 {% /calcs %}
-{% /encounter %}
+{% /trainer-encounter %}
 
 - Go above shorts guy and fight the next bug catcher.
 
 ### Bug Catcher Greg
 
-{% encounter trainerId="TRAINER_BUG_CATCHER_GREG" %}
+{% trainer-encounter trainerId="TRAINER_BUG_CATCHER_GREG" %}
 {% strategy %}
 Water Gun*
 {% /strategy %}
 {% calcs %}
 {% speed-check playerStages=-1 /%}
 {% /calcs %}
-{% /encounter %}
+{% /trainer-encounter %}
 
-{% encounter trainerId="TRAINER_BUG_CATCHER_GREG" slot=2 %}
+{% trainer-encounter trainerId="TRAINER_BUG_CATCHER_GREG" slot=2 %}
 {% strategy %}
 Water Gun (x2)
 {% /strategy %}
 {% calcs %}
 {% speed-check playerStages=-1 /%}
 {% /calcs %}
-{% /encounter %}
+{% /trainer-encounter %}
 
-{% encounter trainerId="TRAINER_BUG_CATCHER_GREG" slot=1 %}
+{% trainer-encounter trainerId="TRAINER_BUG_CATCHER_GREG" slot=1 %}
 {% strategy %}
 Water Gun* (x2)
 {% /strategy %}
-{% /encounter %}
+{% /trainer-encounter %}
 
-{% encounter trainerId="TRAINER_BUG_CATCHER_GREG" slot=3 %}
+{% trainer-encounter trainerId="TRAINER_BUG_CATCHER_GREG" slot=3 %}
 {% strategy %}
 Water Gun* (x2)
 {% /strategy %}
 {% calcs %}
 {% speed-check playerStages=-2 /%}
 {% /calcs %}
-{% /encounter %}
+{% /trainer-encounter %}
 
 ### Bug Catcher James
 
-{% encounter trainerId="TRAINER_BUG_CATCHER_JAMES" %}
+{% trainer-encounter trainerId="TRAINER_BUG_CATCHER_JAMES" %}
 {% strategy %}
 Water Gun (x2)
 {% /strategy %}
 {% calcs %}
 {% speed-check playerStages=-1 /%}
 {% /calcs %}
-{% /encounter %}
+{% /trainer-encounter %}
 
-{% encounter trainerId="TRAINER_BUG_CATCHER_JAMES" slot=1 %}
+{% trainer-encounter trainerId="TRAINER_BUG_CATCHER_JAMES" slot=1 %}
 {% strategy %}
 Water Gun* (x2)
 {% /strategy %}
 {% calcs %}
 {% speed-check playerStages=-2 /%}
 {% /calcs %}
-{% /encounter %}
+{% /trainer-encounter %}
 
 - If you did not catch Pidgey on Route 1, catch a Spearow / Pidgey now in the grass below the lass (Bubble to weaken, Tackle if in torrent).
   - If no HM Slaves, can catch Nidoran for Cut and Strength.
@@ -252,27 +252,27 @@ Water Gun* (x2)
 
 {% choice label="Choose trainer" %}
 {% option value="robby" label="Bug Catcher Robby" %}
-  {% encounter trainerId="TRAINER_BUG_CATCHER_ROBBY" %}
+  {% trainer-encounter trainerId="TRAINER_BUG_CATCHER_ROBBY" %}
   {% strategy %}
   Water Gun*
   {% /strategy %}
-  {% /encounter %}
+  {% /trainer-encounter %}
 
-  {% encounter trainerId="TRAINER_BUG_CATCHER_ROBBY" slot=1 %}
+  {% trainer-encounter trainerId="TRAINER_BUG_CATCHER_ROBBY" slot=1 %}
   {% strategy %}
   Water Gun*
   {% /strategy %}
-  {% /encounter %}
+  {% /trainer-encounter %}
 
-  {% encounter trainerId="TRAINER_BUG_CATCHER_ROBBY" slot=2 %}
+  {% trainer-encounter trainerId="TRAINER_BUG_CATCHER_ROBBY" slot=2 %}
   {% strategy %}
   Water Gun*
   {% /strategy %}
-  {% /encounter %}
+  {% /trainer-encounter %}
 {% /option %}
 
 {% option value="josh" label="Youngster Josh" %}
-  {% encounter trainerId="TRAINER_YOUNGSTER_JOSH" %}
+  {% trainer-encounter trainerId="TRAINER_YOUNGSTER_JOSH" %}
   {% strategy %}
   Water Gun*
   {% /strategy %}
@@ -280,9 +280,9 @@ Water Gun* (x2)
   {% speed-check /%}
   {% damage-in move="Quick Attack" /%}
   {% /calcs %}
-  {% /encounter %}
+  {% /trainer-encounter %}
 
-  {% encounter trainerId="TRAINER_YOUNGSTER_JOSH" slot=1 %}
+  {% trainer-encounter trainerId="TRAINER_YOUNGSTER_JOSH" slot=1 %}
   {% strategy %}
   Water Gun*
   {% /strategy %}
@@ -290,20 +290,20 @@ Water Gun* (x2)
   {% speed-check /%}
   {% damage-in move="Quick Attack" /%}
   {% /calcs %}
-  {% /encounter %}
+  {% /trainer-encounter %}
 
-  {% encounter trainerId="TRAINER_YOUNGSTER_JOSH" slot=2 %}
+  {% trainer-encounter trainerId="TRAINER_YOUNGSTER_JOSH" slot=2 %}
   {% strategy %}
   Water Gun* (x2)
   {% /strategy %}
   {% calcs %}
   {% ko-chance move="Water Gun" pinch=true /%}
   {% /calcs %}
-  {% /encounter %}
+  {% /trainer-encounter %}
 {% /option %}
 
 {% option value="rocket" label="Rocket Spinner" %}
-  {% encounter trainerId="TRAINER_TEAM_ROCKET_GRUNT_4" %}
+  {% trainer-encounter trainerId="TRAINER_TEAM_ROCKET_GRUNT_4" %}
   {% strategy %}
   Water Gun (x2)
   {% /strategy %}
@@ -311,33 +311,33 @@ Water Gun* (x2)
   {% damage-in move="Hyper Fang" /%}
   {% damage-in move="Quick Attack" /%}
   {% /calcs %}
-  {% /encounter %}
+  {% /trainer-encounter %}
   
-  {% encounter trainerId="TRAINER_TEAM_ROCKET_GRUNT_4" slot=1 %}
+  {% trainer-encounter trainerId="TRAINER_TEAM_ROCKET_GRUNT_4" slot=1 %}
   {% strategy %}
   Water Gun
   {% /strategy %}
-  {% /encounter %}
+  {% /trainer-encounter %}
 {% /option %}
 
 {% option value="hiker" label="Hiker Marcos" %}
-  {% encounter trainerId="TRAINER_HIKER_MARCOS" %}
+  {% trainer-encounter trainerId="TRAINER_HIKER_MARCOS" %}
   {% strategy %}
   Bubble
   {% /strategy %}
-  {% /encounter %}
+  {% /trainer-encounter %}
 
-  {% encounter trainerId="TRAINER_HIKER_MARCOS" slot=1 %}
+  {% trainer-encounter trainerId="TRAINER_HIKER_MARCOS" slot=1 %}
   {% strategy %}
   Bubble
   {% /strategy %}
-  {% /encounter %}
+  {% /trainer-encounter %}
 
-  {% encounter trainerId="TRAINER_HIKER_MARCOS" slot=2 %}
+  {% trainer-encounter trainerId="TRAINER_HIKER_MARCOS" slot=2 %}
   {% strategy %}
   Bubble
   {% /strategy %}
-  {% /encounter %}
+  {% /trainer-encounter %}
 {% /option %}
 {% /choice %}
 
@@ -347,27 +347,27 @@ Water Gun* (x2)
 
 ### Rocket Grunt
 
-{% encounter trainerId="TRAINER_TEAM_ROCKET_GRUNT" %}
+{% trainer-encounter trainerId="TRAINER_TEAM_ROCKET_GRUNT" %}
 {% strategy %}
 Water Gun (x2)
 {% /strategy %}
 {% calcs %}
 {% ko-chance move="Water Gun" pinch=true /%}
 {% /calcs %}
-{% /encounter %}
+{% /trainer-encounter %}
 
-{% encounter trainerId="TRAINER_TEAM_ROCKET_GRUNT" slot=1 %}
+{% trainer-encounter trainerId="TRAINER_TEAM_ROCKET_GRUNT" slot=1 %}
 {% strategy %}
 Water Gun (x2)
 {% /strategy %}
 {% calcs %}
 {% ko-chance move="Water Gun" pinch=true /%}
 {% /calcs %}
-{% /encounter %}
+{% /trainer-encounter %}
 
 ### Super Nerd Miguel
 
-{% encounter trainerId="TRAINER_SUPER_NERD_MIGUEL" %}
+{% trainer-encounter trainerId="TRAINER_SUPER_NERD_MIGUEL" %}
 {% strategy %}
 Water Gun x2
 {% /strategy %}
@@ -375,9 +375,9 @@ Water Gun x2
 {% calcs %}
 {% poison-damage /%}
 {% /calcs %}
-{% /encounter %}
+{% /trainer-encounter %}
 
-{% encounter trainerId="TRAINER_SUPER_NERD_MIGUEL" slot=1 %}
+{% trainer-encounter trainerId="TRAINER_SUPER_NERD_MIGUEL" slot=1 %}
 {% strategy %}
 Water Gun* (x2)
 {% /strategy %}
@@ -386,9 +386,9 @@ Water Gun* (x2)
 {% ko-chance move="Water Gun" pinch=true /%}
 {% damage-in move="Tackle" /%}
 {% /calcs %}
-{% /encounter %}
+{% /trainer-encounter %}
 
-{% encounter trainerId="TRAINER_SUPER_NERD_MIGUEL" slot=2 %}
+{% trainer-encounter trainerId="TRAINER_SUPER_NERD_MIGUEL" slot=2 %}
 {% strategy %}
 Water Gun* (x2)
 {% /strategy %}
@@ -398,7 +398,7 @@ Water Gun* (x2)
 {% speed-check /%}
 {% ko-chance move="Water Gun" pinch=true /%}
 {% /calcs %}
-{% /encounter %}
+{% /trainer-encounter %}
 
 - Praise Helix and head outside of Mt. Moon.
 

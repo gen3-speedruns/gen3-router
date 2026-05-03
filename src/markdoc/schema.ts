@@ -1,5 +1,4 @@
-import { Tag, type Config, type Node } from "@markdoc/markdoc";
-import type { EncounterSource } from "../domain/encounter";
+import { type Config } from "@markdoc/markdoc";
 
 export const markdocConfig: Config = {
   tags: {
@@ -11,25 +10,22 @@ export const markdocConfig: Config = {
         natures: { type: Array, required: false },
       },
     },
-    encounter: {
-      render: "Encounter",
+    "wild-encounter": {
+      render: "WildEncounter",
       selfClosing: false,
       attributes: {
-        species: { type: String },
-        level: { type: Number },
-        trainerId: { type: String },
-        slot: { type: Number },
+        species: { type: String, required: true },
+        level: { type: Number, required: true },
         optional: { type: Boolean, default: false },
       },
-      transform(node, config) {
-        const { optional } = node.attributes;
-        const source = parseEncounterSource(node);
-        if (!source) return null;
-        return new Tag(
-          "Encounter",
-          { source, optional },
-          node.transformChildren(config),
-        );
+    },
+    "trainer-encounter": {
+      render: "TrainerEncounter",
+      selfClosing: false,
+      attributes: {
+        trainerId: { type: String, required: true },
+        slot: { type: Number, default: 0 },
+        optional: { type: Boolean, default: false },
       },
     },
     strategy: {
@@ -45,16 +41,8 @@ export const markdocConfig: Config = {
     "calcs-for": {
       render: "CalcsFor",
       attributes: {
-        species: { type: String },
-        level: { type: Number },
-        trainerId: { type: String },
-        slot: { type: Number },
-        optional: { type: Boolean, default: false },
-      },
-      transform(node, config) {
-        const source = parseEncounterSource(node);
-        if (!source) return null;
-        return new Tag("CalcsFor", { source }, node.transformChildren(config));
+        trainerId: { type: String, required: true },
+        slot: { type: Number, default: 0 },
       },
     },
     "speed-check": {
@@ -125,14 +113,3 @@ export const markdocConfig: Config = {
     },
   },
 };
-
-function parseEncounterSource(node: Node): EncounterSource | null {
-  const { species, level, trainerId, slot } = node.attributes;
-  if (trainerId) {
-    return { type: "trainer", trainerId, slot: slot ?? 0 };
-  } else if (species && level != null) {
-    return { type: "wild", species, level };
-  } else {
-    return null;
-  }
-}

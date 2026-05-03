@@ -15,43 +15,45 @@ export interface Encounter {
   isTrainer: boolean;
 }
 
-export type EncounterSource =
-  | { type: "wild"; species: string; level: number }
-  | { type: "trainer"; trainerId: string; slot: number };
-
-export function resolveEncounter(source: EncounterSource): Encounter | null {
-  if (source.type === "trainer") {
-    const trainer = TrainerDataMap[source.trainerId];
-    if (!trainer) return null;
-    const member = trainer.party[source.slot];
-    if (!member) return null;
-    const pokemon = PokemonDataMap[member.species];
-    if (!pokemon) return null;
-
-    return {
-      species: member.species,
-      dexId: pokemon.dexId,
-      level: member.level,
-      types: pokemon.types,
-      stats: buildStats(
-        pokemon.baseStats,
-        member.level,
-        member.iv,
-        calcTrainerPokemonNature(source.trainerId, source.slot),
-      ),
-      isTrainer: true,
-    };
-  }
-
-  const pokemon = PokemonDataMap[source.species];
+export function resolveTrainerEncounter(
+  trainerId: string,
+  slot: number,
+): Encounter | null {
+  const trainer = TrainerDataMap[trainerId];
+  if (!trainer) return null;
+  const member = trainer.party[slot];
+  if (!member) return null;
+  const pokemon = PokemonDataMap[member.species];
   if (!pokemon) return null;
 
   return {
-    species: source.species,
+    species: member.species,
     dexId: pokemon.dexId,
-    level: source.level,
+    level: member.level,
     types: pokemon.types,
-    stats: buildStats(pokemon.baseStats, source.level, 0, "Hardy"),
+    stats: buildStats(
+      pokemon.baseStats,
+      member.level,
+      member.iv,
+      calcTrainerPokemonNature(trainerId, slot),
+    ),
+    isTrainer: true,
+  };
+}
+
+export function resolveWildEncounter(
+  species: string,
+  level: number,
+): Encounter | null {
+  const pokemon = PokemonDataMap[species];
+  if (!pokemon) return null;
+
+  return {
+    species: species,
+    dexId: pokemon.dexId,
+    level: level,
+    types: pokemon.types,
+    stats: buildStats(pokemon.baseStats, level, 0, "Hardy"),
     isTrainer: false,
   };
 }

@@ -5,7 +5,6 @@ import { Calcs } from "./components/Calcs";
 import { CalcsFor } from "./components/CalcsFor";
 import { Choice } from "./components/Choice";
 import { DamageIn } from "./components/DamageIn";
-import { Encounter } from "./components/Encounter";
 import { Evolve } from "./components/Evolve";
 import { GymBadge } from "./components/GymBadge";
 import { KoChance } from "./components/KoChance";
@@ -19,12 +18,15 @@ import { Sidebar } from "./components/Sidebar";
 import { SpeedCheck } from "./components/SpeedCheck";
 import { Starter } from "./components/Starter";
 import { Strategy } from "./components/Strategy";
+import { TrainerEncounter } from "./components/TrainerEncounter";
+import { WildEncounter } from "./components/WildEncounter";
 import { useRoute } from "./hooks/useRoute";
 import { markdocConfig } from "./markdoc/schema";
 
 const components = {
-  Encounter,
   Starter,
+  WildEncounter,
+  TrainerEncounter,
   Strategy,
   Calcs,
   CalcsFor,

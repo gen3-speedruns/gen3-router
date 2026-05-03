@@ -1,18 +1,20 @@
 import React, { useMemo } from "react";
 import { resolveTrainerEncounter } from "../domain/encounter";
 import { useRunStore } from "../store/runState";
-import { Calcs } from "./Calcs";
+import { BaseEncounter } from "./BaseEncounter";
 import { EncounterProvider } from "./EncounterContext";
 
-interface CalcsForProps {
+interface TrainerEncounterProps {
   trainerId: string;
   slot: number;
-  children: React.ReactNode;
+  optional?: boolean;
+  children?: React.ReactNode;
 }
 
-export const CalcsFor: React.FC<CalcsForProps> = ({
+export const TrainerEncounter: React.FC<TrainerEncounterProps> = ({
   trainerId,
   slot,
+  optional = false,
   children,
 }) => {
   const run = useRunStore((s) => s.run);
@@ -21,23 +23,27 @@ export const CalcsFor: React.FC<CalcsForProps> = ({
     [trainerId, slot],
   );
 
-  if (!encounter)
+  if (!encounter) {
     return (
-      <div className="text-error text-sm">
+      <div className="text-error underline">
         Unknown trainer encounter: {trainerId}-{slot}
       </div>
     );
+  }
 
-  if (!run)
+  if (!run) {
     return (
-      <div className="text-base-content/50 italic text-sm">
+      <div className="text-base-content/50 italic p-4">
         Set your starter to see calcs.
       </div>
     );
+  }
 
   return (
     <EncounterProvider value={{ run, encounter }}>
-      <Calcs>{children}</Calcs>
+      <BaseEncounter encounter={encounter} optional={optional}>
+        {children}
+      </BaseEncounter>
     </EncounterProvider>
   );
 };
