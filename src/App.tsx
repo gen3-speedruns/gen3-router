@@ -1,31 +1,32 @@
-import React, { useState } from "react";
 import Markdoc from "@markdoc/markdoc";
-import { markdocConfig } from "./markdoc/schema";
+import { Moon, Sun } from "lucide-react";
+import React, { useState } from "react";
+import { Calcs } from "./components/Calcs";
+import { CalcsFor } from "./components/CalcsFor";
+import { Choice } from "./components/Choice";
+import { DamageIn } from "./components/DamageIn";
 import { Encounter } from "./components/Encounter";
-import { Starter } from "./components/Starter";
+import { Evolve } from "./components/Evolve";
+import { GymBadge } from "./components/GymBadge";
+import { KoChance } from "./components/KoChance";
+import { LevelUpHpGain } from "./components/LevelUpHpGain";
+import { Option } from "./components/Option";
+import { PoisonDamage } from "./components/PoisonDamage";
+import { RouteHeader } from "./components/RouteHeader";
+import { RouteIndexProvider } from "./components/RouteIndexProvider";
 import { Sidebar } from "./components/Sidebar";
 import { SpeedCheck } from "./components/SpeedCheck";
-import { DamageIn } from "./components/DamageIn";
-import { KoChance } from "./components/KoChance";
-import { useRoute } from "./hooks/useRoute";
-import { RouteHeader } from "./components/RouteHeader";
-import { Calcs } from "./components/Calcs";
+import { Starter } from "./components/Starter";
 import { Strategy } from "./components/Strategy";
-import { Moon, Sun } from "lucide-react";
-import { PoisonDamage } from "./components/PoisonDamage";
-import { LevelUpHpGain } from "./components/LevelUpHpGain";
-import { Choice } from "./components/Choice";
-import { Option } from "./components/Option";
-import { Enemy } from "./components/Enemy";
-import { GymBadge } from "./components/GymBadge";
-import { Evolve } from "./components/Evolve";
-import { RouteIndexProvider } from "./components/RouteIndexProvider";
+import { useRoute } from "./hooks/useRoute";
+import { markdocConfig } from "./markdoc/schema";
 
 const components = {
   Encounter,
   Starter,
   Strategy,
   Calcs,
+  CalcsFor,
   SpeedCheck,
   DamageIn,
   KoChance,
@@ -33,7 +34,6 @@ const components = {
   LevelUpHpGain,
   Choice,
   Option,
-  Enemy,
   GymBadge,
   Evolve,
 };

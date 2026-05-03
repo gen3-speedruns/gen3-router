@@ -1,7 +1,9 @@
 import { PokemonDataMap } from "../gamedata/pokemon";
+import { TrainerDataMap } from "../gamedata/trainers";
 import type { Nature, PokemonType, StatsTable } from "../gamedata/types";
 import { calculateExpYield } from "./mechanics/experience";
 import { calcHealth, calcStat } from "./mechanics/stats";
+import { calcTrainerPokemonNature } from "./mechanics/trainerNature";
 import type { EncounterYield } from "./mechanics/types";
 
 export interface Encounter {
@@ -13,22 +15,44 @@ export interface Encounter {
   isTrainer: boolean;
 }
 
-export function resolveEncounter(
-  species: string,
-  level: number,
-  isTrainer?: boolean,
-  fixedIv?: number,
-): Encounter | null {
-  const pokemon = PokemonDataMap[species];
+export type EncounterSource =
+  | { type: "wild"; species: string; level: number }
+  | { type: "trainer"; trainerId: string; slot: number };
+
+export function resolveEncounter(source: EncounterSource): Encounter | null {
+  if (source.type === "trainer") {
+    const trainer = TrainerDataMap[source.trainerId];
+    if (!trainer) return null;
+    const member = trainer.party[source.slot];
+    if (!member) return null;
+    const pokemon = PokemonDataMap[member.species];
+    if (!pokemon) return null;
+
+    return {
+      species: member.species,
+      dexId: pokemon.dexId,
+      level: member.level,
+      types: pokemon.types,
+      stats: buildStats(
+        pokemon.baseStats,
+        member.level,
+        member.iv,
+        calcTrainerPokemonNature(source.trainerId, source.slot),
+      ),
+      isTrainer: true,
+    };
+  }
+
+  const pokemon = PokemonDataMap[source.species];
   if (!pokemon) return null;
 
   return {
-    species: species,
+    species: source.species,
     dexId: pokemon.dexId,
-    level: level,
+    level: source.level,
     types: pokemon.types,
-    stats: buildStats(pokemon.baseStats, level, fixedIv ?? 0, "Hardy"),
-    isTrainer: isTrainer ?? false,
+    stats: buildStats(pokemon.baseStats, source.level, 0, "Hardy"),
+    isTrainer: false,
   };
 }
 

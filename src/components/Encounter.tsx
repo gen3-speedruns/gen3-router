@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import { resolveEncounter } from "../domain/encounter";
+import { resolveEncounter, type EncounterSource } from "../domain/encounter";
 import { useRouteAction } from "../hooks/useRouteAction";
 import { useRunStore } from "../store/runState";
 import { EncounterProvider } from "./EncounterContext";
@@ -8,34 +8,25 @@ import { RouteCard } from "./RouteCard";
 import { TypeBadge } from "./TypeBadge";
 
 interface EncounterProps {
-  species: string;
-  level: number;
-  isTrainer?: boolean;
+  source: EncounterSource;
   optional?: boolean;
-  fixedIv?: number;
   children?: React.ReactNode;
 }
 
 export const Encounter: React.FC<EncounterProps> = ({
-  species,
-  level,
-  isTrainer = false,
+  source,
   optional = false,
-  fixedIv,
   children,
 }) => {
   const { completed, complete } = useRouteAction();
   const gainEncounter = useRunStore((state) => state.gainEncounter);
   const run = useRunStore((s) => s.run);
-  const encounter = useMemo(
-    () => resolveEncounter(species, level, isTrainer, fixedIv),
-    [species, level, isTrainer, fixedIv],
-  );
+  const encounter = useMemo(() => resolveEncounter(source), [source]);
 
   if (!encounter) {
     return (
       <div className="text-error underline">
-        Error: Species {species} not found
+        Unknown encounter: {JSON.stringify(source)}
       </div>
     );
   }
@@ -52,12 +43,14 @@ export const Encounter: React.FC<EncounterProps> = ({
     <EncounterProvider value={{ run, encounter }}>
       <RouteCard
         faded={completed}
-        left={<PokemonSprite dexId={encounter.dexId} name={species} />}
+        left={
+          <PokemonSprite dexId={encounter.dexId} name={encounter.species} />
+        }
         title={
           <>
-            <span>{species}</span>
+            <span>{encounter.species}</span>
             <span className="text-sm font-normal text-base-content/50">
-              Lv. {level}
+              Lv. {encounter.level}
             </span>
             {encounter.types.map((t) => (
               <TypeBadge key={t} type={t} />

@@ -1,4 +1,5 @@
-import type { Config } from "@markdoc/markdoc";
+import { Tag, type Config, type Node } from "@markdoc/markdoc";
+import type { EncounterSource } from "../domain/encounter";
 
 export const markdocConfig: Config = {
   tags: {
@@ -14,11 +15,21 @@ export const markdocConfig: Config = {
       render: "Encounter",
       selfClosing: false,
       attributes: {
-        species: { type: String, required: true },
-        level: { type: Number, required: true },
-        isTrainer: { type: Boolean, default: false },
+        species: { type: String },
+        level: { type: Number },
+        trainerId: { type: String },
+        slot: { type: Number },
         optional: { type: Boolean, default: false },
-        fixedIv: { type: Number, default: 0 },
+      },
+      transform(node, config) {
+        const { optional } = node.attributes;
+        const source = parseEncounterSource(node);
+        if (!source) return null;
+        return new Tag(
+          "Encounter",
+          { source, optional },
+          node.transformChildren(config),
+        );
       },
     },
     strategy: {
@@ -30,6 +41,21 @@ export const markdocConfig: Config = {
       render: "Calcs",
       selfClosing: false,
       attributes: {},
+    },
+    "calcs-for": {
+      render: "CalcsFor",
+      attributes: {
+        species: { type: String },
+        level: { type: Number },
+        trainerId: { type: String },
+        slot: { type: Number },
+        optional: { type: Boolean, default: false },
+      },
+      transform(node, config) {
+        const source = parseEncounterSource(node);
+        if (!source) return null;
+        return new Tag("CalcsFor", { source }, node.transformChildren(config));
+      },
     },
     "speed-check": {
       render: "SpeedCheck",
@@ -78,14 +104,6 @@ export const markdocConfig: Config = {
         label: { type: String, required: true },
       },
     },
-    enemy: {
-      render: "Enemy",
-      attributes: {
-        species: { type: String, required: true },
-        level: { type: Number, required: true },
-        fixedIv: { type: Number, default: 0 },
-      },
-    },
     badge: {
       render: "GymBadge",
       selfClosing: true,
@@ -102,3 +120,14 @@ export const markdocConfig: Config = {
     },
   },
 };
+
+function parseEncounterSource(node: Node): EncounterSource | null {
+  const { species, level, trainerId, slot } = node.attributes;
+  if (trainerId) {
+    return { type: "trainer", trainerId, slot: slot ?? 0 };
+  } else if (species && level != null) {
+    return { type: "wild", species, level };
+  } else {
+    return null;
+  }
+}

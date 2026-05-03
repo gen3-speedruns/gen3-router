@@ -27,7 +27,7 @@ Please check the **Before Starting** section of it when you are new to the game.
 
 ### Rival 1
 
-{% encounter species="Bulbasaur" level=5 isTrainer=true %}
+{% encounter trainerId="TRAINER_RIVAL_OAKS_LAB_BULBASAUR" %}
 {% strategy %}
 Spam Tackle
 {% /strategy %}
@@ -65,7 +65,7 @@ Spam Tackle
 
 ### Bug Catcher Sammy
 
-{% encounter species="Weedle" level=9 isTrainer=true %}
+{% encounter trainerId="TRAINER_BUG_CATCHER_SAMMY" %}
 {% strategy %}
 Tail Whip x1-2, Tackle x4-6 / Spam Bubble if level 7
 {% /strategy %}
@@ -84,13 +84,13 @@ Tail Whip x1-2, Tackle x4-6 / Spam Bubble if level 7
 
 ### Camper Liam
 
-{% encounter species="Geodude" level=10 isTrainer=true %}
+{% encounter trainerId="TRAINER_CAMPER_LIAM" %}
 {% strategy %}
 Bubble* (x2)
 {% /strategy %}
 {% /encounter %}
 
-{% encounter species="Sandshrew" level=11 isTrainer=true %}
+{% encounter trainerId="TRAINER_CAMPER_LIAM" slot=1 %}
 {% strategy %}
 Bubble* x2-4
 {% /strategy %}
@@ -101,7 +101,7 @@ Bubble* x2-4
 
 ### Leader Brock
 
-{% encounter species="Geodude" level=12 isTrainer=true %}
+{% encounter trainerId="TRAINER_LEADER_BROCK" %}
 {% strategy %}
 Bubble* (x2)
 {% /strategy %}
@@ -113,7 +113,7 @@ Bubble* (x2)
 {% /calcs %}
 {% /encounter %}
 
-{% encounter species="Onix" level=14 isTrainer=true %}
+{% encounter trainerId="TRAINER_LEADER_BROCK" slot=1 %}
 {% strategy %}
 Bubble* (x2)
 {% /strategy %}
@@ -151,7 +151,7 @@ Bubble* (x2)
 
 ### Bug Catcher Colton
 
-{% encounter species="Caterpie" level=10 isTrainer=true %}
+{% encounter trainerId="TRAINER_BUG_CATCHER_COLTON" %}
 {% strategy %}
 Water Gun* (x2)
 {% /strategy %}
@@ -160,13 +160,13 @@ Water Gun* (x2)
 {% /calcs %}
 {% /encounter %}
 
-{% encounter species="Weedle" level=10 isTrainer=true %}
+{% encounter trainerId="TRAINER_BUG_CATCHER_COLTON" slot=1 %}
 {% strategy %}
 Water Gun* (x2)
 {% /strategy %}
 {% /encounter %}
 
-{% encounter species="Caterpie" level=10 isTrainer=true %}
+{% encounter trainerId="TRAINER_BUG_CATCHER_COLTON" slot=2 %}
 {% strategy %}
 Water Gun* (x2)
 {% /strategy %}
@@ -179,7 +179,7 @@ Water Gun* (x2)
 
 ### Bug Catcher Greg
 
-{% encounter species="Weedle" level=9 isTrainer=true %}
+{% encounter trainerId="TRAINER_BUG_CATCHER_GREG" %}
 {% strategy %}
 Water Gun*
 {% /strategy %}
@@ -188,7 +188,7 @@ Water Gun*
 {% /calcs %}
 {% /encounter %}
 
-{% encounter species="Caterpie" level=9 isTrainer=true %}
+{% encounter trainerId="TRAINER_BUG_CATCHER_GREG" slot=2 %}
 {% strategy %}
 Water Gun (x2)
 {% /strategy %}
@@ -197,13 +197,13 @@ Water Gun (x2)
 {% /calcs %}
 {% /encounter %}
 
-{% encounter species="Kakuna" level=9 isTrainer=true %}
+{% encounter trainerId="TRAINER_BUG_CATCHER_GREG" slot=1 %}
 {% strategy %}
 Water Gun* (x2)
 {% /strategy %}
 {% /encounter %}
 
-{% encounter species="Metapod" level=9 isTrainer=true %}
+{% encounter trainerId="TRAINER_BUG_CATCHER_GREG" slot=3 %}
 {% strategy %}
 Water Gun* (x2)
 {% /strategy %}
@@ -214,7 +214,7 @@ Water Gun* (x2)
 
 ### Bug Catcher James
 
-{% encounter species="Caterpie" level=11 isTrainer=true %}
+{% encounter trainerId="TRAINER_BUG_CATCHER_JAMES" %}
 {% strategy %}
 Water Gun (x2)
 {% /strategy %}
@@ -223,7 +223,7 @@ Water Gun (x2)
 {% /calcs %}
 {% /encounter %}
 
-{% encounter species="Metapod" level=11 isTrainer=true %}
+{% encounter trainerId="TRAINER_BUG_CATCHER_JAMES" slot=1 %}
 {% strategy %}
 Water Gun* (x2)
 {% /strategy %}
@@ -245,28 +245,26 @@ Water Gun* (x2)
   - Use Repel.
 - Grab this Rare Candy near the Bug Catcher (after fighting him if you are fighting him). ![Rare Candy](images/frlg/MtMoonRareCandy.png)
 - Fight **ONE** of the following optional trainers for EXP depending on the situation ![Mt Moon Trainers](images/frlg/MtMoonTrainers.png)
-  {% enemy species="Rattata" level=13 %}
-  {% calcs %}
+  {% calcs-for trainerId="TRAINER_TEAM_ROCKET_GRUNT_4" %}
   {% level-up-hp-gain level=16 /%}
   {% damage-in move="Hyper Fang" /%}
-  {% /calcs %}
-  {% /enemy %}
+  {% /calcs-for %}
 
 {% choice label="Choose trainer" %}
 {% option value="robby" label="Bug Catcher Robby" %}
-  {% encounter species="Caterpie" level=10 isTrainer=true %}
+  {% encounter trainerId="TRAINER_BUG_CATCHER_ROBBY" %}
   {% strategy %}
   Water Gun*
   {% /strategy %}
   {% /encounter %}
 
-  {% encounter species="Metapod" level=10 isTrainer=true %}
+  {% encounter trainerId="TRAINER_BUG_CATCHER_ROBBY" slot=1 %}
   {% strategy %}
   Water Gun*
   {% /strategy %}
   {% /encounter %}
 
-  {% encounter species="Caterpie" level=10 isTrainer=true %}
+  {% encounter trainerId="TRAINER_BUG_CATCHER_ROBBY" slot=2 %}
   {% strategy %}
   Water Gun*
   {% /strategy %}
@@ -274,7 +272,7 @@ Water Gun* (x2)
 {% /option %}
 
 {% option value="josh" label="Youngster Josh" %}
-  {% encounter species="Rattata" level=10 isTrainer=true %}
+  {% encounter trainerId="TRAINER_YOUNGSTER_JOSH" %}
   {% strategy %}
   Water Gun*
   {% /strategy %}
@@ -284,7 +282,7 @@ Water Gun* (x2)
   {% /calcs %}
   {% /encounter %}
 
-  {% encounter species="Rattata" level=10 isTrainer=true %}
+  {% encounter trainerId="TRAINER_YOUNGSTER_JOSH" slot=1 %}
   {% strategy %}
   Water Gun*
   {% /strategy %}
@@ -294,7 +292,7 @@ Water Gun* (x2)
   {% /calcs %}
   {% /encounter %}
 
-  {% encounter species="Zubat" level=10 isTrainer=true %}
+  {% encounter trainerId="TRAINER_YOUNGSTER_JOSH" slot=2 %}
   {% strategy %}
   Water Gun* (x2)
   {% /strategy %}
@@ -305,7 +303,7 @@ Water Gun* (x2)
 {% /option %}
 
 {% option value="rocket" label="Rocket Spinner" %}
-  {% encounter species="Rattata" level=13 isTrainer=true %}
+  {% encounter trainerId="TRAINER_TEAM_ROCKET_GRUNT_4" %}
   {% strategy %}
   Water Gun (x2)
   {% /strategy %}
@@ -315,7 +313,7 @@ Water Gun* (x2)
   {% /calcs %}
   {% /encounter %}
   
-  {% encounter species="Sandshrew" level=13 isTrainer=true %}
+  {% encounter trainerId="TRAINER_TEAM_ROCKET_GRUNT_4" slot=1 %}
   {% strategy %}
   Water Gun
   {% /strategy %}
@@ -323,19 +321,19 @@ Water Gun* (x2)
 {% /option %}
 
 {% option value="hiker" label="Hiker Marcos" %}
-  {% encounter species="Geodude" level=10 isTrainer=true %}
+  {% encounter trainerId="TRAINER_HIKER_MARCOS" %}
   {% strategy %}
   Bubble
   {% /strategy %}
   {% /encounter %}
 
-  {% encounter species="Geodude" level=10 isTrainer=true %}
+  {% encounter trainerId="TRAINER_HIKER_MARCOS" slot=1 %}
   {% strategy %}
   Bubble
   {% /strategy %}
   {% /encounter %}
 
-  {% encounter species="Onix" level=10 isTrainer=true %}
+  {% encounter trainerId="TRAINER_HIKER_MARCOS" slot=2 %}
   {% strategy %}
   Bubble
   {% /strategy %}
@@ -349,7 +347,7 @@ Water Gun* (x2)
 
 ### Rocket Grunt
 
-{% encounter species="Rattata" level=13 isTrainer=true %}
+{% encounter trainerId="TRAINER_TEAM_ROCKET_GRUNT" %}
 {% strategy %}
 Water Gun (x2)
 {% /strategy %}
@@ -358,7 +356,7 @@ Water Gun (x2)
 {% /calcs %}
 {% /encounter %}
 
-{% encounter species="Zubat" level=13 isTrainer=true %}
+{% encounter trainerId="TRAINER_TEAM_ROCKET_GRUNT" slot=1 %}
 {% strategy %}
 Water Gun (x2)
 {% /strategy %}
@@ -369,7 +367,7 @@ Water Gun (x2)
 
 ### Super Nerd Miguel
 
-{% encounter species="Grimer" level=12 isTrainer=true %}
+{% encounter trainerId="TRAINER_SUPER_NERD_MIGUEL" %}
 {% strategy %}
 Water Gun x2
 {% /strategy %}
@@ -379,7 +377,7 @@ Water Gun x2
 {% /calcs %}
 {% /encounter %}
 
-{% encounter species="Voltorb" level=12 isTrainer=true %}
+{% encounter trainerId="TRAINER_SUPER_NERD_MIGUEL" slot=1 %}
 {% strategy %}
 Water Gun* (x2)
 {% /strategy %}
@@ -390,7 +388,7 @@ Water Gun* (x2)
 {% /calcs %}
 {% /encounter %}
 
-{% encounter species="Koffing" level=12 isTrainer=true %}
+{% encounter trainerId="TRAINER_SUPER_NERD_MIGUEL" slot=2 %}
 {% strategy %}
 Water Gun* (x2)
 {% /strategy %}
