@@ -91,6 +91,10 @@ export const useRunStore = create<AppState>()(
           choices: {},
         })),
     }),
-    { name: "gen3-router-run-state" },
+    {
+      name: "gen3-router-run-state",
+      version: 1,
+      migrate: () => ({ run: null, completedActions: [], choices: {} }),
+    },
   ),
 );
