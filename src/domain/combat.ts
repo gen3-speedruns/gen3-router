@@ -24,7 +24,7 @@ export function damageIn(
   if (!move) return null;
 
   return calcDamageIn(
-    encounterBattleStats(encounter, stages),
+    encounterBattleStats(encounter),
     runBattleStats(run, stages),
     move,
   );
