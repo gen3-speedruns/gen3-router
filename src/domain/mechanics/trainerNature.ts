@@ -29,19 +29,49 @@ export const NaturesInOrder: Nature[] = [
   "Quirky",
 ];
 
-function gen3CharByte(c: string): number {
-  const code = c.charCodeAt(0);
-  if (code >= 65 && code <= 90) return 0xbb + (code - 65);
-  if (code >= 97 && code <= 122) return 0xd5 + (code - 97);
-  return 0x00;
-}
+const GEN3_CHARMAP: Record<string, number> = {
+  A: 0xbb,
+  B: 0xbc,
+  C: 0xbd,
+  D: 0xbe,
+  E: 0xbf,
+  F: 0xc0,
+  G: 0xc1,
+  H: 0xc2,
+  I: 0xc3,
+  J: 0xc4,
+  K: 0xc5,
+  L: 0xc6,
+  M: 0xc7,
+  N: 0xc8,
+  O: 0xc9,
+  P: 0xca,
+  Q: 0xcb,
+  R: 0xcc,
+  S: 0xcd,
+  T: 0xce,
+  U: 0xcf,
+  V: 0xd0,
+  W: 0xd1,
+  X: 0xd2,
+  Y: 0xd3,
+  Z: 0xd4,
+  ".": 0xad,
+  " ": 0x00,
+};
 
-function gen3NameHash(name: string): number {
-  let hash = 0;
-  for (let i = 0; i < name.length; i++) {
-    hash += gen3CharByte(name[i].toUpperCase());
+function sumGen3Bytes(text: string): number {
+  let sum = 0;
+  for (const char of text) {
+    const byte = GEN3_CHARMAP[char];
+    if (byte === undefined) {
+      throw new Error(
+        `Unsupported Gen 3 char: ${JSON.stringify(char)} in ${JSON.stringify(text)}`,
+      );
+    }
+    sum += byte;
   }
-  return hash;
+  return sum;
 }
 
 function getInitialValue(isDouble: boolean, isFemale: boolean): number {
@@ -56,18 +86,20 @@ export function calcTrainerPokemonNature(
   const trainer = TrainerDataMap[trainerId];
   if (!trainer) throw new Error(`Unknown trainer: ${trainerId}`);
 
-  const base = getInitialValue(trainer.isDouble, trainer.isFemale);
+  let personalityValue = 0;
   let nameHash = 0;
 
   for (let i = 0; i <= slot; i++) {
     const pokemon = trainer.party[i];
-    if (!pokemon)
+    if (!pokemon) {
       throw new Error(`Slot ${i} not found for trainer ${trainerId}`);
+    }
 
-    nameHash += gen3NameHash(trainer.name);
-    nameHash += gen3NameHash(pokemon.species);
+    nameHash += sumGen3Bytes(trainer.name.toUpperCase());
+    nameHash += sumGen3Bytes(pokemon.species.toUpperCase());
+    personalityValue = getInitialValue(trainer.isDouble, trainer.isFemale);
+    personalityValue += nameHash << 8;
   }
 
-  const personalityValue = (base + (nameHash << 8)) >>> 0;
-  return NaturesInOrder[personalityValue % 25];
+  return NaturesInOrder[(personalityValue >>> 0) % NaturesInOrder.length];
 }
