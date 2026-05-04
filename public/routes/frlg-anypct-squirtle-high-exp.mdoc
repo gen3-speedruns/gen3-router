@@ -622,7 +622,7 @@ Water Pulse
 {% /strategy %}
 {% /trainer-encounter %}
 
-- TODO: Handle Nob route
+- TODO: Handle link to Beginner Route.
 
 ### Camper Flint
 
@@ -729,6 +729,7 @@ Water Pulse* / Mega Kick
 
 Before fighting the rival:
 - Rare Candy to level 27 if you do not level out of torrent.
+  {% rare-candy id="ss-anne-rare-candy" /%}
 - Ether Mega Kick if you have not already.
 - Keep Torrent if you are still in it and will not die to Quick Attack.
 
@@ -739,3 +740,381 @@ Before fighting the rival:
 
 ### Rival
 
+{% trainer-encounter trainerId="TRAINER_RIVAL_SS_ANNE_BULBASAUR" %}
+{% strategy %}
+Water Pulse* / Water Pulse, Bite
+{% /strategy %}
+{% calcs %}
+{% damage-in move="Quick Attack" /%}
+{% /calcs %}
+{% /trainer-encounter %}
+
+{% trainer-encounter trainerId="TRAINER_RIVAL_SS_ANNE_BULBASAUR" slot=3 %}
+{% strategy %}
+Bite, Mega Kick
+{% /strategy %}
+{% calcs %}
+{% ko-chance moves=["Bite", "Mega Kick"] /%}
+{% /calcs %}
+{% /trainer-encounter %}
+
+{% trainer-encounter trainerId="TRAINER_RIVAL_SS_ANNE_BULBASAUR" slot=1 %}
+{% strategy %}
+Water Pulse* / Mega Kick
+{% /strategy %}
+{% calcs %}
+{% damage-in move="Quick Attack" /%}
+{% /calcs %}
+{% /trainer-encounter %}
+
+{% trainer-encounter trainerId="TRAINER_RIVAL_SS_ANNE_BULBASAUR" slot=2 %}
+{% strategy %}
+Bite
+{% /strategy %}
+{% calcs %}
+{% damage-in move="Confusion" /%}
+{% /calcs %}
+{% /trainer-encounter %}
+
+- Talk to the captain for HM01 and take the Bed Lady's free heal on the way out.
+
+## Vermilion City
+
+- Press Select to teach Cut to Rattata / Sandshrew.
+- Cut the bush and enter the gym.
+- Save after you find the first switch of the puzzle.
+  - The second switch can be located to any adjacent can.
+  - Soft reset if you did not get the second switch after saving. ![Can Order](images/frlg/VermillionGymCans.png)
+
+### Gentlemen Tucker
+
+{% trainer-encounter trainerId="TRAINER_GENTLEMAN_TUCKER" %}
+{% strategy %}
+Water Pulse
+{% /strategy %}
+{% calcs %}
+{% speed-check /%}
+{% /calcs %}
+{% /trainer-encounter %}
+
+### Leader Surge
+
+{% trainer-encounter trainerId="TRAINER_LEADER_LT_SURGE" %}
+{% strategy %}
+Water Pulse (x2)
+{% /strategy %}
+{% calcs %}
+{% speed-check /%}
+{% ko-chance move="Water Pulse" /%}
+{% /calcs %}
+{% /trainer-encounter %}
+
+{% trainer-encounter trainerId="TRAINER_LEADER_LT_SURGE" slot=1 %}
+{% strategy %}
+Water Pulse
+{% /strategy %}
+{% /trainer-encounter %}
+
+{% trainer-encounter trainerId="TRAINER_LEADER_LT_SURGE" slot=2 %}
+{% strategy %}
+Water Pulse, Water Pulse* / Water Pulse, Mega Kick
+{% /strategy %}
+- Swap Water Pulse to Slot 2 before using it (Select + A + A).
+{% calcs %}
+{% damage-in move="Shock Wave" /%}
+{% damage-in move="Quick Attack" /%}
+{% damage-in move="Quick Attack" stages=-2 /%}
+{% /calcs %}
+{% /trainer-encounter %}
+
+- Get the Bike Voucher, then run back to Cerulean City.
+
+## Cerulean City
+
+- Get the Bicycle, then register and use it.
+- Head to the right towards Rock Tunnel.
+
+## Route 9-10
+
+### Picknicker Alicia
+
+{% trainer-encounter trainerId="TRAINER_PICNICKER_ALICIA" %}
+{% strategy %}
+Mega Kick
+{% /strategy %}
+{% /trainer-encounter %}
+
+{% trainer-encounter trainerId="TRAINER_PICNICKER_ALICIA" slot=1 %}
+{% strategy %}
+Bite
+{% /strategy %}
+{% /trainer-encounter %}
+
+{% trainer-encounter trainerId="TRAINER_PICNICKER_ALICIA" slot=2 %}
+{% strategy %}
+Mega Kick
+{% /strategy %}
+{% /trainer-encounter %}
+
+{% trainer-encounter trainerId="TRAINER_PICNICKER_ALICIA" slot=3 %}
+{% strategy %}
+Bite
+{% /strategy %}
+{% /trainer-encounter %}
+
+- Run-into-bike manip the Hiker spinner (if you mess up just use bike from the bag).
+
+### Bug Catcher Conner
+
+{% trainer-encounter trainerId="TRAINER_BUG_CATCHER_CONNER" %}
+{% strategy %}
+Water Gun
+{% /strategy %}
+{% /trainer-encounter %}
+
+{% trainer-encounter trainerId="TRAINER_BUG_CATCHER_CONNER" slot=1 %}
+{% strategy %}
+Water Gun
+{% /strategy %}
+{% /trainer-encounter %}
+
+{% trainer-encounter trainerId="TRAINER_BUG_CATCHER_CONNER" slot=2 %}
+{% strategy %}
+Water Pulse (x2)
+{% /strategy %}
+{% calcs %}
+{% ko-chance move="Water Pulse" /%}
+{% ko-chance move="Mega Kick" /%}
+{% /calcs %}
+{% /trainer-encounter %}
+
+- Consider these berries if short on Awakening (Chesto Berry) or Paralyze Heal (Cheri Berry).
+  ![Chesto Berry](images/frlg/Route9ChestoBerry.png)
+  ![Cheri Berry](images/frlg/Route9CheriBerry.png)
+
+- Grab this hidden Rare Candy after the Hiker (he has a vision range of 1 tile).
+  ![Rare Candy](images/frlg/Route9RareCandy.png)
+
+- TODO: Handle link to Low Exp Route.
+
+## Rock Tunnel
+
+- Use Elixir on a Repel menu as necessary for Mega Kick PP.
+- Walk along the green path. Fight yellow trainers and avoid red trainers.
+  ![Rock Tunnel 1](images/frlg/RockTunnel-1.png)
+
+### Pokemaniac Ashton
+
+{% trainer-encounter trainerId="TRAINER_POKEMANIAC_ASHTON" %}
+{% strategy %}
+Water Gun
+{% /strategy %}
+{% /trainer-encounter %}
+
+{% trainer-encounter trainerId="TRAINER_POKEMANIAC_ASHTON" slot=1 %}
+{% strategy %}
+Bite (x2)
+{% /strategy %}
+{% calcs %}
+{% ko-chance move="Bite" /%}
+{% /calcs %}
+{% /trainer-encounter %}
+
+- Walk along the green path. Fight yellow trainers and avoid red trainers.
+  ![Rock Tunnel 2](images/frlg/RockTunnel-2.png)
+
+### Pokemaniac Winston
+
+{% trainer-encounter trainerId="TRAINER_POKEMANIAC_WINSTON" %}
+{% strategy %}
+Bite (x2)
+{% /strategy %}
+{% calcs %}
+{% ko-chance move="Bite" /%}
+{% /calcs %}
+{% /trainer-encounter %}
+
+### Picknicker Martha
+
+{% trainer-encounter trainerId="TRAINER_PICNICKER_MARTHA" %}
+{% strategy %}
+Mega Kick / Bite x2
+{% /strategy %}
+{% calcs %}
+{% ko-chance move="Bite" hits=2 /%}
+{% /calcs %}
+{% /trainer-encounter %}
+
+{% trainer-encounter trainerId="TRAINER_PICNICKER_MARTHA" slot=1 %}
+{% strategy %}
+Mega Kick
+{% /strategy %}
+{% calcs %}
+{% damage-in move="Razor Leaf" /%}
+{% /calcs %}
+{% /trainer-encounter %}
+
+### Hiker Eric
+
+{% trainer-encounter trainerId="TRAINER_HIKER_ERIC" %}
+{% strategy %}
+Water Pulse
+{% /strategy %}
+{% /trainer-encounter %}
+
+{% trainer-encounter trainerId="TRAINER_HIKER_ERIC" slot=1 %}
+{% strategy %}
+Water Pulse
+{% /strategy %}
+{% /trainer-encounter %}
+
+- Walk along the green path. Fight yellow trainers and avoid red trainers.
+  ![Rock Tunnel 3](images/frlg/RockTunnel-3.png)
+
+### Hiker Oliver
+
+{% trainer-encounter trainerId="TRAINER_HIKER_OLIVER" %}
+{% strategy %}
+Bite (x2)
+{% /strategy %}
+{% calcs %}
+{% ko-chance move="Bite" /%}
+{% /calcs %}
+{% /trainer-encounter %}
+
+{% trainer-encounter trainerId="TRAINER_HIKER_OLIVER" slot=1 %}
+{% strategy %}
+Water Gun
+{% /strategy %}
+{% /trainer-encounter %}
+
+{% trainer-encounter trainerId="TRAINER_HIKER_OLIVER" slot=2 %}
+{% strategy %}
+Bite
+{% /strategy %}
+{% /trainer-encounter %}
+
+- Walk along the green path. Fight yellow trainers and avoid red trainers.
+  ![Rock Tunnel 4](images/frlg/RockTunnel-4.png)
+
+### Picknicker Sofia
+
+{% trainer-encounter trainerId="TRAINER_PICNICKER_SOFIA" %}
+{% strategy %}
+Water Gun* / Water Pulse
+{% /strategy %}
+{% /trainer-encounter %}
+
+{% trainer-encounter trainerId="TRAINER_PICNICKER_SOFIA" slot=1 %}
+{% strategy %}
+Water Gun* / Water Pulse
+{% /strategy %}
+{% /trainer-encounter %}
+
+{% trainer-encounter trainerId="TRAINER_PICNICKER_SOFIA" slot=2 %}
+{% strategy %}
+Water Gun* / Water Pulse
+{% /strategy %}
+{% /trainer-encounter %}
+
+### Hiker Dudley
+
+{% trainer-encounter trainerId="TRAINER_HIKER_DUDLEY" %}
+{% strategy %}
+Bite
+{% /strategy %}
+{% /trainer-encounter %}
+
+{% trainer-encounter trainerId="TRAINER_HIKER_DUDLEY" slot=1 %}
+{% strategy %}
+Bite
+{% /strategy %}
+{% /trainer-encounter %}
+
+{% trainer-encounter trainerId="TRAINER_HIKER_DUDLEY" slot=2 %}
+{% strategy %}
+Water Gun
+{% /strategy %}
+{% /trainer-encounter %}
+
+- Run-into-**walk** manip the Supernerd ([Run-into-bike manip is slower due to lag from music transitions](https://www.youtube.com/watch?v=PwmYijBaFCU)).
+- Walk along the green path. Fight yellow trainers and avoid red trainers.
+  ![Rock Tunnel 5](images/frlg/RockTunnel-5.png)
+
+### Picknicker Dana
+
+{% trainer-encounter trainerId="TRAINER_PICNICKER_DANA" %}
+{% strategy %}
+Bite
+{% /strategy %}
+{% /trainer-encounter %}
+
+{% trainer-encounter trainerId="TRAINER_PICNICKER_DANA" slot=1 %}
+{% strategy %}
+Mega Kick
+{% /strategy %}
+- Check how many Mega Kicks you have here.
+{% /trainer-encounter %}
+
+{% trainer-encounter trainerId="TRAINER_PICNICKER_DANA" slot=2 %}
+{% strategy %}
+Bite
+{% /strategy %}
+{% /trainer-encounter %}
+
+## Lavender Town
+
+- Head south to the mart and buy
+  - 4x Escape Rope (7x ↓)
+  - 7x Super Repel (↓)
+- Head left to the next route.
+
+## Route 8
+
+- Fight the Gamer below.
+
+### Gambler Rich
+
+{% trainer-encounter trainerId="TRAINER_GAMER_RICH" %}
+{% strategy %}
+Water Gun
+{% /strategy %}
+{% /trainer-encounter %}
+
+{% trainer-encounter trainerId="TRAINER_GAMER_RICH" slot=1 %}
+{% strategy %}
+Water Gun / Water Pulse
+{% /strategy %}
+- Use Water Pulse if Water Gun is not OHKO.
+{% calcs %}
+{% ko-chance move="Water Gun" /%}
+{% /calcs %}
+{% /trainer-encounter %}
+
+- Avoid all the trainers and head into the building above the bikers.
+
+## Celadon City
+
+- Head straight to the game corner.
+
+### Rocket Grunt
+
+{% trainer-encounter trainerId="TRAINER_TEAM_ROCKET_GRUNT_7" %}
+{% strategy %}
+Water Pulse* / Mega Kick
+{% /strategy %}
+{% calcs %}
+{% damage-in move="Quick Attack" /%}
+{% /calcs %}
+{% /trainer-encounter %}
+
+{% trainer-encounter trainerId="TRAINER_TEAM_ROCKET_GRUNT_7" slot=1 %}
+{% strategy %}
+Water Pulse
+{% /strategy %}
+{% calcs %}
+{% speed-check playerStages=-2 /%}
+{% /calcs %}
+{% /trainer-encounter %}
+
+- Talk to the poster and head into the Rocket Hideout.
