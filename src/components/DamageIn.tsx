@@ -7,6 +7,14 @@ export const DamageIn: React.FC<{ move: string; stages?: number }> = ({
   stages = 0,
 }) => {
   const { run, encounter } = useEncounter();
+  if (!run || run === "pending") {
+    return (
+      <div className="px-4 py-2 text-sm text-base-content/30 italic">
+        {!run ? "Set your starter to see calcs." : "Pending earlier decision…"}
+      </div>
+    );
+  }
+
   const damage = damageIn(run, encounter, move, stages);
 
   if (!damage) {

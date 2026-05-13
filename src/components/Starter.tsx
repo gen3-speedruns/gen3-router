@@ -16,7 +16,7 @@ export const Starter: React.FC<StarterProps> = ({
   natures,
 }) => {
   const startRun = useRunStore((state) => state.startRun);
-  const isInitialized = useRunStore((state) => state.run !== null);
+  const isInitialized = useRunStore((state) => state.root !== null);
 
   const [nature, setNature] = useState<Nature>(natures[0]);
   const [ivs, setIvs] = useState({

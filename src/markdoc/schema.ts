@@ -37,11 +37,14 @@ export const markdocConfig: Config = {
     calcs: {
       render: "Calcs",
       selfClosing: false,
-      attributes: {},
+      attributes: {
+        id: { type: String, required: false },
+      },
     },
     "calcs-for": {
       render: "CalcsFor",
       attributes: {
+        id: { type: String, required: true },
         trainerId: { type: String, required: true },
         slot: { type: Number, default: 0 },
       },

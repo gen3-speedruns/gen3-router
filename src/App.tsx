@@ -1,6 +1,6 @@
 import Markdoc from "@markdoc/markdoc";
 import { Moon, Sun } from "lucide-react";
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { Calcs } from "./components/Calcs";
 import { CalcsFor } from "./components/CalcsFor";
 import { Choice } from "./components/Choice";
@@ -13,12 +13,14 @@ import { Option } from "./components/Option";
 import { PoisonDamage } from "./components/PoisonDamage";
 import { RareCandy } from "./components/RareCandy";
 import { RouteHeader } from "./components/RouteHeader";
+import { RouteTreeProvider } from "./components/RouteTreeContext";
 import { Sidebar } from "./components/Sidebar";
 import { SpeedCheck } from "./components/SpeedCheck";
 import { Starter } from "./components/Starter";
 import { Strategy } from "./components/Strategy";
 import { TrainerEncounter } from "./components/TrainerEncounter";
 import { WildEncounter } from "./components/WildEncounter";
+import { parseRouteTree } from "./domain/routeTree";
 import { useRoute } from "./hooks/useRoute";
 import { markdocConfig } from "./markdoc/schema";
 
@@ -56,38 +58,47 @@ export default function App() {
     setIsDark(next);
   };
 
+  const routeContent = route.status === "ready" ? route.data.content : null;
+  const tree = useMemo(() => {
+    if (!routeContent) return [];
+    const ast = Markdoc.parse(routeContent);
+    return parseRouteTree(ast);
+  }, [routeContent]);
+
   return (
-    <div className="min-h-screen bg-base-200 flex font-sans">
-      <Sidebar />
-      <div className="ml-80 flex-1 p-10">
-        <button
-          onClick={toggleTheme}
-          className="btn btn-ghost btn-sm btn-circle fixed top-4 right-4"
-        >
-          {isDark ? <Sun /> : <Moon />}
-        </button>
-        <div className="max-w-3xl mx-auto">
-          {route.status === "loading" && (
-            <span className="loading loading-spinner loading-md" />
-          )}
-          {route.status === "error" && (
-            <div className="alert alert-error">
-              <span>{route.message}</span>
-            </div>
-          )}
-          {route.status === "ready" && (
-            <>
-              {route.data.frontmatter && (
-                <RouteHeader frontmatter={route.data.frontmatter} />
-              )}
-              <div className="prose prose-sm sm:prose max-w-none dark:prose-invert">
-                <RouteRenderer content={route.data.content} />
+    <RouteTreeProvider value={tree}>
+      <div className="min-h-screen bg-base-200 flex font-sans">
+        <Sidebar />
+        <div className="ml-80 flex-1 p-10">
+          <button
+            onClick={toggleTheme}
+            className="btn btn-ghost btn-sm btn-circle fixed top-4 right-4"
+          >
+            {isDark ? <Sun /> : <Moon />}
+          </button>
+          <div className="max-w-3xl mx-auto">
+            {route.status === "loading" && (
+              <span className="loading loading-spinner loading-md" />
+            )}
+            {route.status === "error" && (
+              <div className="alert alert-error">
+                <span>{route.message}</span>
               </div>
-            </>
-          )}
+            )}
+            {route.status === "ready" && (
+              <>
+                {route.data.frontmatter && (
+                  <RouteHeader frontmatter={route.data.frontmatter} />
+                )}
+                <div className="prose prose-sm sm:prose max-w-none dark:prose-invert">
+                  <RouteRenderer content={route.data.content} />
+                </div>
+              </>
+            )}
+          </div>
         </div>
       </div>
-    </div>
+    </RouteTreeProvider>
   );
 }
 

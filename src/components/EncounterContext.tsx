@@ -3,7 +3,7 @@ import type { Encounter } from "../domain/encounter";
 import type { Run } from "../domain/run";
 
 interface EncounterContextValue {
-  run: Run;
+  run: Run | "pending" | null;
   encounter: Encounter;
 }
 
@@ -14,6 +14,10 @@ export const useEncounter = (): EncounterContextValue => {
   if (!ctx)
     throw new Error("Combat tags must be used within an {% encounter %}");
   return ctx;
+};
+
+export const useEncounterMaybe = (): EncounterContextValue | null => {
+  return useContext(EncounterContext);
 };
 
 export const EncounterProvider = EncounterContext.Provider;

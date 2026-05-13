@@ -18,6 +18,13 @@ export const KoChance: React.FC<KoChanceProps> = ({
   stages = 0,
 }) => {
   const { run, encounter } = useEncounter();
+  if (!run || run === "pending") {
+    return (
+      <div className="px-4 py-2 text-sm text-base-content/30 italic">
+        {!run ? "Set your starter to see calcs." : "Pending earlier decision…"}
+      </div>
+    );
+  }
 
   const moveList = moves ?? Array(hits).fill(move);
   if (moveList.some((m) => !m)) {

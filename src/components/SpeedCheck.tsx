@@ -12,6 +12,14 @@ export const SpeedCheck: React.FC<SpeedCheckProps> = ({
   enemyStages,
 }) => {
   const { run, encounter } = useEncounter();
+  if (!run || run === "pending") {
+    return (
+      <div className="px-4 py-2 text-sm text-base-content/30 italic">
+        {!run ? "Set your starter to see calcs." : "Pending earlier decision…"}
+      </div>
+    );
+  }
+
   const { outcome, playerSpeed, enemySpeed } = speedCheck(
     run,
     encounter,

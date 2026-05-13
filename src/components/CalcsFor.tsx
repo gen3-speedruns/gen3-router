@@ -1,39 +1,39 @@
 import React, { useMemo } from "react";
 import { resolveTrainerEncounter } from "../domain/encounter";
-import { useRunStore } from "../store/runState";
+import { useRunAt } from "../hooks/useRun";
 import { Calcs } from "./Calcs";
 import { EncounterProvider } from "./EncounterContext";
+import { useRouteTree } from "./RouteTreeContext";
 
 interface CalcsForProps {
+  id: string;
   trainerId: string;
-  slot: number;
+  slot?: number;
   children: React.ReactNode;
 }
 
 export const CalcsFor: React.FC<CalcsForProps> = ({
+  id,
   trainerId,
-  slot,
+  slot = 0,
   children,
 }) => {
-  const run = useRunStore((s) => s.run);
+  const tree = useRouteTree();
   const encounter = useMemo(
     () => resolveTrainerEncounter(trainerId, slot),
     [trainerId, slot],
   );
+  const runView = useRunAt(tree, id);
 
   if (!encounter)
     return (
       <div className="text-error text-sm">
-        Unknown trainer encounter: {trainerId}-{slot}
+        Unknown trainer: {trainerId} slot {slot}
       </div>
     );
 
-  if (!run)
-    return (
-      <div className="text-base-content/50 italic text-sm">
-        Set your starter to see calcs.
-      </div>
-    );
+  const run =
+    runView === null ? null : runView === "pending" ? "pending" : runView.run;
 
   return (
     <EncounterProvider value={{ run, encounter }}>

@@ -1,52 +1,52 @@
 import React, { useMemo } from "react";
 import { resolveTrainerEncounter } from "../domain/encounter";
-import { useRunStore } from "../store/runState";
+import { useRunAt } from "../hooks/useRun";
 import { BaseEncounter } from "./BaseEncounter";
 import { EncounterProvider } from "./EncounterContext";
+import { useRouteTree } from "./RouteTreeContext";
 
 interface TrainerEncounterProps {
   trainerId: string;
-  slot: number;
+  slot?: number;
   optional?: boolean;
   children?: React.ReactNode;
 }
 
 export const TrainerEncounter: React.FC<TrainerEncounterProps> = ({
   trainerId,
-  slot,
+  slot = 0,
   optional = false,
   children,
 }) => {
-  const run = useRunStore((s) => s.run);
+  const tree = useRouteTree();
+  const stepId = `${trainerId}-${slot}`;
   const encounter = useMemo(
     () => resolveTrainerEncounter(trainerId, slot),
     [trainerId, slot],
   );
+  const runView = useRunAt(tree, stepId);
 
   if (!encounter) {
     return (
       <div className="text-error underline">
-        Unknown trainer encounter: {trainerId}-{slot}
+        Unknown trainer: {trainerId} slot {slot}
       </div>
     );
   }
 
-  if (!run) {
-    return (
-      <div className="text-base-content/50 italic p-4">
-        Set your starter to see calcs.
-      </div>
-    );
-  }
-
-  const actionId = `trainer-encounter-${trainerId}-${slot}`;
   return (
-    <EncounterProvider value={{ run, encounter }}>
-      <BaseEncounter
-        actionId={actionId}
-        encounter={encounter}
-        optional={optional}
-      >
+    <EncounterProvider
+      value={{
+        run:
+          runView === null
+            ? null
+            : runView === "pending"
+              ? "pending"
+              : runView.run,
+        encounter,
+      }}
+    >
+      <BaseEncounter stepId={stepId} encounter={encounter} optional={optional}>
         {children}
       </BaseEncounter>
     </EncounterProvider>

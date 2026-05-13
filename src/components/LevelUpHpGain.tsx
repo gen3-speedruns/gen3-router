@@ -1,17 +1,21 @@
 import React from "react";
 import { hpGainOnLevelUp } from "../domain/run";
-import { useRunStore } from "../store/runState";
+import { useEncounterMaybe } from "./EncounterContext";
+import { useRunContext } from "./RunContext";
 
 interface LevelUpHpGainProps {
   level: number;
 }
 
 export const LevelUpHpGain: React.FC<LevelUpHpGainProps> = ({ level }) => {
-  const run = useRunStore((s) => s.run);
-  if (!run) {
+  const encounterCtx = useEncounterMaybe();
+  const runCtx = useRunContext();
+  const run = encounterCtx?.run ?? runCtx;
+
+  if (!run || run === "pending") {
     return (
-      <div className="px-4 py-2 text-sm text-base-content/50 italic">
-        Set your starter to see HP gain.
+      <div className="px-4 py-2 text-sm text-base-content/30 italic">
+        {!run ? "Set your starter to see calcs." : "Pending earlier decision…"}
       </div>
     );
   }
@@ -22,11 +26,9 @@ export const LevelUpHpGain: React.FC<LevelUpHpGainProps> = ({ level }) => {
       <div className="text-xs font-medium uppercase tracking-wide text-base-content/45">
         HP gain
       </div>
-
       <div className="text-base-content/60">
         Lv. {level - 1} → {level}
       </div>
-
       <div className="text-right font-mono font-bold text-success">+{gain}</div>
     </div>
   );

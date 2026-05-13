@@ -1,8 +1,9 @@
 import React, { useMemo } from "react";
 import { resolveWildEncounter } from "../domain/encounter";
-import { useRunStore } from "../store/runState";
+import { useRunAt } from "../hooks/useRun";
 import { BaseEncounter } from "./BaseEncounter";
 import { EncounterProvider } from "./EncounterContext";
+import { useRouteTree } from "./RouteTreeContext";
 
 interface WildEncounterProps {
   id: string;
@@ -19,11 +20,12 @@ export const WildEncounter: React.FC<WildEncounterProps> = ({
   optional = false,
   children,
 }) => {
-  const run = useRunStore((s) => s.run);
+  const tree = useRouteTree();
   const encounter = useMemo(
     () => resolveWildEncounter(species, level),
     [species, level],
   );
+  const runView = useRunAt(tree, id);
 
   if (!encounter) {
     return (
@@ -31,22 +33,19 @@ export const WildEncounter: React.FC<WildEncounterProps> = ({
     );
   }
 
-  if (!run) {
-    return (
-      <div className="text-base-content/50 italic p-4">
-        Set your starter to see calcs.
-      </div>
-    );
-  }
-
-  const actionId = `wild-encounter-${id}`;
   return (
-    <EncounterProvider value={{ run, encounter }}>
-      <BaseEncounter
-        actionId={actionId}
-        encounter={encounter}
-        optional={optional}
-      >
+    <EncounterProvider
+      value={{
+        run:
+          runView === null
+            ? null
+            : runView === "pending"
+              ? "pending"
+              : runView.run,
+        encounter,
+      }}
+    >
+      <BaseEncounter stepId={id} encounter={encounter} optional={optional}>
         {children}
       </BaseEncounter>
     </EncounterProvider>

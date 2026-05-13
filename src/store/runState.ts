@@ -1,18 +1,11 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import { calcEncounterYield, type Encounter } from "../domain/encounter";
-import {
-  applyEncounterYield,
-  applyRareCandy,
-  startNewRun,
-  type BadgeBoosts,
-  type Run,
-} from "../domain/run";
+import { startNewRun, type Run } from "../domain/run";
 import type { Nature, StatsTable } from "../gamedata/types";
 
 interface AppState {
-  run: Run | null;
-  completedActions: string[];
+  root: Run | null;
+  optionals: Record<string, boolean>;
   choices: Record<string, string>;
 
   startRun: (
@@ -21,88 +14,53 @@ interface AppState {
     nature: Nature,
     ivs: StatsTable,
   ) => void;
-  evolve: (newSpecies: string) => void;
-  gainEncounter: (encounter: Encounter) => void;
-  gainBadge: (badge: keyof BadgeBoosts) => void;
-  gainRareCandy: () => void;
-  completeAction: (id: string) => void;
+  resolveOptional: (id: string, did: boolean) => void;
+  unresolveOptional: (id: string) => void;
   setChoice: (id: string, value: string) => void;
+  unsetChoice: (id: string) => void;
   reset: () => void;
 }
 
 export const useRunStore = create<AppState>()(
   persist(
     (set) => ({
-      run: null,
-      completedActions: [],
+      root: null,
+      optionals: {},
       choices: {},
 
       startRun: (species, level, nature, ivs) =>
-        set(() => {
-          return {
-            run: startNewRun(species, level, nature, ivs),
-          };
+        set({
+          root: startNewRun(species, level, nature, ivs),
+          optionals: {},
+          choices: {},
         }),
 
-      evolve: (newSpecies) =>
-        set((state) => {
-          if (!state.run) return state;
-          return {
-            run: {
-              ...state.run,
-              species: newSpecies,
-            },
-          };
-        }),
+      resolveOptional: (id, did) =>
+        set((s) => ({ optionals: { ...s.optionals, [id]: did } })),
 
-      gainEncounter: (encounter) =>
-        set((state) => {
-          if (!state.run) return state;
-          return {
-            run: applyEncounterYield(state.run, calcEncounterYield(encounter)),
-          };
+      unresolveOptional: (id) =>
+        set((s) => {
+          const next = { ...s.optionals };
+          delete next[id];
+          return { optionals: next };
         }),
-
-      gainBadge: (badge) =>
-        set((state) => {
-          if (!state.run) return state;
-          return {
-            run: {
-              ...state.run,
-              badges: { ...state.run.badges, [badge]: true },
-            },
-          };
-        }),
-
-      gainRareCandy: () =>
-        set((state) => {
-          if (!state.run) return state;
-          return { run: applyRareCandy(state.run) };
-        }),
-
-      completeAction: (id) =>
-        set((state) => ({
-          completedActions: state.completedActions.includes(id)
-            ? state.completedActions
-            : [...state.completedActions, id],
-        })),
 
       setChoice: (id, value) =>
-        set((state) => ({
-          choices: { ...state.choices, [id]: value },
-        })),
+        set((s) => ({ choices: { ...s.choices, [id]: value } })),
 
-      reset: () =>
-        set(() => ({
-          run: null,
-          completedActions: [],
-          choices: {},
-        })),
+      unsetChoice: (id) =>
+        set((s) => {
+          const next = { ...s.choices };
+          delete next[id];
+          return { choices: next };
+        }),
+
+      reset: () => set({ root: null, optionals: {}, choices: {} }),
     }),
     {
       name: "gen3-router-run-state",
-      version: 1,
-      migrate: () => ({ run: null, completedActions: [], choices: {} }),
+      version: 2,
+      migrate: () => ({ root: null, optionals: {}, choices: {} }),
     },
   ),
 );

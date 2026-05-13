@@ -144,7 +144,7 @@ Bubble* (x2)
 - Attempt to get torrent in as little turns as possible on this route.
   - If no torrent for level 14, get it off the 2nd level 10 Caterpie.
   - If no torrent for level 15, get it off the level 11 Caterpie.
-  {% calcs %}
+  {% calcs id="route3-calcs" %}
   {% level-up-hp-gain level=14 /%}
   {% level-up-hp-gain level=15 /%}
   {% /calcs %}
@@ -245,7 +245,7 @@ Water Gun* (x2)
   - Use Repel.
 - Grab this Rare Candy near the Bug Catcher (after fighting him if you are fighting him). ![Rare Candy](images/frlg/MtMoonRareCandy.png)
 - Fight **ONE** of the following optional trainers for EXP depending on the situation ![Mt Moon Trainers](images/frlg/MtMoonTrainers.png)
-  {% calcs-for trainerId="TRAINER_TEAM_ROCKET_GRUNT_4" %}
+  {% calcs-for id="mt-moon-calcs" trainerId="TRAINER_TEAM_ROCKET_GRUNT_4" %}
   {% level-up-hp-gain level=16 /%}
   {% damage-in move="Hyper Fang" /%}
   {% /calcs-for %}
@@ -447,10 +447,10 @@ Bite, (Tackle), Bite
 - After the fight:
   - Teach Water Pulse over Tackle (Slot 2).
   - Heal for Rival so you can survive a Quick Attack and Vine Whip.
-  {% calcs-for trainerId="TRAINER_RIVAL_CERULEAN_BULBASAUR" %}
+  {% calcs-for id="cerulean-rival-calcs-1" trainerId="TRAINER_RIVAL_CERULEAN_BULBASAUR" %}
   {% damage-in move="Quick Attack" /%}
   {% /calcs-for %}
-  {% calcs-for trainerId="TRAINER_RIVAL_CERULEAN_BULBASAUR" slot=3 %}
+  {% calcs-for id="cerulean-rival-calcs-2" trainerId="TRAINER_RIVAL_CERULEAN_BULBASAUR" slot=3 %}
   {% damage-in move="Vine Whip" /%}
   {% /calcs-for %}
 
@@ -733,7 +733,7 @@ Before fighting the rival:
 - Ether Mega Kick if you have not already.
 - Keep Torrent if you are still in it and will not die to Quick Attack.
 
-  {% calcs-for trainerId="TRAINER_RIVAL_SS_ANNE_BULBASAUR" %}
+  {% calcs-for id="ss-anne-calcs" trainerId="TRAINER_RIVAL_SS_ANNE_BULBASAUR" %}
   {% level-up-hp-gain level=27 /%}
   {% damage-in move="Quick Attack" /%}
   {% /calcs-for %}
